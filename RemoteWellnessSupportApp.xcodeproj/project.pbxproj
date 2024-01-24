@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportAppApp.swift */; };
+		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D382B608BDC0063EC7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D372B608BDC0063EC7A /* ContentView.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
 		2EBD2D432B608BDF0063EC7A /* RemoteWellnessSupportApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2EBD2D422B608BDF0063EC7A /* RemoteWellnessSupportApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2EBD2D482B608BDF0063EC7A /* RemoteWellnessSupportAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D472B608BDF0063EC7A /* RemoteWellnessSupportAppApp.swift */; };
+		2EBD2D482B608BDF0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D472B608BDF0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D4A2B608BDF0063EC7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D492B608BDF0063EC7A /* ContentView.swift */; };
 		2EBD2D4C2B608BE10063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D4B2B608BE10063EC7A /* Assets.xcassets */; };
 		2EBD2D4F2B608BE10063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D4E2B608BE10063EC7A /* Preview Assets.xcassets */; };
@@ -44,12 +44,12 @@
 
 /* Begin PBXFileReference section */
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportAppApp.swift; sourceTree = "<group>"; };
+		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D372B608BDC0063EC7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2EBD2D422B608BDF0063EC7A /* RemoteWellnessSupportApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RemoteWellnessSupportApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EBD2D472B608BDF0063EC7A /* RemoteWellnessSupportAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportAppApp.swift; sourceTree = "<group>"; };
+		2EBD2D472B608BDF0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D492B608BDF0063EC7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2EBD2D4B2B608BE10063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EBD2D4E2B608BE10063EC7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		2EBD2D342B608BDC0063EC7A /* RemoteWellnessSupportApp */ = {
 			isa = PBXGroup;
 			children = (
-				2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportAppApp.swift */,
+				2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */,
 				2EBD2D372B608BDC0063EC7A /* ContentView.swift */,
 				2EBD2D392B608BDF0063EC7A /* Assets.xcassets */,
 				2EBD2D3B2B608BDF0063EC7A /* Preview Content */,
@@ -113,7 +113,7 @@
 		2EBD2D462B608BDF0063EC7A /* RemoteWellnessSupportApp Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				2EBD2D472B608BDF0063EC7A /* RemoteWellnessSupportAppApp.swift */,
+				2EBD2D472B608BDF0063EC7A /* RemoteWellnessSupportApp.swift */,
 				2EBD2D492B608BDF0063EC7A /* ContentView.swift */,
 				2EBD2D4B2B608BE10063EC7A /* Assets.xcassets */,
 				2EBD2D4D2B608BE10063EC7A /* Preview Content */,
@@ -144,6 +144,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2EE596A52B613FC3009C47BC /* PBXTargetDependency */,
 				2EBD2D452B608BDF0063EC7A /* PBXTargetDependency */,
 			);
 			name = RemoteWellnessSupportApp;
@@ -162,6 +163,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2EE596A72B613FCD009C47BC /* PBXTargetDependency */,
 			);
 			name = "RemoteWellnessSupportApp Watch App";
 			productName = "RemoteWellnessSupportApp Watch App";
@@ -195,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 2EBD2D292B608BDC0063EC7A;
+			packageReferences = (
+				2EE596A32B613F79009C47BC /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 2EBD2D332B608BDC0063EC7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EBD2D382B608BDC0063EC7A /* ContentView.swift in Sources */,
-				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportAppApp.swift in Sources */,
+				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EBD2D4A2B608BDF0063EC7A /* ContentView.swift in Sources */,
-				2EBD2D482B608BDF0063EC7A /* RemoteWellnessSupportAppApp.swift in Sources */,
+				2EBD2D482B608BDF0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +257,14 @@
 			isa = PBXTargetDependency;
 			target = 2EBD2D412B608BDF0063EC7A /* RemoteWellnessSupportApp Watch App */;
 			targetProxy = 2EBD2D442B608BDF0063EC7A /* PBXContainerItemProxy */;
+		};
+		2EE596A52B613FC3009C47BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 2EE596A42B613FC3009C47BC /* SwiftLintPlugin */;
+		};
+		2EE596A72B613FCD009C47BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 2EE596A62B613FCD009C47BC /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -525,6 +538,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2EE596A32B613F79009C47BC /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2EE596A42B613FC3009C47BC /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EE596A32B613F79009C47BC /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+		2EE596A62B613FCD009C47BC /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EE596A32B613F79009C47BC /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2EBD2D2A2B608BDC0063EC7A /* Project object */;
 }
