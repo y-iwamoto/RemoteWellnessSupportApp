@@ -26,8 +26,13 @@ jobs:
         key: ${{ runner.os }}-swift-${{ hashFiles('BuildTools/Package.swift', 'BuildTools/Package.resolved') }}
         restore-keys: |
           ${{ runner.os }}-swift-
+
     - name: Install dependencies
       run: swift build
+      working-directory: BuildTools
+
+    - name: Run SwiftLint
+      run: swift run swiftlint ../ --config ../.swiftlint.yml --strict
       working-directory: BuildTools
 
     - name: Run SwiftFormat
