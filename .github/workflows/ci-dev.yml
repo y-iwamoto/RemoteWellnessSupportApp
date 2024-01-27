@@ -1,0 +1,35 @@
+name: Ci Dev
+
+on:
+  pull_request:
+    paths:
+    - '**.swift'
+
+jobs:
+  code-check:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Swift
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: 'latest'
+
+    - name: Cache Swift dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          BuildTools/.build
+          BuildTools/Package.resolved
+        key: ${{ runner.os }}-swift-${{ hashFiles('BuildTools/Package.swift', 'BuildTools/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-swift-
+    - name: Install dependencies
+      run: swift build
+      working-directory: BuildTools
+
+    - name: Run SwiftFormat
+      run: swift run swiftformat ../ --config ../.swiftformat --lint
+      working-directory: BuildTools
