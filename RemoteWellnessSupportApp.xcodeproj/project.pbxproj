@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95BE2B69208A00576531 /* IntroductionView.swift */; };
+		2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95C12B6929E600576531 /* OnboardingContentView.swift */; };
+		2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95C52B6A710700576531 /* OnboardingScreenView.swift */; };
+		2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95C72B6A723300576531 /* ReminderExplanationView.swift */; };
+		2E0C95CA2B6A73EF00576531 /* ReviewDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95C92B6A73EF00576531 /* ReviewDescriptionView.swift */; };
+		2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95CB2B6A7D2F00576531 /* HealthReviewDescriptionView.swift */; };
+		2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95CD2B6A7E8000576531 /* WatchFeatureExplanationView.swift */; };
+		2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */; };
+		2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D62B6B0EBE00576531 /* AppColors.swift */; };
+		2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D382B608BDC0063EC7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D372B608BDC0063EC7A /* ContentView.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
@@ -43,6 +53,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E0C95BE2B69208A00576531 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		2E0C95C12B6929E600576531 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		2E0C95C52B6A710700576531 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		2E0C95C72B6A723300576531 /* ReminderExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderExplanationView.swift; sourceTree = "<group>"; };
+		2E0C95C92B6A73EF00576531 /* ReviewDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDescriptionView.swift; sourceTree = "<group>"; };
+		2E0C95CB2B6A7D2F00576531 /* HealthReviewDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthReviewDescriptionView.swift; sourceTree = "<group>"; };
+		2E0C95CD2B6A7E8000576531 /* WatchFeatureExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFeatureExplanationView.swift; sourceTree = "<group>"; };
+		2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTab.swift; sourceTree = "<group>"; };
+		2E0C95D62B6B0EBE00576531 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D372B608BDC0063EC7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +93,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0C95BD2B69201000576531 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95CF2B6B0CE200576531 /* Enums */,
+				2E0C95C32B69CD1300576531 /* Views */,
+				2E0C95C52B6A710700576531 /* OnboardingScreenView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		2E0C95C02B6929B800576531 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95C12B6929E600576531 /* OnboardingContentView.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		2E0C95C32B69CD1300576531 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95C42B69CD1C00576531 /* Children */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E0C95C42B69CD1C00576531 /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95C92B6A73EF00576531 /* ReviewDescriptionView.swift */,
+				2E0C95C02B6929B800576531 /* Sharing */,
+				2E0C95BE2B69208A00576531 /* IntroductionView.swift */,
+				2E0C95C72B6A723300576531 /* ReminderExplanationView.swift */,
+				2E0C95CB2B6A7D2F00576531 /* HealthReviewDescriptionView.swift */,
+				2E0C95CD2B6A7E8000576531 /* WatchFeatureExplanationView.swift */,
+			);
+			path = Children;
+			sourceTree = "<group>";
+		};
+		2E0C95CF2B6B0CE200576531 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		2E0C95D42B6B0DCF00576531 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95D82B6BC2E400576531 /* Views */,
+				2E0C95D52B6B0EAE00576531 /* Styles */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2E0C95D52B6B0EAE00576531 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95D62B6B0EBE00576531 /* AppColors.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		2E0C95D82B6BC2E400576531 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2EBD2D292B608BDC0063EC7A = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +186,8 @@
 		2EBD2D342B608BDC0063EC7A /* RemoteWellnessSupportApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E0C95D42B6B0DCF00576531 /* Common */,
+				2E0C95BD2B69201000576531 /* OnBoarding */,
 				2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */,
 				2EBD2D372B608BDC0063EC7A /* ContentView.swift */,
 				2EBD2D392B608BDF0063EC7A /* Assets.xcassets */,
@@ -237,7 +331,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EBD2D382B608BDC0063EC7A /* ContentView.swift in Sources */,
+				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
+				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
+				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
+				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
+				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
+				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
+				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
+				2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */,
+				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
+				2E0C95CA2B6A73EF00576531 /* ReviewDescriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
