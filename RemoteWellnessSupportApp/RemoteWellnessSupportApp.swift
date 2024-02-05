@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct RemoteWellnessSupportApp: App {
-    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = false
 
     var body: some Scene {
         WindowGroup {

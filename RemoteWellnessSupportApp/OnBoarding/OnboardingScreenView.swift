@@ -8,31 +8,24 @@
 import SwiftUI
 
 struct OnboardingScreenView: View {
-    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
-    @State private var selection = OnBoardingTab.introduction
+    @StateObject var viewModel = OnboardingScreenViewModel()
 
     var body: some View {
         VStack {
-            TabView(selection: $selection) {
+            TabView(selection: $viewModel.selection) {
                 IntroductionView()
-                    .tag(OnBoardingTab.introduction.rawValue)
+                    .tag(OnBoardingTab.introduction)
                 ReminderExplanationView()
-                    .tag(OnBoardingTab.reminder.rawValue)
+                    .tag(OnBoardingTab.reminder)
                 HealthReviewDescriptionView()
-                    .tag(OnBoardingTab.healthReview.rawValue)
+                    .tag(OnBoardingTab.healthReview)
                 ReviewDescriptionView()
-                    .tag(OnBoardingTab.review.rawValue)
-                WatchFeatureExplanationView()
-                    .tag(OnBoardingTab.watchFeature.rawValue)
+                    .tag(OnBoardingTab.review)
+                WatchFeatureExplanationView(viewModel: viewModel)
+                    .tag(OnBoardingTab.watchFeature)
             }
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-
-            if selection == .watchFeature {
-                CommonButtonView(title: "はじめる") {
-                    hasCompletedOnboarding = true
-                }
-            }
         }
         .background(Color.appBackground)
     }
