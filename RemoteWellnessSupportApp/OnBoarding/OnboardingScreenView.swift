@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingScreenView: View {
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
-    @State private var selection = OnBoardingTab.introduction.rawValue
+    @State private var selection = OnBoardingTab.introduction
 
     var body: some View {
         VStack {
@@ -28,7 +28,7 @@ struct OnboardingScreenView: View {
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
 
-            if selection == OnBoardingTab.watchFeature.rawValue {
+            if selection == .watchFeature {
                 CommonButtonView(title: "はじめる") {
                     hasCompletedOnboarding = true
                 }
