@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingScreenView: View {
-    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding = false
     @State private var selection = OnBoardingTab.introduction.rawValue
 
     var body: some View {
