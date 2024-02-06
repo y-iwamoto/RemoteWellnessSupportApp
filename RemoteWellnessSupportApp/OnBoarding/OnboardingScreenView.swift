@@ -9,22 +9,20 @@ import SwiftUI
 
 struct OnboardingScreenView: View {
     var body: some View {
-        VStack {
-            TabView {
-                IntroductionView()
-                    .tag(OnBoardingTab.introduction)
-                ReminderExplanationView()
-                    .tag(OnBoardingTab.reminder)
-                HealthReviewDescriptionView()
-                    .tag(OnBoardingTab.healthReview)
-                ReviewDescriptionView()
-                    .tag(OnBoardingTab.review)
-                WatchFeatureExplanationView()
-                    .tag(OnBoardingTab.watchFeature)
-            }
-            .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        TabView {
+            IntroductionView()
+                .tag(OnBoardingTab.introduction)
+            ReminderExplanationView()
+                .tag(OnBoardingTab.reminder)
+            HealthReviewDescriptionView()
+                .tag(OnBoardingTab.healthReview)
+            ReviewDescriptionView()
+                .tag(OnBoardingTab.review)
+            WatchFeatureExplanationView()
+                .tag(OnBoardingTab.watchFeature)
         }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .background(Color.appBackground)
     }
 }
