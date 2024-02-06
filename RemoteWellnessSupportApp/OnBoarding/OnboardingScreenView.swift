@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct OnboardingScreenView: View {
-    @StateObject var viewModel = OnboardingScreenViewModel()
-
     var body: some View {
         VStack {
             TabView {
@@ -21,7 +19,7 @@ struct OnboardingScreenView: View {
                     .tag(OnBoardingTab.healthReview)
                 ReviewDescriptionView()
                     .tag(OnBoardingTab.review)
-                WatchFeatureExplanationView(viewModel: viewModel)
+                WatchFeatureExplanationView()
                     .tag(OnBoardingTab.watchFeature)
             }
             .tabViewStyle(PageTabViewStyle())

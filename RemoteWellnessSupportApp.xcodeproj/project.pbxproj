@@ -26,7 +26,7 @@
 		2EBD2D4A2B608BDF0063EC7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D492B608BDF0063EC7A /* ContentView.swift */; };
 		2EBD2D4C2B608BE10063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D4B2B608BE10063EC7A /* Assets.xcassets */; };
 		2EBD2D4F2B608BE10063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D4E2B608BE10063EC7A /* Preview Assets.xcassets */; };
-		2EFD01862B71A254003020C6 /* OnboardingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD01852B71A254003020C6 /* OnboardingScreenViewModel.swift */; };
+		2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */; };
 		2EFD01892B71A721003020C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD01882B71A721003020C6 /* Const.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +75,7 @@
 		2EBD2D492B608BDF0063EC7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2EBD2D4B2B608BE10063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EBD2D4E2B608BE10063EC7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2EFD01852B71A254003020C6 /* OnboardingScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewModel.swift; sourceTree = "<group>"; };
+		2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFeatureExplanationViewModel.swift; sourceTree = "<group>"; };
 		2EFD01882B71A721003020C6 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,7 +232,7 @@
 		2EFD01842B71A211003020C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2EFD01852B71A254003020C6 /* OnboardingScreenViewModel.swift */,
+				2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
-				2EFD01862B71A254003020C6 /* OnboardingScreenViewModel.swift in Sources */,
+				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,

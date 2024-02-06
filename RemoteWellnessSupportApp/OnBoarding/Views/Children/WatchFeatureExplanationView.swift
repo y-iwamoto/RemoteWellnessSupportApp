@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WatchFeatureExplanationView: View {
-    @ObservedObject var viewModel: OnboardingScreenViewModel
+    @StateObject var viewModel = WatchFeatureExplanationViewModel()
 
     var body: some View {
         VStack {
@@ -16,7 +16,7 @@ struct WatchFeatureExplanationView: View {
                                   title: "Apple Watchも使って手軽に計測",
                                   description: "このアプリはスマートフォン以外にもApple Watchを使った簡単登録や通知受け取りができます\n\nApple Watchも上手に使い、ついつい登録忘れを防ぎましょう")
             CommonButtonView(title: "はじめる") {
-                viewModel.hasCompletedOnboarding = true
+                viewModel.completeOnboarding()
             }
             .padding(.bottom, 40)
         }
