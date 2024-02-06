@@ -10,5 +10,4 @@ import SwiftUI
 
 class OnboardingScreenViewModel: ObservableObject {
     @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding = false
-    @Published var selection = OnBoardingTab.introduction
 }

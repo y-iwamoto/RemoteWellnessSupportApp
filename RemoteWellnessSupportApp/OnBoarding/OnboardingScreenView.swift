@@ -12,7 +12,7 @@ struct OnboardingScreenView: View {
 
     var body: some View {
         VStack {
-            TabView(selection: $viewModel.selection) {
+            TabView {
                 IntroductionView()
                     .tag(OnBoardingTab.introduction)
                 ReminderExplanationView()
