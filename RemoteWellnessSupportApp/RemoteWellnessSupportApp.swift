@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct RemoteWellnessSupportApp: App {
+    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = false
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if hasCompletedOnboarding {
+                ContentView()
+            } else {
+                OnboardingScreenView()
+            }
         }
     }
 }
