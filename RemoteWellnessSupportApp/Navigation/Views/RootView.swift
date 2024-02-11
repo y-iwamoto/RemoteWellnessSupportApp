@@ -12,7 +12,7 @@ struct RootView: View {
 
     var body: some View {
         if hasCompletedOnboarding {
-            Text("Welcome to the app!")
+            MainView()
         } else {
             OnboardingScreenView()
         }

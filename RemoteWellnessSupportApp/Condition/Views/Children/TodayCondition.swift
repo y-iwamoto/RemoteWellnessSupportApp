@@ -9,60 +9,85 @@ import SwiftUI
 
 struct TodayCondition: View {
     @State private var isExpanded = false
+    @State private var selectedDestination: NavigationDestination.Activity?
 
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
 
+                if isExpanded {
+                    HStack(spacing: 3) {
+                        NavigationLink(value: NavigationDestination.Activity.physicalConditionEntryForm) {
+                            Image(systemName: "medical.thermometer.fill")
+                                .padding()
+                                .background(.black)
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                        }
+                        .transition(.opacity)
+                        NavigationLink(value: NavigationDestination.Activity.reviewEnrtyForm) {
+                            Image(systemName: "book.fill")
+                                .padding()
+                                .background(.black)
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                        }
+                        .transition(.opacity)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+
                 HStack {
                     Spacer()
 
                     if isExpanded {
                         VStack {
-                            Button(
-                                action: {
-                                    // 新規登録画面1への遷移
-                                },
-                                label: {
-                                    Text("登録1")
-                                        .padding()
-                                        .background(Color.blue)
-                                        .foregroundColor(.white)
-                                        .clipShape(Circle())
-                                }
-                            )
-
-                            Button(
-                                action: {
-                                    // 新規登録画面2への遷移
-                                },
-                                label: {
-                                    Text("登録2")
-                                        .padding()
-                                        .background(Color.blue)
-                                        .foregroundColor(.white)
-                                        .clipShape(Circle())
-                                }
-                            )
+                            NavigationLink(value: NavigationDestination.Activity.stepEntryForm) {
+                                Image(systemName: "shoeprints.fill")
+                                    .padding()
+                                    .background(.black)
+                                    .foregroundColor(.white)
+                                    .clipShape(Circle())
+                            }
+                            .transition(.opacity)
+                            NavigationLink(value: NavigationDestination.Activity.hydrationEntryForm) {
+                                Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                                    .padding()
+                                    .background(.black)
+                                    .foregroundColor(.white)
+                                    .clipShape(Circle())
+                            }
+                            .transition(.opacity)
                         }
-                        .transition(.move(edge: .trailing))
                     }
 
                     Button(
                         action: {
-                            withAnimation {
+                            withAnimation(Animation.linear(duration: 0.5)) {
                                 isExpanded.toggle()
                             }
                         },
                         label: {
-                            Image(systemName: "plus.circle.fill")
+                            Image(systemName: "plus.square.fill")
                                 .resizable()
                                 .frame(width: 60, height: 60)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.gray)
                         }
                     )
                     .padding()
+                }
+            }
+            .navigationDestination(for: NavigationDestination.Activity.self) { destination in
+                switch destination {
+                case .physicalConditionEntryForm:
+                    PhysicalConditionEntryForm()
+                case .reviewEnrtyForm:
+                    ReviewEntryForm()
+                case .stepEntryForm:
+                    StepEntryForm()
+                case .hydrationEntryForm:
+                    HydrationEntryForm()
                 }
             }
         }

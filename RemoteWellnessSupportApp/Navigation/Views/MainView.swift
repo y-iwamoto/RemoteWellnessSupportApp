@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            Text("Condition")
+            ConditionScreen()
                 .tabItem {
                     Label("Condition", systemImage: "heart.text.square")
                 }

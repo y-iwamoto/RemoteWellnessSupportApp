@@ -11,8 +11,7 @@ struct ConditionScreen: View {
     @State private var selectedTab = "Today"
 
     var body: some View {
-        VStack {
-            // タブバー
+        NavigationStack {
             HStack {
                 TabButton(title: "Today", selectedTab: $selectedTab)
                 TabButton(title: "Week", selectedTab: $selectedTab)
@@ -20,14 +19,13 @@ struct ConditionScreen: View {
             .padding()
             .background(Color.gray.opacity(0.2))
 
-            // 選択されたタブに応じて表示するビュー
             switch selectedTab {
             case "Today":
-                Text("Today View")
+                TodayCondition()
             case "Week":
                 Text("Week View")
             default:
-                Text("Today View")
+                TodayCondition()
             }
 
             Spacer()

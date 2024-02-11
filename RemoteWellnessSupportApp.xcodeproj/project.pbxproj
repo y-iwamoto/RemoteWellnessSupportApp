@@ -30,6 +30,11 @@
 		2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812C42B79016D000B65E5 /* ConditionScreen.swift */; };
 		2EE812C92B79016D000B65E5 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812C62B79016D000B65E5 /* TabButton.swift */; };
 		2EE812CA2B79016D000B65E5 /* TodayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812C72B79016D000B65E5 /* TodayCondition.swift */; };
+		2EE812D82B79904E000B65E5 /* HydrationEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812CE2B79904E000B65E5 /* HydrationEntryForm.swift */; };
+		2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812D12B79904E000B65E5 /* PhysicalConditionEntryForm.swift */; };
+		2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812D42B79904E000B65E5 /* StepEntryForm.swift */; };
+		2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812D72B79904E000B65E5 /* ReviewEntryForm.swift */; };
+		2EE812DD2B799079000B65E5 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812DC2B799079000B65E5 /* NavigationDestination.swift */; };
 		2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */; };
 		2EFD01892B71A721003020C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD01882B71A721003020C6 /* Const.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +88,11 @@
 		2EE812C42B79016D000B65E5 /* ConditionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionScreen.swift; sourceTree = "<group>"; };
 		2EE812C62B79016D000B65E5 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		2EE812C72B79016D000B65E5 /* TodayCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayCondition.swift; sourceTree = "<group>"; };
+		2EE812CE2B79904E000B65E5 /* HydrationEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HydrationEntryForm.swift; sourceTree = "<group>"; };
+		2EE812D12B79904E000B65E5 /* PhysicalConditionEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryForm.swift; sourceTree = "<group>"; };
+		2EE812D42B79904E000B65E5 /* StepEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepEntryForm.swift; sourceTree = "<group>"; };
+		2EE812D72B79904E000B65E5 /* ReviewEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewEntryForm.swift; sourceTree = "<group>"; };
+		2EE812DC2B799079000B65E5 /* NavigationDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFeatureExplanationViewModel.swift; sourceTree = "<group>"; };
 		2EFD01882B71A721003020C6 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +211,7 @@
 		2EBD2D342B608BDC0063EC7A /* RemoteWellnessSupportApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EE812CB2B79904E000B65E5 /* Activity */,
 				2EE812C22B79016D000B65E5 /* Condition */,
 				2EE812BC2B790137000B65E5 /* Navigation */,
 				2E0C95D42B6B0DCF00576531 /* Common */,
@@ -242,7 +253,6 @@
 		2EE812BB2B78FFEE000B65E5 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				2EBD2D372B608BDC0063EC7A /* RootView.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -290,6 +300,81 @@
 			path = Children;
 			sourceTree = "<group>";
 		};
+		2EE812CB2B79904E000B65E5 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812CC2B79904E000B65E5 /* Hydration */,
+				2EE812CF2B79904E000B65E5 /* PhysicalCondition */,
+				2EE812D22B79904E000B65E5 /* Step */,
+				2EE812D52B79904E000B65E5 /* Review */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		2EE812CC2B79904E000B65E5 /* Hydration */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812CD2B79904E000B65E5 /* Views */,
+			);
+			path = Hydration;
+			sourceTree = "<group>";
+		};
+		2EE812CD2B79904E000B65E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812CE2B79904E000B65E5 /* HydrationEntryForm.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EE812CF2B79904E000B65E5 /* PhysicalCondition */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812D02B79904E000B65E5 /* Views */,
+			);
+			path = PhysicalCondition;
+			sourceTree = "<group>";
+		};
+		2EE812D02B79904E000B65E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812D12B79904E000B65E5 /* PhysicalConditionEntryForm.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EE812D22B79904E000B65E5 /* Step */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812D32B79904E000B65E5 /* Views */,
+			);
+			path = Step;
+			sourceTree = "<group>";
+		};
+		2EE812D32B79904E000B65E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812D42B79904E000B65E5 /* StepEntryForm.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EE812D52B79904E000B65E5 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812D62B79904E000B65E5 /* Views */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		2EE812D62B79904E000B65E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EE812D72B79904E000B65E5 /* ReviewEntryForm.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2EFD01842B71A211003020C6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				2EFD01882B71A721003020C6 /* Const.swift */,
+				2EE812DC2B799079000B65E5 /* NavigationDestination.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -415,8 +501,12 @@
 			files = (
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
+				2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */,
+				2EE812DD2B799079000B65E5 /* NavigationDestination.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
+				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
+				2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */,
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
@@ -426,6 +516,7 @@
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
 				2EE812CA2B79016D000B65E5 /* TodayCondition.swift in Sources */,
+				2EE812D82B79904E000B65E5 /* HydrationEntryForm.swift in Sources */,
 				2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */,
 				2EFD01892B71A721003020C6 /* Const.swift in Sources */,
 				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
