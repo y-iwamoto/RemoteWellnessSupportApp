@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayCondition: View {
     @State private var isExpanded = false
-    @State private var selectedDestination: CondtionNavigationLinkConst.Destination?
+    @State private var selectedDestination: ConditionNavigationLink.Destination?
 
     var body: some View {
         ZStack {
@@ -18,10 +18,10 @@ struct TodayCondition: View {
 
                 if isExpanded {
                     HStack(spacing: 3) {
-                        ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.physicalConditionEntryForm,
-                                                    imageName: CondtionNavigationLinkConst.ImageName.physicalConditionEntryForm)
-                        ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.reviewEnrtyForm,
-                                                    imageName: CondtionNavigationLinkConst.ImageName.reviewEnrtyForm)
+                        ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.physicalConditionEntryForm,
+                                                    imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm)
+                        ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.reviewEnrtyForm,
+                                                    imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 }
@@ -31,10 +31,10 @@ struct TodayCondition: View {
 
                     if isExpanded {
                         VStack {
-                            ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.stepEntryForm,
-                                                        imageName: CondtionNavigationLinkConst.ImageName.stepEntryForm)
-                            ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.hydrationEntryForm,
-                                                        imageName: CondtionNavigationLinkConst.ImageName.hydrationEntryForm)
+                            ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.stepEntryForm,
+                                                        imageName: ConditionNavigationLink.ImageName.stepEntryForm)
+                            ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.hydrationEntryForm,
+                                                        imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
                         }
                     }
 
@@ -45,7 +45,7 @@ struct TodayCondition: View {
                     })
                 }
             }
-            .navigationDestination(for: CondtionNavigationLinkConst.Destination.self) { destination in
+            .navigationDestination(for: ConditionNavigationLink.Destination.self) { destination in
                 switch destination {
                 case .physicalConditionEntryForm:
                     PhysicalConditionEntryForm()
