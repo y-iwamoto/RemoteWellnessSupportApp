@@ -12,12 +12,12 @@ struct MainView: View {
         TabView {
             ConditionScreen()
                 .tabItem {
-                    Label("Condition", systemImage: "heart.text.square")
+                    Label(MainTabConst.LabelName.conditionScreen, systemImage: MainTabConst.Image.conditionScreen)
                 }
-
+            // TODO: 現状はダミーで作成、設定画面作成時に対応
             Text("Settings")
                 .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
+                    Label(MainTabConst.LabelName.settingsScreen, systemImage: MainTabConst.Image.settingsScreen)
                 }
         }
     }

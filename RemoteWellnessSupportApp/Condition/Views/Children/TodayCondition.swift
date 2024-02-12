@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayCondition: View {
     @State private var isExpanded = false
-    @State private var selectedDestination: NavigationDestination.Activity?
+    @State private var selectedDestination: CondtionNavigationLinkConst.Destination?
 
     var body: some View {
         ZStack {
@@ -18,22 +18,10 @@ struct TodayCondition: View {
 
                 if isExpanded {
                     HStack(spacing: 3) {
-                        NavigationLink(value: NavigationDestination.Activity.physicalConditionEntryForm) {
-                            Image(systemName: "medical.thermometer.fill")
-                                .padding()
-                                .background(.black)
-                                .foregroundColor(.white)
-                                .clipShape(Circle())
-                        }
-                        .transition(.opacity)
-                        NavigationLink(value: NavigationDestination.Activity.reviewEnrtyForm) {
-                            Image(systemName: "book.fill")
-                                .padding()
-                                .background(.black)
-                                .foregroundColor(.white)
-                                .clipShape(Circle())
-                        }
-                        .transition(.opacity)
+                        ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.physicalConditionEntryForm,
+                                                    imageName: CondtionNavigationLinkConst.ImageName.physicalConditionEntryForm)
+                        ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.reviewEnrtyForm,
+                                                    imageName: CondtionNavigationLinkConst.ImageName.reviewEnrtyForm)
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 }
@@ -43,42 +31,21 @@ struct TodayCondition: View {
 
                     if isExpanded {
                         VStack {
-                            NavigationLink(value: NavigationDestination.Activity.stepEntryForm) {
-                                Image(systemName: "shoeprints.fill")
-                                    .padding()
-                                    .background(.black)
-                                    .foregroundColor(.white)
-                                    .clipShape(Circle())
-                            }
-                            .transition(.opacity)
-                            NavigationLink(value: NavigationDestination.Activity.hydrationEntryForm) {
-                                Image(systemName: "takeoutbag.and.cup.and.straw.fill")
-                                    .padding()
-                                    .background(.black)
-                                    .foregroundColor(.white)
-                                    .clipShape(Circle())
-                            }
-                            .transition(.opacity)
+                            ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.stepEntryForm,
+                                                        imageName: CondtionNavigationLinkConst.ImageName.stepEntryForm)
+                            ActivityEntryNavigationLink(destination: CondtionNavigationLinkConst.Destination.hydrationEntryForm,
+                                                        imageName: CondtionNavigationLinkConst.ImageName.hydrationEntryForm)
                         }
                     }
 
-                    Button(
-                        action: {
-                            withAnimation(Animation.linear(duration: 0.5)) {
-                                isExpanded.toggle()
-                            }
-                        },
-                        label: {
-                            Image(systemName: "plus.square.fill")
-                                .resizable()
-                                .frame(width: 60, height: 60)
-                                .foregroundColor(.gray)
+                    PlusButton(action: {
+                        withAnimation(Animation.linear(duration: 0.5)) {
+                            isExpanded.toggle()
                         }
-                    )
-                    .padding()
+                    })
                 }
             }
-            .navigationDestination(for: NavigationDestination.Activity.self) { destination in
+            .navigationDestination(for: CondtionNavigationLinkConst.Destination.self) { destination in
                 switch destination {
                 case .physicalConditionEntryForm:
                     PhysicalConditionEntryForm()
