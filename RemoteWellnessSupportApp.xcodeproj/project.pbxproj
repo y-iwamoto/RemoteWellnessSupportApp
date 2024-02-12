@@ -35,7 +35,7 @@
 		2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812D42B79904E000B65E5 /* StepEntryForm.swift */; };
 		2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812D72B79904E000B65E5 /* ReviewEntryForm.swift */; };
 		2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812DF2B799E24000B65E5 /* MainTabConst.swift */; };
-		2EE812E32B79A068000B65E5 /* ConditionTabConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812E22B79A068000B65E5 /* ConditionTabConst.swift */; };
+		2EE812E32B79A068000B65E5 /* ConditionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812E22B79A068000B65E5 /* ConditionTab.swift */; };
 		2EE812E52B79A4A0000B65E5 /* CondtionNavigationLinkConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812E42B79A4A0000B65E5 /* CondtionNavigationLinkConst.swift */; };
 		2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812E62B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift */; };
 		2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812E82B79ABBC000B65E5 /* PlusButton.swift */; };
@@ -97,7 +97,7 @@
 		2EE812D42B79904E000B65E5 /* StepEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepEntryForm.swift; sourceTree = "<group>"; };
 		2EE812D72B79904E000B65E5 /* ReviewEntryForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewEntryForm.swift; sourceTree = "<group>"; };
 		2EE812DF2B799E24000B65E5 /* MainTabConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabConst.swift; sourceTree = "<group>"; };
-		2EE812E22B79A068000B65E5 /* ConditionTabConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTabConst.swift; sourceTree = "<group>"; };
+		2EE812E22B79A068000B65E5 /* ConditionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTab.swift; sourceTree = "<group>"; };
 		2EE812E42B79A4A0000B65E5 /* CondtionNavigationLinkConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondtionNavigationLinkConst.swift; sourceTree = "<group>"; };
 		2EE812E62B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntryNavigationLink.swift; sourceTree = "<group>"; };
 		2EE812E82B79ABBC000B65E5 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
@@ -398,7 +398,7 @@
 		2EE812E12B799FBF000B65E5 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				2EE812E22B79A068000B65E5 /* ConditionTabConst.swift */,
+				2EE812E22B79A068000B65E5 /* ConditionTab.swift */,
 				2EE812E42B79A4A0000B65E5 /* CondtionNavigationLinkConst.swift */,
 			);
 			path = Enums;
@@ -539,7 +539,7 @@
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */,
 				2EE812E52B79A4A0000B65E5 /* CondtionNavigationLinkConst.swift in Sources */,
-				2EE812E32B79A068000B65E5 /* ConditionTabConst.swift in Sources */,
+				2EE812E32B79A068000B65E5 /* ConditionTab.swift in Sources */,
 				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 				2EE812C92B79016D000B65E5 /* TabButton.swift in Sources */,

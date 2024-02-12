@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct ConditionScreen: View {
-    @State private var selectedTab = ConditionTabConst.LabelTitle.today
+    @State private var selectedTab = ConditionTab.today
 
     var body: some View {
         NavigationStack {
             HStack {
-                TabButton(title: ConditionTabConst.LabelTitle.today, selectedTab: $selectedTab)
-                TabButton(title: ConditionTabConst.LabelTitle.week, selectedTab: $selectedTab)
+                TabButton(title: ConditionTab.today, selectedTab: $selectedTab)
+                TabButton(title: ConditionTab.week, selectedTab: $selectedTab)
             }
             .padding()
             .background(Color.gray.opacity(0.2))
 
             switch selectedTab {
-            case ConditionTabConst.LabelTitle.today:
+            case ConditionTab.today:
                 TodayCondition()
-            case ConditionTabConst.LabelTitle.week:
+            case ConditionTab.week:
                 // TODO: 現状はダミーで作成、WeekTabView作成時に対応
                 Text("Week View")
-            default:
-                TodayCondition()
             }
 
             Spacer()

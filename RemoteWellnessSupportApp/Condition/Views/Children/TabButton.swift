@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TabButton: View {
-    let title: String
-    @Binding var selectedTab: String
+    let title: ConditionTab
+    @Binding var selectedTab: ConditionTab
 
     var body: some View {
         Button(
@@ -17,7 +17,7 @@ struct TabButton: View {
                 selectedTab = title
             },
             label: {
-                Text(title)
+                Text(title.rawValue)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding(.vertical, 10)
                     .padding(.horizontal, 20)
@@ -32,8 +32,4 @@ struct TabButton: View {
             }
         )
     }
-}
-
-#Preview {
-    TabButton(title: "Home", selectedTab: .constant("Home"))
 }
