@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TabButton: View {
-    let title: ConditionTab
     @Binding var selectedTab: ConditionTab
+    let title: ConditionTab
 
     var body: some View {
         Button(

@@ -22,7 +22,3 @@ struct ActivityEntryNavigationLink: View {
         .transition(.opacity)
     }
 }
-
-// #Preview {
-//    ActivityEntryNavigationLink()
-// }
