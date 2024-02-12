@@ -1,5 +1,5 @@
 //
-//  TodayConditionViewModel.swift
+//  ActivityEntryAreaViewModel.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/02/12.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class TodayConditionViewModel: ObservableObject {
+class ActivityEntryAreaViewModel: ObservableObject {
     @Published var isExpanded = false
 
     let topActivityNavigationLinks = [

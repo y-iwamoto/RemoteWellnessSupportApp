@@ -13,8 +13,8 @@ struct ConditionScreen: View {
     var body: some View {
         NavigationStack {
             HStack {
-                TabButton(title: ConditionTab.today, selectedTab: $selectedTab)
-                TabButton(title: ConditionTab.week, selectedTab: $selectedTab)
+                TabButton(selectedTab: $selectedTab, title: ConditionTab.today)
+                TabButton(selectedTab: $selectedTab, title: ConditionTab.week)
             }
             .padding()
             .background(Color.gray.opacity(0.2))

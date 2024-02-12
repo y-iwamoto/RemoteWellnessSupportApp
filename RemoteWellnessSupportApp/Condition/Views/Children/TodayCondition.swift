@@ -8,40 +8,19 @@
 import SwiftUI
 
 struct TodayCondition: View {
-    @ObservedObject var viewModel = TodayConditionViewModel()
-
     var body: some View {
-        ZStack {
-            VStack {
-                Spacer()
-
-                if viewModel.isExpanded {
-                    HStack(spacing: 3) {
-                        ForEach(viewModel.topActivityNavigationLinks.indices, id: \.self) { index in
-                            ActivityEntryNavigationLink(destination: viewModel.topActivityNavigationLinks[index].destination,
-                                                        imageName: viewModel.topActivityNavigationLinks[index].imageName)
+        GeometryReader { geometry in
+            ZStack {
+                ScrollView {
+                    VStack {
+                        ForEach(0 ..< 3) { index in
+                            Text("Dummy Graph Area \(index + 1)")
+                                .frame(width: geometry.size.width, height: 400)
+                                .background(Color.pink.opacity(0.2))
                         }
                     }
-                    .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-
-                HStack {
-                    Spacer()
-
-                    if viewModel.isExpanded {
-                        VStack {
-                            ForEach(viewModel.leftActivityNavigationLinks.indices, id: \.self) { index in
-                                ActivityEntryNavigationLink(destination: viewModel.leftActivityNavigationLinks[index].destination,
-                                                            imageName: viewModel.leftActivityNavigationLinks[index].imageName)
-                            }
-                        }
-                    }
-
-                    PlusButton(action: viewModel.toggleExpanded)
-                }
-            }
-            .navigationDestination(for: ConditionNavigationLink.Destination.self) { destination in
-                viewModel.destinationView(for: destination)
+                ActivityEntryArea()
             }
         }
     }
