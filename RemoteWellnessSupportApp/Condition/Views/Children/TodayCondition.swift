@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct TodayCondition: View {
-    @State private var isExpanded = false
-    @State private var selectedDestination: ConditionNavigationLink.Destination?
+    @ObservedObject var viewModel = TodayConditionViewModel()
 
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
 
-                if isExpanded {
+                if viewModel.isExpanded {
                     HStack(spacing: 3) {
-                        ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.physicalConditionEntryForm,
-                                                    imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm)
-                        ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.reviewEnrtyForm,
-                                                    imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
+                        ForEach(viewModel.topActivityNavigationLinks.indices, id: \.self) { index in
+                            ActivityEntryNavigationLink(destination: viewModel.topActivityNavigationLinks[index].destination,
+                                                        imageName: viewModel.topActivityNavigationLinks[index].imageName)
+                        }
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                 }
@@ -29,33 +28,20 @@ struct TodayCondition: View {
                 HStack {
                     Spacer()
 
-                    if isExpanded {
+                    if viewModel.isExpanded {
                         VStack {
-                            ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.stepEntryForm,
-                                                        imageName: ConditionNavigationLink.ImageName.stepEntryForm)
-                            ActivityEntryNavigationLink(destination: ConditionNavigationLink.Destination.hydrationEntryForm,
-                                                        imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
+                            ForEach(viewModel.leftActivityNavigationLinks.indices, id: \.self) { index in
+                                ActivityEntryNavigationLink(destination: viewModel.leftActivityNavigationLinks[index].destination,
+                                                            imageName: viewModel.leftActivityNavigationLinks[index].imageName)
+                            }
                         }
                     }
 
-                    PlusButton(action: {
-                        withAnimation(Animation.linear(duration: 0.5)) {
-                            isExpanded.toggle()
-                        }
-                    })
+                    PlusButton(action: viewModel.toggleExpanded)
                 }
             }
             .navigationDestination(for: ConditionNavigationLink.Destination.self) { destination in
-                switch destination {
-                case .physicalConditionEntryForm:
-                    PhysicalConditionEntryForm()
-                case .reviewEnrtyForm:
-                    ReviewEntryForm()
-                case .stepEntryForm:
-                    StepEntryForm()
-                case .hydrationEntryForm:
-                    HydrationEntryForm()
-                }
+                viewModel.destinationView(for: destination)
             }
         }
     }
