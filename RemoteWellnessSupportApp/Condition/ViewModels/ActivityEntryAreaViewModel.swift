@@ -29,17 +29,4 @@ class ActivityEntryAreaViewModel: ObservableObject {
             isExpanded.toggle()
         }
     }
-
-    func destinationView(for destination: ConditionNavigationLink.Destination) -> AnyView {
-        switch destination {
-        case .physicalConditionEntryForm:
-            return AnyView(PhysicalConditionEntryForm())
-        case .reviewEntryForm:
-            return AnyView(ReviewEntryForm())
-        case .stepEntryForm:
-            return AnyView(StepEntryForm())
-        case .hydrationEntryForm:
-            return AnyView(HydrationEntryForm())
-        }
-    }
 }

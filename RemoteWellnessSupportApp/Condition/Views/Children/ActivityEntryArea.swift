@@ -40,7 +40,21 @@ struct ActivityEntryArea: View {
             }
         }
         .navigationDestination(for: ConditionNavigationLink.Destination.self) { destination in
-            viewModel.destinationView(for: destination)
+            destinationView(for: destination)
+        }
+    }
+
+    @ViewBuilder
+    private func destinationView(for destination: ConditionNavigationLink.Destination) -> some View {
+        switch destination {
+        case .physicalConditionEntryForm:
+            PhysicalConditionEntryForm()
+        case .reviewEntryForm:
+            ReviewEntryForm()
+        case .stepEntryForm:
+            StepEntryForm()
+        case .hydrationEntryForm:
+            HydrationEntryForm()
         }
     }
 }
