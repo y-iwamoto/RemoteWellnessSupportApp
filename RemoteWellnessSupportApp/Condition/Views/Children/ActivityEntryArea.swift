@@ -34,13 +34,38 @@ struct ActivityEntryArea: View {
                                                         imageName: viewModel.leftActivityNavigationLinks[index].imageName)
                         }
                     }
+
+                    VStack {
+                        ForEach(viewModel.leftActivityNavigationLinks.indices, id: \.self) { index in
+                            ActivityEntryNavigationLink(destination: viewModel.leftActivityNavigationLinks[index].destination,
+                                                        imageName: viewModel.leftActivityNavigationLinks[index].imageName)
+                        }
+                    }
+
                 }
 
-                PlusButton(action: viewModel.toggleExpanded)
+                PlusButton {
+                    viewModel.toggleExpanded()
+                }
+
             }
         }
         .navigationDestination(for: ConditionNavigationLink.Destination.self) { destination in
-            viewModel.destinationView(for: destination)
+            destinationView(for: destination)
         }
     }
+
+    private func destinationView(for destination: ConditionNavigationLink.Destination) -> AnyView {
+        switch destination {
+        case .physicalConditionEntryForm:
+            return AnyView(PhysicalConditionEntryForm())
+        case .reviewEntryForm:
+            return AnyView(ReviewEntryForm())
+        case .stepEntryForm:
+            return AnyView(StepEntryForm())
+        case .hydrationEntryForm:
+            return AnyView(HydrationEntryForm())
+        }
+    }
+
 }

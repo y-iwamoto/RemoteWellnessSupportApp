@@ -20,9 +20,9 @@ struct ConditionScreen: View {
             .background(Color.gray.opacity(0.2))
 
             switch selectedTab {
-            case ConditionTab.today:
+            case .today:
                 TodayCondition()
-            case ConditionTab.week:
+            case .week:
                 // TODO: 現状はダミーで作成、WeekTabView作成時に対応
                 Text("Week View")
             }

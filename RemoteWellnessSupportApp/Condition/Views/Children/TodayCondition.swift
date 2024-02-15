@@ -12,7 +12,7 @@ struct TodayCondition: View {
         GeometryReader { geometry in
             ZStack {
                 ScrollView {
-                    VStack {
+                    VStack(spacing: 10) {
                         ForEach(0 ..< 3) { index in
                             Text("Dummy Graph Area \(index + 1)")
                                 .frame(width: geometry.size.width, height: 400)
