@@ -55,17 +55,17 @@ struct ActivityEntryArea: View {
         }
     }
 
-    private func destinationView(for destination: ConditionNavigationLink.Destination) -> AnyView {
+    @ViewBuilder
+    private func destinationView(for destination: ConditionNavigationLink.Destination) -> some View {
         switch destination {
         case .physicalConditionEntryForm:
-            return AnyView(PhysicalConditionEntryForm())
+            PhysicalConditionEntryForm()
         case .reviewEntryForm:
-            return AnyView(ReviewEntryForm())
+            ReviewEntryForm()
         case .stepEntryForm:
-            return AnyView(StepEntryForm())
+            StepEntryForm()
         case .hydrationEntryForm:
-            return AnyView(HydrationEntryForm())
+            HydrationEntryForm()
         }
     }
-
 }
