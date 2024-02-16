@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ActivityEntryArea: View {
     @ObservedObject var viewModel = ActivityEntryAreaViewModel()
+    let spacing: CGFloat = 3
 
     var body: some View {
         VStack {
             Spacer()
 
             if viewModel.isExpanded {
-                HStack(spacing: 3) {
+                HStack(spacing: spacing) {
                     ForEach(viewModel.topActivityNavigationLinks.indices, id: \.self) { index in
                         ActivityEntryNavigationLink(destination: viewModel.topActivityNavigationLinks[index].destination,
                                                     imageName: viewModel.topActivityNavigationLinks[index].imageName)
@@ -28,7 +29,7 @@ struct ActivityEntryArea: View {
                 Spacer()
 
                 if viewModel.isExpanded {
-                    VStack {
+                    VStack(spacing: spacing) {
                         ForEach(viewModel.leftActivityNavigationLinks.indices, id: \.self) { index in
                             ActivityEntryNavigationLink(destination: viewModel.leftActivityNavigationLinks[index].destination,
                                                         imageName: viewModel.leftActivityNavigationLinks[index].imageName)
@@ -36,7 +37,9 @@ struct ActivityEntryArea: View {
                     }
                 }
 
-                PlusButton(action: viewModel.toggleExpanded)
+                PlusButton {
+                    viewModel.toggleExpanded()
+                }
             }
         }
         .navigationDestination(for: ConditionNavigationLink.Destination.self) { destination in

@@ -12,7 +12,7 @@ struct ConditionScreen: View {
 
     var body: some View {
         NavigationStack {
-            HStack {
+            HStack(spacing: StyleConst.Spacing.emptySpacing) {
                 TabButton(selectedTab: $selectedTab, title: .today)
                 TabButton(selectedTab: $selectedTab, title: .week)
             }
