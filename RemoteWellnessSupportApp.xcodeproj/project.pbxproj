@@ -19,6 +19,8 @@
 		2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */; };
 		2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
+		2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
+		2E6E64122B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -83,6 +85,7 @@
 		2E0C95D62B6B0EBE00576531 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
 		2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionRating.swift; sourceTree = "<group>"; };
+		2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConst.swift; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -434,6 +437,7 @@
 			children = (
 				2EFD01882B71A721003020C6 /* Const.swift */,
 				2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */,
+				2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -553,6 +557,7 @@
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
 				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
+				2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
 				2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */,
 				2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */,
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
@@ -584,6 +589,7 @@
 			files = (
 				2EBD2D4A2B608BDF0063EC7A /* ContentView.swift in Sources */,
 				2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
+				2E6E64122B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
 				2EBD2D482B608BDF0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
