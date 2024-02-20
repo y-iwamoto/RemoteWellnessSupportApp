@@ -21,6 +21,13 @@
 		2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
 		2E6E64122B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
+		2E6E64152B80460500A11DB9 /* PhysicalConditionEntryFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */; };
+		2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
+		2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
+		2E8C66D42B81ECF800280A17 /* SharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D32B81ECF800280A17 /* SharedModelContainer.swift */; };
+		2E8C66D52B81ECF800280A17 /* SharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D32B81ECF800280A17 /* SharedModelContainer.swift */; };
+		2E8C66D82B81FF1500280A17 /* DataContainerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D72B81FF1500280A17 /* DataContainerViewModifier.swift */; };
+		2E8C66D92B81FF1500280A17 /* DataContainerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D72B81FF1500280A17 /* DataContainerViewModifier.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -86,6 +93,10 @@
 		2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
 		2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionRating.swift; sourceTree = "<group>"; };
 		2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConst.swift; sourceTree = "<group>"; };
+		2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryFormViewModel.swift; sourceTree = "<group>"; };
+		2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCondition.swift; sourceTree = "<group>"; };
+		2E8C66D32B81ECF800280A17 /* SharedModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModelContainer.swift; sourceTree = "<group>"; };
+		2E8C66D72B81FF1500280A17 /* DataContainerViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainerViewModifier.swift; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +195,8 @@
 		2E0C95D42B6B0DCF00576531 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E8C66D62B81FF0100280A17 /* ViewModifiers */,
+				2E6E64162B80548F00A11DB9 /* Models */,
 				2EFD01872B71A6EA003020C6 /* Enums */,
 				2E0C95D82B6BC2E400576531 /* Views */,
 				2E0C95D52B6B0EAE00576531 /* Styles */,
@@ -206,6 +219,31 @@
 				2EE812E82B79ABBC000B65E5 /* PlusButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2E6E64132B8045DC00A11DB9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E6E64162B80548F00A11DB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */,
+				2E8C66D32B81ECF800280A17 /* SharedModelContainer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E8C66D62B81FF0100280A17 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2E8C66D72B81FF1500280A17 /* DataContainerViewModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		2EBD2D292B608BDC0063EC7A = {
@@ -354,6 +392,7 @@
 		2EE812CF2B79904E000B65E5 /* PhysicalCondition */ = {
 			isa = PBXGroup;
 			children = (
+				2E6E64132B8045DC00A11DB9 /* ViewModels */,
 				2EE812D02B79904E000B65E5 /* Views */,
 			);
 			path = PhysicalCondition;
@@ -457,7 +496,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2EE596A52B613FC3009C47BC /* PBXTargetDependency */,
 				2EBD2D452B608BDF0063EC7A /* PBXTargetDependency */,
 			);
 			name = RemoteWellnessSupportApp;
@@ -476,7 +514,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2EE596A72B613FCD009C47BC /* PBXTargetDependency */,
 			);
 			name = "RemoteWellnessSupportApp Watch App";
 			productName = "RemoteWellnessSupportApp Watch App";
@@ -549,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
 				2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
@@ -569,12 +607,15 @@
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 				2EE812C92B79016D000B65E5 /* TabButton.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
+				2E8C66D82B81FF1500280A17 /* DataContainerViewModifier.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
 				2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */,
 				2EE812CA2B79016D000B65E5 /* TodayCondition.swift in Sources */,
 				2EE812D82B79904E000B65E5 /* HydrationEntryForm.swift in Sources */,
 				2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */,
+				2E8C66D42B81ECF800280A17 /* SharedModelContainer.swift in Sources */,
+				2E6E64152B80460500A11DB9 /* PhysicalConditionEntryFormViewModel.swift in Sources */,
 				2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */,
 				2EFD01892B71A721003020C6 /* Const.swift in Sources */,
 				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
@@ -587,6 +628,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8C66D52B81ECF800280A17 /* SharedModelContainer.swift in Sources */,
+				2E8C66D92B81FF1500280A17 /* DataContainerViewModifier.swift in Sources */,
+				2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EBD2D4A2B608BDF0063EC7A /* ContentView.swift in Sources */,
 				2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
 				2E6E64122B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
@@ -601,14 +645,6 @@
 			isa = PBXTargetDependency;
 			target = 2EBD2D412B608BDF0063EC7A /* RemoteWellnessSupportApp Watch App */;
 			targetProxy = 2EBD2D442B608BDF0063EC7A /* PBXContainerItemProxy */;
-		};
-		2EE596A52B613FC3009C47BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 2EE596A42B613FC3009C47BC /* SwiftLintPlugin */;
-		};
-		2EE596A72B613FCD009C47BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 2EE596A62B613FCD009C47BC /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -893,19 +929,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2EE596A42B613FC3009C47BC /* SwiftLintPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2EE596A32B613F79009C47BC /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
-		};
-		2EE596A62B613FCD009C47BC /* SwiftLintPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2EE596A32B613F79009C47BC /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2EBD2D2A2B608BDC0063EC7A /* Project object */;
 }

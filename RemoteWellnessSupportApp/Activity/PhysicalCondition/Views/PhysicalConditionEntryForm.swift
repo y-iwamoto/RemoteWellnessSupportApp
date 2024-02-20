@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct PhysicalConditionEntryForm: View {
-    @State private var selectedDateTime = Date()
-    @State private var memo = ""
-    @State private var selectedRating: PhysicalConditionRating?
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel = PhysicalConditionEntryFormViewModel()
 
     var body: some View {
         Text("体調登録")
             .font(.title)
         Form {
-            DatePicker("日付", selection: $selectedDateTime, displayedComponents: [.date, .hourAndMinute])
+            DatePicker("日付", selection: $viewModel.selectedDateTime, displayedComponents: [.date, .hourAndMinute])
 
             HStack {
                 ForEach(PhysicalConditionRating.allCases, id: \.self) { rating in
@@ -25,27 +25,27 @@ struct PhysicalConditionEntryForm: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 50, height: 50)
-                            .foregroundColor(selectedRating == rating ? .blue : .gray)
+                            .foregroundColor(viewModel.selectedRating == rating ? .blue : .gray)
                         Text(rating.label)
                     }
                     .onTapGesture {
-                        selectedRating = rating
+                        viewModel.selectedRating = rating
                     }
                 }
             }
             .padding(.vertical)
-            Text("\(selectedRating?.label ?? "選択なし")")
+            Text("\(viewModel.selectedRating?.label ?? "選択なし")")
                 .foregroundColor(.gray)
 
             ZStack(alignment: .topLeading) {
-                if memo.isEmpty {
+                if viewModel.memo.isEmpty {
                     Text("自由に気持ちを吐き出しましょう")
                         .font(.system(size: 18))
                         .foregroundColor(Color.gray)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 12)
                 }
-                TextEditor(text: $memo)
+                TextEditor(text: $viewModel.memo)
                     .font(.system(size: 18))
                     .frame(minHeight: 72)
                     .padding(.horizontal)
@@ -56,11 +56,21 @@ struct PhysicalConditionEntryForm: View {
             }
             .padding(.all)
 
-            CommonButtonView(title: "保存する", action: {
-                print("登録しました")
-            })
+            CommonButtonView(title: "保存する") {
+                viewModel.insertPhysicalCondition(modelContext)
+            }
+            .onReceive(viewModel.successPublisher) { _ in
+                dismiss()
+            }
         }
         .environment(\.locale, .init(identifier: "ja_JP"))
+        .alert("エラーです", isPresented: $viewModel.isErrorAlert) {
+            Button("戻る", role: .cancel) {
+                viewModel.isErrorAlert = false
+            }
+        } message: {
+            Text(viewModel.errorMessage)
+        }
     }
 }
 
