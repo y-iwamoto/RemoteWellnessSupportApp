@@ -18,8 +18,7 @@ class PhysicalCondition {
     var updatedAt: Date
 
     init(id: String = UUID().uuidString,
-         memo: String, rating: Int, entryDate: Date, createdAt: Date, updatedAt: Date)
-    {
+         memo: String, rating: Int, entryDate: Date, createdAt: Date, updatedAt: Date) {
         self.id = id
         self.memo = memo
         self.rating = rating

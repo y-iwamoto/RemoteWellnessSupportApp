@@ -19,6 +19,7 @@ struct DataContainerViewModifier: ViewModifier {
             schema: schema,
             isStoredInMemoryOnly: false
         )
+        // swiftlint:disable:next force_try
         container = try! ModelContainer(for: schema, configurations: [modelConfiguration])
     }
 
