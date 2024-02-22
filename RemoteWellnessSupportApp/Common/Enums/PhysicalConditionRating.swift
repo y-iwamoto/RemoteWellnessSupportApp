@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum PhysicalConditionRating: Int, CaseIterable {
+enum PhysicalConditionRating: Int, CaseIterable, SelectableItem {
+    var id: Self { self }
+
     case excellent = 0
     case good = 1
     case soso = 2

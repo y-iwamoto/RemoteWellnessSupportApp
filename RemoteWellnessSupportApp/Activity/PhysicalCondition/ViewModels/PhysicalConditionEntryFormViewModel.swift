@@ -5,9 +5,9 @@
 //  Created by 岩本雄貴 on 2024/02/17.
 //
 
+import Combine
 import Foundation
 import SwiftData
-import Combine
 
 class PhysicalConditionEntryFormViewModel: ObservableObject {
     @Published var selectedDateTime = Date()
@@ -19,7 +19,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
 
     func insertPhysicalCondition(_ modelContext: ModelContext) {
         guard validateInputs() else {
-           return
+            return
         }
 
         let rating = selectedRating!.rawValue
@@ -35,7 +35,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
             setError(withMessage: "体調登録に失敗しました")
         }
     }
-    
+
     private func validateInputs() -> Bool {
         guard (selectedRating?.rawValue) != nil else {
             setError(withMessage: "頭痛の痛みの度合いを選択してください")
