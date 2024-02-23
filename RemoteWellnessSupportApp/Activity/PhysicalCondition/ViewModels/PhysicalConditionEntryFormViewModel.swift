@@ -22,7 +22,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
             return
         }
 
-        let rating = selectedRating!.rawValue
+        guard let rating = selectedRating?.rawValue else { return }
 
         let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime, createdAt: Date(), updatedAt: Date())
 
