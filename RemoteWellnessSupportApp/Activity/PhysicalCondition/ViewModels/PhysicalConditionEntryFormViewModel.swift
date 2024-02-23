@@ -23,7 +23,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
 
         guard let rating = selectedRating?.rawValue else { return false }
 
-        let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime, createdAt: Date(), updatedAt: Date())
+        let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime)
 
         do {
             modelContext.insert(physicalCondition)
