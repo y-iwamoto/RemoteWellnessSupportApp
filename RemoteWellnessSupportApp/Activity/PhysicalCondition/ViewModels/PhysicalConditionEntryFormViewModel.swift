@@ -15,24 +15,24 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
     @Published var selectedRating: PhysicalConditionRating?
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
-    let successPublisher = PassthroughSubject<Void, Never>()
 
-    func insertPhysicalCondition(_ modelContext: ModelContext) {
+    func insertPhysicalCondition(_ modelContext: ModelContext) -> Bool {
         guard validateInputs() else {
-            return
+            return false
         }
 
-        guard let rating = selectedRating?.rawValue else { return }
+        guard let rating = selectedRating?.rawValue else { return false }
 
         let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime, createdAt: Date(), updatedAt: Date())
 
         do {
             modelContext.insert(physicalCondition)
             try modelContext.save()
-            successPublisher.send()
+            return true
         } catch {
             print("register PhysicalCondition Error: \(error)")
             setError(withMessage: "体調登録に失敗しました")
+            return false
         }
     }
 

@@ -25,10 +25,9 @@ struct PhysicalConditionEntryForm: View {
             StyledTextEditor(value: $viewModel.memo, placefolder: "自由に気持ちを吐き出しましょう", numberOfLines: 5)
 
             CommonButtonView(title: "保存する") {
-                viewModel.insertPhysicalCondition(modelContext)
-            }
-            .onReceive(viewModel.successPublisher) { _ in
-                dismiss()
+                if viewModel.insertPhysicalCondition(modelContext) {
+                    dismiss()
+                }
             }
         }
         .environment(\.locale, .init(identifier: "ja_JP"))
