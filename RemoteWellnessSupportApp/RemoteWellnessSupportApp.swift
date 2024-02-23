@@ -13,7 +13,6 @@ struct RemoteWellnessSupportApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .modifier(DataContainerViewModifier())
         }
     }
 }

@@ -7,16 +7,21 @@
 
 import Combine
 import Foundation
-import SwiftData
 
 class PhysicalConditionEntryFormViewModel: ObservableObject {
+    private let dataSource: PhysicalConditionDataSource
+
+    init(dataSource: PhysicalConditionDataSource = .shared) {
+        self.dataSource = dataSource
+    }
+
     @Published var selectedDateTime = Date()
     @Published var memo = ""
     @Published var selectedRating: PhysicalConditionRating?
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
 
-    func insertPhysicalCondition(_ modelContext: ModelContext) -> Bool {
+    func insertPhysicalCondition() -> Bool {
         guard validateInputs() else {
             return false
         }
@@ -26,8 +31,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
         let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime)
 
         do {
-            modelContext.insert(physicalCondition)
-            try modelContext.save()
+            try dataSource.insertPhysicalCondition(physicalCondition: physicalCondition)
             return true
         } catch {
             print("register PhysicalCondition Error: \(error)")

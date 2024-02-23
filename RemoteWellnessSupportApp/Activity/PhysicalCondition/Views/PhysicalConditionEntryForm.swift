@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PhysicalConditionEntryForm: View {
-    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = PhysicalConditionEntryFormViewModel()
 
@@ -25,7 +24,7 @@ struct PhysicalConditionEntryForm: View {
             StyledTextEditor(value: $viewModel.memo, placeholder: "自由に気持ちを吐き出しましょう", numberOfLines: 5)
 
             CommonButtonView(title: "保存する") {
-                if viewModel.insertPhysicalCondition(modelContext) {
+                if viewModel.insertPhysicalCondition() {
                     dismiss()
                 }
             }
