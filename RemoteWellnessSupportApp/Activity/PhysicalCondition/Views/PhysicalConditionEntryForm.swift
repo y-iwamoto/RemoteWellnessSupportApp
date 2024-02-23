@@ -22,7 +22,7 @@ struct PhysicalConditionEntryForm: View {
             SelectorView(selectedItem: $viewModel.selectedRating, items: PhysicalConditionRating.allCases)
                 .padding(.vertical)
 
-            StyledTextEditor(value: $viewModel.memo, placefolder: "自由に気持ちを吐き出しましょう", numberOfLines: 5)
+            StyledTextEditor(value: $viewModel.memo, placeholder: "自由に気持ちを吐き出しましょう", numberOfLines: 5)
 
             CommonButtonView(title: "保存する") {
                 if viewModel.insertPhysicalCondition(modelContext) {
