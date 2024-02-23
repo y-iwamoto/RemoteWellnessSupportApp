@@ -16,17 +16,6 @@ enum PhysicalConditionRating: Int, CaseIterable, SelectableItem {
     case fair = 3
     case poor = 4
 
-    init?(index: Int) {
-        switch index {
-        case 0: self = .excellent
-        case 1: self = .good
-        case 2: self = .soso
-        case 3: self = .fair
-        case 4: self = .poor
-        default: return nil
-        }
-    }
-
     var label: String {
         switch self {
         case .excellent:
