@@ -5,7 +5,6 @@
 //  Created by 岩本雄貴 on 2024/02/17.
 //
 
-import Combine
 import Foundation
 
 class PhysicalConditionEntryFormViewModel: ObservableObject {
