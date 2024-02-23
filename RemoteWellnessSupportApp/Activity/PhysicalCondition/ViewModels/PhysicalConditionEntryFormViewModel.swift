@@ -13,8 +13,8 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
     @Published var selectedDateTime = Date()
     @Published var memo = ""
     @Published var selectedRating: PhysicalConditionRating?
-    @Published var isErrorAlert: Bool = false
-    @Published var errorMessage: String = ""
+    @Published var isErrorAlert = false
+    @Published var errorMessage = ""
     let successPublisher = PassthroughSubject<Void, Never>()
 
     func insertPhysicalCondition(_ modelContext: ModelContext) {
