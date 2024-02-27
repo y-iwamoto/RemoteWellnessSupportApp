@@ -17,6 +17,16 @@
 		2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */; };
 		2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D62B6B0EBE00576531 /* AppColors.swift */; };
 		2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */; };
+		2E0DA41C2B8B2A73004E0185 /* GraphPhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA41B2B8B2A73004E0185 /* GraphPhysicalCondition.swift */; };
+		2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4202B8C0B1F004E0185 /* PhysicalConditionChartView.swift */; };
+		2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */; };
+		2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */; };
+		2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */; };
+		2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */; };
+		2E631C6E2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C6D2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift */; };
+		2E631C702B8972E800B35AAC /* TodayPhysicalConditionGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C6F2B8972E800B35AAC /* TodayPhysicalConditionGraphViewModel.swift */; };
+		2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C722B8A180E00B35AAC /* Date+Extensions.swift */; };
+		2E631C742B8A180E00B35AAC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C722B8A180E00B35AAC /* Date+Extensions.swift */; };
 		2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
@@ -94,6 +104,15 @@
 		2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTab.swift; sourceTree = "<group>"; };
 		2E0C95D62B6B0EBE00576531 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
+		2E0DA41B2B8B2A73004E0185 /* GraphPhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPhysicalCondition.swift; sourceTree = "<group>"; };
+		2E0DA4202B8C0B1F004E0185 /* PhysicalConditionChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionChartView.swift; sourceTree = "<group>"; };
+		2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneType.swift; sourceTree = "<group>"; };
+		2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDefinition.swift; sourceTree = "<group>"; };
+		2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisModifier.swift; sourceTree = "<group>"; };
+		2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionChartYModifier.swift; sourceTree = "<group>"; };
+		2E631C6D2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPhysicalConditionGraph.swift; sourceTree = "<group>"; };
+		2E631C6F2B8972E800B35AAC /* TodayPhysicalConditionGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPhysicalConditionGraphViewModel.swift; sourceTree = "<group>"; };
+		2E631C722B8A180E00B35AAC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionRating.swift; sourceTree = "<group>"; };
 		2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConst.swift; sourceTree = "<group>"; };
 		2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryFormViewModel.swift; sourceTree = "<group>"; };
@@ -201,6 +220,7 @@
 		2E0C95D42B6B0DCF00576531 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E631C712B8A17F700B35AAC /* Extensions */,
 				2ED957CF2B883D6F007663AA /* DataSources */,
 				2ED957C92B86BEE8007663AA /* Protocols */,
 				2E8C66D62B81FF0100280A17 /* ViewModifiers */,
@@ -229,6 +249,47 @@
 				2ED957C72B86BED1007663AA /* SelectorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2E0DA41A2B8B2A56004E0185 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E0DA41B2B8B2A73004E0185 /* GraphPhysicalCondition.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E0DA41D2B8C0AD6004E0185 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2E0DA4202B8C0B1F004E0185 /* PhysicalConditionChartView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2E0DA4262B8E10D2004E0185 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */,
+				2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		2E631C6C2B896EE800B35AAC /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				2E631C6D2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		2E631C712B8A17F700B35AAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E631C722B8A180E00B35AAC /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2E6E64132B8045DC00A11DB9 /* ViewModels */ = {
@@ -360,6 +421,8 @@
 		2EE812C22B79016D000B65E5 /* Condition */ = {
 			isa = PBXGroup;
 			children = (
+				2E0DA4262B8E10D2004E0185 /* ViewModifiers */,
+				2E0DA41A2B8B2A56004E0185 /* Models */,
 				2EE812EA2B7A2427000B65E5 /* ViewModels */,
 				2EE812E12B799FBF000B65E5 /* Enums */,
 				2EE812C32B79016D000B65E5 /* Views */,
@@ -370,6 +433,7 @@
 		2EE812C32B79016D000B65E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E0DA41D2B8C0AD6004E0185 /* Common */,
 				2EE812C42B79016D000B65E5 /* ConditionScreen.swift */,
 				2EE812C52B79016D000B65E5 /* Children */,
 			);
@@ -379,6 +443,7 @@
 		2EE812C52B79016D000B65E5 /* Children */ = {
 			isa = PBXGroup;
 			children = (
+				2E631C6C2B896EE800B35AAC /* Graphs */,
 				2EE812C62B79016D000B65E5 /* TabButton.swift */,
 				2EE812C72B79016D000B65E5 /* TodayCondition.swift */,
 				2EE812E62B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift */,
@@ -476,6 +541,8 @@
 			children = (
 				2EE812E22B79A068000B65E5 /* ConditionTab.swift */,
 				2EE812E42B79A4A0000B65E5 /* ConditionNavigationLink.swift */,
+				2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */,
+				2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -484,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				2EE812EB2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift */,
+				2E631C6F2B8972E800B35AAC /* TodayPhysicalConditionGraphViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -613,9 +681,13 @@
 			files = (
 				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
+				2E0DA41C2B8B2A73004E0185 /* GraphPhysicalCondition.swift in Sources */,
+				2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */,
 				2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
+				2E631C6E2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift in Sources */,
+				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
 				2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
 				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
@@ -632,10 +704,14 @@
 				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
 				2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
+				2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */,
 				2EE812C92B79016D000B65E5 /* TabButton.swift in Sources */,
 				2ED957C82B86BED1007663AA /* SelectorView.swift in Sources */,
+				2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */,
+				2E631C702B8972E800B35AAC /* TodayPhysicalConditionGraphViewModel.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
+				2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
 				2ED957CE2B86D7D1007663AA /* ErrorAlertModifier.swift in Sources */,
 				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
 				2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */,
@@ -644,6 +720,7 @@
 				2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */,
 				2ED957CB2B86BEF8007663AA /* SelectableItem.swift in Sources */,
 				2E6E64152B80460500A11DB9 /* PhysicalConditionEntryFormViewModel.swift in Sources */,
+				2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */,
 				2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */,
 				2EFD01892B71A721003020C6 /* Const.swift in Sources */,
 				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
@@ -657,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED957D22B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */,
+				2E631C742B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
 				2ED957CC2B86C7EC007663AA /* SelectableItem.swift in Sources */,
 				2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EBD2D4A2B608BDF0063EC7A /* ContentView.swift in Sources */,

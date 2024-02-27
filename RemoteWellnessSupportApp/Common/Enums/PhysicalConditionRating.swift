@@ -10,39 +10,39 @@ import Foundation
 enum PhysicalConditionRating: Int, CaseIterable, SelectableItem {
     var id: Self { self }
 
-    case excellent = 0
-    case good = 1
-    case soso = 2
-    case fair = 3
-    case poor = 4
+    case excellent = 5
+    case good = 4
+    case soso = 3
+    case fair = 2
+    case poor = 1
 
     var label: String {
         switch self {
         case .excellent:
-            return "最高"
+            "最高"
         case .good:
-            return "良い"
+            "良い"
         case .soso:
-            return "普通"
+            "普通"
         case .fair:
-            return "悪い"
+            "悪い"
         case .poor:
-            return "最悪"
+            "最悪"
         }
     }
 
     var imageName: String {
         switch self {
         case .excellent:
-            return "star.fill"
+            "star.fill"
         case .good:
-            return "star.lefthalf.fill"
+            "star.lefthalf.fill"
         case .soso:
-            return "star.leadinghalf.fill"
+            "star.leadinghalf.fill"
         case .fair:
-            return "star"
+            "star"
         case .poor:
-            return "star.slash"
+            "star.slash"
         }
     }
 }

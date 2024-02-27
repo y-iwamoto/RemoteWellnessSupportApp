@@ -5,6 +5,7 @@
 //  Created by 岩本雄貴 on 2024/02/23.
 //
 
+import Foundation
 import SwiftData
 
 final class PhysicalConditionDataSource {
@@ -24,5 +25,11 @@ final class PhysicalConditionDataSource {
     func insertPhysicalCondition(physicalCondition: PhysicalCondition) throws {
         modelContext.insert(physicalCondition)
         try modelContext.save()
+    }
+
+    func fetchPhysicalConditions(predicate: Predicate<PhysicalCondition>?,
+                                 sortBy: [SortDescriptor<PhysicalCondition>] = []) throws -> [PhysicalCondition] {
+        let descriptor = FetchDescriptor<PhysicalCondition>(predicate: predicate, sortBy: sortBy)
+        return try modelContext.fetch(descriptor)
     }
 }
