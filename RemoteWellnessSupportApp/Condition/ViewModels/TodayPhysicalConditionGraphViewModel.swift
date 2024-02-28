@@ -9,7 +9,7 @@ import Foundation
 
 class TodayPhysicalConditionGraphViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
-    private let noEntryValueForSpecificTime: Int = 0
+    private let noEntryValueForSpecificTime = 0
 
     init(dataSource: PhysicalConditionDataSource = .shared) {
         self.dataSource = dataSource
