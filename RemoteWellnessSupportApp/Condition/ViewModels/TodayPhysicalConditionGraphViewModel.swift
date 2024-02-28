@@ -11,6 +11,9 @@ class TodayPhysicalConditionGraphViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
     private let noEntryValueForSpecificTime = 0
 
+    @Published var isErrorAlert = false
+    @Published var errorMessage = ""
+
     init(dataSource: PhysicalConditionDataSource = .shared) {
         self.dataSource = dataSource
     }
@@ -22,10 +25,10 @@ class TodayPhysicalConditionGraphViewModel: ObservableObject {
             let predicate = createPredicateForLastDay()
 
             let physicalConditions = try dataSource.fetchPhysicalConditions(predicate: predicate)
-
             setTodayPhysicalConditions(physicalConditions)
         } catch {
             print("fetch PhysicalCondition Error: \(error)")
+            setError(withMessage: "体調データの取得に失敗しました")
         }
     }
 
@@ -76,5 +79,10 @@ class TodayPhysicalConditionGraphViewModel: ObservableObject {
             round(Double(totalRating) / Double(conditionsInHour.count))
         }
         return averageRating
+    }
+
+    private func setError(withMessage message: String) {
+        isErrorAlert = true
+        errorMessage = message
     }
 }

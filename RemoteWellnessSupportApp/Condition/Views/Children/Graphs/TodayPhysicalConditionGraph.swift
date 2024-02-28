@@ -16,6 +16,7 @@ struct TodayPhysicalConditionGraph: View {
             Text("体調")
                 .font(.title3)
             content
+                .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
                 .onAppear {
                     viewModel.fetchPhysicalConditions()
                 }
