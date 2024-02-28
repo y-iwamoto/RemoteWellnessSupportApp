@@ -17,11 +17,9 @@ struct PhysicalConditionChartYModifier: ViewModifier {
             .chartYScale(domain: physicalConditionRateRange)
             .chartYAxis {
                 AxisMarks(position: .leading, values: ratingValues) { value in
-                    if let rawValue = value.as(Int.self) {
-                        if let rating = PhysicalConditionRating(rawValue: rawValue) {
-                            AxisValueLabel {
-                                Image(systemName: rating.imageName)
-                            }
+                    if let rawValue = value.as(Int.self), let rating = PhysicalConditionRating(rawValue: rawValue) {
+                        AxisValueLabel {
+                            Image(systemName: rating.imageName)
                         }
                     }
                 }
