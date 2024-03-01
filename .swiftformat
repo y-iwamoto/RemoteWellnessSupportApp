@@ -3,3 +3,5 @@
 
 # format options
 --commas inline # trailingCommas 有効時 複数行の配列や辞書などで、最後のカンマを無効化 lintでwaringがでるため追加
+
+--disable wrapMultilineStatementBraces
