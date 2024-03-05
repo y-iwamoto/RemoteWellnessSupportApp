@@ -51,7 +51,7 @@ struct ActivityEntryArea: View {
     private func destinationView(for destination: ConditionNavigationLink.Destination) -> some View {
         switch destination {
         case .physicalConditionEntryForm:
-            PhysicalConditionEntryForm()
+            PhysicalConditionCreateForm()
         case .reviewEntryForm:
             ReviewEntryForm()
         case .stepEntryForm:
