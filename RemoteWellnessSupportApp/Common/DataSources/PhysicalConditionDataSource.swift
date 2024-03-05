@@ -27,9 +27,18 @@ final class PhysicalConditionDataSource {
         try modelContext.save()
     }
 
+    func updatePhysicalCondition(physicalCondition _: PhysicalCondition) throws {
+        try modelContext.save()
+    }
+
     func fetchPhysicalConditions(predicate: Predicate<PhysicalCondition>?,
                                  sortBy: [SortDescriptor<PhysicalCondition>] = []) throws -> [PhysicalCondition] {
         let descriptor = FetchDescriptor<PhysicalCondition>(predicate: predicate, sortBy: sortBy)
         return try modelContext.fetch(descriptor)
+    }
+
+    func removePhysicalCondition(_ physicalCondition: PhysicalCondition) throws {
+        modelContext.delete(physicalCondition)
+        try modelContext.save()
     }
 }

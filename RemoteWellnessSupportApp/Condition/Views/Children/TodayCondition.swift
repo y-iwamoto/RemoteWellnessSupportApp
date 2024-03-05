@@ -13,9 +13,15 @@ struct TodayCondition: View {
             ZStack {
                 ScrollView {
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        TodayPhysicalConditionGraph()
-                            .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
-                            .padding()
+                        NavigationLink(value: ActivityListDestination.physicalConditionList) {
+                            TodayPhysicalConditionGraph()
+                                .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
+                                .padding()
+                        }
+                    }
+                    .navigationDestination(for: ActivityListDestination.self) { _ in
+
+                        TodaysPhysicalConditionListView()
                     }
                 }
                 ActivityEntryArea()
