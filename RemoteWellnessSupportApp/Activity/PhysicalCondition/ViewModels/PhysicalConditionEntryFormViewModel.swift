@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class PhysicalConditionEntryFormViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
 
