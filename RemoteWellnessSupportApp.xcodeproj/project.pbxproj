@@ -192,13 +192,6 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		2E0ACDFD2B9690FC00318BF2 /* Children */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Children;
-			sourceTree = "<group>";
-		};
 		2E0C95BD2B69201000576531 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,7 +516,6 @@
 		2EE812D02B79904E000B65E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2E0ACDFD2B9690FC00318BF2 /* Children */,
 				2EE812D12B79904E000B65E5 /* PhysicalConditionEntryForm.swift */,
 				2E0ACDF22B93E42200318BF2 /* TodaysPhysicalConditionListView.swift */,
 				2E0ACDF92B947DB100318BF2 /* PhysicalConditionEditForm.swift */,
