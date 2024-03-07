@@ -25,7 +25,10 @@ struct PhysicalConditionEntryForm: View {
             StyledTextEditor(value: $viewModel.memo, placeholder: "自由に気持ちを吐き出しましょう", numberOfLines: 5)
 
             CommonButtonView(title: "保存する") {
-                if viewModel.formAction() {
+                viewModel.formAction()
+            }
+            .onChange(of: viewModel.isFormSubmitted) {
+                if viewModel.isFormSubmitted {
                     dismiss()
                 }
             }

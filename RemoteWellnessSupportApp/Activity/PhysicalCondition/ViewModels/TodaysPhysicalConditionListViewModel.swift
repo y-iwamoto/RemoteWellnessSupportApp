@@ -23,7 +23,6 @@ class TodaysPhysicalConditionListViewModel: ObservableObject {
             let sortBy = [SortDescriptor(\PhysicalCondition.entryDate)]
             physicalConditions = try dataSource.fetchPhysicalConditions(predicate: predicate, sortBy: sortBy)
         } catch {
-            print("fetch PhysicalCondition Error: \(error)")
             setError(withMessage: "体調データの取得に失敗しました")
         }
     }
@@ -33,8 +32,7 @@ class TodaysPhysicalConditionListViewModel: ObservableObject {
         do {
             try dataSource.removePhysicalCondition(physicalConditions[index])
         } catch {
-            print("delete PhysicalCondition Error: \(error)")
-            setError(withMessage: "体調データの取得に失敗しました")
+            setError(withMessage: "体調データの削除に失敗しました")
         }
     }
 
