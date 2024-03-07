@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PhysicalConditionEditForm: View {
     var physicalCondition: PhysicalCondition
-    @ObservedObject var viewModel: PhysicalConditionEntryFormViewModel
+    @StateObject var viewModel: PhysicalConditionEntryFormViewModel
 
     init(physicalCondition: PhysicalCondition) {
         self.physicalCondition = physicalCondition
-        viewModel = PhysicalConditionEntryFormViewModel(formAction: FormAction.update, physicalCondition: physicalCondition)
+        _viewModel = StateObject(wrappedValue: PhysicalConditionEntryFormViewModel(formAction: .update, physicalCondition: physicalCondition))
     }
 
     var body: some View {
