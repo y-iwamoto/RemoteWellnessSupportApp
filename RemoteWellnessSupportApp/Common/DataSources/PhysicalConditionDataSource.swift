@@ -27,7 +27,7 @@ final class PhysicalConditionDataSource {
         try modelContext.save()
     }
 
-    func updatePhysicalCondition() throws {
+    func updatePhysicalCondition(physicalCondition _: PhysicalCondition) throws {
         try modelContext.save()
     }
 
