@@ -66,7 +66,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
         physicalCondition.rating = rating
         physicalCondition.entryDate = selectedDateTime
 
-        performDataSourceOperation { try self.dataSource.updatePhysicalCondition() }
+        performDataSourceOperation { try self.dataSource.updatePhysicalCondition(physicalCondition: physicalCondition) }
     }
 
     private func performDataSourceOperation(_ operation: () throws -> Void) {
@@ -83,20 +83,6 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
         selectedDateTime = item.entryDate
         memo = item.memo
         selectedRating = PhysicalConditionRating(rawValue: item.rating)
-    }
-
-    private func updatePhysicalConditionValues() -> PhysicalCondition? {
-        guard let physicalCondition else {
-            return nil
-        }
-
-        guard let rating = selectedRating?.rawValue else { return nil }
-
-        physicalCondition.memo = memo
-        physicalCondition.rating = rating
-        physicalCondition.entryDate = selectedDateTime
-
-        return physicalCondition
     }
 
     private func validateInputs() -> Bool {
