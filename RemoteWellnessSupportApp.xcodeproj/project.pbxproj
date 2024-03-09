@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0ACDF32B93E42200318BF2 /* TodaysPhysicalConditionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF22B93E42200318BF2 /* TodaysPhysicalConditionListView.swift */; };
+		2E0ACDF52B93E9EA00318BF2 /* TodaysPhysicalConditionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF42B93E9EA00318BF2 /* TodaysPhysicalConditionListViewModel.swift */; };
+		2E0ACDF82B947CD800318BF2 /* ActivityEditDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF72B947CD800318BF2 /* ActivityEditDestination.swift */; };
+		2E0ACDFA2B947DB100318BF2 /* PhysicalConditionEditForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF92B947DB100318BF2 /* PhysicalConditionEditForm.swift */; };
+		2E0ACDFC2B9690F300318BF2 /* PhysicalConditionCreateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDFB2B9690F300318BF2 /* PhysicalConditionCreateForm.swift */; };
+		2E0ACDFF2B97E32B00318BF2 /* FormAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDFE2B97E32B00318BF2 /* FormAction.swift */; };
+		2E0ACE012B97E4F200318BF2 /* ActivityListDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACE002B97E4F200318BF2 /* ActivityListDestination.swift */; };
 		2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95BE2B69208A00576531 /* IntroductionView.swift */; };
 		2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95C12B6929E600576531 /* OnboardingContentView.swift */; };
 		2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95C52B6A710700576531 /* OnboardingScreenView.swift */; };
@@ -35,6 +42,8 @@
 		2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */; };
+		2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */; };
+		2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -94,6 +103,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E0ACDF22B93E42200318BF2 /* TodaysPhysicalConditionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysPhysicalConditionListView.swift; sourceTree = "<group>"; };
+		2E0ACDF42B93E9EA00318BF2 /* TodaysPhysicalConditionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysPhysicalConditionListViewModel.swift; sourceTree = "<group>"; };
+		2E0ACDF72B947CD800318BF2 /* ActivityEditDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEditDestination.swift; sourceTree = "<group>"; };
+		2E0ACDF92B947DB100318BF2 /* PhysicalConditionEditForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEditForm.swift; sourceTree = "<group>"; };
+		2E0ACDFB2B9690F300318BF2 /* PhysicalConditionCreateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionCreateForm.swift; sourceTree = "<group>"; };
+		2E0ACDFE2B97E32B00318BF2 /* FormAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAction.swift; sourceTree = "<group>"; };
+		2E0ACE002B97E4F200318BF2 /* ActivityListDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListDestination.swift; sourceTree = "<group>"; };
 		2E0C95BE2B69208A00576531 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
 		2E0C95C12B6929E600576531 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		2E0C95C52B6A710700576531 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
@@ -118,6 +134,8 @@
 		2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryFormViewModel.swift; sourceTree = "<group>"; };
 		2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCondition.swift; sourceTree = "<group>"; };
 		2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextEditor.swift; sourceTree = "<group>"; };
+		2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionDataSourceProtocol.swift; sourceTree = "<group>"; };
+		2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhysicalConditionDataSource+Extension.swift"; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +187,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0ACDF62B947C3C00318BF2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ACDF72B947CD800318BF2 /* ActivityEditDestination.swift */,
+				2E0ACE002B97E4F200318BF2 /* ActivityListDestination.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		2E0C95BD2B69201000576531 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				2E631C722B8A180E00B35AAC /* Date+Extensions.swift */,
+				2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */,
+				2E0ACDF42B93E9EA00318BF2 /* TodaysPhysicalConditionListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -381,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				2ED957CA2B86BEF8007663AA /* SelectableItem.swift */,
+				2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -455,6 +485,7 @@
 		2EE812CB2B79904E000B65E5 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				2E0ACDF62B947C3C00318BF2 /* Enums */,
 				2EE812CC2B79904E000B65E5 /* Hydration */,
 				2EE812CF2B79904E000B65E5 /* PhysicalCondition */,
 				2EE812D22B79904E000B65E5 /* Step */,
@@ -492,6 +523,9 @@
 			isa = PBXGroup;
 			children = (
 				2EE812D12B79904E000B65E5 /* PhysicalConditionEntryForm.swift */,
+				2E0ACDF22B93E42200318BF2 /* TodaysPhysicalConditionListView.swift */,
+				2E0ACDF92B947DB100318BF2 /* PhysicalConditionEditForm.swift */,
+				2E0ACDFB2B9690F300318BF2 /* PhysicalConditionCreateForm.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -570,6 +604,7 @@
 				2EFD01882B71A721003020C6 /* Const.swift */,
 				2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */,
 				2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */,
+				2E0ACDFE2B97E32B00318BF2 /* FormAction.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -688,14 +723,19 @@
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E631C6E2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift in Sources */,
 				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
+				2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */,
 				2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */,
+				2E0ACDF52B93E9EA00318BF2 /* TodaysPhysicalConditionListViewModel.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
+				2E0ACDFC2B9690F300318BF2 /* PhysicalConditionCreateForm.swift in Sources */,
 				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
 				2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
 				2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */,
+				2E0ACE012B97E4F200318BF2 /* ActivityListDestination.swift in Sources */,
 				2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */,
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
+				2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */,
 				2EE812E52B79A4A0000B65E5 /* ConditionNavigationLink.swift in Sources */,
@@ -710,8 +750,11 @@
 				2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */,
 				2E631C702B8972E800B35AAC /* TodayPhysicalConditionGraphViewModel.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
+				2E0ACDF32B93E42200318BF2 /* TodaysPhysicalConditionListView.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
+				2E0ACDFA2B947DB100318BF2 /* PhysicalConditionEditForm.swift in Sources */,
 				2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
+				2E0ACDF82B947CD800318BF2 /* ActivityEditDestination.swift in Sources */,
 				2ED957CE2B86D7D1007663AA /* ErrorAlertModifier.swift in Sources */,
 				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
 				2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */,
@@ -725,6 +768,7 @@
 				2EFD01892B71A721003020C6 /* Const.swift in Sources */,
 				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
 				2E0C95CA2B6A73EF00576531 /* ReviewDescriptionView.swift in Sources */,
+				2E0ACDFF2B97E32B00318BF2 /* FormAction.swift in Sources */,
 				2EE812C02B790137000B65E5 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

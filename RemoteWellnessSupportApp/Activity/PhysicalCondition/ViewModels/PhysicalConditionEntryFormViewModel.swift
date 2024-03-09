@@ -9,10 +9,17 @@ import Foundation
 
 @MainActor
 class PhysicalConditionEntryFormViewModel: ObservableObject {
-    private let dataSource: PhysicalConditionDataSource
+    private let dataSource: PhysicalConditionDataSourceProtocol
+    private let action: FormAction
+    private let physicalCondition: PhysicalCondition?
 
-    init(dataSource: PhysicalConditionDataSource = .shared) {
+    init(formAction: FormAction = .create, physicalCondition: PhysicalCondition? = nil,
+         dataSource: PhysicalConditionDataSourceProtocol = PhysicalConditionDataSource.shared) {
         self.dataSource = dataSource
+        action = formAction
+        self.physicalCondition = physicalCondition
+
+        setFormInitialValue()
     }
 
     @Published var selectedDateTime = Date()
@@ -20,28 +27,67 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
     @Published var selectedRating: PhysicalConditionRating?
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
+    @Published var isFormSubmitted = false
 
-    func insertPhysicalCondition() -> Bool {
+    func formAction() {
         guard validateInputs() else {
-            return false
+            return
         }
 
-        guard let rating = selectedRating?.rawValue else { return false }
-
-        let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime)
-
-        do {
-            try dataSource.insertPhysicalCondition(physicalCondition: physicalCondition)
-            return true
-        } catch {
-            print("register PhysicalCondition Error: \(error)")
-            setError(withMessage: "体調登録に失敗しました")
-            return false
+        switch action {
+        case .create:
+            insertPhysicalCondition()
+        case .update:
+            updatePhysicalCondition()
         }
     }
 
+    func insertPhysicalCondition() {
+        guard let rating = selectedRating?.rawValue else {
+            setError(withMessage: "評価を選択してください")
+            return
+        }
+
+        let physicalCondition = PhysicalCondition(memo: memo, rating: rating, entryDate: selectedDateTime)
+        performDataSourceOperation { try self.dataSource.insertPhysicalCondition(physicalCondition: physicalCondition) }
+    }
+
+    func updatePhysicalCondition() {
+        guard let physicalCondition else {
+            setError(withMessage: "更新する体調情報が存在しません")
+            return
+        }
+
+        guard let rating = selectedRating?.rawValue else {
+            setError(withMessage: "評価が選択されていません")
+            return
+        }
+
+        physicalCondition.memo = memo
+        physicalCondition.rating = rating
+        physicalCondition.entryDate = selectedDateTime
+
+        performDataSourceOperation { try self.dataSource.updatePhysicalCondition(physicalCondition: physicalCondition) }
+    }
+
+    private func performDataSourceOperation(_ operation: () throws -> Void) {
+        do {
+            try operation()
+            isFormSubmitted = true
+        } catch {
+            setError(withMessage: "データの保存に失敗しました")
+        }
+    }
+
+    private func setFormInitialValue() {
+        guard let item = physicalCondition else { return }
+        selectedDateTime = item.entryDate
+        memo = item.memo
+        selectedRating = PhysicalConditionRating(rawValue: item.rating)
+    }
+
     private func validateInputs() -> Bool {
-        guard (selectedRating?.rawValue) != nil else {
+        guard selectedRating != nil else {
             setError(withMessage: "頭痛の痛みの度合いを選択してください")
             return false
         }
