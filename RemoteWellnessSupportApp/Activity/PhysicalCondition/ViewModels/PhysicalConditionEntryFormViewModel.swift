@@ -9,11 +9,12 @@ import Foundation
 
 @MainActor
 class PhysicalConditionEntryFormViewModel: ObservableObject {
-    private let dataSource: PhysicalConditionDataSource
+    private let dataSource: PhysicalConditionDataSourceProtocol
     private let action: FormAction
     private let physicalCondition: PhysicalCondition?
 
-    init(formAction: FormAction = .create, physicalCondition: PhysicalCondition? = nil, dataSource: PhysicalConditionDataSource = .shared) {
+    init(formAction: FormAction = .create, physicalCondition: PhysicalCondition? = nil,
+         dataSource: PhysicalConditionDataSourceProtocol = PhysicalConditionDataSource.shared) {
         self.dataSource = dataSource
         action = formAction
         self.physicalCondition = physicalCondition
@@ -74,7 +75,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
             try operation()
             isFormSubmitted = true
         } catch {
-            setError(withMessage: "データの操作に失敗しました: \(error.localizedDescription)")
+            setError(withMessage: "データの保存に失敗しました")
         }
     }
 
