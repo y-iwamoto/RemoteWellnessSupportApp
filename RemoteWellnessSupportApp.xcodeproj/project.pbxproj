@@ -42,6 +42,8 @@
 		2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */; };
+		2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */; };
+		2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -132,6 +134,8 @@
 		2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryFormViewModel.swift; sourceTree = "<group>"; };
 		2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCondition.swift; sourceTree = "<group>"; };
 		2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextEditor.swift; sourceTree = "<group>"; };
+		2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionDataSourceProtocol.swift; sourceTree = "<group>"; };
+		2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhysicalConditionDataSource+Extension.swift"; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				2E631C722B8A180E00B35AAC /* Date+Extensions.swift */,
+				2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				2ED957CA2B86BEF8007663AA /* SelectableItem.swift */,
+				2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -717,6 +723,7 @@
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E631C6E2B896F0D00B35AAC /* TodayPhysicalConditionGraph.swift in Sources */,
 				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
+				2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */,
 				2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */,
 				2E0ACDF52B93E9EA00318BF2 /* TodaysPhysicalConditionListViewModel.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
@@ -728,6 +735,7 @@
 				2E0ACE012B97E4F200318BF2 /* ActivityListDestination.swift in Sources */,
 				2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */,
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
+				2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */,
 				2EE812E52B79A4A0000B65E5 /* ConditionNavigationLink.swift in Sources */,

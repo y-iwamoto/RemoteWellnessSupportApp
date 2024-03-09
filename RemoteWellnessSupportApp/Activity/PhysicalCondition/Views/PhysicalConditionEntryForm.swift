@@ -28,9 +28,8 @@ struct PhysicalConditionEntryForm: View {
                 viewModel.formAction()
             }
             .onChange(of: viewModel.isFormSubmitted) {
-                if viewModel.isFormSubmitted {
-                    dismiss()
-                }
+                guard viewModel.isFormSubmitted else { return }
+                dismiss()
             }
         }
         .environment(\.locale, .init(identifier: "ja_JP"))
