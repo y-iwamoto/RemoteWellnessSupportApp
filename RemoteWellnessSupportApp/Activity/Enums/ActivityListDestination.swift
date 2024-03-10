@@ -8,5 +8,5 @@
 import Foundation
 
 enum ActivityListDestination {
-    case physicalConditionList
+    case todayPhysicalConditionList, weekPhysicalConditionList
 }
