@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct WeekPhysicalConditionListView: View {
-    @StateObject var viewModel = WeekPhysicalConditionListViewModel()
+    @ObservedObject var viewModel: WeekPhysicalConditionListViewModel
+
+    init(viewModel: WeekPhysicalConditionListViewModel = WeekPhysicalConditionListViewModel()) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         Text("体調一覧")
