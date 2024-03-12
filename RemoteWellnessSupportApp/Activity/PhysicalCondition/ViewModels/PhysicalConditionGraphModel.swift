@@ -38,7 +38,9 @@ class PhysicalConditionGraphModel: ObservableObject {
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: targetDate)
         let endOfDayComponents = DateComponents(day: 1)
-        let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay)!
+        guard let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay) else {
+            fatalError("Failed to calculate the end of day")
+        }
         let predicate = #Predicate<PhysicalCondition> { physicalCondition in
             physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
         }

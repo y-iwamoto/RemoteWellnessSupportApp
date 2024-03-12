@@ -9,7 +9,7 @@ import Foundation
 
 class DailyPhysicalConditionListViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
-    private let targetDate: Date
+    let targetDate: Date
     @Published var physicalConditions: [PhysicalCondition] = []
     @Published var isErrorAlert = false
     @Published var errorMessage = ""

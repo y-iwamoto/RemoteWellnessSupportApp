@@ -55,7 +55,7 @@ class WeekPhysicalConditionListViewModel: ObservableObject {
         let currentTime = Date()
         let oneWeekAgo = Calendar.current.date(byAdding: .day, value: -7, to: currentTime)
         let predicate = #Predicate<PhysicalCondition> { physicalCondition in
-            physicalCondition.entryDate > (oneWeekAgo ?? currentTime)
+            physicalCondition.entryDate > oneWeekAgo!
         }
         return predicate
     }
