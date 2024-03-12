@@ -11,7 +11,7 @@ struct DailyPhysicalConditionList: View {
     let targetDate: Date
     @StateObject var viewModel: DailyPhysicalConditionListViewModel
 
-    init(targetDate: Date) {
+    init(targetDate: Date = Date()) {
         self.targetDate = targetDate
         _viewModel = StateObject(wrappedValue: DailyPhysicalConditionListViewModel(targetDate: targetDate))
     }

@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TodayCondition: View {
+    let today = Date()
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 ScrollView {
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        NavigationLink(value: ActivityListDestination.dailyPhysicalConditionList(Date())) {
-                            PhysicalConditionGraph(targetDate: Date())
+                        NavigationLink(value: ActivityListDestination.dailyPhysicalConditionList(today)) {
+                            PhysicalConditionGraph(targetDate: today)
                                 .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
                                 .padding()
                         }

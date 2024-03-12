@@ -58,7 +58,10 @@ class PhysicalConditionGraphModel: ObservableObject {
         let calendar = Calendar.current
         let currentHour = calendar.component(.hour, from: targetDate)
         // TODO: 現在はhoursRangeを特定値で固定にしているが別途、ここも動的になる
-        let hoursRange: Range<Int> = (currentHour > 0 && currentHour < 9) ? 0 ..< currentHour + 1 : 9 ..< 19
+        let startHour = 0
+        let endHour = 9
+        let defaultEndHour = 19
+        let hoursRange: Range<Int> = (currentHour > startHour && currentHour < endHour) ? startHour ..< currentHour + 1 : endHour ..< defaultEndHour
 
         for hour in hoursRange {
             let averageRating = calculateAverageRatingForHour(conditions, hour: hour)
