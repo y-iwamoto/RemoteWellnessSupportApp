@@ -19,8 +19,14 @@ struct WeekCondition: View {
                                 .padding()
                         }
                     }
-                    .navigationDestination(for: ActivityListDestination.self) { _ in
-                        WeekPhysicalConditionListView()
+                    .frame(maxWidth: .infinity)
+                    .navigationDestination(for: ActivityListDestination.self) { destination in
+                        switch destination {
+                        case let .dailyPhysicalConditionList(targetDate):
+                            DailyPhysicalConditionList(targetDate: targetDate)
+                        case .weekPhysicalConditionList:
+                            WeekPhysicalConditionListView()
+                        }
                     }
                 }
             }

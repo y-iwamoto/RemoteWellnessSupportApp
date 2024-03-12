@@ -45,7 +45,7 @@ class WeekPhysicalConditionListViewModel: ObservableObject {
         let sortedDates = groupedConditions.keys.sorted()
 
         let dateWithPhysicalCondition: [DateWithPhysicalCondition] = sortedDates.map { date -> DateWithPhysicalCondition in
-            DateWithPhysicalCondition(date: date.toString(format: "yyyy/MM/dd"))
+            DateWithPhysicalCondition(date: date)
         }
 
         return dateWithPhysicalCondition

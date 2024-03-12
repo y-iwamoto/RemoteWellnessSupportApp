@@ -13,6 +13,9 @@ struct WeekPhysicalConditionListView: View {
     var body: some View {
         Text("体調一覧")
         content
+            .navigationDestination(for: DateWithPhysicalCondition.self) { dateWithPhysicalCondition in
+                SelectedDatePhysicalConditionGraph(targetDate: dateWithPhysicalCondition.date)
+            }
             .onAppear {
                 viewModel.fetchDatesWithPhysicalCondition()
             }
@@ -27,11 +30,10 @@ struct WeekPhysicalConditionListView: View {
             List {
                 ForEach(viewModel.dateWithPhysicalConditions, id: \.self) { item in
                     HStack {
-                        // TODO: 後でnavigation対応を実施
-                        // NavigationLink(value: item) {
-                        Text(item.date)
-                        Spacer()
-                        // }
+                        NavigationLink(value: item) {
+                            Text(item.date.toString(format: "yyyy/MM/dd"))
+                            Spacer()
+                        }
                     }
                 }
             }

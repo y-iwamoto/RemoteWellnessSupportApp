@@ -1,5 +1,5 @@
 //
-//  TodaysPhysicalConditionListViewModel.swift
+//  DailyPhysicalConditionListViewModel.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/03/03.
@@ -7,19 +7,21 @@
 
 import Foundation
 
-class TodaysPhysicalConditionListViewModel: ObservableObject {
+class DailyPhysicalConditionListViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
+    private let targetDate: Date
     @Published var physicalConditions: [PhysicalCondition] = []
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
 
-    init(dataSource: PhysicalConditionDataSource = .shared) {
+    init(dataSource: PhysicalConditionDataSource = .shared, targetDate: Date = Date()) {
         self.dataSource = dataSource
+        self.targetDate = targetDate
     }
 
     func fetchPhysicalConditions() {
         do {
-            let predicate = createPredicateForToday()
+            let predicate = createPredicateForTargetDate()
             let sortBy = [SortDescriptor(\PhysicalCondition.entryDate)]
             physicalConditions = try dataSource.fetchPhysicalConditions(predicate: predicate, sortBy: sortBy)
         } catch {
@@ -36,11 +38,13 @@ class TodaysPhysicalConditionListViewModel: ObservableObject {
         }
     }
 
-    private func createPredicateForToday() -> Predicate<PhysicalCondition> {
+    private func createPredicateForTargetDate() -> Predicate<PhysicalCondition> {
         let calendar = Calendar.current
-        let startOfDay = calendar.startOfDay(for: Date())
+        let startOfDay = calendar.startOfDay(for: targetDate)
+        let endOfDayComponents = DateComponents(day: 1)
+        let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay)!
         let predicate = #Predicate<PhysicalCondition> { physicalCondition in
-            physicalCondition.entryDate >= startOfDay
+            physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
         }
         return predicate
     }

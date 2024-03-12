@@ -1,5 +1,5 @@
 //
-//  TodayPhysicalConditionGraphViewModel.swift
+//  PhysicalConditionGraphModel.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/02/24.
@@ -7,15 +7,17 @@
 
 import Foundation
 
-class TodayPhysicalConditionGraphViewModel: ObservableObject {
+class PhysicalConditionGraphModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
     private let noEntryValueForSpecificTime = 0
+    private let targetDate: Date
 
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
 
-    init(dataSource: PhysicalConditionDataSource = .shared) {
+    init(dataSource: PhysicalConditionDataSource = .shared, targetDate: Date = Date()) {
         self.dataSource = dataSource
+        self.targetDate = targetDate
     }
 
     @Published var todayPhysicalConditions: [GraphPhysicalCondition] = []
@@ -25,18 +27,20 @@ class TodayPhysicalConditionGraphViewModel: ObservableObject {
             let predicate = createPredicateForLastDay()
 
             let physicalConditions = try dataSource.fetchPhysicalConditions(predicate: predicate)
+
             setTodayPhysicalConditions(physicalConditions)
         } catch {
-            print("fetch PhysicalCondition Error: \(error)")
             setError(withMessage: "体調データの取得に失敗しました")
         }
     }
 
     private func createPredicateForLastDay() -> Predicate<PhysicalCondition> {
-        let currentTime = Date()
-        let oneDayAgo = Calendar.current.date(byAdding: .day, value: -1, to: currentTime)
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: targetDate)
+        let endOfDayComponents = DateComponents(day: 1)
+        let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay)!
         let predicate = #Predicate<PhysicalCondition> { physicalCondition in
-            physicalCondition.entryDate > (oneDayAgo ?? currentTime)
+            physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
         }
         return predicate
     }
@@ -52,14 +56,13 @@ class TodayPhysicalConditionGraphViewModel: ObservableObject {
     private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) -> [GraphPhysicalCondition] {
         var results: [GraphPhysicalCondition] = []
         let calendar = Calendar.current
-        let currentHour = calendar.component(.hour, from: Date())
-
+        let currentHour = calendar.component(.hour, from: targetDate)
         // TODO: 現在はhoursRangeを特定値で固定にしているが別途、ここも動的になる
-        let hoursRange: Range<Int> = currentHour < 9 ? 0 ..< currentHour + 1 : 9 ..< 19
+        let hoursRange: Range<Int> = (currentHour > 0 && currentHour < 9) ? 0 ..< currentHour + 1 : 9 ..< 19
 
         for hour in hoursRange {
             let averageRating = calculateAverageRatingForHour(conditions, hour: hour)
-            if let timeZone = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: Date()) {
+            if let timeZone = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: targetDate) {
                 results.append(GraphPhysicalCondition(timeZone: timeZone, rateAverage: Int(averageRating)))
             }
         }

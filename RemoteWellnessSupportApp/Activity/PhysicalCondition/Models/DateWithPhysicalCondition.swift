@@ -8,10 +8,10 @@
 import Foundation
 
 struct DateWithPhysicalCondition: Hashable {
-    var date: String
+    var date: Date
     var id: UUID
 
-    init(date: String) {
+    init(date: Date) {
         self.date = date
         id = UUID()
     }
