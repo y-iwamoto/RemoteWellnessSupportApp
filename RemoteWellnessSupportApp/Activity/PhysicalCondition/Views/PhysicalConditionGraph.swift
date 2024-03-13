@@ -1,5 +1,5 @@
 //
-//  TodayPhysicalConditionGraph.swift
+//  PhysicalConditionGraph.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/02/24.
@@ -8,8 +8,14 @@
 import Charts
 import SwiftUI
 
-struct TodayPhysicalConditionGraph: View {
-    @StateObject private var viewModel = TodayPhysicalConditionGraphViewModel()
+struct PhysicalConditionGraph: View {
+    let targetDate: Date
+    @StateObject private var viewModel: PhysicalConditionGraphModel
+
+    init(targetDate: Date) {
+        self.targetDate = targetDate
+        _viewModel = StateObject(wrappedValue: PhysicalConditionGraphModel(targetDate: targetDate))
+    }
 
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
@@ -26,7 +32,7 @@ struct TodayPhysicalConditionGraph: View {
     @ViewBuilder
     private var content: some View {
         if viewModel.todayPhysicalConditions.isEmpty {
-            Text("本日の体調のデータはありません。")
+            Text("体調のデータはありません。")
             Spacer()
         } else {
             PhysicalConditionChartView(physicalConditions: viewModel.todayPhysicalConditions, timeZoneType: TimeZoneType.hour)
@@ -34,6 +40,6 @@ struct TodayPhysicalConditionGraph: View {
     }
 }
 
-#Preview {
-    TodayPhysicalConditionGraph()
-}
+// #Preview {
+//    TodayPhysicalConditionGraph()
+// }

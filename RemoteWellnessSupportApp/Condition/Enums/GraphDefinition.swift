@@ -15,6 +15,6 @@ enum GraphDefinition {
 
     enum TimeZone: String {
         case hour = "H"
-        case date = "MM/dd"
+        case date = "EEEE"
     }
 }

@@ -1,5 +1,5 @@
 //
-//  TodaysPhysicalConditionListView.swift
+//  DailyPhysicalConditionList.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/03/03.
@@ -7,11 +7,17 @@
 
 import SwiftUI
 
-struct TodaysPhysicalConditionListView: View {
-    @StateObject var viewModel = TodaysPhysicalConditionListViewModel()
+struct DailyPhysicalConditionList: View {
+    let targetDate: Date
+    @StateObject var viewModel: DailyPhysicalConditionListViewModel
+
+    init(targetDate: Date = Date()) {
+        self.targetDate = targetDate
+        _viewModel = StateObject(wrappedValue: DailyPhysicalConditionListViewModel(targetDate: targetDate))
+    }
 
     var body: some View {
-        Text("体調一覧 \(Date().toString(format: "MM/dd"))")
+        Text("体調一覧 \(targetDate.toString(format: "MM/dd"))")
         content
             .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
             .navigationDestination(for: PhysicalCondition.self) { selectedCondition in
@@ -53,6 +59,6 @@ struct TodaysPhysicalConditionListView: View {
     }
 }
 
-#Preview {
-    TodaysPhysicalConditionListView()
-}
+// #Preview {
+//    SelectedDatePhysicalConditionListView()
+// }

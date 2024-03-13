@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum ActivityListDestination {
-    case physicalConditionList
+enum ActivityListDestination: Hashable {
+    case dailyPhysicalConditionList(Date)
+    case weekPhysicalConditionList
 }

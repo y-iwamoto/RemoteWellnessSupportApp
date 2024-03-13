@@ -23,8 +23,7 @@ struct ConditionScreen: View {
             case .today:
                 TodayCondition()
             case .week:
-                // TODO: 現状はダミーで作成、WeekTabView作成時に対応
-                Text("Week View")
+                WeekCondition()
             }
 
             Spacer()
