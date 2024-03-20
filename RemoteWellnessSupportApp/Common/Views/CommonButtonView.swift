@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CommonButtonView: View {
     var title: String
+    var disabled = false
     var action: () -> Void
 
     var body: some View {
@@ -17,10 +18,11 @@ struct CommonButtonView: View {
                 .font(.title)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(Color.blue)
+                .background(disabled ? Color.gray : Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(10)
         }
         .padding()
+        .disabled(disabled)
     }
 }

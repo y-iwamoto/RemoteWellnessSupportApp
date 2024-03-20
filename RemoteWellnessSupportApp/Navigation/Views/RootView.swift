@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
-    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = false
+    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting = false
 
     var body: some View {
-        if hasCompletedOnboarding {
+        if hasCompletedNotificationSetting {
             MainView()
+        } else if hasCompletedOnboarding {
+            NotificationSettingScreen()
         } else {
             OnboardingScreenView()
         }

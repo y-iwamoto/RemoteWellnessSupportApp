@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct TabButton: View {
-    @Binding var selectedTab: ConditionTab
-    let title: ConditionTab
+struct TabButton<T: TabTitleConvertible>: View {
+    @Binding var selectedTab: T
+    let title: T
 
     var body: some View {
         Button(
@@ -17,16 +17,16 @@ struct TabButton: View {
                 selectedTab = title
             },
             label: {
-                Text(title.rawValue)
+                Text(title.tabTitle)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding(.vertical, 10)
                     .padding(.horizontal, 20)
                     .background(Color.clear)
-                    .foregroundColor(selectedTab == title ? .blue : .gray)
+                    .foregroundColor(selectedTab.tabTitle == title.tabTitle ? .blue : .gray)
                     .overlay(
                         Rectangle()
                             .frame(height: 2)
-                            .foregroundColor(selectedTab == title ? .blue : .clear),
+                            .foregroundColor(selectedTab.tabTitle == title.tabTitle ? .blue : .clear),
                         alignment: .bottom
                     )
             }

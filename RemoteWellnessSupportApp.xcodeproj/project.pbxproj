@@ -46,9 +46,33 @@
 		2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
 		2E6E64122B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
 		2E6E64152B80460500A11DB9 /* PhysicalConditionEntryFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */; };
+		2E6FE20C2BA26D2700541819 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FE20B2BA26D2700541819 /* NotificationPermissionView.swift */; };
+		2E6FE20F2BA26F9000541819 /* NotificationPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FE20E2BA26F9000541819 /* NotificationPermissionViewModel.swift */; };
+		2E6FE2122BA2750100541819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FE2112BA2750100541819 /* AppDelegate.swift */; };
 		2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */; };
+		2E8FBEC32BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */; };
+		2E8FBEC62BA676C60082B3E1 /* NotificationSettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEC52BA676C60082B3E1 /* NotificationSettingScreen.swift */; };
+		2E8FBEC82BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEC72BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift */; };
+		2E8FBECB2BA67BF20082B3E1 /* NotificationSettingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBECA2BA67BF20082B3E1 /* NotificationSettingEndView.swift */; };
+		2E8FBECD2BA67D680082B3E1 /* PhysicalConditionReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBECC2BA67D680082B3E1 /* PhysicalConditionReminderView.swift */; };
+		2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBECE2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift */; };
+		2E8FBED12BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBED02BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift */; };
+		2E8FBED32BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBED22BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift */; };
+		2E8FBED62BA6E7CD0082B3E1 /* DateArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBED52BA6E7CD0082B3E1 /* DateArrayTransformer.swift */; };
+		2E8FBED82BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBED72BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift */; };
+		2E8FBEDB2BA7B2E80082B3E1 /* ReminderTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEDA2BA7B2E80082B3E1 /* ReminderTab.swift */; };
+		2E8FBEDE2BA86E660082B3E1 /* IntervalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEDD2BA86E660082B3E1 /* IntervalTimeSelectView.swift */; };
+		2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEDF2BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift */; };
+		2E8FBEE32BA86ED00082B3E1 /* TimeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEE22BA86ED00082B3E1 /* TimeSelection.swift */; };
+		2E8FBEE72BA86F630082B3E1 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEE62BA86F630082B3E1 /* TimePicker.swift */; };
+		2E8FBEE92BAA78390082B3E1 /* ReminderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEE82BAA78390082B3E1 /* ReminderType.swift */; };
+		2E8FBEEC2BAA78F70082B3E1 /* TabTitleConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEEB2BAA78F70082B3E1 /* TabTitleConvertible.swift */; };
+		2E8FBEEF2BAA79300082B3E1 /* ConditionTab+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEEE2BAA79300082B3E1 /* ConditionTab+Extensions.swift */; };
+		2E8FBEF22BAA7A850082B3E1 /* ReminderTab+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF12BAA7A850082B3E1 /* ReminderTab+Extensions.swift */; };
+		2E8FBEF42BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF32BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift */; };
+		2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */; };
 		2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */; };
 		2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
@@ -64,7 +88,6 @@
 		2ED957CC2B86C7EC007663AA /* SelectableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED957CA2B86BEF8007663AA /* SelectableItem.swift */; };
 		2ED957CE2B86D7D1007663AA /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED957CD2B86D7D1007663AA /* ErrorAlertModifier.swift */; };
 		2ED957D12B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED957D02B883D8B007663AA /* PhysicalConditionDataSource.swift */; };
-		2ED957D22B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED957D02B883D8B007663AA /* PhysicalConditionDataSource.swift */; };
 		2EE812C02B790137000B65E5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812BE2B790137000B65E5 /* RootView.swift */; };
 		2EE812C12B790137000B65E5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812BF2B790137000B65E5 /* MainView.swift */; };
 		2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812C42B79016D000B65E5 /* ConditionScreen.swift */; };
@@ -146,8 +169,32 @@
 		2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionRating.swift; sourceTree = "<group>"; };
 		2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConst.swift; sourceTree = "<group>"; };
 		2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryFormViewModel.swift; sourceTree = "<group>"; };
+		2E6FE20B2BA26D2700541819 /* NotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionView.swift; sourceTree = "<group>"; };
+		2E6FE20E2BA26F9000541819 /* NotificationPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionViewModel.swift; sourceTree = "<group>"; };
+		2E6FE2112BA2750100541819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCondition.swift; sourceTree = "<group>"; };
 		2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextEditor.swift; sourceTree = "<group>"; };
+		2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionScreenNavigationRouter.swift; sourceTree = "<group>"; };
+		2E8FBEC52BA676C60082B3E1 /* NotificationSettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingScreen.swift; sourceTree = "<group>"; };
+		2E8FBEC72BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingNavigationRouter.swift; sourceTree = "<group>"; };
+		2E8FBECA2BA67BF20082B3E1 /* NotificationSettingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingEndView.swift; sourceTree = "<group>"; };
+		2E8FBECC2BA67D680082B3E1 /* PhysicalConditionReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionReminderView.swift; sourceTree = "<group>"; };
+		2E8FBECE2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionReminderViewModel.swift; sourceTree = "<group>"; };
+		2E8FBED02BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingEndViewModel.swift; sourceTree = "<group>"; };
+		2E8FBED22BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionReminder.swift; sourceTree = "<group>"; };
+		2E8FBED52BA6E7CD0082B3E1 /* DateArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateArrayTransformer.swift; sourceTree = "<group>"; };
+		2E8FBED72BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionReminderDataSource.swift; sourceTree = "<group>"; };
+		2E8FBEDA2BA7B2E80082B3E1 /* ReminderTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTab.swift; sourceTree = "<group>"; };
+		2E8FBEDD2BA86E660082B3E1 /* IntervalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimeSelectView.swift; sourceTree = "<group>"; };
+		2E8FBEDF2BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimeSelectView.swift; sourceTree = "<group>"; };
+		2E8FBEE22BA86ED00082B3E1 /* TimeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelection.swift; sourceTree = "<group>"; };
+		2E8FBEE62BA86F630082B3E1 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		2E8FBEE82BAA78390082B3E1 /* ReminderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderType.swift; sourceTree = "<group>"; };
+		2E8FBEEB2BAA78F70082B3E1 /* TabTitleConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTitleConvertible.swift; sourceTree = "<group>"; };
+		2E8FBEEE2BAA79300082B3E1 /* ConditionTab+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConditionTab+Extensions.swift"; sourceTree = "<group>"; };
+		2E8FBEF12BAA7A850082B3E1 /* ReminderTab+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderTab+Extensions.swift"; sourceTree = "<group>"; };
+		2E8FBEF32BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingNavigationItem.swift; sourceTree = "<group>"; };
+		2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhysicalConditionDataSource+Extension.swift"; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +335,7 @@
 				2EE812E82B79ABBC000B65E5 /* PlusButton.swift */,
 				2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */,
 				2ED957C72B86BED1007663AA /* SelectorView.swift */,
+				2E8FBEE62BA86F630082B3E1 /* TimePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,8 +395,8 @@
 			children = (
 				2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */,
 				2E0ACDF42B93E9EA00318BF2 /* DailyPhysicalConditionListViewModel.swift */,
-				2E631C6F2B8972E800B35AAC /* PhysicalConditionGraphModel.swift */,
 				2E69836C2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift */,
+				2E631C6F2B8972E800B35AAC /* PhysicalConditionGraphModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,9 +404,53 @@
 		2E6E64162B80548F00A11DB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E8FBED42BA6E7760082B3E1 /* ValueTransformers */,
 				2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */,
+				2E8FBED22BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2E6FE2092BA26CE000541819 /* NotificationSetting */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEF02BAA7A760082B3E1 /* Extensions */,
+				2E8FBEE12BA86EC20082B3E1 /* Models */,
+				2E8FBED92BA7B2CE0082B3E1 /* Enums */,
+				2E6FE20D2BA26F7E00541819 /* ViewModels */,
+				2E6FE20A2BA26CFD00541819 /* Views */,
+			);
+			path = NotificationSetting;
+			sourceTree = "<group>";
+		};
+		2E6FE20A2BA26CFD00541819 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEDC2BA86E3C0082B3E1 /* Common */,
+				2E8FBEC92BA67BDA0082B3E1 /* Children */,
+				2E8FBEC52BA676C60082B3E1 /* NotificationSettingScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E6FE20D2BA26F7E00541819 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FE20E2BA26F9000541819 /* NotificationPermissionViewModel.swift */,
+				2E8FBEC72BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift */,
+				2E8FBECE2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift */,
+				2E8FBED02BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E6FE2102BA274F100541819 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FE2112BA2750100541819 /* AppDelegate.swift */,
+				2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		2E8C66D62B81FF0100280A17 /* ViewModifiers */ = {
@@ -367,6 +459,74 @@
 				2ED957CD2B86D7D1007663AA /* ErrorAlertModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		2E8FBEC92BA67BDA0082B3E1 /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FE20B2BA26D2700541819 /* NotificationPermissionView.swift */,
+				2E8FBECA2BA67BF20082B3E1 /* NotificationSettingEndView.swift */,
+				2E8FBECC2BA67D680082B3E1 /* PhysicalConditionReminderView.swift */,
+			);
+			path = Children;
+			sourceTree = "<group>";
+		};
+		2E8FBED42BA6E7760082B3E1 /* ValueTransformers */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBED52BA6E7CD0082B3E1 /* DateArrayTransformer.swift */,
+			);
+			path = ValueTransformers;
+			sourceTree = "<group>";
+		};
+		2E8FBED92BA7B2CE0082B3E1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEDA2BA7B2E80082B3E1 /* ReminderTab.swift */,
+				2E8FBEF32BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		2E8FBEDC2BA86E3C0082B3E1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEDD2BA86E660082B3E1 /* IntervalTimeSelectView.swift */,
+				2E8FBEDF2BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2E8FBEE12BA86EC20082B3E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEE22BA86ED00082B3E1 /* TimeSelection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E8FBEEA2BAA78E70082B3E1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEEB2BAA78F70082B3E1 /* TabTitleConvertible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2E8FBEED2BAA79100082B3E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEEE2BAA79300082B3E1 /* ConditionTab+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E8FBEF02BAA7A760082B3E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBEF12BAA7A850082B3E1 /* ReminderTab+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2EBD2D292B608BDC0063EC7A = {
@@ -391,6 +551,8 @@
 		2EBD2D342B608BDC0063EC7A /* RemoteWellnessSupportApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E6FE2102BA274F100541819 /* Core */,
+				2E6FE2092BA26CE000541819 /* NotificationSetting */,
 				2EE812CB2B79904E000B65E5 /* Activity */,
 				2EE812C22B79016D000B65E5 /* Condition */,
 				2EE812BC2B790137000B65E5 /* Navigation */,
@@ -443,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				2ED957D02B883D8B007663AA /* PhysicalConditionDataSource.swift */,
+				2E8FBED72BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -475,6 +638,8 @@
 		2EE812C22B79016D000B65E5 /* Condition */ = {
 			isa = PBXGroup;
 			children = (
+				2E8FBEED2BAA79100082B3E1 /* Extensions */,
+				2E8FBEEA2BAA78E70082B3E1 /* Protocols */,
 				2E0DA4262B8E10D2004E0185 /* ViewModifiers */,
 				2E0DA41A2B8B2A56004E0185 /* Models */,
 				2EE812EA2B7A2427000B65E5 /* ViewModels */,
@@ -615,6 +780,7 @@
 			children = (
 				2EE812EB2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift */,
 				2E6983682B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift */,
+				2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -634,6 +800,7 @@
 				2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */,
 				2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */,
 				2E0ACDFE2B97E32B00318BF2 /* FormAction.swift */,
+				2E8FBEE82BAA78390082B3E1 /* ReminderType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -743,39 +910,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6FE2122BA2750100541819 /* AppDelegate.swift in Sources */,
 				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
 				2E0DA41C2B8B2A73004E0185 /* GraphPhysicalCondition.swift in Sources */,
 				2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */,
+				2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */,
+				2E8FBECD2BA67D680082B3E1 /* PhysicalConditionReminderView.swift in Sources */,
+				2E8FBEE72BA86F630082B3E1 /* TimePicker.swift in Sources */,
 				2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E631C6E2B896F0D00B35AAC /* PhysicalConditionGraph.swift in Sources */,
 				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
+				2E8FBEF22BAA7A850082B3E1 /* ReminderTab+Extensions.swift in Sources */,
+				2E8FBEC32BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift in Sources */,
 				2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */,
 				2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */,
+				2E8FBED32BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift in Sources */,
 				2E0ACDF52B93E9EA00318BF2 /* DailyPhysicalConditionListViewModel.swift in Sources */,
+				2E6FE20C2BA26D2700541819 /* NotificationPermissionView.swift in Sources */,
 				2E6983652B9C728D0076EF4F /* WeekCondition.swift in Sources */,
+				2E8FBEE92BAA78390082B3E1 /* ReminderType.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
+				2E8FBEEC2BAA78F70082B3E1 /* TabTitleConvertible.swift in Sources */,
 				2E0ACDFC2B9690F300318BF2 /* PhysicalConditionCreateForm.swift in Sources */,
 				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
 				2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
+				2E8FBED12BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift in Sources */,
 				2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */,
 				2E0ACE012B97E4F200318BF2 /* ActivityListDestination.swift in Sources */,
+				2E8FBEEF2BAA79300082B3E1 /* ConditionTab+Extensions.swift in Sources */,
 				2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */,
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
 				2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */,
+				2E8FBEC82BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift in Sources */,
+				2E8FBEDE2BA86E660082B3E1 /* IntervalTimeSelectView.swift in Sources */,
 				2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
+				2E6FE20F2BA26F9000541819 /* NotificationPermissionViewModel.swift in Sources */,
 				2E69836B2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift in Sources */,
 				2E69836D2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift in Sources */,
 				2E6983672B9C73720076EF4F /* WeekPhysicalConditionGraph.swift in Sources */,
+				2E8FBEF42BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift in Sources */,
 				2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */,
 				2EE812E52B79A4A0000B65E5 /* ConditionNavigationLink.swift in Sources */,
 				2EE812E32B79A068000B65E5 /* ConditionTab.swift in Sources */,
 				2ED957D12B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */,
 				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
+				2E8FBED82BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift in Sources */,
 				2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */,
 				2E6983702B9DACC50076EF4F /* DateWithPhysicalCondition.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
@@ -784,8 +968,10 @@
 				2ED957C82B86BED1007663AA /* SelectorView.swift in Sources */,
 				2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */,
 				2E631C702B8972E800B35AAC /* PhysicalConditionGraphModel.swift in Sources */,
+				2E8FBEE32BA86ED00082B3E1 /* TimeSelection.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
 				2E0ACDF32B93E42200318BF2 /* DailyPhysicalConditionList.swift in Sources */,
+				2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2E0ACDFA2B947DB100318BF2 /* PhysicalConditionEditForm.swift in Sources */,
 				2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
@@ -798,11 +984,16 @@
 				2E0C95C22B6929E600576531 /* OnboardingContentView.swift in Sources */,
 				2E6983722B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift in Sources */,
 				2ED957CB2B86BEF8007663AA /* SelectableItem.swift in Sources */,
+				2E8FBECB2BA67BF20082B3E1 /* NotificationSettingEndView.swift in Sources */,
+				2E8FBEC62BA676C60082B3E1 /* NotificationSettingScreen.swift in Sources */,
 				2E6E64152B80460500A11DB9 /* PhysicalConditionEntryFormViewModel.swift in Sources */,
+				2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */,
 				2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */,
 				2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */,
+				2E8FBED62BA6E7CD0082B3E1 /* DateArrayTransformer.swift in Sources */,
 				2EFD01892B71A721003020C6 /* Const.swift in Sources */,
 				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
+				2E8FBEDB2BA7B2E80082B3E1 /* ReminderTab.swift in Sources */,
 				2E0C95CA2B6A73EF00576531 /* ReviewDescriptionView.swift in Sources */,
 				2E0ACDFF2B97E32B00318BF2 /* FormAction.swift in Sources */,
 				2EE812C02B790137000B65E5 /* RootView.swift in Sources */,
@@ -813,7 +1004,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ED957D22B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */,
 				2E631C742B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
 				2ED957CC2B86C7EC007663AA /* SelectableItem.swift in Sources */,
 				2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
