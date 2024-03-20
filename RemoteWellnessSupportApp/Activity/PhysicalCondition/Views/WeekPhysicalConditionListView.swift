@@ -8,18 +8,11 @@
 import SwiftUI
 
 struct WeekPhysicalConditionListView: View {
-    @ObservedObject var viewModel: WeekPhysicalConditionListViewModel
-
-    init(viewModel: WeekPhysicalConditionListViewModel = WeekPhysicalConditionListViewModel()) {
-        self.viewModel = viewModel
-    }
+    @StateObject var viewModel = WeekPhysicalConditionListViewModel()
 
     var body: some View {
         Text("体調一覧")
         content
-            .navigationDestination(for: DateWithPhysicalCondition.self) { dateWithPhysicalCondition in
-                SelectedDatePhysicalConditionGraph(targetDate: dateWithPhysicalCondition.date)
-            }
             .onAppear {
                 viewModel.fetchDatesWithPhysicalCondition()
             }
@@ -34,7 +27,7 @@ struct WeekPhysicalConditionListView: View {
             List {
                 ForEach(viewModel.dateWithPhysicalConditions, id: \.self) { item in
                     HStack {
-                        NavigationLink(value: item) {
+                        NavigationLink(value: ConditionScreenNavigationItem.selectedDatePhysicalConditionGraph(targetDate: item.date)) {
                             Text(item.date.toString(format: "yyyy/MM/dd"))
                             Spacer()
                         }

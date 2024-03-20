@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActivityEntryNavigationLink: View {
-    let destination: ConditionNavigationLink.Destination
+    let destination: ConditionScreenNavigationItem
     let imageName: ConditionNavigationLink.ImageName
 
     var body: some View {

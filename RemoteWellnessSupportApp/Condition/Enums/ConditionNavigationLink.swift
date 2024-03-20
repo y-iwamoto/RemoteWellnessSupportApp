@@ -8,10 +8,6 @@
 import Foundation
 
 enum ConditionNavigationLink {
-    enum Destination {
-        case physicalConditionEntryForm, reviewEntryForm, stepEntryForm, hydrationEntryForm
-    }
-
     enum ImageName: String {
         case physicalConditionEntryForm = "medical.thermometer.fill"
         case reviewEntryForm = "book.fill"

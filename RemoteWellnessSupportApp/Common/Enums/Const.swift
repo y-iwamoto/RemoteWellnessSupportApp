@@ -10,5 +10,6 @@ import Foundation
 enum Const {
     enum AppStatus {
         static let hasCompletedOnboarding = "hasCompletedOnboarding"
+        static let hasCompletedNotificationSetting = "hasCompletedNotificationSetting"
     }
 }

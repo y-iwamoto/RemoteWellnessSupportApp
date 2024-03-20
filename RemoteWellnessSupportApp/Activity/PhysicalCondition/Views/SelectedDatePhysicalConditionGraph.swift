@@ -15,7 +15,7 @@ struct SelectedDatePhysicalConditionGraph: View {
             VStack {
                 Text("\(targetDate.toString(format: "yyyy/MM/dd"))")
                     .font(.title3)
-                NavigationLink(value: ActivityListDestination.dailyPhysicalConditionList(targetDate)) {
+                NavigationLink(value: ConditionScreenNavigationItem.dailyPhysicalConditionList(date: targetDate)) {
                     PhysicalConditionGraph(targetDate: targetDate)
                         .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
                 }
