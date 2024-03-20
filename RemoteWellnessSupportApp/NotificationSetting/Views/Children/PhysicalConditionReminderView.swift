@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PhysicalConditionReminderView: View {
-    @StateObject var viewModel =  PhysicalConditionReminderViewModel()
+    @StateObject var viewModel = PhysicalConditionReminderViewModel()
     @EnvironmentObject var router: NotificationSettingNavigationRouter
 
     var body: some View {
@@ -17,42 +17,38 @@ struct PhysicalConditionReminderView: View {
                 Text("体調リマインドについて設定して下さい")
                     .font(.title)
                     .padding(.top, 10)
-                
+
                 Toggle(isOn: $viewModel.isReminderActive) {
                     Text("通知設定の有無")
                 }
                 .padding()
-                
+
                 if viewModel.isReminderActive {
                     HStack(spacing: StyleConst.Spacing.emptySpacing) {
                         TabButton(selectedTab: $viewModel.selectedTab, title: .repeating)
                         TabButton(selectedTab: $viewModel.selectedTab, title: .scheduled)
                     }
                     .padding()
-                    
-                    tabContent
-                        .frame(height:  geometry.size.height * 0.3)
 
+                    tabContent
+                        .frame(height: geometry.size.height * 0.3)
                 }
                 Spacer()
 
-                
                 CommonButtonView(title: "次へ進む") {
                     Task {
                         if await viewModel.savePhysicalConditionReminderSetteing() {
                             router.items.append(.notificationSettingEnd)
                         }
-
                     }
                 }
                 .padding(.bottom, 50)
-
             }
             .padding(.horizontal, 10)
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
     }
-    
+
     @ViewBuilder
     private var tabContent: some View {
         switch viewModel.selectedTab {

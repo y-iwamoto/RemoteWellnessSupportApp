@@ -12,6 +12,6 @@ class NotificationSettingEndViewModel: ObservableObject {
     @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting = false
 
     func endNotificationSettings() {
-        self.hasCompletedNotificationSetting = true
+        hasCompletedNotificationSetting = true
     }
 }

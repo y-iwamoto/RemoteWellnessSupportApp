@@ -5,16 +5,16 @@
 //  Created by 岩本雄貴 on 2024/03/17.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 class DateArrayTransformer: ValueTransformer {
     override class func transformedValueClass() -> AnyClass {
-        return NSData.self
+        NSData.self
     }
 
     override class func allowsReverseTransformation() -> Bool {
-        return true
+        true
     }
 
     override func transformedValue(_ value: Any?) -> Any? {

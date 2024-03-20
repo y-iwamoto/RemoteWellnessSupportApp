@@ -9,6 +9,6 @@ import Foundation
 
 extension ReminderTab: TabTitleConvertible {
     var tabTitle: String {
-        return self.rawValue
+        rawValue
     }
 }

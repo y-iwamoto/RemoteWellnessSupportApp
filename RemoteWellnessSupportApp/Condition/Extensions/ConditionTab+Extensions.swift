@@ -9,6 +9,6 @@ import Foundation
 
 extension ConditionTab: TabTitleConvertible {
     var tabTitle: String {
-        return self.rawValue
+        rawValue
     }
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NotificationSettingEndView: View {
-    @StateObject var viewModel =  NotificationSettingEndViewModel()
-    
+    @StateObject var viewModel = NotificationSettingEndViewModel()
+
     var body: some View {
         VStack {
             Text("初期設定完了しました")

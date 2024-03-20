@@ -11,7 +11,7 @@ struct TodayCondition: View {
     @State private var navigationTarget: ActivityListDestination?
     @EnvironmentObject var router: ConditionScreenNavigationRouter
     @AppStorage("notificationIdentifier") var notificationIdentifier: String?
-    
+
     let today = Date()
     var body: some View {
         GeometryReader { geometry in
@@ -28,7 +28,7 @@ struct TodayCondition: View {
                 ActivityEntryArea()
             }
             .onChange(of: notificationIdentifier) {
-                if let _ = notificationIdentifier {
+                if notificationIdentifier != nil {
                     router.items.append(.physicalConditionEntryForm)
                 }
             }

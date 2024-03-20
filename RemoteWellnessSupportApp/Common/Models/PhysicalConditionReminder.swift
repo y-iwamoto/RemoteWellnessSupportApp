@@ -19,8 +19,9 @@ class PhysicalConditionReminder {
     @Attribute(.transformable(by: DateArrayTransformer.self)) var scheduledTimes: [Date]?
     var createdAt: Date
     var updatedAt: Date
-    
-    init(id: String = UUID().uuidString, isActive: Bool, sendsToiOS: Bool, sendsTowatchOS: Bool, type: ReminderType? = nil, interval: Int? = nil, times: [Date]? = nil, scheduledTimes: [Date]? = nil, createdAt: Date = Date(), updatedAt: Date = Date()) {
+
+    init(id: String = UUID().uuidString, isActive: Bool, sendsToiOS: Bool, sendsTowatchOS: Bool, type: ReminderType? = nil, interval: Int? = nil,
+         times _: [Date]? = nil, scheduledTimes: [Date]? = nil, createdAt: Date = Date(), updatedAt: Date = Date()) {
         self.id = id
         self.isActive = isActive
         self.sendsToiOS = sendsToiOS

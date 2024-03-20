@@ -27,7 +27,7 @@ struct ConditionScreen: View {
         }
         .environmentObject(router)
     }
-    
+
     @ViewBuilder
     private var tabContent: some View {
         switch selectedTab {
@@ -37,15 +37,15 @@ struct ConditionScreen: View {
             WeekCondition()
         }
     }
-    
+
     @ViewBuilder
     private func navigationDestinationBuilder(item: ConditionScreenNavigationItem) -> some View {
         switch item {
-        case .dailyPhysicalConditionList(let date):
+        case let .dailyPhysicalConditionList(date):
             DailyPhysicalConditionList(targetDate: date)
         case .weekPhysicalConditionList:
             WeekPhysicalConditionListView()
-        case .physicalConditionEditForm(let physicalCondition):
+        case let .physicalConditionEditForm(physicalCondition):
             PhysicalConditionEditForm(physicalCondition: physicalCondition)
         case .physicalConditionEntryForm:
             PhysicalConditionCreateForm()
@@ -55,7 +55,7 @@ struct ConditionScreen: View {
             StepEntryForm()
         case .hydrationEntryForm:
             HydrationEntryForm()
-        case .selectedDatePhysicalConditionGraph(let targetDate):
+        case let .selectedDatePhysicalConditionGraph(targetDate):
             SelectedDatePhysicalConditionGraph(targetDate: targetDate)
         }
     }

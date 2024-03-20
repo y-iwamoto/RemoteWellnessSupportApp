@@ -21,15 +21,14 @@ final class PhysicalConditionReminderDataSource {
         modelContainer = manager.modelContainer
         modelContext = manager.modelContext
     }
-    
+
     func insertPhysicalConditionReminder(physicalConditionReminder: PhysicalConditionReminder) throws {
         modelContext.insert(physicalConditionReminder)
         try modelContext.save()
     }
-    
+
     func fetchPhysicalConditionReminders() throws -> [PhysicalConditionReminder] {
         let descriptor = FetchDescriptor<PhysicalConditionReminder>()
         return try modelContext.fetch(descriptor)
     }
-    
 }

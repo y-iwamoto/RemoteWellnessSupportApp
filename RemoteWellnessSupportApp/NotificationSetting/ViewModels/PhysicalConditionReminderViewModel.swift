@@ -17,17 +17,16 @@ class PhysicalConditionReminderViewModel: ObservableObject {
     @Published var selectedTab: ReminderTab = .repeating
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
-    
-    
+
     init(dataSource: PhysicalConditionReminderDataSource = PhysicalConditionReminderDataSource.shared) {
         self.dataSource = dataSource
     }
-    
-    func savePhysicalConditionReminderSetteing() async -> Bool  {
+
+    func savePhysicalConditionReminderSetteing() async -> Bool {
         guard await validateInputs() else {
             return false
         }
-        
+
         let physicalConditionReminder = createPhysicalConditionReminder()
 
         guard await insertPhysicalConditionReminderIntoDataSource(physicalConditionReminder) else {
@@ -36,36 +35,38 @@ class PhysicalConditionReminderViewModel: ObservableObject {
 
         return await sendNotification(for: physicalConditionReminder)
     }
-    
+
     private func createPhysicalConditionReminder() -> PhysicalConditionReminder {
         var physicalConditionReminder: PhysicalConditionReminder
         let sendsToiOS = isReminderActive ? true : false
         let sendsTowatchOS = false
         let interval = selectedHour * 3600 + selectedMinute * 60
-        
-        let scheduledTimes = scheduledTimeSelections.map { $0.selectedTime }.sorted()
-        
+
+        let scheduledTimes = scheduledTimeSelections.map(\.selectedTime).sorted()
+
         if !isReminderActive {
             physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS)
         } else if selectedTab == .repeating {
-            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS, type: .repeating, interval: interval)
+            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS,
+                                                                  type: .repeating, interval: interval)
         } else {
-            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS, type: .scheduled, scheduledTimes: scheduledTimes)
+            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS,
+                                                                  type: .scheduled, scheduledTimes: scheduledTimes)
         }
-        
+
         return physicalConditionReminder
     }
-    
+
     @MainActor private func insertPhysicalConditionReminderIntoDataSource(_ reminder: PhysicalConditionReminder) -> Bool {
         do {
-            try self.dataSource.insertPhysicalConditionReminder(physicalConditionReminder: reminder)
+            try dataSource.insertPhysicalConditionReminder(physicalConditionReminder: reminder)
             return true
         } catch {
             setError(withMessage: "通知設定の登録に失敗しました")
             return false
         }
     }
-    
+
     @MainActor private func sendNotification(for reminder: PhysicalConditionReminder) async -> Bool {
         let center = UNUserNotificationCenter.current()
 
@@ -73,7 +74,7 @@ class PhysicalConditionReminderViewModel: ObservableObject {
         if checkStatus.authorizationStatus != .authorized {
             return true
         }
-        
+
         let content = UNMutableNotificationContent()
         content.title = "体調の記録をつけるお時間です"
         content.body = "通知をタップして体調の記録をしませんか？"
@@ -101,12 +102,11 @@ class PhysicalConditionReminderViewModel: ObservableObject {
             setError(withMessage: "通知の許可リクエストまたは通知スケジュールに失敗しました")
             return false
         }
-        
     }
 
     @MainActor private func validateInputs() -> Bool {
         if selectedTab == .repeating {
-            if selectedHour == 0 &&  selectedMinute == 0 {
+            if selectedHour == 0, selectedMinute == 0 {
                 setError(withMessage: "0時間0分は設定しないで下さい")
                 return false
             }
@@ -123,5 +123,4 @@ class PhysicalConditionReminderViewModel: ObservableObject {
         isErrorAlert = true
         errorMessage = message
     }
-    
 }

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct NotificationPermissionView: View {
-    @StateObject var viewModel =  NotificationPermissionViewModel()
+    @StateObject var viewModel = NotificationPermissionViewModel()
     @EnvironmentObject var router: NotificationSettingNavigationRouter
-    
+
     var body: some View {
         VStack {
             Text("通知を設定して下さい")
@@ -20,7 +20,7 @@ struct NotificationPermissionView: View {
                 CommonButtonView(title: "次へ進む", disabled: !viewModel.isNotificationPermissionGranted) {
                     router.items.append(.physicalConditionReminder)
                 }
-                
+
                 NavigationLink(value: NotificationSettingNavigationItem.notificationSettingEnd) {
                     Text("通知設定をスキップする")
                 }
@@ -28,7 +28,7 @@ struct NotificationPermissionView: View {
         }
         .padding(.vertical, 50)
         .task {
-           await viewModel.scheduleNotification()
+            await viewModel.scheduleNotification()
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
     }

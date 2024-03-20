@@ -10,7 +10,7 @@ import SwiftUI
 struct TimePicker: View {
     @Binding var timeSelection: TimeSelection
     let label: String
-    
+
     var body: some View {
         DatePicker(
             label,

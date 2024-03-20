@@ -27,7 +27,7 @@ class NotificationPermissionViewModel: ObservableObject {
             await setError(withMessage: "通知の許可リクエストまたは通知スケジュールに失敗しました")
         }
     }
-    
+
     private func checkAuthorizeNotificationSetting(center: UNUserNotificationCenter) async -> Bool {
         let checkStatus = await center.notificationSettings()
         if checkStatus.authorizationStatus == .authorized {
@@ -35,11 +35,11 @@ class NotificationPermissionViewModel: ObservableObject {
         }
         return false
     }
-    
+
     @MainActor private func notificationPermissionGranted() async {
         isNotificationPermissionGranted = true
     }
-    
+
     @MainActor private func setError(withMessage message: String) {
         isErrorAlert = true
         errorMessage = message

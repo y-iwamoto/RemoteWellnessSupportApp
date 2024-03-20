@@ -10,8 +10,8 @@ import SwiftUI
 struct IntervalTimeSelectView: View {
     @Binding var selectedHour: Int
     @Binding var selectedMinute: Int
-    let minutes = Array(0...59)
-    let hours = Array(0...23)
+    let minutes = Array(0 ... 59)
+    let hours = Array(0 ... 23)
 
     var body: some View {
         VStack {
@@ -35,7 +35,6 @@ struct IntervalTimeSelectView: View {
                 .clipped()
                 .pickerStyle(WheelPickerStyle())
                 .frame(height: 150)
-
             }
         }
     }
