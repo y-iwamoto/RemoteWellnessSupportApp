@@ -19,9 +19,10 @@ final class ModelManager {
             if let context = _modelContext {
                 return context
             } else {
-                let context = modelContainer.mainContext
-                _modelContext = context
-                return context
+                Task { @MainActor in
+                    self.initializeModelContext()
+                }
+                return modelContainer.mainContext
             }
         }
     }
@@ -33,5 +34,10 @@ final class ModelManager {
         } catch {
             fatalError("ModelContainer initialization failed: \(error)")
         }
+    }
+
+    @MainActor private func initializeModelContext() {
+        let context = modelContainer.mainContext
+        _modelContext = context
     }
 }
