@@ -20,9 +20,6 @@ struct DailyPhysicalConditionList: View {
         Text("体調一覧 \(targetDate.toString(format: "MM/dd"))")
         content
             .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
-            .navigationDestination(for: PhysicalCondition.self) { selectedCondition in
-                PhysicalConditionEditForm(physicalCondition: selectedCondition)
-            }
             .onAppear {
                 viewModel.fetchPhysicalConditions()
             }
@@ -37,7 +34,7 @@ struct DailyPhysicalConditionList: View {
             List {
                 ForEach(viewModel.physicalConditions, id: \.self) { item in
                     HStack {
-                        NavigationLink(value: item) {
+                        NavigationLink(value: ConditionScreenNavigationItem.physicalConditionEditForm(physicalCondition: item)) {
                             Text(item.entryDate.toString(format: "HH:mm"))
                             Spacer()
                             if let rating = PhysicalConditionRating(rawValue: item.rating) {

@@ -12,15 +12,15 @@ class ActivityEntryAreaViewModel: ObservableObject {
     @Published var isExpanded = false
 
     let topActivityNavigationLinks = [
-        (destination: ConditionNavigationLink.Destination.physicalConditionEntryForm,
+        (destination: ConditionScreenNavigationItem.physicalConditionEntryForm,
          imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm),
-        (destination: ConditionNavigationLink.Destination.reviewEntryForm,
+        (destination: ConditionScreenNavigationItem.reviewEntryForm,
          imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
     ]
     let leftActivityNavigationLinks = [
-        (destination: ConditionNavigationLink.Destination.stepEntryForm,
+        (destination: ConditionScreenNavigationItem.stepEntryForm,
          imageName: ConditionNavigationLink.ImageName.stepEntryForm),
-        (destination: ConditionNavigationLink.Destination.hydrationEntryForm,
+        (destination: ConditionScreenNavigationItem.hydrationEntryForm,
          imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
     ]
 

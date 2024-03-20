@@ -13,21 +13,13 @@ struct WeekCondition: View {
             ZStack {
                 ScrollView {
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        NavigationLink(value: ActivityListDestination.weekPhysicalConditionList) {
+                        NavigationLink(value: ConditionScreenNavigationItem.weekPhysicalConditionList) {
                             WeekPhysicalConditionGraph()
                                 .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
                                 .padding()
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    .navigationDestination(for: ActivityListDestination.self) { destination in
-                        switch destination {
-                        case let .dailyPhysicalConditionList(targetDate):
-                            DailyPhysicalConditionList(targetDate: targetDate)
-                        case .weekPhysicalConditionList:
-                            WeekPhysicalConditionListView()
-                        }
-                    }
                 }
             }
         }
