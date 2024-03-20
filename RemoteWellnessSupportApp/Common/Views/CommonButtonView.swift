@@ -18,7 +18,7 @@ struct CommonButtonView: View {
                 .font(.title)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(disabled ? Color.gray : Color.blue)
+                .background(Color.blue.opacity(disabled ? 0.5 : 1))
                 .foregroundColor(.white)
                 .cornerRadius(10)
         }

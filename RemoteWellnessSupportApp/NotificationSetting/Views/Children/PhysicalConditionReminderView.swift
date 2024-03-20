@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PhysicalConditionReminderView: View {
-    @StateObject var viewModel = PhysicalConditionReminderViewModel()
-    @EnvironmentObject var router: NotificationSettingNavigationRouter
+    @StateObject private var viewModel = PhysicalConditionReminderViewModel()
+    @EnvironmentObject private var router: NotificationSettingNavigationRouter
 
     var body: some View {
         GeometryReader { geometry in

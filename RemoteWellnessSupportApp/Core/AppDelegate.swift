@@ -10,10 +10,18 @@ import SwiftUI
 import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    @AppStorage("notificationIdentifier") var notificationIdentifier: String?
+    var notificationIdentifier: String? {
+        get {
+            UserDefaults.standard.string(forKey: "notificationIdentifier")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "notificationIdentifier")
+        }
+    }
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        ValueTransformer.setValueTransformer(DateArrayTransformer(), forName: NSValueTransformerName("DateArrayTransformer"))
         return true
     }
 

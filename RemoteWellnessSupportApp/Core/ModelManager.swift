@@ -28,7 +28,10 @@ final class ModelManager {
 
     private init() {
         let schema = Schema([PhysicalCondition.self, PhysicalConditionReminder.self])
-        // swiftlint:disable:next force_try
-        modelContainer = try! ModelContainer(for: schema)
+        do {
+            modelContainer = try ModelContainer(for: schema)
+        } catch {
+            fatalError("ModelContainer initialization failed: \(error)")
+        }
     }
 }

@@ -19,11 +19,11 @@ class DateArrayTransformer: ValueTransformer {
 
     override func transformedValue(_ value: Any?) -> Any? {
         guard let dateArray = value as? [Date] else { return nil }
-        return try? NSKeyedArchiver.archivedData(withRootObject: dateArray, requiringSecureCoding: false)
+        return try? JSONEncoder().encode(dateArray)
     }
 
     override func reverseTransformedValue(_ value: Any?) -> Any? {
         guard let data = value as? Data else { return nil }
-        return try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, NSDate.self], from: data) as? [Date]
+        return try? JSONDecoder().decode([Date].self, from: data)
     }
 }

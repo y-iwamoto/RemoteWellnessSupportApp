@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NotificationSettingEndView: View {
-    @StateObject var viewModel = NotificationSettingEndViewModel()
+    @StateObject private var viewModel = NotificationSettingEndViewModel()
 
     var body: some View {
         VStack {
