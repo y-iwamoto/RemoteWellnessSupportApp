@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 
 final class PhysicalConditionDataSource {
+    private let manager = ModelManager.shared
     private let modelContainer: ModelContainer
     private let modelContext: ModelContext
 
@@ -17,9 +18,8 @@ final class PhysicalConditionDataSource {
 
     @MainActor
     private init() {
-        // swiftlint:disable:next force_try
-        modelContainer = try! ModelContainer(for: PhysicalCondition.self)
-        modelContext = modelContainer.mainContext
+        modelContainer = manager.modelContainer
+        modelContext = manager.modelContext
     }
 
     func insertPhysicalCondition(physicalCondition: PhysicalCondition) throws {

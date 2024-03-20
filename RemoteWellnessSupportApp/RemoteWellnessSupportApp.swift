@@ -10,6 +10,11 @@ import SwiftUI
 
 @main
 struct RemoteWellnessSupportApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    init() {
+        ValueTransformer.setValueTransformer(DateArrayTransformer(), forName: NSValueTransformerName("DateArrayTransformer"))
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
