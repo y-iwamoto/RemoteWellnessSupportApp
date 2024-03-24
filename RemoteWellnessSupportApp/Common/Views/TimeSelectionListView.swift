@@ -27,7 +27,3 @@ struct TimeSelectionListView<Item: TimeSelectable, ContentView: View>: View {
         .listStyle(PlainListStyle())
     }
 }
-
-// #Preview {
-//    TimeSelectionListView()
-// }

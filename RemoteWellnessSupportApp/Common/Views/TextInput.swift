@@ -22,7 +22,3 @@ struct TextInput: View {
             )
     }
 }
-
-// #Preview {
-//    TextInput()
-// }
