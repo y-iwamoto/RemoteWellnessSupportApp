@@ -21,6 +21,7 @@ struct WorkDaySelectView: View {
         VStack {
             Text("普段勤務している曜日を教えて下さい")
                 .font(.title3)
+                .padding(.bottom, 50)
 
             VStack(spacing: 20) {
                 ForEach(viewModel.daysOfWeek, id: \.self) { group in
@@ -50,6 +51,9 @@ struct WorkDaySelectView: View {
             }
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
+        .padding(.horizontal, 10)
+        .padding(.bottom, 70)
+        .padding(.top, 30)
     }
 }
 

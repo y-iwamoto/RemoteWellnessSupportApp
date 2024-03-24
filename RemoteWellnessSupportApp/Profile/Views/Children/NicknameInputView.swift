@@ -14,11 +14,10 @@ struct NicknameInputView: View {
 
     var body: some View {
         VStack {
-            VStack(spacing: 50) {
-                Text("あなたの名前について教えて下さい")
-                    .font(.title3)
-                TextInput(labelName: "ニックネーム", value: $nickname)
-            }
+            Text("あなたの名前について教えて下さい")
+                .font(.title3)
+                .padding(.bottom, 50)
+            TextInput(labelName: "ニックネーム", value: $nickname)
             Spacer()
             CommonButtonView(title: "次へ進む") {
                 if viewModel.inputValidate(nickname: nickname) {

@@ -18,6 +18,7 @@ struct GoalSettingInputView: View {
         VStack {
             Text("1時間あたりの目標値を設定して下さい")
                 .font(.title3)
+                .padding(.bottom, 50)
 
             HStack {
                 Text("水分摂取")
@@ -27,7 +28,7 @@ struct GoalSettingInputView: View {
                     }
                     .keyboardType(.numberPad)
             }
-
+            Spacer()
             CommonButtonView(title: "次へ進む") {
                 if viewModel.inputValidate(hydrationGoal: hydrationGoal), saveProfile() {
                     hasCompletedProfileRegister = true
@@ -36,6 +37,8 @@ struct GoalSettingInputView: View {
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
         .padding(.horizontal, 10)
+        .padding(.bottom, 70)
+        .padding(.top, 30)
     }
 }
 

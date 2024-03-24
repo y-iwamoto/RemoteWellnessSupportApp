@@ -17,10 +17,12 @@ struct WorkTimeInputView: View {
         VStack {
             Text("業務時間を設定して下さい")
                 .font(.title3)
+                .padding(.bottom, 50)
 
             TimePicker(timeSelection: $workTimeFrom, label: "開始時間")
             TimePicker(timeSelection: $workTimeTo, label: "終了時間")
 
+            Spacer()
             CommonButtonView(title: "次へ進む") {
                 if viewModel.inputValidate(workTimeFrom: workTimeFrom, workTimeTo: workTimeTo) {
                     router.items.append(.restTimeInput)
@@ -28,7 +30,10 @@ struct WorkTimeInputView: View {
             }
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 10)
+        .padding(.bottom, 70)
+        .padding(.top, 30)
+        
     }
 }
 

@@ -16,6 +16,7 @@ struct RestTimeInputView: View {
         VStack {
             Text("休憩時間を設定して下さい")
                 .font(.title3)
+                .padding(.bottom, 50)
 
             TimeSelectionListView(
                 items: $restTimePeriodSections,
@@ -28,7 +29,7 @@ struct RestTimeInputView: View {
                 addItem: { restTimePeriodSections.append(RestTimePeriodSection(fromTime: TimeSelection(), toTime: TimeSelection())) },
                 removeItem: { restTimePeriodSections.remove(atOffsets: $0) }
             )
-
+            Spacer()
             CommonButtonView(title: "次へ進む") {
                 if viewModel.inputValidate(restTimePeriodSections: restTimePeriodSections) {
                     router.items.append(.goalSettingInput)
@@ -36,6 +37,9 @@ struct RestTimeInputView: View {
             }
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
+        .padding(.horizontal, 10)
+        .padding(.bottom, 70)
+        .padding(.top, 30)
     }
 }
 
