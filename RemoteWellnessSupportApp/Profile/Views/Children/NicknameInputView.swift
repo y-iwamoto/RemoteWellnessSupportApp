@@ -13,24 +13,19 @@ struct NicknameInputView: View {
     @EnvironmentObject var router: ProfileNavigationRouter
 
     var body: some View {
-        VStack {
-            Text("あなたの名前について教えて下さい")
-                .font(.title3)
-                .padding(.bottom, 50)
-            TextInput(labelName: "ニックネーム", value: $nickname)
-            Spacer()
-            CommonButtonView(title: "次へ進む") {
+        CommonLayoutView(
+            title: "あなたの名前について教えて下さい",
+            buttonTitle: "次へ進む",
+            content: {
+                TextInput(labelName: "ニックネーム", value: $nickname)
+            },
+            buttonAction: {
                 if viewModel.inputValidate(nickname: nickname) {
                     router.items.append(.workDaySelect)
                 }
-            }
-        }
+            },
+            isFirstView: true
+        )
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
-        .padding(.horizontal, 10)
-        .padding(.vertical, 70)
     }
-}
-
-#Preview {
-    NicknameInputView(nickname: .constant("test"))
 }

@@ -98,6 +98,9 @@
 		2EB9421D2BB01F6400F3B0D2 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9421C2BB01F6400F3B0D2 /* TextInput.swift */; };
 		2EB9421F2BB0259300F3B0D2 /* TimeSelectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9421E2BB0259300F3B0D2 /* TimeSelectionListView.swift */; };
 		2EB942212BB02A2B00F3B0D2 /* TimeSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942202BB02A2B00F3B0D2 /* TimeSelectable.swift */; };
+		2EB942242BB0500B00F3B0D2 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942232BB0500B00F3B0D2 /* TitleView.swift */; };
+		2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */; };
+		2EB942292BB0522300F3B0D2 /* CommonLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -243,6 +246,9 @@
 		2EB9421C2BB01F6400F3B0D2 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		2EB9421E2BB0259300F3B0D2 /* TimeSelectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionListView.swift; sourceTree = "<group>"; };
 		2EB942202BB02A2B00F3B0D2 /* TimeSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectable.swift; sourceTree = "<group>"; };
+		2EB942232BB0500B00F3B0D2 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPaddingModifier.swift; sourceTree = "<group>"; };
+		2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLayoutView.swift; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -582,6 +588,7 @@
 		2EB941EE2BAC57D900F3B0D2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2EB942252BB050F600F3B0D2 /* ViewModifier */,
 				2EB942102BAFB89200F3B0D2 /* Model */,
 				2EB941F42BACF19400F3B0D2 /* ViewModels */,
 				2EB941F32BACF18900F3B0D2 /* Views */,
@@ -592,6 +599,7 @@
 		2EB941F32BACF18900F3B0D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2EB942222BB04FF000F3B0D2 /* Common */,
 				2EB941F92BACF51F00F3B0D2 /* Children */,
 				2EB941F52BACF1AC00F3B0D2 /* ProfileScreen.swift */,
 			);
@@ -641,6 +649,23 @@
 				2EB9421A2BAFC85200F3B0D2 /* FormBaseViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2EB942222BB04FF000F3B0D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2EB942232BB0500B00F3B0D2 /* TitleView.swift */,
+				2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2EB942252BB050F600F3B0D2 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 		2EBD2D292B608BDC0063EC7A = {
@@ -1076,6 +1101,7 @@
 				2EB942212BB02A2B00F3B0D2 /* TimeSelectable.swift in Sources */,
 				2E69836B2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift in Sources */,
 				2EB941F02BAC59DF00F3B0D2 /* Profile.swift in Sources */,
+				2EB942292BB0522300F3B0D2 /* CommonLayoutView.swift in Sources */,
 				2E69836D2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift in Sources */,
 				2E6983672B9C73720076EF4F /* WeekPhysicalConditionGraph.swift in Sources */,
 				2E8FBEF42BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift in Sources */,
@@ -1101,6 +1127,7 @@
 				2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2EB942052BAEBF2500F3B0D2 /* WorkTimeInputView.swift in Sources */,
+				2EB942242BB0500B00F3B0D2 /* TitleView.swift in Sources */,
 				2EB941F22BAC5C2E00F3B0D2 /* ProfileDataSource.swift in Sources */,
 				2E0ACDFA2B947DB100318BF2 /* PhysicalConditionEditForm.swift in Sources */,
 				2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
@@ -1127,6 +1154,7 @@
 				2EB9420B2BAED68C00F3B0D2 /* RestTimeInputViewModel.swift in Sources */,
 				2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */,
 				2EB942092BAECC9200F3B0D2 /* RestTimeInputView.swift in Sources */,
+				2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */,
 				2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */,
 				2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */,
 				2E8FBED62BA6E7CD0082B3E1 /* DateArrayTransformer.swift in Sources */,

@@ -15,33 +15,25 @@ struct GoalSettingInputView: View {
     var saveProfile: () -> Bool
 
     var body: some View {
-        VStack {
-            Text("1時間あたりの目標値を設定して下さい")
-                .font(.title3)
-                .padding(.bottom, 50)
-
-            HStack {
-                Text("水分摂取")
-                TextInput(labelName: "ml", value: $hydrationGoal)
-                    .onChange(of: hydrationGoal) { _, newState in
-                        hydrationGoal = viewModel.processHydrationGoalChange(newState)
-                    }
-                    .keyboardType(.numberPad)
-            }
-            Spacer()
-            CommonButtonView(title: "次へ進む") {
+        CommonLayoutView(
+            title: "1時間あたりの目標値を設定して下さい",
+            buttonTitle: "次へ進む",
+            content: {
+                HStack {
+                    Text("水分摂取")
+                    TextInput(labelName: "ml", value: $hydrationGoal)
+                        .onChange(of: hydrationGoal) { _, newState in
+                            hydrationGoal = viewModel.processHydrationGoalChange(newState)
+                        }
+                        .keyboardType(.numberPad)
+                }
+            },
+            buttonAction: {
                 if viewModel.inputValidate(hydrationGoal: hydrationGoal), saveProfile() {
                     hasCompletedProfileRegister = true
                 }
             }
-        }
+        )
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
-        .padding(.horizontal, 10)
-        .padding(.bottom, 70)
-        .padding(.top, 30)
     }
 }
-
-// #Preview {
-//    GoalSettingInputView()
-// }
