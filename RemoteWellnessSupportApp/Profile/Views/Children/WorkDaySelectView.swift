@@ -10,7 +10,7 @@ import SwiftUI
 struct WorkDaySelectView: View {
     @Binding var workDays: [WorkDay]
     @StateObject var viewModel: WorkDaySelectViewModel
-    @EnvironmentObject private var router: ProfileNavigationRouter
+    @EnvironmentObject var router: ProfileNavigationRouter
 
     init(workDays: Binding<[WorkDay]>) {
         _workDays = workDays
@@ -30,7 +30,7 @@ struct WorkDaySelectView: View {
                                 viewModel.selectDayOfWeek(dayOfWeek)
                             } label: {
                                 Text(dayOfWeek.labelName)
-                                    .frame(width: 100, height: 100)
+                                    .frame(minWidth: 70, minHeight: 70)
                                     .background(dayOfWeek.selected ? Color.green : Color.gray)
                                     .foregroundColor(.white)
                                     .font(.title)
@@ -40,7 +40,7 @@ struct WorkDaySelectView: View {
                     }
                 }
             }
-
+            Spacer()
             CommonButtonView(title: "次へ進む") {
                 let newWorkDays = viewModel.assignDayOfWeek(workDays)
                 if !newWorkDays.isEmpty {

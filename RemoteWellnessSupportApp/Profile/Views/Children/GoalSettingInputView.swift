@@ -23,10 +23,7 @@ struct GoalSettingInputView: View {
                 Text("水分摂取")
                 TextInput(labelName: "ml", value: $hydrationGoal)
                     .onChange(of: hydrationGoal) { _, newState in
-                        let filtered = newState.filter { "0123456789".contains($0) }
-                        if filtered != newState {
-                            hydrationGoal = filtered
-                        }
+                        hydrationGoal = viewModel.processHydrationGoalChange(newState)
                     }
                     .keyboardType(.numberPad)
             }

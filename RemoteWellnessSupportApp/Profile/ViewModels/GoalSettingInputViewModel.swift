@@ -20,4 +20,9 @@ class GoalSettingInputViewModel: FormBaseViewModel {
         }
         return true
     }
+
+    func processHydrationGoalChange(_ newValue: String) -> String {
+        let filtered = newValue.filter { "0123456789".contains($0) }
+        return filtered
+    }
 }

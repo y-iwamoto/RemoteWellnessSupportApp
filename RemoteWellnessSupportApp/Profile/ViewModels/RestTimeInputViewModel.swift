@@ -15,7 +15,7 @@ class RestTimeInputViewModel: FormBaseViewModel {
         }
 
         if restTimePeriodSections.contains(where: { $0.fromTime.selectedTime > $0.toTime.selectedTime }) {
-            setError(withMessage: "休憩時間で開始時間が終了時間より未来日を選択肢")
+            setError(withMessage: "休憩時間の開始時間が終了時間よりも後になっています")
             return false
         }
         return true

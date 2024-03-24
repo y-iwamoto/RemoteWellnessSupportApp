@@ -9,7 +9,7 @@ import Foundation
 
 class WorkTimeInputViewModel: FormBaseViewModel {
     func inputValidate(workTimeFrom: TimeSelection, workTimeTo: TimeSelection) -> Bool {
-        if workTimeFrom.selectedTime > workTimeTo.selectedTime {
+        if workTimeFrom.selectedTime >= workTimeTo.selectedTime {
             setError(withMessage: "開始時間の方が終了時間より未来時間を指定しています")
             return false
         }

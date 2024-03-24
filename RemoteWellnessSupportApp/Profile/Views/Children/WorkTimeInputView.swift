@@ -11,7 +11,7 @@ struct WorkTimeInputView: View {
     @Binding var workTimeFrom: TimeSelection
     @Binding var workTimeTo: TimeSelection
     @StateObject var viewModel = WorkTimeInputViewModel()
-    @EnvironmentObject private var router: ProfileNavigationRouter
+    @EnvironmentObject var router: ProfileNavigationRouter
 
     var body: some View {
         VStack {

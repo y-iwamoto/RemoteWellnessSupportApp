@@ -10,7 +10,7 @@ import SwiftUI
 struct NicknameInputView: View {
     @Binding var nickname: String
     @StateObject var viewModel = NicknameInputViewModel()
-    @EnvironmentObject private var router: ProfileNavigationRouter
+    @EnvironmentObject var router: ProfileNavigationRouter
 
     var body: some View {
         VStack {

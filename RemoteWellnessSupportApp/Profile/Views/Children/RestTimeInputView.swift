@@ -10,7 +10,7 @@ import SwiftUI
 struct RestTimeInputView: View {
     @Binding var restTimePeriodSections: [RestTimePeriodSection]
     @StateObject var viewModel = RestTimeInputViewModel()
-    @EnvironmentObject private var router: ProfileNavigationRouter
+    @EnvironmentObject var router: ProfileNavigationRouter
 
     var body: some View {
         VStack {

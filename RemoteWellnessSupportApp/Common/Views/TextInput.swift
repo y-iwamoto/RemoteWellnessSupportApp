@@ -13,7 +13,8 @@ struct TextInput: View {
     var body: some View {
         TextField(labelName, text: $value)
             .padding()
-            .foregroundColor(.black).padding(10)
+            .foregroundColor(.black)
+            .padding(10)
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
