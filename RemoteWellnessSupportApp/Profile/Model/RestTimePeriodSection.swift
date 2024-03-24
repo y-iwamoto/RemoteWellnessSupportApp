@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct RestTimePeriodSection {
+struct RestTimePeriodSection: TimeSelectable {
     var fromTime: TimeSelection
     var toTime: TimeSelection
+    var id = UUID()
 }

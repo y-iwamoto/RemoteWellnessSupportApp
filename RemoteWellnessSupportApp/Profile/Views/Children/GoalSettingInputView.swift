@@ -21,8 +21,7 @@ struct GoalSettingInputView: View {
 
             HStack {
                 Text("水分摂取")
-                // TODO: 共通化
-                TextField("ml", text: $hydrationGoal)
+                TextInput(labelName: "ml", value: $hydrationGoal)
                     .onChange(of: hydrationGoal) { _, newState in
                         let filtered = newState.filter { "0123456789".contains($0) }
                         if filtered != newState {
@@ -30,13 +29,6 @@ struct GoalSettingInputView: View {
                         }
                     }
                     .keyboardType(.numberPad)
-                    .padding()
-                    .foregroundColor(.black).padding(10)
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
             }
 
             CommonButtonView(title: "次へ進む") {

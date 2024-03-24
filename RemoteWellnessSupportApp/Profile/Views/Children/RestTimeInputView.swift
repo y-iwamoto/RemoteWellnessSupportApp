@@ -16,22 +16,18 @@ struct RestTimeInputView: View {
         VStack {
             Text("休憩時間を設定して下さい")
                 .font(.title3)
-            // TODO: 共通化
-            List {
-                ForEach(restTimePeriodSections.indices, id: \.self) { index in
+
+            TimeSelectionListView(
+                items: $restTimePeriodSections,
+                contentView: { item in
                     VStack {
-                        TimePicker(timeSelection: $restTimePeriodSections[index].fromTime, label: "休憩開始時間")
-
-                        TimePicker(timeSelection: $restTimePeriodSections[index].toTime, label: "休憩終了時間")
+                        TimePicker(timeSelection: item.fromTime, label: "休憩開始時間")
+                        TimePicker(timeSelection: item.toTime, label: "休憩終了時間")
                     }
-                }
-                .onDelete(perform: removeTimeSelection)
-
-                Button(action: addTimeSelection) {
-                    Label("追加", systemImage: "plus.circle.fill")
-                }
-            }
-            .listStyle(PlainListStyle())
+                },
+                addItem: { restTimePeriodSections.append(RestTimePeriodSection(fromTime: TimeSelection(), toTime: TimeSelection())) },
+                removeItem: { restTimePeriodSections.remove(atOffsets: $0) }
+            )
 
             CommonButtonView(title: "次へ進む") {
                 if viewModel.inputValidate(restTimePeriodSections: restTimePeriodSections) {
@@ -40,14 +36,6 @@ struct RestTimeInputView: View {
             }
         }
         .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
-    }
-
-    private func addTimeSelection() {
-        restTimePeriodSections.append(RestTimePeriodSection(fromTime: TimeSelection(), toTime: TimeSelection()))
-    }
-
-    private func removeTimeSelection(at offsets: IndexSet) {
-        restTimePeriodSections.remove(atOffsets: offsets)
     }
 }
 

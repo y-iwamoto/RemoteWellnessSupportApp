@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TimeSelection: Identifiable {
+struct TimeSelection: Identifiable, TimeSelectable {
     var id = UUID()
     var selectedTime = Date()
 }

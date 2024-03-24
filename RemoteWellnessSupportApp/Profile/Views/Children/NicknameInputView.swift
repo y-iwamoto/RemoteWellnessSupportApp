@@ -17,15 +17,7 @@ struct NicknameInputView: View {
             VStack(spacing: 50) {
                 Text("あなたの名前について教えて下さい")
                     .font(.title3)
-                // TODO: 共通化
-                TextField("ニックネーム", text: $nickname)
-                    .padding()
-                    .foregroundColor(.black).padding(10)
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
+                TextInput(labelName: "ニックネーム", value: $nickname)
             }
             Spacer()
             CommonButtonView(title: "次へ進む") {
