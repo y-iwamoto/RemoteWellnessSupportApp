@@ -10,12 +10,15 @@ import SwiftUI
 struct RootView: View {
     @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = false
     @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting = false
+    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = false
 
     var body: some View {
         if hasCompletedNotificationSetting {
             MainView()
-        } else if hasCompletedOnboarding {
+        } else if hasCompletedProfileRegister {
             NotificationSettingScreen()
+        } else if hasCompletedOnboarding {
+            ProfileScreen()
         } else {
             OnboardingScreenView()
         }
