@@ -9,7 +9,7 @@ import Charts
 import SwiftUI
 
 struct PhysicalConditionChartView: View {
-    let physicalConditions: [GraphPhysicalCondition]
+    let physicalConditions: [GraphValue]
     let timeZoneType: TimeZoneType
     let ratingValues = PhysicalConditionRating.allCases.map(\.rawValue)
 

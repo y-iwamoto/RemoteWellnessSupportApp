@@ -1,5 +1,5 @@
 //
-//  DateWithPhysicalCondition.swift
+//  DateWithListValue.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/03/10.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DateWithPhysicalCondition: Hashable {
+struct DateWithListValue: Hashable {
     var date: Date
     let id: UUID
 
