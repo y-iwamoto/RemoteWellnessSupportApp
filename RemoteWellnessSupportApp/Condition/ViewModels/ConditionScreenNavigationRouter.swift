@@ -14,8 +14,12 @@ enum ConditionScreenNavigationItem: Hashable {
     case hydrationEntryForm
     case dailyPhysicalConditionList(date: Date)
     case weekPhysicalConditionList
+    case weekHydrationList
+    case dailyHydrationList(date: Date)
     case physicalConditionEditForm(physicalCondition: PhysicalCondition)
+    case hydrationEditForm(hydration: Hydration)
     case selectedDatePhysicalConditionGraph(targetDate: Date)
+    case selectedDateHydrationGraph(targetDate: Date)
 }
 
 final class ConditionScreenNavigationRouter: ObservableObject {

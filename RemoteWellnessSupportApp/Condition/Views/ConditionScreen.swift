@@ -43,10 +43,16 @@ struct ConditionScreen: View {
         switch item {
         case let .dailyPhysicalConditionList(date):
             DailyPhysicalConditionList(targetDate: date)
+        case let .dailyHydrationList(date):
+            DailyHydrationList(targetDate: date)
         case .weekPhysicalConditionList:
             WeekPhysicalConditionListView()
+        case .weekHydrationList:
+            WeekHydrationListView()
         case let .physicalConditionEditForm(physicalCondition):
             PhysicalConditionEditForm(physicalCondition: physicalCondition)
+        case let .hydrationEditForm(hydration):
+            HydrationEditForm(hydration: hydration)
         case .physicalConditionEntryForm:
             PhysicalConditionCreateForm()
         case .reviewEntryForm:
@@ -54,9 +60,11 @@ struct ConditionScreen: View {
         case .stepEntryForm:
             StepEntryForm()
         case .hydrationEntryForm:
-            HydrationEntryForm()
+            HydrationCreateForm()
         case let .selectedDatePhysicalConditionGraph(targetDate):
             SelectedDatePhysicalConditionGraph(targetDate: targetDate)
+        case let .selectedDateHydrationGraph(targetDate):
+            SelectedDateHydrationGraph(targetDate: targetDate)
         }
     }
 }
