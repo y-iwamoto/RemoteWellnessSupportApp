@@ -51,9 +51,7 @@ class WeekPhysicalConditionGraphViewModel: ObservableObject {
         let calendar = Calendar.current
         let currentTime = Date()
         let dateRange = (0 ... 7).map { date -> Date in
-            guard let startOfDay = calendar.date(byAdding: .day, value: -date, to: currentTime) else {
-                fatalError("Failed to calculate start of day")
-            }
+            let startOfDay = calendar.date(byAdding: .day, value: -date, to: currentTime)!
             return calendar.startOfDay(for: startOfDay)
         }
 

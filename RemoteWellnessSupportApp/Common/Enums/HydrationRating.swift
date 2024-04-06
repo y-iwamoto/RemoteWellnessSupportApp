@@ -19,11 +19,11 @@ enum HydrationRating: Int, CaseIterable, SelectableItem {
     var label: String {
         switch self {
         case .teaCup:
-            "250"
+            "250ml"
         case .glass:
-            "500"
+            "500ml"
         case .mugCup:
-            "750"
+            "750ml"
         }
     }
 

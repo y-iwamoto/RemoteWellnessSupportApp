@@ -38,6 +38,8 @@ struct ConditionScreen: View {
         }
     }
 
+    // TODO: TodayConditionとWeekConditionにそれぞれnavigationを移動。また各登録画面についてはそれぞれnavigation持たせるべき
+    // swiftlint:disable cyclomatic_complexity
     @ViewBuilder
     private func navigationDestinationBuilder(item: ConditionScreenNavigationItem) -> some View {
         switch item {
@@ -67,6 +69,7 @@ struct ConditionScreen: View {
             SelectedDateHydrationGraph(targetDate: targetDate)
         }
     }
+    // swiftlint:enable cyclomatic_complexity
 }
 
 #Preview {

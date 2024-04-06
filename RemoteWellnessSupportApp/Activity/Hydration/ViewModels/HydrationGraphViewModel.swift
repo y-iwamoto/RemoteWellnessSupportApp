@@ -105,9 +105,7 @@ class HydrationGraphViewModel: FormBaseViewModel {
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: targetDate)
         let endOfDayComponents = DateComponents(day: 1)
-        guard let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay) else {
-            fatalError("Failed to calculate the end of day")
-        }
+        let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay)!
         let predicate = #Predicate<Hydration> { hydration in
             hydration.entryDate >= startOfDay && hydration.entryDate < endOfDay
         }
