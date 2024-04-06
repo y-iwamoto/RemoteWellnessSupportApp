@@ -17,7 +17,7 @@ class WeekPhysicalConditionGraphViewModel: ObservableObject {
         self.dataSource = dataSource
     }
 
-    @Published var weekPhysicalConditions: [GraphPhysicalCondition] = []
+    @Published var weekPhysicalConditions: [GraphValue] = []
 
     func fetchWeekPhysicalConditions() {
         do {
@@ -47,13 +47,11 @@ class WeekPhysicalConditionGraphViewModel: ObservableObject {
         }
     }
 
-    private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) -> [GraphPhysicalCondition] {
+    private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) -> [GraphValue] {
         let calendar = Calendar.current
         let currentTime = Date()
         let dateRange = (0 ... 7).map { date -> Date in
-            guard let startOfDay = calendar.date(byAdding: .day, value: -date, to: currentTime) else {
-                fatalError("Failed to calculate start of day")
-            }
+            let startOfDay = calendar.date(byAdding: .day, value: -date, to: currentTime)!
             return calendar.startOfDay(for: startOfDay)
         }
 
@@ -61,12 +59,12 @@ class WeekPhysicalConditionGraphViewModel: ObservableObject {
             calendar.startOfDay(for: condition.entryDate)
         }
 
-        let graphConditions: [GraphPhysicalCondition] = dateRange.map { date -> GraphPhysicalCondition in
+        let graphConditions: [GraphValue] = dateRange.map { date -> GraphValue in
             if let conditionsForDay = groupedConditions[date] {
                 let averageRating = conditionsForDay.reduce(0) { $0 + $1.rating } / conditionsForDay.count
-                return GraphPhysicalCondition(timeZone: date, rateAverage: averageRating)
+                return GraphValue(timeZone: date, rateAverage: averageRating)
             } else {
-                return GraphPhysicalCondition(timeZone: date, rateAverage: 0)
+                return GraphValue(timeZone: date, rateAverage: 0)
             }
         }
 

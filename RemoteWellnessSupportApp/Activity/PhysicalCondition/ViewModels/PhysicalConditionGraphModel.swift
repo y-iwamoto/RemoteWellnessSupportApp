@@ -20,7 +20,7 @@ class PhysicalConditionGraphModel: ObservableObject {
         self.targetDate = targetDate
     }
 
-    @Published var todayPhysicalConditions: [GraphPhysicalCondition] = []
+    @Published var todayPhysicalConditions: [GraphValue] = []
 
     func fetchPhysicalConditions() {
         do {
@@ -55,8 +55,8 @@ class PhysicalConditionGraphModel: ObservableObject {
         }
     }
 
-    private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) -> [GraphPhysicalCondition] {
-        var results: [GraphPhysicalCondition] = []
+    private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) -> [GraphValue] {
+        var results: [GraphValue] = []
         let calendar = Calendar.current
         let currentHour = calendar.component(.hour, from: targetDate)
         // TODO: 現在はhoursRangeを特定値で固定にしているが別途、ここも動的になる
@@ -68,7 +68,7 @@ class PhysicalConditionGraphModel: ObservableObject {
         for hour in hoursRange {
             let averageRating = calculateAverageRatingForHour(conditions, hour: hour)
             if let timeZone = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: targetDate) {
-                results.append(GraphPhysicalCondition(timeZone: timeZone, rateAverage: Int(averageRating)))
+                results.append(GraphValue(timeZone: timeZone, rateAverage: Int(averageRating)))
             }
         }
         return results

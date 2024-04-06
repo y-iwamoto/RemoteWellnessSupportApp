@@ -14,17 +14,19 @@ struct SelectorView<Item: SelectableItem>: View {
     var body: some View {
         HStack(alignment: .center) {
             ForEach(items) { item in
+                Spacer()
                 VStack {
+                    Text(item.label)
                     Image(systemName: item.imageName)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50)
                         .foregroundColor(selectedItem?.id == item.id ? .blue : .gray)
-                    Text(item.label)
                 }
                 .onTapGesture {
                     selectedItem = item
                 }
+                Spacer()
             }
         }.frame(maxWidth: .infinity)
     }

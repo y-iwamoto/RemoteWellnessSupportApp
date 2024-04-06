@@ -9,7 +9,7 @@ import Foundation
 
 class WeekPhysicalConditionListViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSource
-    @Published var dateWithPhysicalConditions: [DateWithPhysicalCondition] = []
+    @Published var dateWithPhysicalConditions: [DateWithListValue] = []
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
 
@@ -36,7 +36,7 @@ class WeekPhysicalConditionListViewModel: ObservableObject {
         }
     }
 
-    private func convertToDateWithPhysicalConditions(_ conditions: [PhysicalCondition]) -> [DateWithPhysicalCondition] {
+    private func convertToDateWithPhysicalConditions(_ conditions: [PhysicalCondition]) -> [DateWithListValue] {
         let calendar = Calendar.current
         let groupedConditions = Dictionary(grouping: conditions) { condition -> Date in
             calendar.startOfDay(for: condition.entryDate)
@@ -44,8 +44,8 @@ class WeekPhysicalConditionListViewModel: ObservableObject {
 
         let sortedDates = groupedConditions.keys.sorted()
 
-        let dateWithPhysicalCondition: [DateWithPhysicalCondition] = sortedDates.map { date -> DateWithPhysicalCondition in
-            DateWithPhysicalCondition(date: date)
+        let dateWithPhysicalCondition: [DateWithListValue] = sortedDates.map { date -> DateWithListValue in
+            DateWithListValue(date: date)
         }
 
         return dateWithPhysicalCondition

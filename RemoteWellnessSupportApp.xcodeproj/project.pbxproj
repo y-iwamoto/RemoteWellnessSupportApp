@@ -24,12 +24,24 @@
 		2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */; };
 		2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D62B6B0EBE00576531 /* AppColors.swift */; };
 		2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */; };
-		2E0DA41C2B8B2A73004E0185 /* GraphPhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA41B2B8B2A73004E0185 /* GraphPhysicalCondition.swift */; };
+		2E0DA41C2B8B2A73004E0185 /* GraphValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA41B2B8B2A73004E0185 /* GraphValue.swift */; };
 		2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4202B8C0B1F004E0185 /* PhysicalConditionChartView.swift */; };
 		2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */; };
 		2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */; };
 		2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */; };
 		2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */; };
+		2E61D0AB2BB238130087B895 /* HydrationEntryFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0AA2BB238130087B895 /* HydrationEntryFormViewModel.swift */; };
+		2E61D0AD2BB238C00087B895 /* Hydration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0AC2BB238C00087B895 /* Hydration.swift */; };
+		2E61D0AF2BB2396A0087B895 /* HydrationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0AE2BB2396A0087B895 /* HydrationDataSource.swift */; };
+		2E61D0B32BB23E8D0087B895 /* HydrationRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0B22BB23E8D0087B895 /* HydrationRating.swift */; };
+		2E61D0B52BB246B80087B895 /* HydrationCreateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0B42BB246B80087B895 /* HydrationCreateForm.swift */; };
+		2E61D0B72BB2F26E0087B895 /* HydrationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0B62BB2F26E0087B895 /* HydrationGraph.swift */; };
+		2E61D0B92BB2F2820087B895 /* HydrationGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0B82BB2F2820087B895 /* HydrationGraphViewModel.swift */; };
+		2E61D0BB2BB2F8D20087B895 /* GraphValueChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0BA2BB2F8D20087B895 /* GraphValueChartView.swift */; };
+		2E61D0BD2BB302190087B895 /* HydrationChartYModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0BC2BB302190087B895 /* HydrationChartYModifier.swift */; };
+		2E61D0BF2BB432520087B895 /* DailyHydrationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0BE2BB432520087B895 /* DailyHydrationList.swift */; };
+		2E61D0C12BB432CA0087B895 /* DailyHydrationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0C02BB432CA0087B895 /* DailyHydrationListViewModel.swift */; };
+		2E61D0C32BB446520087B895 /* HydrationEditForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0C22BB446520087B895 /* HydrationEditForm.swift */; };
 		2E631C6E2B896F0D00B35AAC /* PhysicalConditionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C6D2B896F0D00B35AAC /* PhysicalConditionGraph.swift */; };
 		2E631C702B8972E800B35AAC /* PhysicalConditionGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C6F2B8972E800B35AAC /* PhysicalConditionGraphModel.swift */; };
 		2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E631C722B8A180E00B35AAC /* Date+Extensions.swift */; };
@@ -39,7 +51,7 @@
 		2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6983682B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift */; };
 		2E69836B2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69836A2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift */; };
 		2E69836D2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69836C2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift */; };
-		2E6983702B9DACC50076EF4F /* DateWithPhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69836F2B9DACC50076EF4F /* DateWithPhysicalCondition.swift */; };
+		2E6983702B9DACC50076EF4F /* DateWithListValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69836F2B9DACC50076EF4F /* DateWithListValue.swift */; };
 		2E6983722B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6983712B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift */; };
 		2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
@@ -49,6 +61,11 @@
 		2E6FE20C2BA26D2700541819 /* NotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FE20B2BA26D2700541819 /* NotificationPermissionView.swift */; };
 		2E6FE20F2BA26F9000541819 /* NotificationPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FE20E2BA26F9000541819 /* NotificationPermissionViewModel.swift */; };
 		2E6FE2122BA2750100541819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FE2112BA2750100541819 /* AppDelegate.swift */; };
+		2E868AB22BB59D5A00681E6B /* WeekHydrationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB12BB59D5A00681E6B /* WeekHydrationGraph.swift */; };
+		2E868AB42BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB32BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift */; };
+		2E868AB62BB6332700681E6B /* WeekHydrationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB52BB6332700681E6B /* WeekHydrationListView.swift */; };
+		2E868AB82BB6336800681E6B /* WeekHydrationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB72BB6336800681E6B /* WeekHydrationListViewModel.swift */; };
+		2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB92BB6372500681E6B /* SelectedDateHydrationGraph.swift */; };
 		2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66D22B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */; };
@@ -176,12 +193,24 @@
 		2E0C95D22B6B0D2B00576531 /* OnBoardingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTab.swift; sourceTree = "<group>"; };
 		2E0C95D62B6B0EBE00576531 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		2E0C95D92B6BC62D00576531 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
-		2E0DA41B2B8B2A73004E0185 /* GraphPhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPhysicalCondition.swift; sourceTree = "<group>"; };
+		2E0DA41B2B8B2A73004E0185 /* GraphValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphValue.swift; sourceTree = "<group>"; };
 		2E0DA4202B8C0B1F004E0185 /* PhysicalConditionChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionChartView.swift; sourceTree = "<group>"; };
 		2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneType.swift; sourceTree = "<group>"; };
 		2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDefinition.swift; sourceTree = "<group>"; };
 		2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisModifier.swift; sourceTree = "<group>"; };
 		2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionChartYModifier.swift; sourceTree = "<group>"; };
+		2E61D0AA2BB238130087B895 /* HydrationEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationEntryFormViewModel.swift; sourceTree = "<group>"; };
+		2E61D0AC2BB238C00087B895 /* Hydration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydration.swift; sourceTree = "<group>"; };
+		2E61D0AE2BB2396A0087B895 /* HydrationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationDataSource.swift; sourceTree = "<group>"; };
+		2E61D0B22BB23E8D0087B895 /* HydrationRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationRating.swift; sourceTree = "<group>"; };
+		2E61D0B42BB246B80087B895 /* HydrationCreateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationCreateForm.swift; sourceTree = "<group>"; };
+		2E61D0B62BB2F26E0087B895 /* HydrationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationGraph.swift; sourceTree = "<group>"; };
+		2E61D0B82BB2F2820087B895 /* HydrationGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationGraphViewModel.swift; sourceTree = "<group>"; };
+		2E61D0BA2BB2F8D20087B895 /* GraphValueChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphValueChartView.swift; sourceTree = "<group>"; };
+		2E61D0BC2BB302190087B895 /* HydrationChartYModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationChartYModifier.swift; sourceTree = "<group>"; };
+		2E61D0BE2BB432520087B895 /* DailyHydrationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyHydrationList.swift; sourceTree = "<group>"; };
+		2E61D0C02BB432CA0087B895 /* DailyHydrationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyHydrationListViewModel.swift; sourceTree = "<group>"; };
+		2E61D0C22BB446520087B895 /* HydrationEditForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationEditForm.swift; sourceTree = "<group>"; };
 		2E631C6D2B896F0D00B35AAC /* PhysicalConditionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionGraph.swift; sourceTree = "<group>"; };
 		2E631C6F2B8972E800B35AAC /* PhysicalConditionGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionGraphModel.swift; sourceTree = "<group>"; };
 		2E631C722B8A180E00B35AAC /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -190,7 +219,7 @@
 		2E6983682B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPhysicalConditionGraphViewModel.swift; sourceTree = "<group>"; };
 		2E69836A2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPhysicalConditionListView.swift; sourceTree = "<group>"; };
 		2E69836C2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPhysicalConditionListViewModel.swift; sourceTree = "<group>"; };
-		2E69836F2B9DACC50076EF4F /* DateWithPhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWithPhysicalCondition.swift; sourceTree = "<group>"; };
+		2E69836F2B9DACC50076EF4F /* DateWithListValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWithListValue.swift; sourceTree = "<group>"; };
 		2E6983712B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDatePhysicalConditionGraph.swift; sourceTree = "<group>"; };
 		2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionRating.swift; sourceTree = "<group>"; };
 		2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConst.swift; sourceTree = "<group>"; };
@@ -198,6 +227,11 @@
 		2E6FE20B2BA26D2700541819 /* NotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionView.swift; sourceTree = "<group>"; };
 		2E6FE20E2BA26F9000541819 /* NotificationPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionViewModel.swift; sourceTree = "<group>"; };
 		2E6FE2112BA2750100541819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E868AB12BB59D5A00681E6B /* WeekHydrationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHydrationGraph.swift; sourceTree = "<group>"; };
+		2E868AB32BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHydrationGraphViewModel.swift; sourceTree = "<group>"; };
+		2E868AB52BB6332700681E6B /* WeekHydrationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHydrationListView.swift; sourceTree = "<group>"; };
+		2E868AB72BB6336800681E6B /* WeekHydrationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHydrationListViewModel.swift; sourceTree = "<group>"; };
+		2E868AB92BB6372500681E6B /* SelectedDateHydrationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDateHydrationGraph.swift; sourceTree = "<group>"; };
 		2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCondition.swift; sourceTree = "<group>"; };
 		2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextEditor.swift; sourceTree = "<group>"; };
 		2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionScreenNavigationRouter.swift; sourceTree = "<group>"; };
@@ -391,6 +425,7 @@
 				2E8FBEE62BA86F630082B3E1 /* TimePicker.swift */,
 				2EB9421C2BB01F6400F3B0D2 /* TextInput.swift */,
 				2EB9421E2BB0259300F3B0D2 /* TimeSelectionListView.swift */,
+				2E61D0BA2BB2F8D20087B895 /* GraphValueChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,7 +433,7 @@
 		2E0DA41A2B8B2A56004E0185 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2E0DA41B2B8B2A73004E0185 /* GraphPhysicalCondition.swift */,
+				2E0DA41B2B8B2A73004E0185 /* GraphValue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,16 +451,21 @@
 			children = (
 				2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */,
 				2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */,
+				2E61D0BC2BB302190087B895 /* HydrationChartYModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		2E631C6C2B896EE800B35AAC /* Graphs */ = {
+		2E61D0A92BB237FE0087B895 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2E6983662B9C73720076EF4F /* WeekPhysicalConditionGraph.swift */,
+				2E61D0AA2BB238130087B895 /* HydrationEntryFormViewModel.swift */,
+				2E61D0B82BB2F2820087B895 /* HydrationGraphViewModel.swift */,
+				2E61D0C02BB432CA0087B895 /* DailyHydrationListViewModel.swift */,
+				2E868AB32BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift */,
+				2E868AB72BB6336800681E6B /* WeekHydrationListViewModel.swift */,
 			);
-			path = Graphs;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		2E631C712B8A17F700B35AAC /* Extensions */ = {
@@ -440,7 +480,7 @@
 		2E69836E2B9DACBA0076EF4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2E69836F2B9DACC50076EF4F /* DateWithPhysicalCondition.swift */,
+				2E69836F2B9DACC50076EF4F /* DateWithListValue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -463,6 +503,7 @@
 				2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */,
 				2E8FBED22BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift */,
 				2E8FBED42BA6E7760082B3E1 /* ValueTransformers */,
+				2E61D0AC2BB238C00087B895 /* Hydration.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -748,6 +789,7 @@
 				2ED957D02B883D8B007663AA /* PhysicalConditionDataSource.swift */,
 				2E8FBED72BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift */,
 				2EB941F12BAC5C2E00F3B0D2 /* ProfileDataSource.swift */,
+				2E61D0AE2BB2396A0087B895 /* HydrationDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -804,7 +846,6 @@
 		2EE812C52B79016D000B65E5 /* Children */ = {
 			isa = PBXGroup;
 			children = (
-				2E631C6C2B896EE800B35AAC /* Graphs */,
 				2EE812C62B79016D000B65E5 /* TabButton.swift */,
 				2EE812C72B79016D000B65E5 /* TodayCondition.swift */,
 				2EE812E62B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift */,
@@ -829,6 +870,7 @@
 		2EE812CC2B79904E000B65E5 /* Hydration */ = {
 			isa = PBXGroup;
 			children = (
+				2E61D0A92BB237FE0087B895 /* ViewModels */,
 				2EE812CD2B79904E000B65E5 /* Views */,
 			);
 			path = Hydration;
@@ -838,6 +880,13 @@
 			isa = PBXGroup;
 			children = (
 				2EE812CE2B79904E000B65E5 /* HydrationEntryForm.swift */,
+				2E61D0B42BB246B80087B895 /* HydrationCreateForm.swift */,
+				2E61D0B62BB2F26E0087B895 /* HydrationGraph.swift */,
+				2E61D0BE2BB432520087B895 /* DailyHydrationList.swift */,
+				2E61D0C22BB446520087B895 /* HydrationEditForm.swift */,
+				2E868AB12BB59D5A00681E6B /* WeekHydrationGraph.swift */,
+				2E868AB52BB6332700681E6B /* WeekHydrationListView.swift */,
+				2E868AB92BB6372500681E6B /* SelectedDateHydrationGraph.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -861,6 +910,7 @@
 				2E0ACDFB2B9690F300318BF2 /* PhysicalConditionCreateForm.swift */,
 				2E631C6D2B896F0D00B35AAC /* PhysicalConditionGraph.swift */,
 				2E69836A2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift */,
+				2E6983662B9C73720076EF4F /* WeekPhysicalConditionGraph.swift */,
 				2E6983712B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift */,
 			);
 			path = Views;
@@ -943,6 +993,7 @@
 				2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */,
 				2E0ACDFE2B97E32B00318BF2 /* FormAction.swift */,
 				2E8FBEE82BAA78390082B3E1 /* ReminderType.swift */,
+				2E61D0B22BB23E8D0087B895 /* HydrationRating.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1052,17 +1103,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E61D0AB2BB238130087B895 /* HydrationEntryFormViewModel.swift in Sources */,
 				2E6FE2122BA2750100541819 /* AppDelegate.swift in Sources */,
 				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
+				2E61D0BF2BB432520087B895 /* DailyHydrationList.swift in Sources */,
 				2EB941F82BACF1BA00F3B0D2 /* ProfileScreenViewModel.swift in Sources */,
 				2EB9420D2BAEDF9F00F3B0D2 /* GoalSettingInputView.swift in Sources */,
-				2E0DA41C2B8B2A73004E0185 /* GraphPhysicalCondition.swift in Sources */,
+				2E0DA41C2B8B2A73004E0185 /* GraphValue.swift in Sources */,
 				2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */,
 				2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */,
 				2E8FBECD2BA67D680082B3E1 /* PhysicalConditionReminderView.swift in Sources */,
 				2E8FBEE72BA86F630082B3E1 /* TimePicker.swift in Sources */,
+				2E61D0B72BB2F26E0087B895 /* HydrationGraph.swift in Sources */,
 				2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
+				2E61D0B52BB246B80087B895 /* HydrationCreateForm.swift in Sources */,
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E631C6E2B896F0D00B35AAC /* PhysicalConditionGraph.swift in Sources */,
@@ -1077,15 +1132,18 @@
 				2E6FE20C2BA26D2700541819 /* NotificationPermissionView.swift in Sources */,
 				2EB9421D2BB01F6400F3B0D2 /* TextInput.swift in Sources */,
 				2E6983652B9C728D0076EF4F /* WeekCondition.swift in Sources */,
+				2E61D0C32BB446520087B895 /* HydrationEditForm.swift in Sources */,
 				2E8FBEE92BAA78390082B3E1 /* ReminderType.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
 				2E8FBEEC2BAA78F70082B3E1 /* TabTitleConvertible.swift in Sources */,
 				2E0ACDFC2B9690F300318BF2 /* PhysicalConditionCreateForm.swift in Sources */,
 				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
+				2E61D0BB2BB2F8D20087B895 /* GraphValueChartView.swift in Sources */,
 				2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
 				2E8FBED12BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift in Sources */,
 				2EE812DA2B79904E000B65E5 /* StepEntryForm.swift in Sources */,
+				2E868AB42BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift in Sources */,
 				2E0ACE012B97E4F200318BF2 /* ActivityListDestination.swift in Sources */,
 				2E8FBEEF2BAA79300082B3E1 /* ConditionTab+Extensions.swift in Sources */,
 				2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */,
@@ -1095,11 +1153,13 @@
 				2E8FBEC82BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift in Sources */,
 				2E8FBEDE2BA86E660082B3E1 /* IntervalTimeSelectView.swift in Sources */,
 				2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */,
+				2E61D0BD2BB302190087B895 /* HydrationChartYModifier.swift in Sources */,
 				2EB9421B2BAFC85200F3B0D2 /* FormBaseViewModel.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2E6FE20F2BA26F9000541819 /* NotificationPermissionViewModel.swift in Sources */,
 				2EB942212BB02A2B00F3B0D2 /* TimeSelectable.swift in Sources */,
 				2E69836B2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift in Sources */,
+				2E61D0AF2BB2396A0087B895 /* HydrationDataSource.swift in Sources */,
 				2EB941F02BAC59DF00F3B0D2 /* Profile.swift in Sources */,
 				2EB942292BB0522300F3B0D2 /* CommonLayoutView.swift in Sources */,
 				2E69836D2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift in Sources */,
@@ -1113,18 +1173,21 @@
 				2E0C95C82B6A723300576531 /* ReminderExplanationView.swift in Sources */,
 				2E8FBED82BA6ED940082B3E1 /* PhysicalConditionReminderDataSource.swift in Sources */,
 				2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */,
-				2E6983702B9DACC50076EF4F /* DateWithPhysicalCondition.swift in Sources */,
+				2E6983702B9DACC50076EF4F /* DateWithListValue.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 				2EB942072BAEC9D700F3B0D2 /* WorkTimeInputViewModel.swift in Sources */,
 				2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */,
 				2EE812C92B79016D000B65E5 /* TabButton.swift in Sources */,
+				2E868AB22BB59D5A00681E6B /* WeekHydrationGraph.swift in Sources */,
 				2ED957C82B86BED1007663AA /* SelectorView.swift in Sources */,
 				2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */,
 				2E631C702B8972E800B35AAC /* PhysicalConditionGraphModel.swift in Sources */,
+				2E61D0B92BB2F2820087B895 /* HydrationGraphViewModel.swift in Sources */,
 				2E8FBEE32BA86ED00082B3E1 /* TimeSelection.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
 				2E0ACDF32B93E42200318BF2 /* DailyPhysicalConditionList.swift in Sources */,
 				2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */,
+				2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2EB942052BAEBF2500F3B0D2 /* WorkTimeInputView.swift in Sources */,
 				2EB942242BB0500B00F3B0D2 /* TitleView.swift in Sources */,
@@ -1139,6 +1202,7 @@
 				2EB941FB2BACF54300F3B0D2 /* NicknameInputView.swift in Sources */,
 				2EB942122BAFB8A000F3B0D2 /* RestTimePeriodSection.swift in Sources */,
 				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
+				2E61D0AD2BB238C00087B895 /* Hydration.swift in Sources */,
 				2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */,
 				2EE812CA2B79016D000B65E5 /* TodayCondition.swift in Sources */,
 				2EE812D82B79904E000B65E5 /* HydrationEntryForm.swift in Sources */,
@@ -1147,14 +1211,18 @@
 				2EB9420F2BAF055C00F3B0D2 /* GoalSettingInputViewModel.swift in Sources */,
 				2ED957CB2B86BEF8007663AA /* SelectableItem.swift in Sources */,
 				2E8FBECB2BA67BF20082B3E1 /* NotificationSettingEndView.swift in Sources */,
+				2E61D0B32BB23E8D0087B895 /* HydrationRating.swift in Sources */,
 				2E8FBEC62BA676C60082B3E1 /* NotificationSettingScreen.swift in Sources */,
+				2E868AB82BB6336800681E6B /* WeekHydrationListViewModel.swift in Sources */,
 				2E6E64152B80460500A11DB9 /* PhysicalConditionEntryFormViewModel.swift in Sources */,
 				2EB942012BADAA2300F3B0D2 /* WorkDaySelectView.swift in Sources */,
+				2E61D0C12BB432CA0087B895 /* DailyHydrationListViewModel.swift in Sources */,
 				2EB941FF2BADA8C500F3B0D2 /* NicknameInputViewModel.swift in Sources */,
 				2EB9420B2BAED68C00F3B0D2 /* RestTimeInputViewModel.swift in Sources */,
 				2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */,
 				2EB942092BAECC9200F3B0D2 /* RestTimeInputView.swift in Sources */,
 				2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */,
+				2E868AB62BB6332700681E6B /* WeekHydrationListView.swift in Sources */,
 				2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */,
 				2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */,
 				2E8FBED62BA6E7CD0082B3E1 /* DateArrayTransformer.swift in Sources */,
