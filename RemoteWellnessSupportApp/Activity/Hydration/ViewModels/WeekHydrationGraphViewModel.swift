@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeekHydrationGraphViewModel: BaseSelectedDateGraphViewModel {
+class WeekHydrationGraphViewModel: BaseGraphViewModel {
     private let hydrationDataSource: HydrationDataSource
 
     init(hydrationDataSource: HydrationDataSource = .shared,

@@ -110,7 +110,7 @@
 		2EB942142BAFB8E300F3B0D2 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942132BAFB8E300F3B0D2 /* DayOfWeek.swift */; };
 		2EB942162BAFB97E00F3B0D2 /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942152BAFB97E00F3B0D2 /* WorkDay.swift */; };
 		2EB942182BAFC19400F3B0D2 /* RestTimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942172BAFC19400F3B0D2 /* RestTimePeriod.swift */; };
-		2EB9421B2BAFC85200F3B0D2 /* FormBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9421A2BAFC85200F3B0D2 /* FormBaseViewModel.swift */; };
+		2EB9421B2BAFC85200F3B0D2 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9421A2BAFC85200F3B0D2 /* BaseViewModel.swift */; };
 		2EB9421D2BB01F6400F3B0D2 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9421C2BB01F6400F3B0D2 /* TextInput.swift */; };
 		2EB9421F2BB0259300F3B0D2 /* TimeSelectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9421E2BB0259300F3B0D2 /* TimeSelectionListView.swift */; };
 		2EB942212BB02A2B00F3B0D2 /* TimeSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942202BB02A2B00F3B0D2 /* TimeSelectable.swift */; };
@@ -146,7 +146,7 @@
 		2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812E82B79ABBC000B65E5 /* PlusButton.swift */; };
 		2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812EB2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift */; };
 		2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812ED2B7ADE9E000B65E5 /* ActivityEntryArea.swift */; };
-		2EFAC4C32BC15C6100B822BD /* BaseSelectedDateGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAC4C22BC15C6100B822BD /* BaseSelectedDateGraphViewModel.swift */; };
+		2EFAC4C32BC15C6100B822BD /* BaseGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAC4C22BC15C6100B822BD /* BaseGraphViewModel.swift */; };
 		2EFAC4C52BC22D9E00B822BD /* SwiftDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAC4C42BC22D9E00B822BD /* SwiftDataError.swift */; };
 		2EFAC4C72BC22F9700B822BD /* DateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAC4C62BC22F9700B822BD /* DateError.swift */; };
 		2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */; };
@@ -278,7 +278,7 @@
 		2EB942132BAFB8E300F3B0D2 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		2EB942152BAFB97E00F3B0D2 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		2EB942172BAFC19400F3B0D2 /* RestTimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimePeriod.swift; sourceTree = "<group>"; };
-		2EB9421A2BAFC85200F3B0D2 /* FormBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBaseViewModel.swift; sourceTree = "<group>"; };
+		2EB9421A2BAFC85200F3B0D2 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		2EB9421C2BB01F6400F3B0D2 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		2EB9421E2BB0259300F3B0D2 /* TimeSelectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionListView.swift; sourceTree = "<group>"; };
 		2EB942202BB02A2B00F3B0D2 /* TimeSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectable.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 		2EE812E82B79ABBC000B65E5 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		2EE812EB2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntryAreaViewModel.swift; sourceTree = "<group>"; };
 		2EE812ED2B7ADE9E000B65E5 /* ActivityEntryArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntryArea.swift; sourceTree = "<group>"; };
-		2EFAC4C22BC15C6100B822BD /* BaseSelectedDateGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectedDateGraphViewModel.swift; sourceTree = "<group>"; };
+		2EFAC4C22BC15C6100B822BD /* BaseGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGraphViewModel.swift; sourceTree = "<group>"; };
 		2EFAC4C42BC22D9E00B822BD /* SwiftDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataError.swift; sourceTree = "<group>"; };
 		2EFAC4C62BC22F9700B822BD /* DateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateError.swift; sourceTree = "<group>"; };
 		2EFD01852B71A254003020C6 /* WatchFeatureExplanationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFeatureExplanationViewModel.swift; sourceTree = "<group>"; };
@@ -692,8 +692,8 @@
 		2EB942192BAFC84700F3B0D2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2EB9421A2BAFC85200F3B0D2 /* FormBaseViewModel.swift */,
-				2EFAC4C22BC15C6100B822BD /* BaseSelectedDateGraphViewModel.swift */,
+				2EB9421A2BAFC85200F3B0D2 /* BaseViewModel.swift */,
+				2EFAC4C22BC15C6100B822BD /* BaseGraphViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1163,7 +1163,7 @@
 				2E8FBEDE2BA86E660082B3E1 /* IntervalTimeSelectView.swift in Sources */,
 				2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */,
 				2E61D0BD2BB302190087B895 /* HydrationChartYModifier.swift in Sources */,
-				2EB9421B2BAFC85200F3B0D2 /* FormBaseViewModel.swift in Sources */,
+				2EB9421B2BAFC85200F3B0D2 /* BaseViewModel.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2E6FE20F2BA26F9000541819 /* NotificationPermissionViewModel.swift in Sources */,
 				2EB942212BB02A2B00F3B0D2 /* TimeSelectable.swift in Sources */,
@@ -1206,7 +1206,7 @@
 				2E631C732B8A180E00B35AAC /* Date+Extensions.swift in Sources */,
 				2EB942142BAFB8E300F3B0D2 /* DayOfWeek.swift in Sources */,
 				2E0ACDF82B947CD800318BF2 /* ActivityEditDestination.swift in Sources */,
-				2EFAC4C32BC15C6100B822BD /* BaseSelectedDateGraphViewModel.swift in Sources */,
+				2EFAC4C32BC15C6100B822BD /* BaseGraphViewModel.swift in Sources */,
 				2ED957CE2B86D7D1007663AA /* ErrorAlertModifier.swift in Sources */,
 				2EB942182BAFC19400F3B0D2 /* RestTimePeriod.swift in Sources */,
 				2EB941FD2BACF73300F3B0D2 /* ProfileNavigationRouter.swift in Sources */,

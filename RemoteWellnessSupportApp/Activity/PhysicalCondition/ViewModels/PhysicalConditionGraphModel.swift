@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PhysicalConditionGraphModel: BaseSelectedDateGraphViewModel {
+class PhysicalConditionGraphModel: BaseGraphViewModel {
     private let physicalConditionDataSource: PhysicalConditionDataSource
 
     init(physicalCOnditionDataSource: PhysicalConditionDataSource = .shared,

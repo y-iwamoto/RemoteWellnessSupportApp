@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DailyHydrationListViewModel: FormBaseViewModel {
+class DailyHydrationListViewModel: BaseViewModel {
     private let dataSource: HydrationDataSource
     let targetDate: Date
     @Published var hydrations: [Hydration] = []

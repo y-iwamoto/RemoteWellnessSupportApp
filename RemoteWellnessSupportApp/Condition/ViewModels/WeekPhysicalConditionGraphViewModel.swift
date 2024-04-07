@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeekPhysicalConditionGraphViewModel: BaseSelectedDateGraphViewModel {
+class WeekPhysicalConditionGraphViewModel: BaseGraphViewModel {
     private let physicalConditionDataSource: PhysicalConditionDataSource
 
     init(physicalConditionDataSource: PhysicalConditionDataSource = .shared,

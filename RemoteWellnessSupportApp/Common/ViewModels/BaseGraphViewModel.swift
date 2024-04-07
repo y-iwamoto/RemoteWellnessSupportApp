@@ -1,5 +1,5 @@
 //
-//  BaseSelectedDateGraphViewModel.swift
+//  BaseGraphViewModel.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/04/06.
@@ -7,13 +7,10 @@
 
 import Foundation
 
-class BaseSelectedDateGraphViewModel: ObservableObject {
+class BaseGraphViewModel: BaseViewModel {
     let profileDataSource: ProfileDataSource
     let targetDate: Date
     let noEntryValueForSpecificTime = 0
-
-    @Published var isErrorAlert = false
-    @Published var errorMessage = ""
 
     init(profileDataSource: ProfileDataSource = .shared, targetDate: Date = Date()) {
         self.profileDataSource = profileDataSource
@@ -72,9 +69,4 @@ class BaseSelectedDateGraphViewModel: ObservableObject {
         return (startOfDay, endOfDay)
     }
 
-    func setError(withMessage message: String, error: Error? = nil) {
-        isErrorAlert = true
-        errorMessage = message
-        print("error", error?.localizedDescription ?? "Some error has occurred")
-    }
 }
