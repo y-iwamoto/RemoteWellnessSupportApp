@@ -23,7 +23,7 @@ class HydrationGraphViewModel: BaseSelectedDateGraphViewModel {
 
     func fetchHydrations() {
         do {
-            let predicate = createPredicateForLastDay()
+            let predicate = try createPredicateForLastDay()
             let hydrations = try hydrationDataSource.fetchHydration(predicate: predicate)
             try assignTargetDateHydrations(hydrations)
         } catch {
@@ -106,14 +106,15 @@ class HydrationGraphViewModel: BaseSelectedDateGraphViewModel {
         return noEntryValueForSpecificTime ... hydrationRatingMax
     }
 
-    private func createPredicateForLastDay() -> Predicate<Hydration> {
-        let calendar = Calendar.current
-        let startOfDay = calendar.startOfDay(for: targetDate)
-        let endOfDayComponents = DateComponents(day: 1)
-        let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay)!
-        let predicate = #Predicate<Hydration> { hydration in
-            hydration.entryDate >= startOfDay && hydration.entryDate < endOfDay
+    private func createPredicateForLastDay() throws -> Predicate<Hydration> {
+        do {
+            let (startOfDay, endOfDay) = try dayPeriod(for: targetDate)
+            let predicate = #Predicate<Hydration> { hydration in
+                hydration.entryDate >= startOfDay && hydration.entryDate < endOfDay
+            }
+            return predicate
+        } catch {
+            throw error
         }
-        return predicate
     }
 }

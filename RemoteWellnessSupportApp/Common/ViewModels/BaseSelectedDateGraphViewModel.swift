@@ -62,6 +62,16 @@ class BaseSelectedDateGraphViewModel: ObservableObject {
         return Calendar.current.date(byAdding: .day, value: -7, to: currentTime)!
     }
 
+    func dayPeriod(for date: Date) throws -> (startOfDay: Date, endOfDay: Date) {
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: date)
+        let endOfDayComponents = DateComponents(day: 1)
+        guard let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay) else {
+            throw DateError.calculationFailed(description: "Failed to calculate the end of day")
+        }
+        return (startOfDay, endOfDay)
+    }
+
     func setError(withMessage message: String, error: Error? = nil) {
         isErrorAlert = true
         errorMessage = message

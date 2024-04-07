@@ -75,15 +75,14 @@ class PhysicalConditionGraphModel: BaseSelectedDateGraphViewModel {
     }
 
     private func createPredicateForLastDay() throws -> Predicate<PhysicalCondition> {
-        let calendar = Calendar.current
-        let startOfDay = calendar.startOfDay(for: targetDate)
-        let endOfDayComponents = DateComponents(day: 1)
-        guard let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay) else {
-            throw DateError.calculationFailed(description: "Failed to calculate the end of day")
+        do {
+            let (startOfDay, endOfDay) = try dayPeriod(for: targetDate)
+            let predicate = #Predicate<PhysicalCondition> { physicalCondition in
+                physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
+            }
+            return predicate
+        } catch {
+            throw error
         }
-        let predicate = #Predicate<PhysicalCondition> { physicalCondition in
-            physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
-        }
-        return predicate
     }
 }
