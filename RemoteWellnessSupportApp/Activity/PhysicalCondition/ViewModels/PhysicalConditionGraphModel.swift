@@ -10,10 +10,10 @@ import Foundation
 class PhysicalConditionGraphModel: BaseGraphViewModel {
     private let physicalConditionDataSource: PhysicalConditionDataSource
 
-    init(physicalCOnditionDataSource: PhysicalConditionDataSource = .shared,
+    init(physicalConditionDataSource: PhysicalConditionDataSource = .shared,
          profileDataSource: ProfileDataSource = .shared,
          targetDate: Date = Date()) {
-        physicalConditionDataSource = physicalCOnditionDataSource
+        self.physicalConditionDataSource = physicalConditionDataSource
         super.init(profileDataSource: profileDataSource, targetDate: targetDate)
     }
 
@@ -30,13 +30,8 @@ class PhysicalConditionGraphModel: BaseGraphViewModel {
     }
 
     private func assignTargetDatePhysicalConditions(_ physicalConditions: [PhysicalCondition]) throws {
-        do {
-            if !physicalConditions.isEmpty {
-                targetDatePhysicalConditions = try convertToGraphPhysicalConditions(physicalConditions)
-            }
-
-        } catch {
-            throw error
+        if !physicalConditions.isEmpty {
+            targetDatePhysicalConditions = try convertToGraphPhysicalConditions(physicalConditions)
         }
     }
 

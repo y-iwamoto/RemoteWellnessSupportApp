@@ -29,6 +29,6 @@ final class ProfileDataSource {
 
     func fetchProfile() throws -> Profile? {
         let descriptor = FetchDescriptor<Profile>()
-        return try modelContext.fetch(descriptor).last ?? nil
+        return try modelContext.fetch(descriptor).first ?? nil
     }
 }

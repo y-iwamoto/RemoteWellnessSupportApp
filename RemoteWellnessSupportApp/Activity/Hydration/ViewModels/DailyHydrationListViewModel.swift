@@ -10,7 +10,7 @@ import Foundation
 class DailyHydrationListViewModel: BaseViewModel {
     private let dataSource: HydrationDataSource
     let targetDate: Date
-    @Published var hydrations: [Hydration] = []
+    @Published private(set) var hydrations: [Hydration] = []
 
     init(dataSource: HydrationDataSource = .shared, targetDate: Date = Date()) {
         self.dataSource = dataSource

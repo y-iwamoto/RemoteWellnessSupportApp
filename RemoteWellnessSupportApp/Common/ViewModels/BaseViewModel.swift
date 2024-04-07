@@ -14,6 +14,8 @@ class BaseViewModel: ObservableObject {
     func setError(withMessage message: String, error: Error? = nil) {
         isErrorAlert = true
         errorMessage = message
-        print("error", error?.localizedDescription ?? "Some error has occurred")
+        #if DEBUG
+            print("error", error?.localizedDescription ?? "Some error has occurred")
+        #endif
     }
 }

@@ -41,13 +41,9 @@ class WeekPhysicalConditionGraphViewModel: BaseGraphViewModel {
     }
 
     private func calculateDateRangeAndGroupedPhysicalConditions(_ conditions: [PhysicalCondition]) throws -> ([Date], [Date: [PhysicalCondition]]) {
-        do {
-            let dateRange = try calculateDateRange()
-            let groupedConditions = groupValuesByEntryDate(conditions)
-            return (dateRange, groupedConditions)
-        } catch {
-            throw error
-        }
+        let dateRange = try calculateDateRange()
+        let groupedConditions = groupValuesByEntryDate(conditions)
+        return (dateRange, groupedConditions)
     }
 
     private func convertToGraphPhysicalConditions(dateRange: [Date], groupedConditions: [Date: [PhysicalCondition]]) -> [GraphValue] {
