@@ -54,6 +54,14 @@ class BaseGraphViewModel: BaseViewModel {
         }.sorted()
     }
 
+    func groupValuesByEntryDate<T: GraphColumnHaving>(_ values: [T]) -> [Date: [T]] {
+        let calendar = Calendar.current
+        let groupedValues = Dictionary(grouping: values) { value -> Date in
+            calendar.startOfDay(for: value.entryDate)
+        }
+        return groupedValues
+    }
+
     func dateOneWeekAgo() -> Date {
         let currentTime = Date()
         return Calendar.current.date(byAdding: .day, value: -7, to: currentTime)!
@@ -68,5 +76,4 @@ class BaseGraphViewModel: BaseViewModel {
         }
         return (startOfDay, endOfDay)
     }
-
 }

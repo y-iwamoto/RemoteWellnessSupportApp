@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeekHydrationGraphViewModel: BaseGraphViewModel {
+class WeekHydrationGraphViewModel: BaseIncrementalYLabelGraphViewModel {
     private let hydrationDataSource: HydrationDataSource
 
     init(hydrationDataSource: HydrationDataSource = .shared,
@@ -34,8 +34,9 @@ class WeekHydrationGraphViewModel: BaseGraphViewModel {
         do {
             if !hydrations.isEmpty {
                 let (dateRange, groupedHydrations) = try calculateDateRangeAndGroupedHydrations(hydrations)
-                weekHydrations = convertToGraphWeekHydrations(dateRange: dateRange, groupedHydrations: groupedHydrations)
-                hydrationRatingYGraphValues = convertToHydrationYGraphLabelValues(dateRange: dateRange, groupedHydrations: groupedHydrations)
+                weekHydrations = convertToGraphValues(dateRange: dateRange, groupedHydrations: groupedHydrations)
+                hydrationRatingYGraphValues = convertToYGraphLabelValues(dateRange: dateRange, groupedGraphValues: groupedHydrations,
+                                                                         initialRatingValues: HydrationRating.initialHydrationRatingValues)
                 hydrationRateYGraphRange = convertToHydrationRateRange()
             }
         } catch {
@@ -44,46 +45,13 @@ class WeekHydrationGraphViewModel: BaseGraphViewModel {
     }
 
     private func calculateDateRangeAndGroupedHydrations(_ hydrations: [Hydration]) throws -> ([Date], [Date: [Hydration]]) {
-        let calendar = Calendar.current
         do {
             let dateRange = try calculateDateRange()
-            let groupedHydrations = Dictionary(grouping: hydrations) { hydration -> Date in
-                calendar.startOfDay(for: hydration.entryDate)
-            }
-
+            let groupedHydrations = groupValuesByEntryDate(hydrations)
             return (dateRange, groupedHydrations)
         } catch {
             throw error
         }
-    }
-
-    private func convertToGraphWeekHydrations(dateRange: [Date], groupedHydrations: [Date: [Hydration]]) -> [GraphValue] {
-        let graphHydrations: [GraphValue] = dateRange.map { date -> GraphValue in
-            if let hydrationsForDay = groupedHydrations[date] {
-                let totalRating = hydrationsForDay.reduce(noEntryValueForSpecificTime) { $0 + $1.rating }
-                return GraphValue(timeZone: date, rateAverage: totalRating)
-            } else {
-                return GraphValue(timeZone: date, rateAverage: noEntryValueForSpecificTime)
-            }
-        }
-
-        return graphHydrations
-    }
-
-    private func convertToHydrationYGraphLabelValues(dateRange: [Date], groupedHydrations: [Date: [Hydration]]) -> [Int] {
-        let totalRatings = dateRange.compactMap { date -> Int? in
-            if let hydrationsForDay = groupedHydrations[date] {
-                let totalRating = hydrationsForDay.reduce(noEntryValueForSpecificTime) { $0 + $1.rating }
-                return totalRating
-            } else {
-                return nil
-            }
-        }
-        guard let maxRating = totalRatings.max(), maxRating != noEntryValueForSpecificTime else {
-            return HydrationRating.initialHydrationRatingValues
-        }
-
-        return [0, 1, 2, 3].map { $0 * maxRating / 3 }
     }
 
     private func convertToHydrationRateRange() -> ClosedRange<Int> {

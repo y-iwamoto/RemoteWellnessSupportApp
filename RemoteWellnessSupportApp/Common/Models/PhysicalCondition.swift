@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class PhysicalCondition {
+class PhysicalCondition: GraphColumnHaving {
     @Attribute(.unique) var id: String = UUID().uuidString
     var memo: String
     var rating: Int
