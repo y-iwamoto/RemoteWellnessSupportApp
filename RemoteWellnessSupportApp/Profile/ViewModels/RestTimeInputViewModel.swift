@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RestTimeInputViewModel: FormBaseViewModel {
+class RestTimeInputViewModel: BaseViewModel {
     func inputValidate(restTimePeriodSections: [RestTimePeriodSection]) -> Bool {
         if restTimePeriodSections.isEmpty {
             setError(withMessage: "休憩時間が未設定です")

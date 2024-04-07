@@ -31,11 +31,11 @@ struct PhysicalConditionGraph: View {
 
     @ViewBuilder
     private var content: some View {
-        if viewModel.todayPhysicalConditions.isEmpty {
+        if viewModel.targetDatePhysicalConditions.isEmpty {
             Text("体調のデータはありません。")
             Spacer()
         } else {
-            PhysicalConditionChartView(physicalConditions: viewModel.todayPhysicalConditions, timeZoneType: TimeZoneType.hour)
+            PhysicalConditionChartView(physicalConditions: viewModel.targetDatePhysicalConditions, timeZoneType: TimeZoneType.hour)
         }
     }
 }

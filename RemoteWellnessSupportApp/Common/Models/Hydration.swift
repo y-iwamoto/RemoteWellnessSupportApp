@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Hydration {
+class Hydration: GraphColumnHaving {
     @Attribute(.unique) var id: String = UUID().uuidString
     var rating: Int
     var entryDate: Date

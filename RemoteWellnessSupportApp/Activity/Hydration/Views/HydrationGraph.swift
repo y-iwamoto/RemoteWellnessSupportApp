@@ -31,11 +31,11 @@ struct HydrationGraph: View {
 
     @ViewBuilder
     private var content: some View {
-        if viewModel.todayHydrations.isEmpty {
+        if viewModel.targetDateHydrations.isEmpty {
             Text("水分摂取のデータはありません。")
             Spacer()
         } else {
-            GraphValueChartView(graphValues: viewModel.todayHydrations, timeZoneType: TimeZoneType.hour,
+            GraphValueChartView(graphValues: viewModel.targetDateHydrations, timeZoneType: TimeZoneType.hour,
                                 ratingYGraphValues: viewModel.hydrationRatingYGraphValues,
                                 graphType: GraphType.hydration, YRateRange: viewModel.hydrationRateYGraphRange)
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileScreenViewModel: FormBaseViewModel {
+class ProfileScreenViewModel: BaseViewModel {
     private let dataSource: ProfileDataSource
     @Published var nickname = ""
     @Published var workDays: [WorkDay] = [.monday, .tuesday, .wednesday, .thursday, .friday]

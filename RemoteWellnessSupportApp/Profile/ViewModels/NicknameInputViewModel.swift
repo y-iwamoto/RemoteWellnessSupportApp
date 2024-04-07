@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NicknameInputViewModel: FormBaseViewModel {
+class NicknameInputViewModel: BaseViewModel {
     func inputValidate(nickname: String) -> Bool {
         if nickname == "" {
             setError(withMessage: "ニックネームが未入力です")

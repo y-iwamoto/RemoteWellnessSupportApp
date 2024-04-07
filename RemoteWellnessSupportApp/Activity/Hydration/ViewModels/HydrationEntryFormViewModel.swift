@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HydrationEntryFormViewModel: FormBaseViewModel {
+class HydrationEntryFormViewModel: BaseViewModel {
     private let dataSource: HydrationDataSource
     private let action: FormAction
     private let hydration: Hydration?

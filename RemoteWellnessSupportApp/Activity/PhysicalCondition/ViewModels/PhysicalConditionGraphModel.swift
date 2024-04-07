@@ -7,71 +7,51 @@
 
 import Foundation
 
-class PhysicalConditionGraphModel: ObservableObject {
-    private let dataSource: PhysicalConditionDataSource
-    private let noEntryValueForSpecificTime = 0
-    private let targetDate: Date
+class PhysicalConditionGraphModel: BaseGraphViewModel {
+    private let physicalConditionDataSource: PhysicalConditionDataSource
 
-    @Published var isErrorAlert = false
-    @Published var errorMessage = ""
-
-    init(dataSource: PhysicalConditionDataSource = .shared, targetDate: Date = Date()) {
-        self.dataSource = dataSource
-        self.targetDate = targetDate
+    init(physicalConditionDataSource: PhysicalConditionDataSource = .shared,
+         profileDataSource: ProfileDataSource = .shared,
+         targetDate: Date = Date()) {
+        self.physicalConditionDataSource = physicalConditionDataSource
+        super.init(profileDataSource: profileDataSource, targetDate: targetDate)
     }
 
-    @Published var todayPhysicalConditions: [GraphValue] = []
+    @Published var targetDatePhysicalConditions: [GraphValue] = []
 
     func fetchPhysicalConditions() {
         do {
-            let predicate = createPredicateForLastDay()
-
-            let physicalConditions = try dataSource.fetchPhysicalConditions(predicate: predicate)
-
-            setTodayPhysicalConditions(physicalConditions)
+            let predicate = try createPredicateForLastDay()
+            let physicalConditions = try physicalConditionDataSource.fetchPhysicalConditions(predicate: predicate)
+            try assignTargetDatePhysicalConditions(physicalConditions)
         } catch {
-            setError(withMessage: "体調データの取得に失敗しました")
+            setError(withMessage: "体調データの取得に失敗しました", error: error)
         }
     }
 
-    private func createPredicateForLastDay() -> Predicate<PhysicalCondition> {
-        let calendar = Calendar.current
-        let startOfDay = calendar.startOfDay(for: targetDate)
-        let endOfDayComponents = DateComponents(day: 1)
-        guard let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay) else {
-            fatalError("Failed to calculate the end of day")
-        }
-        let predicate = #Predicate<PhysicalCondition> { physicalCondition in
-            physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
-        }
-        return predicate
-    }
-
-    private func setTodayPhysicalConditions(_ physicalConditions: [PhysicalCondition]) {
-        if physicalConditions.isEmpty {
-            todayPhysicalConditions = []
-        } else {
-            todayPhysicalConditions = convertToGraphPhysicalConditions(physicalConditions)
+    private func assignTargetDatePhysicalConditions(_ physicalConditions: [PhysicalCondition]) throws {
+        if !physicalConditions.isEmpty {
+            targetDatePhysicalConditions = try convertToGraphPhysicalConditions(physicalConditions)
         }
     }
 
-    private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) -> [GraphValue] {
+    private func convertToGraphPhysicalConditions(_ conditions: [PhysicalCondition]) throws -> [GraphValue] {
         var results: [GraphValue] = []
         let calendar = Calendar.current
-        let currentHour = calendar.component(.hour, from: targetDate)
-        // TODO: 現在はhoursRangeを特定値で固定にしているが別途、ここも動的になる
-        let startHour = 0
-        let endHour = 9
-        let defaultEndHour = 19
-        let hoursRange: Range<Int> = (currentHour > startHour && currentHour < endHour) ? startHour ..< currentHour + 1 : endHour ..< defaultEndHour
+        do {
+            let hoursRange = try calculateWorkHoursRange()
 
-        for hour in hoursRange {
-            let averageRating = calculateAverageRatingForHour(conditions, hour: hour)
-            if let timeZone = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: targetDate) {
-                results.append(GraphValue(timeZone: timeZone, rateAverage: Int(averageRating)))
+            for hour in hoursRange {
+                let averageRating = calculateAverageRatingForHour(conditions, hour: hour)
+                if let timeZone = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: targetDate) {
+                    results.append(GraphValue(timeZone: timeZone, rateAverage: Int(averageRating)))
+                }
             }
+            return results
+
+        } catch {
+            throw error
         }
-        return results
     }
 
     private func calculateAverageRatingForHour(_ conditions: [PhysicalCondition], hour: Int) -> Double {
@@ -89,8 +69,15 @@ class PhysicalConditionGraphModel: ObservableObject {
         return averageRating
     }
 
-    private func setError(withMessage message: String) {
-        isErrorAlert = true
-        errorMessage = message
+    private func createPredicateForLastDay() throws -> Predicate<PhysicalCondition> {
+        do {
+            let (startOfDay, endOfDay) = try dayPeriod(for: targetDate)
+            let predicate = #Predicate<PhysicalCondition> { physicalCondition in
+                physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
+            }
+            return predicate
+        } catch {
+            throw error
+        }
     }
 }

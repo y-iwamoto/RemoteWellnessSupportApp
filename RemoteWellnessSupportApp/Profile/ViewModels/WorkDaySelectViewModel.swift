@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WorkDaySelectViewModel: FormBaseViewModel {
+class WorkDaySelectViewModel: BaseViewModel {
     @Published var daysOfWeek: [[DayOfWeek]]
 
     init(workDays: [WorkDay]) {

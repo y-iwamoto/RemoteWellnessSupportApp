@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeekHydrationListViewModel: FormBaseViewModel {
+class WeekHydrationListViewModel: BaseViewModel {
     private var dataSource: HydrationDataSource
     @Published var dateWithHydrations: [DateWithListValue] = []
 

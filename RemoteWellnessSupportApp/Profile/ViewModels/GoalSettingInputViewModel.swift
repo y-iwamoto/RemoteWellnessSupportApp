@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GoalSettingInputViewModel: FormBaseViewModel {
+class GoalSettingInputViewModel: BaseViewModel {
     func inputValidate(hydrationGoal: String) -> Bool {
         guard let number = Int(hydrationGoal) else {
             setError(withMessage: "数値型の文字列を入力して下さい")
