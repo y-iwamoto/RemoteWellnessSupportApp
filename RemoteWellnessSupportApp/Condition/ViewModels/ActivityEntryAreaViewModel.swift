@@ -10,9 +10,8 @@ import SwiftUI
 
 class ActivityEntryAreaViewModel: ObservableObject {
     @Published var isExpanded = false
-
     let topActivityNavigationLinks = [
-        (destination: ConditionScreenNavigationItem.physicalConditionEntryForm,
+        (destination: ConditionScreenNavigationItem.physicalConditionEntryForm(date: Date()),
          imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm),
         (destination: ConditionScreenNavigationItem.reviewEntryForm,
          imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
@@ -20,7 +19,7 @@ class ActivityEntryAreaViewModel: ObservableObject {
     let leftActivityNavigationLinks = [
         (destination: ConditionScreenNavigationItem.stepEntryForm,
          imageName: ConditionNavigationLink.ImageName.stepEntryForm),
-        (destination: ConditionScreenNavigationItem.hydrationEntryForm,
+        (destination: ConditionScreenNavigationItem.hydrationEntryForm(date: Date()),
          imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
     ]
 

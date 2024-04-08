@@ -8,10 +8,10 @@
 import Foundation
 
 enum ConditionScreenNavigationItem: Hashable {
-    case physicalConditionEntryForm
+    case physicalConditionEntryForm(date: Date)
     case reviewEntryForm
     case stepEntryForm
-    case hydrationEntryForm
+    case hydrationEntryForm(date: Date)
     case dailyPhysicalConditionList(date: Date)
     case weekPhysicalConditionList
     case weekHydrationList

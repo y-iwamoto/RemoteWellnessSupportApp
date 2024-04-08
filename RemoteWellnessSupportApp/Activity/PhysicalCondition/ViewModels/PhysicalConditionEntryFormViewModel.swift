@@ -12,12 +12,14 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
     private let dataSource: PhysicalConditionDataSourceProtocol
     private let action: FormAction
     private let physicalCondition: PhysicalCondition?
+    let targetDate: Date
 
     init(formAction: FormAction = .create, physicalCondition: PhysicalCondition? = nil,
-         dataSource: PhysicalConditionDataSourceProtocol = PhysicalConditionDataSource.shared) {
+         dataSource: PhysicalConditionDataSourceProtocol = PhysicalConditionDataSource.shared, targetDate: Date = Date()) {
         self.dataSource = dataSource
         action = formAction
         self.physicalCondition = physicalCondition
+        self.targetDate = targetDate
 
         setFormInitialValue()
     }
@@ -80,7 +82,10 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
     }
 
     private func setFormInitialValue() {
-        guard let item = physicalCondition else { return }
+        guard let item = physicalCondition else {
+            selectedDateTime = targetDate
+            return
+        }
         selectedDateTime = item.entryDate
         memo = item.memo
         selectedRating = PhysicalConditionRating(rawValue: item.rating)

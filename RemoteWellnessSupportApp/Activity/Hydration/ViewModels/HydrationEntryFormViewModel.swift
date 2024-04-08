@@ -11,11 +11,14 @@ class HydrationEntryFormViewModel: BaseViewModel {
     private let dataSource: HydrationDataSource
     private let action: FormAction
     private let hydration: Hydration?
+    let targetDate: Date
 
-    init(dataSource: HydrationDataSource = HydrationDataSource.shared, action: FormAction = .create, hydration: Hydration? = nil) {
+    init(dataSource: HydrationDataSource = HydrationDataSource.shared, action: FormAction = .create,
+         hydration: Hydration? = nil, targetDate: Date = Date()) {
         self.dataSource = dataSource
         self.action = action
         self.hydration = hydration
+        self.targetDate = targetDate
 
         super.init()
         setFormInitialValue()
@@ -75,7 +78,10 @@ class HydrationEntryFormViewModel: BaseViewModel {
     }
 
     private func setFormInitialValue() {
-        guard let item = hydration else { return }
+        guard let item = hydration else {
+            selectedDateTime = targetDate
+            return
+        }
         selectedDateTime = item.entryDate
         selectedRating = HydrationRating(rawValue: item.rating)
     }
