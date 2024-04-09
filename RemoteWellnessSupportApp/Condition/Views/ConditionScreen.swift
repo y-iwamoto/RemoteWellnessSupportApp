@@ -55,14 +55,14 @@ struct ConditionScreen: View {
             PhysicalConditionEditForm(physicalCondition: physicalCondition)
         case let .hydrationEditForm(hydration):
             HydrationEditForm(hydration: hydration)
-        case .physicalConditionEntryForm:
-            PhysicalConditionCreateForm()
+        case let .physicalConditionEntryForm(date):
+            PhysicalConditionCreateForm(targetDate: date)
         case .reviewEntryForm:
             ReviewEntryForm()
         case .stepEntryForm:
             StepEntryForm()
-        case .hydrationEntryForm:
-            HydrationCreateForm()
+        case let .hydrationEntryForm(date):
+            HydrationCreateForm(targetDate: date)
         case let .selectedDatePhysicalConditionGraph(targetDate):
             SelectedDatePhysicalConditionGraph(targetDate: targetDate)
         case let .selectedDateHydrationGraph(targetDate):

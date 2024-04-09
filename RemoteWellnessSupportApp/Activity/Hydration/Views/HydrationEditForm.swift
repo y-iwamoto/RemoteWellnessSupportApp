@@ -14,7 +14,7 @@ struct HydrationEditForm: View {
     init(hydration: Hydration) {
         self.hydration = hydration
         _viewModel = StateObject(wrappedValue:
-            HydrationEntryFormViewModel(action: .update, hydration: hydration))
+            HydrationEntryFormViewModel(action: .update, hydration: hydration, targetDate: hydration.entryDate))
     }
 
     var body: some View {

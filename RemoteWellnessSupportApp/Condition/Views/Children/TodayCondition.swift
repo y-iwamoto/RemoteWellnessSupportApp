@@ -32,11 +32,11 @@ struct TodayCondition: View {
                         }
                     }
                 }
-                ActivityEntryArea()
+                ActivityEntryArea(targetDate: today)
             }
             .onChange(of: notificationIdentifier) {
                 if notificationIdentifier != nil {
-                    router.items.append(.physicalConditionEntryForm)
+                    router.items.append(.physicalConditionEntryForm(date: today))
                 }
             }
         }

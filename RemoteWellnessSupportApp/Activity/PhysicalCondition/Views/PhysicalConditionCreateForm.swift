@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct PhysicalConditionCreateForm: View {
-    @StateObject var viewModel = PhysicalConditionEntryFormViewModel()
+    let targetDate: Date
+    @StateObject var viewModel: PhysicalConditionEntryFormViewModel
+
+    init(targetDate: Date = Date()) {
+        self.targetDate = targetDate
+        _viewModel = StateObject(wrappedValue: PhysicalConditionEntryFormViewModel(targetDate: targetDate))
+    }
 
     var body: some View {
         PhysicalConditionEntryForm(viewModel: viewModel, title: "体調登録")
     }
-}
-
-#Preview {
-    PhysicalConditionCreateForm()
 }
