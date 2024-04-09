@@ -14,7 +14,7 @@ class HydrationEntryFormViewModel: BaseViewModel {
     let targetDate: Date
 
     init(dataSource: HydrationDataSource = HydrationDataSource.shared, action: FormAction = .create,
-         hydration: Hydration? = nil, targetDate: Date = Date()) {
+         hydration: Hydration? = nil, targetDate: Date) {
         self.dataSource = dataSource
         self.action = action
         self.hydration = hydration

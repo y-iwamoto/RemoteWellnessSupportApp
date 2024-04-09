@@ -15,7 +15,7 @@ class PhysicalConditionEntryFormViewModel: ObservableObject {
     let targetDate: Date
 
     init(formAction: FormAction = .create, physicalCondition: PhysicalCondition? = nil,
-         dataSource: PhysicalConditionDataSourceProtocol = PhysicalConditionDataSource.shared, targetDate: Date = Date()) {
+         dataSource: PhysicalConditionDataSourceProtocol = PhysicalConditionDataSource.shared, targetDate: Date) {
         self.dataSource = dataSource
         action = formAction
         self.physicalCondition = physicalCondition

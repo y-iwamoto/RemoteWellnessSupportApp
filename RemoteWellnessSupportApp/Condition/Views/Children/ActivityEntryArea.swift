@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ActivityEntryArea: View {
-    @ObservedObject var viewModel = ActivityEntryAreaViewModel()
+    @ObservedObject var viewModel: ActivityEntryAreaViewModel
+    let targetDate: Date
     let spacing: CGFloat = 3
+
+    init(targetDate: Date = Date()) {
+        self.targetDate = targetDate
+        _viewModel = ObservedObject(wrappedValue: ActivityEntryAreaViewModel(targetDate: targetDate))
+    }
 
     var body: some View {
         VStack {

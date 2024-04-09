@@ -10,18 +10,29 @@ import SwiftUI
 
 class ActivityEntryAreaViewModel: ObservableObject {
     @Published var isExpanded = false
-    let topActivityNavigationLinks = [
-        (destination: ConditionScreenNavigationItem.physicalConditionEntryForm(date: Date()),
-         imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm),
-        (destination: ConditionScreenNavigationItem.reviewEntryForm,
-         imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
-    ]
-    let leftActivityNavigationLinks = [
-        (destination: ConditionScreenNavigationItem.stepEntryForm,
-         imageName: ConditionNavigationLink.ImageName.stepEntryForm),
-        (destination: ConditionScreenNavigationItem.hydrationEntryForm(date: Date()),
-         imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
-    ]
+    let targetDate: Date
+
+    init(targetDate: Date) {
+        self.targetDate = targetDate
+    }
+
+    var topActivityNavigationLinks: [(destination: ConditionScreenNavigationItem, imageName: ConditionNavigationLink.ImageName)] {
+        [
+            (destination: ConditionScreenNavigationItem.physicalConditionEntryForm(date: targetDate),
+             imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm),
+            (destination: ConditionScreenNavigationItem.reviewEntryForm,
+             imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
+        ]
+    }
+
+    var leftActivityNavigationLinks: [(destination: ConditionScreenNavigationItem, imageName: ConditionNavigationLink.ImageName)] {
+        [
+            (destination: ConditionScreenNavigationItem.stepEntryForm,
+             imageName: ConditionNavigationLink.ImageName.stepEntryForm),
+            (destination: ConditionScreenNavigationItem.hydrationEntryForm(date: targetDate),
+             imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
+        ]
+    }
 
     func toggleExpanded() {
         withAnimation(Animation.linear(duration: 0.5)) {

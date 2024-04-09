@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PhysicalConditionCreateForm: View {
     let targetDate: Date
-    @StateObject var viewModel = PhysicalConditionEntryFormViewModel()
+    @StateObject var viewModel: PhysicalConditionEntryFormViewModel
 
     init(targetDate: Date = Date()) {
         self.targetDate = targetDate

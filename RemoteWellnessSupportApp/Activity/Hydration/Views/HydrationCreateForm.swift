@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HydrationCreateForm: View {
     let targetDate: Date
-    @StateObject var viewModel = HydrationEntryFormViewModel()
+    @StateObject var viewModel: HydrationEntryFormViewModel
 
     init(targetDate: Date = Date()) {
         self.targetDate = targetDate

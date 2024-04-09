@@ -13,7 +13,11 @@ struct PhysicalConditionEditForm: View {
 
     init(physicalCondition: PhysicalCondition) {
         self.physicalCondition = physicalCondition
-        _viewModel = StateObject(wrappedValue: PhysicalConditionEntryFormViewModel(formAction: .update, physicalCondition: physicalCondition))
+        _viewModel = StateObject(
+            wrappedValue:
+            PhysicalConditionEntryFormViewModel(formAction: .update,
+                                                physicalCondition: physicalCondition,
+                                                targetDate: physicalCondition.entryDate))
     }
 
     var body: some View {
