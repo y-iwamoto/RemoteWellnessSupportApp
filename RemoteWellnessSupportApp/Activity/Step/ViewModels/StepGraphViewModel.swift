@@ -48,7 +48,7 @@ class StepGraphViewModel: BaseIncrementalYLabelGraphViewModel {
             let (hoursRange, groupedSteps) = try calculateDateRangeAndGroupedSteps(steps)
             targetDateSteps = convertToGraphValues(dateRange: hoursRange, groupedValues: groupedSteps)
             stepRatingYGraphValues = convertToYGraphLabelValues(dateRange: hoursRange, groupedGraphValues: groupedSteps,
-                                                                initialRatingValues: StepRating.initialStepRatingValues)
+                                                                initialRatingValues: [0] + HydrationRating.allCases.map(\.rawValue))
             stepRateYGraphRange = convertToStepRateRange()
         }
     }
