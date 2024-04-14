@@ -29,6 +29,7 @@ struct ActivityEntryArea: View {
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.trailing, 20)
             }
 
             HStack {

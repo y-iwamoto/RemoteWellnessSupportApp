@@ -30,6 +30,10 @@
 		2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */; };
 		2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */; };
 		2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */; };
+		2E57473A2BC55E2600B46C55 /* StepGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5747392BC55E2600B46C55 /* StepGraph.swift */; };
+		2E57473D2BC55E7D00B46C55 /* StepGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57473C2BC55E7D00B46C55 /* StepGraphViewModel.swift */; };
+		2E5747412BC6BC9C00B46C55 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5747402BC6BC9C00B46C55 /* HealthKitManager.swift */; };
+		2E5747442BC75CFF00B46C55 /* StepSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5747432BC75CFF00B46C55 /* StepSample.swift */; };
 		2E61D0AB2BB238130087B895 /* HydrationEntryFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0AA2BB238130087B895 /* HydrationEntryFormViewModel.swift */; };
 		2E61D0AD2BB238C00087B895 /* Hydration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0AC2BB238C00087B895 /* Hydration.swift */; };
 		2E61D0AF2BB2396A0087B895 /* HydrationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61D0AE2BB2396A0087B895 /* HydrationDataSource.swift */; };
@@ -91,6 +95,8 @@
 		2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */; };
 		2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */; };
 		2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */; };
+		2EB2069F2BC8056C003F0700 /* WeekStepGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB2069E2BC8056C003F0700 /* WeekStepGraph.swift */; };
+		2EB206A12BC805D5003F0700 /* WeekStepGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB206A02BC805D5003F0700 /* WeekStepGraphViewModel.swift */; };
 		2EB941F02BAC59DF00F3B0D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB941EF2BAC59DF00F3B0D2 /* Profile.swift */; };
 		2EB941F22BAC5C2E00F3B0D2 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB941F12BAC5C2E00F3B0D2 /* ProfileDataSource.swift */; };
 		2EB941F62BACF1AC00F3B0D2 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB941F52BACF1AC00F3B0D2 /* ProfileScreen.swift */; };
@@ -117,6 +123,7 @@
 		2EB942242BB0500B00F3B0D2 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942232BB0500B00F3B0D2 /* TitleView.swift */; };
 		2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */; };
 		2EB942292BB0522300F3B0D2 /* CommonLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */; };
+		2EBA3D9F2BCB5F4D00599131 /* StepRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA3D9E2BCB5F4D00599131 /* StepRating.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -203,6 +210,11 @@
 		2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDefinition.swift; sourceTree = "<group>"; };
 		2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisModifier.swift; sourceTree = "<group>"; };
 		2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionChartYModifier.swift; sourceTree = "<group>"; };
+		2E5747392BC55E2600B46C55 /* StepGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGraph.swift; sourceTree = "<group>"; };
+		2E57473C2BC55E7D00B46C55 /* StepGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGraphViewModel.swift; sourceTree = "<group>"; };
+		2E57473E2BC563FC00B46C55 /* RemoteWellnessSupportApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteWellnessSupportApp.entitlements; sourceTree = "<group>"; };
+		2E5747402BC6BC9C00B46C55 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		2E5747432BC75CFF00B46C55 /* StepSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSample.swift; sourceTree = "<group>"; };
 		2E61D0AA2BB238130087B895 /* HydrationEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationEntryFormViewModel.swift; sourceTree = "<group>"; };
 		2E61D0AC2BB238C00087B895 /* Hydration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydration.swift; sourceTree = "<group>"; };
 		2E61D0AE2BB2396A0087B895 /* HydrationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationDataSource.swift; sourceTree = "<group>"; };
@@ -261,6 +273,8 @@
 		2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhysicalConditionDataSource+Extension.swift"; sourceTree = "<group>"; };
+		2EB2069E2BC8056C003F0700 /* WeekStepGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStepGraph.swift; sourceTree = "<group>"; };
+		2EB206A02BC805D5003F0700 /* WeekStepGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStepGraphViewModel.swift; sourceTree = "<group>"; };
 		2EB941EF2BAC59DF00F3B0D2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		2EB941F12BAC5C2E00F3B0D2 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
 		2EB941F52BACF1AC00F3B0D2 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -287,6 +301,7 @@
 		2EB942232BB0500B00F3B0D2 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPaddingModifier.swift; sourceTree = "<group>"; };
 		2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLayoutView.swift; sourceTree = "<group>"; };
+		2EBA3D9E2BCB5F4D00599131 /* StepRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepRating.swift; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -403,6 +418,7 @@
 		2E0C95D42B6B0DCF00576531 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E57473F2BC6BC8200B46C55 /* Manegers */,
 				2EB942192BAFC84700F3B0D2 /* ViewModels */,
 				2E631C712B8A17F700B35AAC /* Extensions */,
 				2ED957CF2B883D6F007663AA /* DataSources */,
@@ -463,6 +479,31 @@
 				2E61D0BC2BB302190087B895 /* HydrationChartYModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		2E57473B2BC55E6900B46C55 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E57473C2BC55E7D00B46C55 /* StepGraphViewModel.swift */,
+				2EB206A02BC805D5003F0700 /* WeekStepGraphViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E57473F2BC6BC8200B46C55 /* Manegers */ = {
+			isa = PBXGroup;
+			children = (
+				2E5747402BC6BC9C00B46C55 /* HealthKitManager.swift */,
+			);
+			path = Manegers;
+			sourceTree = "<group>";
+		};
+		2E5747422BC75CF300B46C55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E5747432BC75CFF00B46C55 /* StepSample.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2E61D0A92BB237FE0087B895 /* ViewModels */ = {
@@ -742,6 +783,7 @@
 		2EBD2D342B608BDC0063EC7A /* RemoteWellnessSupportApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E57473E2BC563FC00B46C55 /* RemoteWellnessSupportApp.entitlements */,
 				2EB941EE2BAC57D900F3B0D2 /* Profile */,
 				2E6FE2102BA274F100541819 /* Core */,
 				2E6FE2092BA26CE000541819 /* NotificationSetting */,
@@ -930,6 +972,8 @@
 		2EE812D22B79904E000B65E5 /* Step */ = {
 			isa = PBXGroup;
 			children = (
+				2E5747422BC75CF300B46C55 /* Models */,
+				2E57473B2BC55E6900B46C55 /* ViewModels */,
 				2EE812D32B79904E000B65E5 /* Views */,
 			);
 			path = Step;
@@ -939,6 +983,8 @@
 			isa = PBXGroup;
 			children = (
 				2EE812D42B79904E000B65E5 /* StepEntryForm.swift */,
+				2E5747392BC55E2600B46C55 /* StepGraph.swift */,
+				2EB2069E2BC8056C003F0700 /* WeekStepGraph.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1008,6 +1054,7 @@
 				2EFAC4C42BC22D9E00B822BD /* SwiftDataError.swift */,
 				2EFAC4C62BC22F9700B822BD /* DateError.swift */,
 				2EFAC4CA2BC243F400B822BD /* GraphColumnHaving.swift */,
+				2EBA3D9E2BCB5F4D00599131 /* StepRating.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1122,6 +1169,7 @@
 				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
 				2E61D0BF2BB432520087B895 /* DailyHydrationList.swift in Sources */,
+				2EB206A12BC805D5003F0700 /* WeekStepGraphViewModel.swift in Sources */,
 				2EB941F82BACF1BA00F3B0D2 /* ProfileScreenViewModel.swift in Sources */,
 				2EB9420D2BAEDF9F00F3B0D2 /* GoalSettingInputView.swift in Sources */,
 				2E0DA41C2B8B2A73004E0185 /* GraphValue.swift in Sources */,
@@ -1134,6 +1182,7 @@
 				2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
 				2E61D0B52BB246B80087B895 /* HydrationCreateForm.swift in Sources */,
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
+				2E57473D2BC55E7D00B46C55 /* StepGraphViewModel.swift in Sources */,
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E631C6E2B896F0D00B35AAC /* PhysicalConditionGraph.swift in Sources */,
 				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
@@ -1172,6 +1221,7 @@
 				2EB9421B2BAFC85200F3B0D2 /* BaseViewModel.swift in Sources */,
 				2E0C95D72B6B0EBE00576531 /* AppColors.swift in Sources */,
 				2E6FE20F2BA26F9000541819 /* NotificationPermissionViewModel.swift in Sources */,
+				2E5747442BC75CFF00B46C55 /* StepSample.swift in Sources */,
 				2EB942212BB02A2B00F3B0D2 /* TimeSelectable.swift in Sources */,
 				2E69836B2B9D554C0076EF4F /* WeekPhysicalConditionListView.swift in Sources */,
 				2E61D0AF2BB2396A0087B895 /* HydrationDataSource.swift in Sources */,
@@ -1181,6 +1231,7 @@
 				2E6983672B9C73720076EF4F /* WeekPhysicalConditionGraph.swift in Sources */,
 				2E8FBEF42BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift in Sources */,
 				2EE812E92B79ABBC000B65E5 /* PlusButton.swift in Sources */,
+				2E57473A2BC55E2600B46C55 /* StepGraph.swift in Sources */,
 				2EE812E52B79A4A0000B65E5 /* ConditionNavigationLink.swift in Sources */,
 				2EE812E32B79A068000B65E5 /* ConditionTab.swift in Sources */,
 				2ED957D12B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */,
@@ -1191,6 +1242,7 @@
 				2E6983702B9DACC50076EF4F /* DateWithListValue.swift in Sources */,
 				2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */,
 				2EB942072BAEC9D700F3B0D2 /* WorkTimeInputViewModel.swift in Sources */,
+				2EBA3D9F2BCB5F4D00599131 /* StepRating.swift in Sources */,
 				2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */,
 				2EE812C92B79016D000B65E5 /* TabButton.swift in Sources */,
 				2E868AB22BB59D5A00681E6B /* WeekHydrationGraph.swift in Sources */,
@@ -1201,6 +1253,7 @@
 				2E8FBEE32BA86ED00082B3E1 /* TimeSelection.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
 				2E0ACDF32B93E42200318BF2 /* DailyPhysicalConditionList.swift in Sources */,
+				2E5747412BC6BC9C00B46C55 /* HealthKitManager.swift in Sources */,
 				2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */,
 				2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
@@ -1237,6 +1290,7 @@
 				2EB942012BADAA2300F3B0D2 /* WorkDaySelectView.swift in Sources */,
 				2E61D0C12BB432CA0087B895 /* DailyHydrationListViewModel.swift in Sources */,
 				2EB941FF2BADA8C500F3B0D2 /* NicknameInputViewModel.swift in Sources */,
+				2EB2069F2BC8056C003F0700 /* WeekStepGraph.swift in Sources */,
 				2EB9420B2BAED68C00F3B0D2 /* RestTimeInputViewModel.swift in Sources */,
 				2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */,
 				2EB942092BAECC9200F3B0D2 /* RestTimeInputView.swift in Sources */,
@@ -1458,12 +1512,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteWellnessSupportApp/RemoteWellnessSupportApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RemoteWellnessSupportApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = RemoteWellnessSupportApp;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "このアプリでは、あなたの歩行距離データを読み取り、よりパーソナライズされた健康管理を提供します。データはあなたの許可なく読み取られることはありません。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1490,12 +1546,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteWellnessSupportApp/RemoteWellnessSupportApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RemoteWellnessSupportApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = RemoteWellnessSupportApp;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "このアプリでは、あなたの歩行距離データを読み取り、よりパーソナライズされた健康管理を提供します。データはあなたの許可なく読み取られることはありません。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
