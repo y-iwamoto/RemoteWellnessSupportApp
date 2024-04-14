@@ -34,7 +34,7 @@ class WeekHydrationGraphViewModel: BaseIncrementalYLabelGraphViewModel {
         do {
             if !hydrations.isEmpty {
                 let (dateRange, groupedHydrations) = try calculateDateRangeAndGroupedHydrations(hydrations)
-                weekHydrations = convertToGraphValues(dateRange: dateRange, groupedHydrations: groupedHydrations)
+                weekHydrations = convertToGraphValues(dateRange: dateRange, groupedValues: groupedHydrations)
                 hydrationRatingYGraphValues = convertToYGraphLabelValues(dateRange: dateRange, groupedGraphValues: groupedHydrations,
                                                                          initialRatingValues: HydrationRating.initialHydrationRatingValues)
                 hydrationRateYGraphRange = convertToHydrationRateRange()

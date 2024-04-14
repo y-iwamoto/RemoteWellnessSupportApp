@@ -34,7 +34,7 @@ class HydrationGraphViewModel: BaseIncrementalYLabelGraphViewModel {
     private func assignTargetDateHydrations(_ hydrations: [Hydration]) throws {
         if !hydrations.isEmpty {
             let (hoursRange, groupedHydrations) = try calculateDateRangeAndGroupedHydrations(hydrations)
-            targetDateHydrations = convertToGraphValues(dateRange: hoursRange, groupedHydrations: groupedHydrations)
+            targetDateHydrations = convertToGraphValues(dateRange: hoursRange, groupedValues: groupedHydrations)
             hydrationRatingYGraphValues = convertToYGraphLabelValues(dateRange: hoursRange, groupedGraphValues: groupedHydrations,
                                                                      initialRatingValues: HydrationRating.initialHydrationRatingValues)
             hydrationRateYGraphRange = convertToHydrationRateRange()

@@ -12,10 +12,12 @@ enum ConditionScreenNavigationItem: Hashable {
     case reviewEntryForm
     case stepEntryForm
     case hydrationEntryForm(date: Date)
+    case dailyHydrationList(date: Date)
     case dailyPhysicalConditionList(date: Date)
+    case dailyStepList(date: Date)
     case weekPhysicalConditionList
     case weekHydrationList
-    case dailyHydrationList(date: Date)
+    case weekStepList
     case physicalConditionEditForm(physicalCondition: PhysicalCondition)
     case hydrationEditForm(hydration: Hydration)
     case selectedDatePhysicalConditionGraph(targetDate: Date)

@@ -19,16 +19,12 @@ class ActivityEntryAreaViewModel: ObservableObject {
     var topActivityNavigationLinks: [(destination: ConditionScreenNavigationItem, imageName: ConditionNavigationLink.ImageName)] {
         [
             (destination: ConditionScreenNavigationItem.physicalConditionEntryForm(date: targetDate),
-             imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm),
-            (destination: ConditionScreenNavigationItem.reviewEntryForm,
-             imageName: ConditionNavigationLink.ImageName.reviewEntryForm)
+             imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm)
         ]
     }
 
     var leftActivityNavigationLinks: [(destination: ConditionScreenNavigationItem, imageName: ConditionNavigationLink.ImageName)] {
         [
-            (destination: ConditionScreenNavigationItem.stepEntryForm,
-             imageName: ConditionNavigationLink.ImageName.stepEntryForm),
             (destination: ConditionScreenNavigationItem.hydrationEntryForm(date: targetDate),
              imageName: ConditionNavigationLink.ImageName.hydrationEntryForm)
         ]

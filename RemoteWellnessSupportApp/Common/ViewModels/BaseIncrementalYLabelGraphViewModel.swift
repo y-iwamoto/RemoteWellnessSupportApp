@@ -8,10 +8,10 @@
 import Foundation
 
 class BaseIncrementalYLabelGraphViewModel: BaseGraphViewModel {
-    func convertToGraphValues(dateRange: [Date], groupedHydrations: [Date: [some GraphColumnHaving]]) -> [GraphValue] {
+    func convertToGraphValues(dateRange: [Date], groupedValues: [Date: [some GraphColumnHaving]]) -> [GraphValue] {
         let graphValues: [GraphValue] = dateRange.map { date -> GraphValue in
-            if let hydrationsForDay = groupedHydrations[date] {
-                let totalRating = hydrationsForDay.reduce(noEntryValueForSpecificTime) { $0 + $1.rating }
+            if let valuesForDay = groupedValues[date] {
+                let totalRating = valuesForDay.reduce(noEntryValueForSpecificTime) { $0 + $1.rating }
                 return GraphValue(timeZone: date, rateAverage: totalRating)
             } else {
                 return GraphValue(timeZone: date, rateAverage: noEntryValueForSpecificTime)
