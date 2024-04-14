@@ -43,7 +43,7 @@ class WeekStepGraphViewModel: BaseIncrementalYLabelGraphViewModel {
                 let (dateRange, groupedSteps) = try calculateDateRangeAndGroupedSteps(steps)
                 weekSteps = convertToGraphValues(dateRange: dateRange, groupedValues: groupedSteps)
                 stepRatingYGraphValues = convertToYGraphLabelValues(dateRange: dateRange, groupedGraphValues: groupedSteps,
-                                                                    initialRatingValues: StepRating.initialHydrationRatingValues)
+                                                                    initialRatingValues: StepRating.initialStepRatingValues)
                 stepRateYGraphRange = convertToStepRateRange()
             }
         } catch {

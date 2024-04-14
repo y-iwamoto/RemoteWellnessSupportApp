@@ -32,7 +32,7 @@ class HealthKitManager {
                     return
                 }
                 guard let results else {
-                    continuation.resume(throwing: NSError(domain: "NoResultsError", code: 1, userInfo: nil))
+                    continuation.resume(throwing: HealthKitError.noResults(description: "NoResultsError"))
                     return
                 }
                 var samples: [HKQuantitySample] = []

@@ -21,12 +21,11 @@ class DailyStepListViewModel: BaseViewModel {
     }
 
     func fetchSteps() async {
-        let nowTime = Date()
-        let startOfDay = Calendar.current.startOfDay(for: nowTime)
+        let startOfDay = Calendar.current.startOfDay(for: targetDate)
         let interval = DateComponents(hour: 1)
 
         do {
-            steps = try await manager.fetchQuery(startOfDay: startOfDay, endOfDay: nowTime, interval: interval, sampleType: stepType)
+            steps = try await manager.fetchQuery(startOfDay: startOfDay, endOfDay: targetDate, interval: interval, sampleType: stepType)
         } catch {
             setError(withMessage: "歩数の取得処理に失敗しました", error: error)
         }

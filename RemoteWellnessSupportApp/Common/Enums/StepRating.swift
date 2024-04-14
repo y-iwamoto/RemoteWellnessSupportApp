@@ -12,5 +12,5 @@ enum StepRating: Int {
     case mediumDefaultStepCount = 200
     case highDefaultStepCount = 300
 
-    static let initialHydrationRatingValues = [0] + HydrationRating.allCases.map(\.rawValue)
+    static let initialStepRatingValues = [0] + HydrationRating.allCases.map(\.rawValue)
 }

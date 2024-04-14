@@ -5,6 +5,7 @@
 //  Created by 岩本雄貴 on 2024/04/14.
 //
 
+import HealthKit
 import SwiftUI
 
 struct WeekStepListView: View {
@@ -30,7 +31,7 @@ struct WeekStepListView: View {
                     HStack {
                         Text("\(item.startDate.toString(format: "MM/dd"))")
                         Spacer()
-                        Text("\(item.quantity)".replacingOccurrences(of: " count", with: "歩"))
+                        StepCountTextView(stepItem: item)
                     }
                 }
             }

@@ -48,36 +48,31 @@ class StepGraphViewModel: BaseIncrementalYLabelGraphViewModel {
             let (hoursRange, groupedSteps) = try calculateDateRangeAndGroupedSteps(steps)
             targetDateSteps = convertToGraphValues(dateRange: hoursRange, groupedValues: groupedSteps)
             stepRatingYGraphValues = convertToYGraphLabelValues(dateRange: hoursRange, groupedGraphValues: groupedSteps,
-                                                                initialRatingValues: StepRating.initialHydrationRatingValues)
+                                                                initialRatingValues: StepRating.initialStepRatingValues)
             stepRateYGraphRange = convertToStepRateRange()
         }
     }
 
     private func calculateDateRangeAndGroupedSteps(_ steps: [HKQuantitySample]) throws -> ([Date], [Date: [StepSample]]) {
         let calendar = Calendar.current
-        do {
-            let hoursRange = try calculateWorkHoursRange()
+        let hoursRange = try calculateWorkHoursRange()
 
-            let currentDate = Date()
-            let dates = hoursRange.compactMap { hour -> Date? in
-                calendar.date(bySettingHour: hour, minute: 0, second: 0, of: currentDate)
-            }
-
-            let groupedSteps = Dictionary(grouping: steps) { step -> Date in
-                let hour = calendar.component(.hour, from: step.startDate)
-                let date = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: currentDate) ?? currentDate
-                return date
-            }
-
-            let conditionsInHour = dates.reduce(into: [Date: [StepSample]]()) { result, date in
-                result[date] = groupedSteps[date]?.map(StepSample.init) ?? []
-            }
-
-            return (dates, conditionsInHour)
-
-        } catch {
-            throw error
+        let currentDate = Date()
+        let dates = hoursRange.compactMap { hour -> Date? in
+            calendar.date(bySettingHour: hour, minute: 0, second: 0, of: currentDate)
         }
+
+        let groupedSteps = Dictionary(grouping: steps) { step -> Date in
+            let hour = calendar.component(.hour, from: step.startDate)
+            let date = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: currentDate) ?? currentDate
+            return date
+        }
+
+        let conditionsInHour = dates.reduce(into: [Date: [StepSample]]()) { result, date in
+            result[date] = groupedSteps[date]?.map(StepSample.init) ?? []
+        }
+
+        return (dates, conditionsInHour)
     }
 
     private func convertToStepRateRange() -> ClosedRange<Int> {
