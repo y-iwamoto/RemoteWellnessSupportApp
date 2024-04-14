@@ -47,10 +47,14 @@ struct ConditionScreen: View {
             DailyPhysicalConditionList(targetDate: date)
         case let .dailyHydrationList(date):
             DailyHydrationList(targetDate: date)
+        case let .dailyStepList(date):
+            DailyStepList(targetDate: date)
         case .weekPhysicalConditionList:
             WeekPhysicalConditionListView()
         case .weekHydrationList:
             WeekHydrationListView()
+        case .weekStepList:
+            WeekStepListView()
         case let .physicalConditionEditForm(physicalCondition):
             PhysicalConditionEditForm(physicalCondition: physicalCondition)
         case let .hydrationEditForm(hydration):

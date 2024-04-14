@@ -124,6 +124,10 @@
 		2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */; };
 		2EB942292BB0522300F3B0D2 /* CommonLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */; };
 		2EBA3D9F2BCB5F4D00599131 /* StepRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA3D9E2BCB5F4D00599131 /* StepRating.swift */; };
+		2EBA3DA12BCB73E900599131 /* DailyStepList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA3DA02BCB73E900599131 /* DailyStepList.swift */; };
+		2EBA3DA32BCB743F00599131 /* DailyStepListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA3DA22BCB743F00599131 /* DailyStepListViewModel.swift */; };
+		2EBA3DA52BCB7BF200599131 /* WeekStepListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA3DA42BCB7BF200599131 /* WeekStepListView.swift */; };
+		2EBA3DA72BCB7C0F00599131 /* WeekStepListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA3DA62BCB7C0F00599131 /* WeekStepListViewModel.swift */; };
 		2EBD2D362B608BDC0063EC7A /* RemoteWellnessSupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */; };
 		2EBD2D3A2B608BDF0063EC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D392B608BDF0063EC7A /* Assets.xcassets */; };
 		2EBD2D3D2B608BDF0063EC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBD2D3C2B608BDF0063EC7A /* Preview Assets.xcassets */; };
@@ -302,6 +306,10 @@
 		2EB942262BB0512200F3B0D2 /* CommonPaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPaddingModifier.swift; sourceTree = "<group>"; };
 		2EB942282BB0522300F3B0D2 /* CommonLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLayoutView.swift; sourceTree = "<group>"; };
 		2EBA3D9E2BCB5F4D00599131 /* StepRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepRating.swift; sourceTree = "<group>"; };
+		2EBA3DA02BCB73E900599131 /* DailyStepList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStepList.swift; sourceTree = "<group>"; };
+		2EBA3DA22BCB743F00599131 /* DailyStepListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStepListViewModel.swift; sourceTree = "<group>"; };
+		2EBA3DA42BCB7BF200599131 /* WeekStepListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStepListView.swift; sourceTree = "<group>"; };
+		2EBA3DA62BCB7C0F00599131 /* WeekStepListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStepListViewModel.swift; sourceTree = "<group>"; };
 		2EBD2D322B608BDC0063EC7A /* RemoteWellnessSupportApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteWellnessSupportApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBD2D352B608BDC0063EC7A /* RemoteWellnessSupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWellnessSupportApp.swift; sourceTree = "<group>"; };
 		2EBD2D392B608BDF0063EC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -486,6 +494,8 @@
 			children = (
 				2E57473C2BC55E7D00B46C55 /* StepGraphViewModel.swift */,
 				2EB206A02BC805D5003F0700 /* WeekStepGraphViewModel.swift */,
+				2EBA3DA22BCB743F00599131 /* DailyStepListViewModel.swift */,
+				2EBA3DA62BCB7C0F00599131 /* WeekStepListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -985,6 +995,8 @@
 				2EE812D42B79904E000B65E5 /* StepEntryForm.swift */,
 				2E5747392BC55E2600B46C55 /* StepGraph.swift */,
 				2EB2069E2BC8056C003F0700 /* WeekStepGraph.swift */,
+				2EBA3DA02BCB73E900599131 /* DailyStepList.swift */,
+				2EBA3DA42BCB7BF200599131 /* WeekStepListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1290,18 +1302,22 @@
 				2EB942012BADAA2300F3B0D2 /* WorkDaySelectView.swift in Sources */,
 				2E61D0C12BB432CA0087B895 /* DailyHydrationListViewModel.swift in Sources */,
 				2EB941FF2BADA8C500F3B0D2 /* NicknameInputViewModel.swift in Sources */,
+				2EBA3DA32BCB743F00599131 /* DailyStepListViewModel.swift in Sources */,
 				2EB2069F2BC8056C003F0700 /* WeekStepGraph.swift in Sources */,
 				2EB9420B2BAED68C00F3B0D2 /* RestTimeInputViewModel.swift in Sources */,
 				2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */,
 				2EB942092BAECC9200F3B0D2 /* RestTimeInputView.swift in Sources */,
 				2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */,
 				2E868AB62BB6332700681E6B /* WeekHydrationListView.swift in Sources */,
+				2EBA3DA52BCB7BF200599131 /* WeekStepListView.swift in Sources */,
+				2EBA3DA72BCB7C0F00599131 /* WeekStepListViewModel.swift in Sources */,
 				2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */,
 				2EE812EE2B7ADE9E000B65E5 /* ActivityEntryArea.swift in Sources */,
 				2E8FBED62BA6E7CD0082B3E1 /* DateArrayTransformer.swift in Sources */,
 				2EFD01892B71A721003020C6 /* Const.swift in Sources */,
 				2E0C95C62B6A710700576531 /* OnboardingScreenView.swift in Sources */,
 				2EB9421F2BB0259300F3B0D2 /* TimeSelectionListView.swift in Sources */,
+				2EBA3DA12BCB73E900599131 /* DailyStepList.swift in Sources */,
 				2E8FBEDB2BA7B2E80082B3E1 /* ReminderTab.swift in Sources */,
 				2E0C95CA2B6A73EF00576531 /* ReviewDescriptionView.swift in Sources */,
 				2E0ACDFF2B97E32B00318BF2 /* FormAction.swift in Sources */,

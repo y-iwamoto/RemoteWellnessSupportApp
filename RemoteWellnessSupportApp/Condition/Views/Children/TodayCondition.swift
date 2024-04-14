@@ -32,9 +32,11 @@ struct TodayCondition: View {
                         }
                     }
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        StepGraph()
-                            .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
-                            .padding()
+                        NavigationLink(value: ConditionScreenNavigationItem.dailyStepList(date: today)) {
+                            StepGraph()
+                                .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
+                                .padding()
+                        }
                     }
                 }
                 ActivityEntryArea(targetDate: today)
