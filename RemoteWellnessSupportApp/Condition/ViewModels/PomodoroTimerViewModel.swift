@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PomodoroTimerViewModel: BaseViewModel {
     private let dataSource: PomodoroDataSource
@@ -15,6 +16,27 @@ class PomodoroTimerViewModel: BaseViewModel {
     @Published var secondsLeft: Int = MaxTimer
     @Published var currentMaxTime: Int = MaxTimer
     @Published var completedPomodoroCount = 0
+    var progress: CGFloat {
+        return CGFloat(secondsLeft) / CGFloat(currentMaxTime)
+    }
+    var foregroundColor: Color {
+        switch timerMode {
+        case .running:
+            return Color.green
+        case .breakMode:
+            return Color.blue
+        default:
+            return Color.red
+        }
+    }
+    let formatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.unitsStyle = .full
+        formatter.calendar?.locale = Locale(identifier: "ja_JP")
+        return formatter
+    }()
+    
     var pomodoroGroupId: UUID?
     var timer = Timer()
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PomodoroTimer: View {
     @StateObject var viewModel = PomodoroTimerViewModel()
+    
     var body: some View {
         VStack {
             ZStack {
@@ -16,78 +17,57 @@ struct PomodoroTimer: View {
                     .stroke(lineWidth: 20)
                     .opacity(0.3)
                     .foregroundColor(Color.gray)
-
-                CircleProgress(progress: CGFloat(viewModel.secondsLeft) /
-                    CGFloat(viewModel.currentMaxTime))
+                
+                CircleProgress(progress: viewModel.progress)
                     .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(viewModel.timerMode == .running ? Color.green :
-                        (viewModel.timerMode == .breakMode ? Color.blue : Color.red))
+                    .foregroundColor(viewModel.foregroundColor)
                     .animation(.linear, value: viewModel.secondsLeft)
-
+                
                 VStack {
                     Text("\(formatPomodoroTime(viewModel.secondsLeft))")
                         .font(.largeTitle)
                         .padding()
-
+                    
                     Text("本日のタスク完了数：\(viewModel.completedPomodoroCount)")
                         .font(.title3)
                 }
             }
             .padding(40)
-
-            if viewModel.timerMode == .initial {
-                if viewModel.currentMaxTime == PomodoroTimerViewModel.MaxTimer {
-                    Button("作業開始") {
-                        viewModel.startTimer()
-                    }
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-                } else if viewModel.currentMaxTime == PomodoroTimerViewModel.BreakTime {
-                    Button("休憩開始") {
-                        viewModel.startBraekMode()
-                    }
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-                }
-            } else if viewModel.timerMode == .running || viewModel.timerMode == .breakMode {
-                Button("Pause") {
-                    viewModel.pauseTimer()
-                }
-                .padding()
-                .background(Color.red)
-                .foregroundColor(.white)
-                .clipShape(Capsule())
-            } else if viewModel.timerMode == .paused {
-                HStack {
-                    Button("Resume") {
-                        viewModel.resumeTimer()
-                    }
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-
-                    Button("Reset") {
-                        viewModel.resetTimer()
-                    }
-                    .padding()
-                    .background(Color.gray)
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-                }
-            }
+            timerModeView
         }
     }
 
+    @ViewBuilder
+       var timerModeView: some View {
+           switch viewModel.timerMode {
+           case .initial:
+               if viewModel.currentMaxTime == PomodoroTimerViewModel.MaxTimer {
+                   PomodoroButton(title: "作業開始", backgroundColor: Color.green) {
+                       viewModel.startTimer()
+                   }
+               } else if viewModel.currentMaxTime == PomodoroTimerViewModel.BreakTime {
+                   PomodoroButton(title: "休憩開始", backgroundColor: Color.blue) {
+                       viewModel.startBraekMode()
+                   }
+               }
+           case .running, .breakMode:
+               PomodoroButton(title: "停止", backgroundColor: Color.red) {
+                   viewModel.pauseTimer()
+               }
+           case .paused:
+               HStack {
+                   PomodoroButton(title: "再開", backgroundColor: Color.green) {
+                       viewModel.resumeTimer()
+                   }
+                   PomodoroButton(title: "リセット", backgroundColor: Color.gray) {
+                       viewModel.resetTimer()
+                   }
+               }
+           }
+       }
+    
     private func formatPomodoroTime(_ second: Int) -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.minute, .second]
-        formatter.unitsStyle = .full
-        formatter.calendar?.locale = Locale(identifier: "ja_JP")
+        let formatter = viewModel.formatter
 
         let formattedString = formatter.string(from: TimeInterval(second))!
         return formattedString

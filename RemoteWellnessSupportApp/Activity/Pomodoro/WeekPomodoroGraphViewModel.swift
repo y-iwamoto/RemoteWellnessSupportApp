@@ -28,21 +28,17 @@ class WeekPomodoroGraphViewModel: BaseIncrementalYLabelGraphViewModel {
             }
             try assignWeekPomodoros(workTimeEndPomodoros)
         } catch {
-            setError(withMessage: "取得処理に失敗しました", error: error)
+            setError(withMessage: "ポモドーロデータの取得に失敗しました", error: error)
         }
     }
 
     private func assignWeekPomodoros(_ pomodoros: [Pomodoro]) throws {
-        do {
-            if !pomodoros.isEmpty {
-                let (dateRange, groupedPomodoros) = try calculateDateRangeAndGroupedPomodoros(pomodoros)
-                weekPomodoros = convertToGraphValues(dateRange: dateRange, groupedValues: groupedPomodoros)
-                pomodoroRatingYGraphValues = convertToYGraphLabelValues(dateRange: dateRange, groupedGraphValues: groupedPomodoros,
-                                                                        initialRatingValues: [0, 1, 2, 3])
-                pomodoroRateYGraphRange = convertToPomodoroRateRange()
-            }
-        } catch {
-            throw error
+        if !pomodoros.isEmpty {
+            let (dateRange, groupedPomodoros) = try calculateDateRangeAndGroupedPomodoros(pomodoros)
+            weekPomodoros = convertToGraphValues(dateRange: dateRange, groupedValues: groupedPomodoros)
+            pomodoroRatingYGraphValues = convertToYGraphLabelValues(dateRange: dateRange, groupedGraphValues: groupedPomodoros,
+                                                                    initialRatingValues: [0, 1, 2, 3])
+            pomodoroRateYGraphRange = convertToPomodoroRateRange()
         }
     }
 
@@ -101,7 +97,6 @@ class WeekPomodoroGraphViewModel: BaseIncrementalYLabelGraphViewModel {
         guard let maxRating = totalRatings.max(), maxRating != noEntryValueForSpecificTime else {
             return initialRatingValues
         }
-        // TODO: ここは動作確認する
         if maxRating < 3 {
             return [0, 1, 2, 3].map { $0 * 3 / 3 }
         }

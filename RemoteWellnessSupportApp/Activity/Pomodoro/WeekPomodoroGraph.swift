@@ -15,9 +15,7 @@ struct WeekPomodoroGraph: View {
                 .font(.title3)
             content
                 .modifier(ErrorAlertModifier(isErrorAlert: $viewModel.isErrorAlert, errorMessage: $viewModel.errorMessage))
-                .onAppear {
-                    viewModel.fetchPomodoros()
-                }
+                .onAppear(perform: viewModel.fetchPomodoros)
         }
     }
 
