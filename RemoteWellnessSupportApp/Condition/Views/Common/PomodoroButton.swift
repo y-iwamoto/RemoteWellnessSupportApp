@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PomodoroButton: View {
-
     var title: String
     var backgroundColor: Color
     var action: () -> Void

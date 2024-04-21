@@ -17,18 +17,20 @@ class PomodoroTimerViewModel: BaseViewModel {
     @Published var currentMaxTime: Int = MaxTimer
     @Published var completedPomodoroCount = 0
     var progress: CGFloat {
-        return CGFloat(secondsLeft) / CGFloat(currentMaxTime)
+        CGFloat(secondsLeft) / CGFloat(currentMaxTime)
     }
+
     var foregroundColor: Color {
         switch timerMode {
         case .running:
-            return Color.green
+            Color.green
         case .breakMode:
-            return Color.blue
+            Color.blue
         default:
-            return Color.red
+            Color.red
         }
     }
+
     let formatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.minute, .second]
@@ -36,7 +38,7 @@ class PomodoroTimerViewModel: BaseViewModel {
         formatter.calendar?.locale = Locale(identifier: "ja_JP")
         return formatter
     }()
-    
+
     var pomodoroGroupId: UUID?
     var timer = Timer()
 
@@ -123,7 +125,8 @@ class PomodoroTimerViewModel: BaseViewModel {
         currentMaxTime = PomodoroTimerViewModel.BreakTime
         timerMode = .initial
         guard let pomodoroGroupId else {
-            fatalError("不正な値です")
+            setError(withMessage: "不正な値です")
+            return
         }
         let pomodoro = Pomodoro(pomodoroGroupId: pomodoroGroupId.uuidString, activityType: .workTime)
         do {
