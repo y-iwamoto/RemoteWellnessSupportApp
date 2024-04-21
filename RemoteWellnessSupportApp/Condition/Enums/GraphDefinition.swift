@@ -14,6 +14,7 @@ enum GraphDefinition {
         case hydration = "水分摂取量"
         case step = "アクティビティ"
         case review = "振り返り"
+        case pomodoro = "タスク完了実績"
     }
 
     enum TimeZone: String {
@@ -27,6 +28,7 @@ enum GraphType: String {
     case physicalCondition
     case step
     case review
+    case pomodoro
 
     var label: GraphDefinition.Label {
         switch self {
@@ -38,6 +40,8 @@ enum GraphType: String {
             .step
         case .review:
             .review
+        case .pomodoro:
+            .pomodoro
         }
     }
 }

@@ -28,7 +28,8 @@ final class ModelManager {
     }
 
     private init() {
-        let schema = Schema([Hydration.self, PhysicalCondition.self, PhysicalConditionReminder.self, Profile.self])
+        let schema = Schema([Hydration.self, PhysicalCondition.self, PhysicalConditionReminder.self, Profile.self,
+                             Pomodoro.self])
         do {
             modelContainer = try ModelContainer(for: schema)
         } catch {
