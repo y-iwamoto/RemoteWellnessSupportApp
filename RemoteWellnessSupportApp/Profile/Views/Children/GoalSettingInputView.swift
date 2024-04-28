@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GoalSettingInputView: View {
     @Binding var hydrationGoal: String
+    @Binding var stepGoal: String
     @StateObject var viewModel = GoalSettingInputViewModel()
     @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = false
 
@@ -19,17 +20,28 @@ struct GoalSettingInputView: View {
             title: "1時間あたりの目標値を設定して下さい",
             buttonTitle: "次へ進む",
             content: {
-                HStack {
-                    Text("水分摂取")
-                    TextInput(labelName: "ml", value: $hydrationGoal)
-                        .onChange(of: hydrationGoal) { _, newState in
-                            hydrationGoal = viewModel.processHydrationGoalChange(newState)
-                        }
-                        .keyboardType(.numberPad)
+                VStack {
+                    HStack {
+                        Text("水分摂取")
+                        TextInput(labelName: "ml", value: $hydrationGoal)
+                            .onChange(of: hydrationGoal) { _, newState in
+                                hydrationGoal = viewModel.convertStringToNumber(newState)
+                            }
+                            .keyboardType(.numberPad)
+                    }
+
+                    HStack {
+                        Text("歩数")
+                        TextInput(labelName: "歩", value: $stepGoal)
+                            .onChange(of: stepGoal) { _, newState in
+                                stepGoal = viewModel.convertStringToNumber(newState)
+                            }
+                            .keyboardType(.numberPad)
+                    }
                 }
             },
             buttonAction: {
-                if viewModel.inputValidate(hydrationGoal: hydrationGoal), saveProfile() {
+                if viewModel.inputValidate(goalValue: hydrationGoal), viewModel.inputValidate(goalValue: stepGoal), saveProfile() {
                     hasCompletedProfileRegister = true
                 }
             }
