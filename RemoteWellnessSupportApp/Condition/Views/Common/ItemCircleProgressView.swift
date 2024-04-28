@@ -25,7 +25,7 @@ struct ItemCircleProgressView: View {
                 CircleProgress(progress: progress)
                     .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                     .foregroundColor(Color.green)
-                    .animation(.linear, value: totalValue)
+                    .animation(.linear, value: progress)
 
                 Image(systemName: imageName)
                     .padding()

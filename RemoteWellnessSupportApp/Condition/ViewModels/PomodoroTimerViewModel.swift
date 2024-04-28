@@ -161,7 +161,7 @@ class PomodoroTimerViewModel: BaseViewModel {
 
         do {
             try dataSource.insertPomodoro(pomodoro: pomodoro)
-            NotificationCenter.default.post(name: .didUpdateData, object: nil)
+            NotificationCenter.default.post(name: .didUpdatePomodoroData, object: nil)
         } catch {
             setError(withMessage: "登録処理に失敗しました", error: error)
         }

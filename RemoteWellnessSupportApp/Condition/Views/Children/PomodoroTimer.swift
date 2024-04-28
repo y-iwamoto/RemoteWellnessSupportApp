@@ -21,7 +21,7 @@ struct PomodoroTimer: View {
                 CircleProgress(progress: viewModel.progress)
                     .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                     .foregroundColor(viewModel.foregroundColor)
-                    .animation(.linear, value: viewModel.secondsLeft)
+                    .animation(.linear, value: viewModel.progress)
 
                 VStack {
                     Text("\(formatPomodoroTime(viewModel.secondsLeft))")

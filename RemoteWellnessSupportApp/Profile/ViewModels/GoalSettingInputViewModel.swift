@@ -21,8 +21,7 @@ class GoalSettingInputViewModel: BaseViewModel {
         return true
     }
 
-    func convertStringToNumber(_ newValue: String) -> String {
-        let filtered = newValue.filter { "0123456789".contains($0) }
-        return filtered
+    func extractNumbersFromString(_ newValue: String) -> String {
+        newValue.filter { "0123456789".contains($0) }
     }
 }

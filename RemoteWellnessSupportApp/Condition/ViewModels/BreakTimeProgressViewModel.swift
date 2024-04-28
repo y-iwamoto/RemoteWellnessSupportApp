@@ -34,7 +34,7 @@ class BreakTimeProgressViewModel: BaseViewModel {
     }
 
     private func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: .didUpdateData, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: .didUpdatePomodoroData, object: nil)
     }
 
     @objc private func fetchData() {

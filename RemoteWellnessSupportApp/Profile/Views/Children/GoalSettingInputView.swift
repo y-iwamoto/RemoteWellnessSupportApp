@@ -25,7 +25,7 @@ struct GoalSettingInputView: View {
                         Text("水分摂取")
                         TextInput(labelName: "ml", value: $hydrationGoal)
                             .onChange(of: hydrationGoal) { _, newState in
-                                hydrationGoal = viewModel.convertStringToNumber(newState)
+                                hydrationGoal = viewModel.extractNumbersFromString(newState)
                             }
                             .keyboardType(.numberPad)
                     }
@@ -34,7 +34,7 @@ struct GoalSettingInputView: View {
                         Text("歩数")
                         TextInput(labelName: "歩", value: $stepGoal)
                             .onChange(of: stepGoal) { _, newState in
-                                stepGoal = viewModel.convertStringToNumber(newState)
+                                stepGoal = viewModel.extractNumbersFromString(newState)
                             }
                             .keyboardType(.numberPad)
                     }

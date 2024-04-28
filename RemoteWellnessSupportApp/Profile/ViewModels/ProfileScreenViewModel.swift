@@ -28,6 +28,7 @@ class ProfileScreenViewModel: BaseViewModel {
 
     func saveProfile() -> Bool {
         guard let hydrationGoalDoubleValue = Double(hydrationGoal), let stepGoalDoubleValue = Double(stepGoal) else {
+            setError(withMessage: "入力された目標値が無効です")
             return false
         }
 
