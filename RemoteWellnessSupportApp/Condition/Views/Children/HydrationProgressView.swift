@@ -17,6 +17,7 @@ struct HydrationProgressView: View {
                                itemValue: viewModel.currentTotalHydrationIntake,
                                itemName: "水分摂取量")
             .onAppear {
+                // TODO: NotificationCenterを利用して適切なタイミングのみロードするように対応
                 viewModel.aggregateHydration()
             }
     }

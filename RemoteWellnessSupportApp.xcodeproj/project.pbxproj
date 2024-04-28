@@ -102,7 +102,7 @@
 		2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */; };
 		2E947A6B2BD53389002B660A /* PomodoroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6A2BD53389002B660A /* PomodoroButton.swift */; };
 		2E947A6D2BD87AB8002B660A /* ItemCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6C2BD87AB8002B660A /* ItemCircleProgressView.swift */; };
-		2E947A6F2BD87C07002B660A /* EachItemProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6E2BD87C07002B660A /* EachItemProgressView.swift */; };
+		2E947A6F2BD87C07002B660A /* GoalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6E2BD87C07002B660A /* GoalProgressView.swift */; };
 		2E947A712BD9C81D002B660A /* HydrationProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A702BD9C81D002B660A /* HydrationProgressView.swift */; };
 		2E947A732BD9C9DB002B660A /* HydrationProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A722BD9C9DB002B660A /* HydrationProgressViewModel.swift */; };
 		2E99F0362BD14C4600F7E97F /* PomodoroDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99F0352BD14C4600F7E97F /* PomodoroDataSource.swift */; };
@@ -305,7 +305,7 @@
 		2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		2E947A6A2BD53389002B660A /* PomodoroButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroButton.swift; sourceTree = "<group>"; };
 		2E947A6C2BD87AB8002B660A /* ItemCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCircleProgressView.swift; sourceTree = "<group>"; };
-		2E947A6E2BD87C07002B660A /* EachItemProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachItemProgressView.swift; sourceTree = "<group>"; };
+		2E947A6E2BD87C07002B660A /* GoalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalProgressView.swift; sourceTree = "<group>"; };
 		2E947A702BD9C81D002B660A /* HydrationProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationProgressView.swift; sourceTree = "<group>"; };
 		2E947A722BD9C9DB002B660A /* HydrationProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationProgressViewModel.swift; sourceTree = "<group>"; };
 		2E99F0352BD14C4600F7E97F /* PomodoroDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroDataSource.swift; sourceTree = "<group>"; };
@@ -517,7 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				2E947A6C2BD87AB8002B660A /* ItemCircleProgressView.swift */,
-				2E947A6E2BD87C07002B660A /* EachItemProgressView.swift */,
+				2E947A6E2BD87C07002B660A /* GoalProgressView.swift */,
 				2E0DA4202B8C0B1F004E0185 /* PhysicalConditionChartView.swift */,
 				2E09E7C72BCD4982004DC601 /* CircleProgress.swift */,
 				2E947A6A2BD53389002B660A /* PomodoroButton.swift */,
@@ -1363,7 +1363,7 @@
 				2E5747412BC6BC9C00B46C55 /* HealthKitManager.swift in Sources */,
 				2EBA3DAA2BCBAE2000599131 /* StepCountTextView.swift in Sources */,
 				2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */,
-				2E947A6F2BD87C07002B660A /* EachItemProgressView.swift in Sources */,
+				2E947A6F2BD87C07002B660A /* GoalProgressView.swift in Sources */,
 				2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2EB942052BAEBF2500F3B0D2 /* WorkTimeInputView.swift in Sources */,

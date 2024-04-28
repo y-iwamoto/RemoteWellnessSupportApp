@@ -21,7 +21,7 @@ struct TodayCondition: View {
                         PomodoroTimer()
                     }
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        EachItemProgressView()
+                        GoalProgressView()
                     }
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
                         NavigationLink(value: ConditionScreenNavigationItem.dailyPhysicalConditionList(date: today)) {

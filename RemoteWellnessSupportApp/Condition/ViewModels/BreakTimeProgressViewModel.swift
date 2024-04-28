@@ -20,6 +20,7 @@ class BreakTimeProgressViewModel: BaseViewModel {
         self.pomodoroDataSource = pomodoroDataSource
         super.init()
         setupNotifications()
+        aggregateBreakTime()
     }
 
     func aggregateBreakTime() {

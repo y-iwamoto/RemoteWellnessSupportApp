@@ -16,9 +16,6 @@ struct BreakTimeProgressView: View {
                                imageName: ConditionNavigationLink.ImageName.breakTime.rawValue,
                                itemValue: viewModel.currentTotalBreakTimeIntake,
                                itemName: "休憩数")
-            .onAppear {
-                viewModel.aggregateBreakTime()
-            }
     }
 }
 
