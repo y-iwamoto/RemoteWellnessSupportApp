@@ -13,5 +13,6 @@ enum ConditionNavigationLink {
         case reviewEntryForm = "book.fill"
         case stepEntryForm = "shoeprints.fill"
         case hydrationEntryForm = "takeoutbag.and.cup.and.straw.fill"
+        case breakTime = "heart.fill"
     }
 }

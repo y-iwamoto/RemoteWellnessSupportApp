@@ -161,6 +161,7 @@ class PomodoroTimerViewModel: BaseViewModel {
 
         do {
             try dataSource.insertPomodoro(pomodoro: pomodoro)
+            NotificationCenter.default.post(name: .didUpdateData, object: nil)
         } catch {
             setError(withMessage: "登録処理に失敗しました", error: error)
         }
@@ -169,7 +170,7 @@ class PomodoroTimerViewModel: BaseViewModel {
 
     private func createPredicateForOneDayPomodoro() throws -> Predicate<Pomodoro> {
         let (startOfDay, endOfDay) = try dayPeriod(for: Date())
-        let workTimeType = PomodoroActivityType.workTime
+        // let workTimeType = PomodoroActivityType.workTime
         let predicate = #Predicate<Pomodoro> { pomodoro in
 
             pomodoro.registeredAt >= startOfDay && pomodoro.registeredAt < endOfDay
