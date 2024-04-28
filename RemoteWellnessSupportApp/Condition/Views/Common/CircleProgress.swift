@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircleProgress: Shape {
-    var progress: CGFloat
+    private(set) var progress: CGFloat
 
     func path(in rect: CGRect) -> Path {
         var path = Path()

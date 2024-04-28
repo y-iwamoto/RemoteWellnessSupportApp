@@ -8,8 +8,8 @@
 import Foundation
 
 class GoalSettingInputViewModel: BaseViewModel {
-    func inputValidate(hydrationGoal: String) -> Bool {
-        guard let number = Int(hydrationGoal) else {
+    func inputValidate(goalValue: String) -> Bool {
+        guard let number = Int(goalValue) else {
             setError(withMessage: "数値型の文字列を入力して下さい")
             return false
         }
@@ -21,8 +21,7 @@ class GoalSettingInputViewModel: BaseViewModel {
         return true
     }
 
-    func processHydrationGoalChange(_ newValue: String) -> String {
-        let filtered = newValue.filter { "0123456789".contains($0) }
-        return filtered
+    func extractNumbersFromString(_ newValue: String) -> String {
+        newValue.filter { "0123456789".contains($0) }
     }
 }

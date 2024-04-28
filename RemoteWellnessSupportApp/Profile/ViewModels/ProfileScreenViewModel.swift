@@ -14,6 +14,7 @@ class ProfileScreenViewModel: BaseViewModel {
     @Published var workTimeFrom: TimeSelection
     @Published var workTimeTo: TimeSelection
     @Published var hydrationGoal = ""
+    @Published var stepGoal = ""
     @Published var restTimePeriodSections: [RestTimePeriodSection]
 
     init(dataSource: ProfileDataSource = ProfileDataSource.shared) {
@@ -26,7 +27,8 @@ class ProfileScreenViewModel: BaseViewModel {
     }
 
     func saveProfile() -> Bool {
-        guard let hydrationGoalDoubleValue = Double(hydrationGoal) else {
+        guard let hydrationGoalDoubleValue = Double(hydrationGoal), let stepGoalDoubleValue = Double(stepGoal) else {
+            setError(withMessage: "入力された目標値が無効です")
             return false
         }
 
@@ -35,7 +37,8 @@ class ProfileScreenViewModel: BaseViewModel {
         }
 
         let profile = Profile(nickname: nickname, workDays: workDays, workTimeFrom: workTimeFrom.selectedTime,
-                              workTimeTo: workTimeTo.selectedTime, hydrationGoal: hydrationGoalDoubleValue, restTimePeriods: restTimePeriods)
+                              workTimeTo: workTimeTo.selectedTime, hydrationGoal: hydrationGoalDoubleValue, stepGoal: stepGoalDoubleValue,
+                              restTimePeriods: restTimePeriods)
 
         do {
             try dataSource.insertProfile(profile: profile)
