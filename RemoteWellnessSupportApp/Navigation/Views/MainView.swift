@@ -14,8 +14,7 @@ struct MainView: View {
                 .tabItem {
                     Label(MainTabConst.LabelName.conditionScreen, systemImage: MainTabConst.Image.conditionScreen)
                 }
-            // TODO: 現状はダミーで作成、設定画面作成時に対応
-            Text("Settings")
+            SettingScreen()
                 .tabItem {
                     Label(MainTabConst.LabelName.settingsScreen, systemImage: MainTabConst.Image.settingsScreen)
                 }
