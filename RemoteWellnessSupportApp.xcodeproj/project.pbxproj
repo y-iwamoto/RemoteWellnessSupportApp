@@ -100,6 +100,14 @@
 		2E8FBEF22BAA7A850082B3E1 /* ReminderTab+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF12BAA7A850082B3E1 /* ReminderTab+Extensions.swift */; };
 		2E8FBEF42BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF32BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift */; };
 		2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */; };
+		2E916C5E2BDF295A0016D67E /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C5D2BDF295A0016D67E /* SettingScreen.swift */; };
+		2E916C612BDF29D10016D67E /* SettingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C602BDF29D10016D67E /* SettingList.swift */; };
+		2E916C632BDF395F0016D67E /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C622BDF395F0016D67E /* ProfileEditView.swift */; };
+		2E916C662BDF3AC60016D67E /* SettingScreenNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C652BDF3AC60016D67E /* SettingScreenNavigationRouter.swift */; };
+		2E916C682BDF3F6A0016D67E /* SettingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C672BDF3F6A0016D67E /* SettingItemView.swift */; };
+		2E916C6A2BDF61DC0016D67E /* ReminderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C692BDF61DC0016D67E /* ReminderEditView.swift */; };
+		2E916C6C2BDF62690016D67E /* SettingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C6B2BDF62690016D67E /* SettingListViewModel.swift */; };
+		2E916C6F2BDF66DA0016D67E /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E916C6E2BDF66DA0016D67E /* SettingsItem.swift */; };
 		2E947A6B2BD53389002B660A /* PomodoroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6A2BD53389002B660A /* PomodoroButton.swift */; };
 		2E947A6D2BD87AB8002B660A /* ItemCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6C2BD87AB8002B660A /* ItemCircleProgressView.swift */; };
 		2E947A6F2BD87C07002B660A /* GoalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E947A6E2BD87C07002B660A /* GoalProgressView.swift */; };
@@ -303,6 +311,14 @@
 		2E8FBEF12BAA7A850082B3E1 /* ReminderTab+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderTab+Extensions.swift"; sourceTree = "<group>"; };
 		2E8FBEF32BAA7CD20082B3E1 /* NotificationSettingNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingNavigationItem.swift; sourceTree = "<group>"; };
 		2E8FBEF52BAA8A310082B3E1 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		2E916C5D2BDF295A0016D67E /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		2E916C602BDF29D10016D67E /* SettingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingList.swift; sourceTree = "<group>"; };
+		2E916C622BDF395F0016D67E /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		2E916C652BDF3AC60016D67E /* SettingScreenNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenNavigationRouter.swift; sourceTree = "<group>"; };
+		2E916C672BDF3F6A0016D67E /* SettingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemView.swift; sourceTree = "<group>"; };
+		2E916C692BDF61DC0016D67E /* ReminderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditView.swift; sourceTree = "<group>"; };
+		2E916C6B2BDF62690016D67E /* SettingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewModel.swift; sourceTree = "<group>"; };
+		2E916C6E2BDF66DA0016D67E /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		2E947A6A2BD53389002B660A /* PomodoroButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroButton.swift; sourceTree = "<group>"; };
 		2E947A6C2BD87AB8002B660A /* ItemCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCircleProgressView.swift; sourceTree = "<group>"; };
 		2E947A6E2BD87C07002B660A /* GoalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalProgressView.swift; sourceTree = "<group>"; };
@@ -734,6 +750,53 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2E916C5B2BDF29220016D67E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2E916C6D2BDF65150016D67E /* Enums */,
+				2E916C642BDF3AAB0016D67E /* ViewModels */,
+				2E916C5C2BDF293F0016D67E /* Views */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		2E916C5C2BDF293F0016D67E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E916C5F2BDF29B70016D67E /* Children */,
+				2E916C5D2BDF295A0016D67E /* SettingScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E916C5F2BDF29B70016D67E /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				2E916C602BDF29D10016D67E /* SettingList.swift */,
+				2E916C622BDF395F0016D67E /* ProfileEditView.swift */,
+				2E916C672BDF3F6A0016D67E /* SettingItemView.swift */,
+				2E916C692BDF61DC0016D67E /* ReminderEditView.swift */,
+			);
+			path = Children;
+			sourceTree = "<group>";
+		};
+		2E916C642BDF3AAB0016D67E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E916C652BDF3AC60016D67E /* SettingScreenNavigationRouter.swift */,
+				2E916C6B2BDF62690016D67E /* SettingListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E916C6D2BDF65150016D67E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2E916C6E2BDF66DA0016D67E /* SettingsItem.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		2E99F03D2BD3266000F7E97F /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,6 +921,7 @@
 		2EBD2D342B608BDC0063EC7A /* RemoteWellnessSupportApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E916C5B2BDF29220016D67E /* Setting */,
 				2E57473E2BC563FC00B46C55 /* RemoteWellnessSupportApp.entitlements */,
 				2EB941EE2BAC57D900F3B0D2 /* Profile */,
 				2E6FE2102BA274F100541819 /* Core */,
@@ -1258,14 +1322,17 @@
 				2E61D0AB2BB238130087B895 /* HydrationEntryFormViewModel.swift in Sources */,
 				2E6FE2122BA2750100541819 /* AppDelegate.swift in Sources */,
 				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
+				2E916C6C2BDF62690016D67E /* SettingListViewModel.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
 				2E61D0BF2BB432520087B895 /* DailyHydrationList.swift in Sources */,
 				2EB206A12BC805D5003F0700 /* WeekStepGraphViewModel.swift in Sources */,
 				2EB941F82BACF1BA00F3B0D2 /* ProfileScreenViewModel.swift in Sources */,
 				2EB9420D2BAEDF9F00F3B0D2 /* GoalSettingInputView.swift in Sources */,
+				2E916C612BDF29D10016D67E /* SettingList.swift in Sources */,
 				2E0DA41C2B8B2A73004E0185 /* GraphValue.swift in Sources */,
 				2EBA3DB22BCBB9E500599131 /* PomodoroTimerViewModel.swift in Sources */,
 				2EFAC4C52BC22D9E00B822BD /* SwiftDataError.swift in Sources */,
+				2E916C6A2BDF61DC0016D67E /* ReminderEditView.swift in Sources */,
 				2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */,
 				2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */,
 				2E99F0362BD14C4600F7E97F /* PomodoroDataSource.swift in Sources */,
@@ -1296,6 +1363,7 @@
 				2E61D0C32BB446520087B895 /* HydrationEditForm.swift in Sources */,
 				2E8FBEE92BAA78390082B3E1 /* ReminderType.swift in Sources */,
 				2E0C95BF2B69208A00576531 /* IntroductionView.swift in Sources */,
+				2E916C6F2BDF66DA0016D67E /* SettingsItem.swift in Sources */,
 				2E8FBEEC2BAA78F70082B3E1 /* TabTitleConvertible.swift in Sources */,
 				2E0ACDFC2B9690F300318BF2 /* PhysicalConditionCreateForm.swift in Sources */,
 				2E041C252BDCF6A10082CBD6 /* BreakTimeProgressViewModel.swift in Sources */,
@@ -1312,6 +1380,7 @@
 				2E8FBEEF2BAA79300082B3E1 /* ConditionTab+Extensions.swift in Sources */,
 				2EE812E02B799E24000B65E5 /* MainTabConst.swift in Sources */,
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
+				2E916C662BDF3AC60016D67E /* SettingScreenNavigationRouter.swift in Sources */,
 				2E041C232BDCF6940082CBD6 /* BreakTimeProgressView.swift in Sources */,
 				2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */,
 				2EB942032BAE7DEB00F3B0D2 /* WorkDaySelectViewModel.swift in Sources */,
@@ -1356,6 +1425,7 @@
 				2ED957C82B86BED1007663AA /* SelectorView.swift in Sources */,
 				2E0DA4212B8C0B1F004E0185 /* PhysicalConditionChartView.swift in Sources */,
 				2E631C702B8972E800B35AAC /* PhysicalConditionGraphModel.swift in Sources */,
+				2E916C632BDF395F0016D67E /* ProfileEditView.swift in Sources */,
 				2E61D0B92BB2F2820087B895 /* HydrationGraphViewModel.swift in Sources */,
 				2E8FBEE32BA86ED00082B3E1 /* TimeSelection.swift in Sources */,
 				2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */,
@@ -1363,6 +1433,7 @@
 				2E5747412BC6BC9C00B46C55 /* HealthKitManager.swift in Sources */,
 				2EBA3DAA2BCBAE2000599131 /* StepCountTextView.swift in Sources */,
 				2E8FBECF2BA67EBE0082B3E1 /* PhysicalConditionReminderViewModel.swift in Sources */,
+				2E916C5E2BDF295A0016D67E /* SettingScreen.swift in Sources */,
 				2E947A6F2BD87C07002B660A /* GoalProgressView.swift in Sources */,
 				2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
@@ -1391,6 +1462,7 @@
 				2EB9420F2BAF055C00F3B0D2 /* GoalSettingInputViewModel.swift in Sources */,
 				2ED957CB2B86BEF8007663AA /* SelectableItem.swift in Sources */,
 				2E8FBECB2BA67BF20082B3E1 /* NotificationSettingEndView.swift in Sources */,
+				2E916C682BDF3F6A0016D67E /* SettingItemView.swift in Sources */,
 				2E61D0B32BB23E8D0087B895 /* HydrationRating.swift in Sources */,
 				2E947A6B2BD53389002B660A /* PomodoroButton.swift in Sources */,
 				2EFAC4C92BC2412F00B822BD /* BaseIncrementalYLabelGraphViewModel.swift in Sources */,
