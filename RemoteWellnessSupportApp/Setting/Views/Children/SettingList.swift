@@ -22,7 +22,7 @@ struct SettingList: View {
                     }
 
                     SettingItemView(imageName: SettingsItem.ImageName.reminderEditList.rawValue,
-                                    title: SettingsItem.Label.profileEditList.rawValue,
+                                    title: SettingsItem.Label.reminderEditList.rawValue,
                                     geometry: geometry) {
                         router.items.append(SettingScreenNavigationItem.reminderEditList)
                     }
