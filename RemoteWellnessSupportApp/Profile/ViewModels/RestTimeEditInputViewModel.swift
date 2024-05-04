@@ -24,7 +24,7 @@ class RestTimeEditInputViewModel: BaseViewModel {
                 return false
             }
             profile.restTimePeriods = restTimePeriodSections.map { $0.toPeriod() }
-            try dataSource.updateProfile(profile: profile)
+            try dataSource.updateProfile()
             return true
         } catch {
             setError(withMessage: "休憩時間の更新に失敗しました")

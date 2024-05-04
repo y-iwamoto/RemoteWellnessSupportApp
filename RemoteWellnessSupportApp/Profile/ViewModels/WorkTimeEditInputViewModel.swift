@@ -27,7 +27,7 @@ class WorkTimeEditInputViewModel: BaseViewModel {
         do {
             profile.workTimeFrom = workTimeFrom.selectedTime
             profile.workTimeTo = workTimeTo.selectedTime
-            try dataSource.updateProfile(profile: profile)
+            try dataSource.updateProfile()
             return true
         } catch {
             setError(withMessage: "勤務時間の更新に失敗しました")

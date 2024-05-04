@@ -12,10 +12,15 @@ extension Double {
         "\(Int(rounded()))"
     }
 
-    func toString(withDecimalPlaces places: Int) -> String {
+    static let formatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.minimumFractionDigits = places
-        formatter.maximumFractionDigits = places
-        return formatter.string(from: NSNumber(value: self)) ?? ""
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
+
+    func toString(withDecimalPlaces places: Int) -> String {
+        Double.formatter.minimumFractionDigits = places
+        Double.formatter.maximumFractionDigits = places
+        return Double.formatter.string(from: NSNumber(value: self)) ?? ""
     }
 }

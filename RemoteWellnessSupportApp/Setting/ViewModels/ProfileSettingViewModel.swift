@@ -11,6 +11,13 @@ class ProfileSettingViewModel: BaseViewModel {
     private let dataSource: ProfileDataSource
     @Published var profileRecord: Profile?
 
+    var workDaysLabels: String {
+        guard let profile = profileRecord else {
+            return ""
+        }
+        return profile.workDays.map(\.labelName).joined(separator: ", ")
+    }
+
     init(dataSource: ProfileDataSource = ProfileDataSource.shared) {
         self.dataSource = dataSource
         super.init()

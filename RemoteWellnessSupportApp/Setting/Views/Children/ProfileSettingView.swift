@@ -30,7 +30,7 @@ struct ProfileSettingView: View {
 
                     Section(header: Text("勤務曜日")) {
                         HStack {
-                            Text(profile.workDays.map(\.labelName).joined(separator: ", "))
+                            Text(viewModel.workDaysLabels)
                             Spacer()
                             Button(action: {
                                 router.items.append(SettingScreenNavigationItem.workDaySelectEdit(profile: profile))

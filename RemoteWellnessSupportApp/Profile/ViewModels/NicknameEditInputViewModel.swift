@@ -26,7 +26,7 @@ class NicknameEditInputViewModel: BaseViewModel {
         }
         do {
             profile.nickname = nickname
-            try dataSource.updateProfile(profile: profile)
+            try dataSource.updateProfile()
             return true
         } catch {
             setError(withMessage: "ニックネームの更新に失敗しました")

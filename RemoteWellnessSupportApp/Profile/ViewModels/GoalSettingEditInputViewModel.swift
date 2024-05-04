@@ -26,13 +26,13 @@ class GoalSettingEditInputViewModel: BaseViewModel {
                 return false
             }
             guard let hydrationGoalDoubleValue = Double(hydrationGoal), let stepGoalDoubleValue = Double(stepGoal) else {
-                setError(withMessage: "入力された目標値が無効です")
+                setError(withMessage: "入力値が無効です")
                 return false
             }
             profile.hydrationGoal = hydrationGoalDoubleValue
             profile.stepGoal = stepGoalDoubleValue
 
-            try dataSource.updateProfile(profile: profile)
+            try dataSource.updateProfile()
             return true
         } catch {
             setError(withMessage: "休憩時間の更新に失敗しました")
