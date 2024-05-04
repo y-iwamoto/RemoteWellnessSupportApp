@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct RestTimePeriod: Codable {
+struct RestTimePeriod: Codable, Hashable {
+    var id = UUID()
     var fromTime: Date
     var toTime: Date
 }
