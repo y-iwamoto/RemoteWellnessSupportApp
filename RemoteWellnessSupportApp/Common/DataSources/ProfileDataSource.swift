@@ -31,4 +31,8 @@ final class ProfileDataSource {
         let descriptor = FetchDescriptor<Profile>()
         return try modelContext.fetch(descriptor).first ?? nil
     }
+
+    func updateProfile(profile _: Profile) throws {
+        try modelContext.save()
+    }
 }

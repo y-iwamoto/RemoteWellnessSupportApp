@@ -21,10 +21,20 @@ struct SettingScreen: View {
     @ViewBuilder
     private func navigationDestinationBuilder(item: SettingScreenNavigationItem) -> some View {
         switch item {
-        case .profileEditList:
-            ProfileEditView()
+        case .profileSetting:
+            ProfileSettingView()
         case .reminderEditList:
             ReminderEditView()
+        case let .nicknameEditInput(profile):
+            NicknameEditInputView(profile: profile)
+        case let .workDaySelectEdit(profile: profile):
+            WorkDaySelectEditView(profile: profile)
+        case let .workTimeEditInput(profile: profile):
+            WorkTimeEditInputView(profile: profile)
+        case let .restTimeEditInput(profile: profile):
+            RestTimeEditInputView(profile: profile)
+        case let .goalSettingEditInput(profile: profile):
+            GoalSettingEditInputView(profile: profile)
         }
     }
 }

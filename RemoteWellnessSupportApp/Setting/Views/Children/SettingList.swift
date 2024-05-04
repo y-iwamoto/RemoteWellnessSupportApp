@@ -18,7 +18,7 @@ struct SettingList: View {
                     SettingItemView(imageName: SettingsItem.ImageName.profileEditList.rawValue,
                                     title: SettingsItem.Label.profileEditList.rawValue,
                                     geometry: geometry) {
-                        router.items.append(SettingScreenNavigationItem.profileEditList)
+                        router.items.append(SettingScreenNavigationItem.profileSetting)
                     }
 
                     SettingItemView(imageName: SettingsItem.ImageName.reminderEditList.rawValue,

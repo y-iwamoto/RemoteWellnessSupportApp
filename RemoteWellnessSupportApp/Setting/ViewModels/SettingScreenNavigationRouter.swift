@@ -8,8 +8,13 @@
 import Foundation
 
 enum SettingScreenNavigationItem: Hashable {
-    case profileEditList
+    case profileSetting
     case reminderEditList
+    case nicknameEditInput(profile: Profile)
+    case workDaySelectEdit(profile: Profile)
+    case workTimeEditInput(profile: Profile)
+    case restTimeEditInput(profile: Profile)
+    case goalSettingEditInput(profile: Profile)
 }
 
 final class SettingScreenNavigationRouter: ObservableObject {
