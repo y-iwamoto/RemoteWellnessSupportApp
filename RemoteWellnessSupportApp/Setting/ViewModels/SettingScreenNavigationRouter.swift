@@ -15,6 +15,7 @@ enum SettingScreenNavigationItem: Hashable {
     case workTimeEditInput(profile: Profile)
     case restTimeEditInput(profile: Profile)
     case goalSettingEditInput(profile: Profile)
+    case physicalConditionReminderEdit(reminder: PhysicalConditionReminder)
 }
 
 final class SettingScreenNavigationRouter: ObservableObject {

@@ -1,42 +1,41 @@
 //
-//  PhysicalConditionReminderViewModel.swift
+//  BasePhysicalConditionReminder.swift
 //  RemoteWellnessSupportApp
 //
-//  Created by 岩本雄貴 on 2024/03/17.
+//  Created by 岩本雄貴 on 2024/05/07.
 //
 
 import Foundation
 import UserNotifications
 
-class PhysicalConditionReminderViewModel: ObservableObject {
-    private let dataSource: PhysicalConditionReminderDataSource
+class BasePhysicalConditionReminder: BaseViewModel {
+    let dataSource: PhysicalConditionReminderDataSource
     @Published var isReminderActive = true
     @Published var selectedHour = 0
     @Published var selectedMinute = 0
     @Published var scheduledTimeSelections: [TimeSelection] = [TimeSelection()]
     @Published var selectedTab: Reminder = .repeating
-    @Published var isErrorAlert = false
-    @Published var errorMessage = ""
 
     init(dataSource: PhysicalConditionReminderDataSource = PhysicalConditionReminderDataSource.shared) {
         self.dataSource = dataSource
     }
 
-    func savePhysicalConditionReminderSetteing() async -> Bool {
-        guard await validateInputs() else {
-            return false
+    func validateInputs() -> Bool {
+        if selectedTab == .repeating {
+            if selectedHour == 0, selectedMinute == 0 {
+                setError(withMessage: "0時間0分は設定しないで下さい")
+                return false
+            }
+        } else if selectedTab == .scheduled {
+            if scheduledTimeSelections.isEmpty {
+                setError(withMessage: "１件以上は時刻を設定して下さい")
+                return false
+            }
         }
-
-        let physicalConditionReminder = createPhysicalConditionReminder()
-
-        guard await insertPhysicalConditionReminderIntoDataSource(physicalConditionReminder) else {
-            return false
-        }
-
-        return await sendNotification(for: physicalConditionReminder)
+        return true
     }
 
-    private func createPhysicalConditionReminder() -> PhysicalConditionReminder {
+    private func assignPhysicalConditionReminder() -> PhysicalConditionReminder {
         var physicalConditionReminder: PhysicalConditionReminder
         let sendsToiOS = isReminderActive ? true : false
         let sendsTowatchOS = false
@@ -57,21 +56,21 @@ class PhysicalConditionReminderViewModel: ObservableObject {
         return physicalConditionReminder
     }
 
-    @MainActor private func insertPhysicalConditionReminderIntoDataSource(_ reminder: PhysicalConditionReminder) -> Bool {
-        do {
-            try dataSource.insertPhysicalConditionReminder(physicalConditionReminder: reminder)
-            return true
-        } catch {
-            setError(withMessage: "通知設定の登録に失敗しました")
-            return false
-        }
-    }
-
-    @MainActor private func sendNotification(for reminder: PhysicalConditionReminder) async -> Bool {
+    func sendNotification(for reminder: PhysicalConditionReminder) async -> Bool {
         let center = UNUserNotificationCenter.current()
 
         let checkStatus = await center.notificationSettings()
         if checkStatus.authorizationStatus != .authorized {
+            return true
+        }
+        let requests = await center.pendingNotificationRequests()
+        let hasPhysicalConditionReminder = requests.contains { $0.identifier == "physicalConditionReminder" }
+
+        if hasPhysicalConditionReminder {
+            center.removePendingNotificationRequests(withIdentifiers: ["physicalConditionReminder"])
+        }
+
+        if !reminder.isActive {
             return true
         }
 
@@ -102,25 +101,5 @@ class PhysicalConditionReminderViewModel: ObservableObject {
             setError(withMessage: "通知の許可リクエストまたは通知スケジュールに失敗しました")
             return false
         }
-    }
-
-    @MainActor private func validateInputs() -> Bool {
-        if selectedTab == .repeating {
-            if selectedHour == 0, selectedMinute == 0 {
-                setError(withMessage: "0時間0分は設定しないで下さい")
-                return false
-            }
-        } else if selectedTab == .scheduled {
-            if scheduledTimeSelections.isEmpty {
-                setError(withMessage: "１件以上は時刻を設定して下さい")
-                return false
-            }
-        }
-        return true
-    }
-
-    private func setError(withMessage message: String) {
-        isErrorAlert = true
-        errorMessage = message
     }
 }

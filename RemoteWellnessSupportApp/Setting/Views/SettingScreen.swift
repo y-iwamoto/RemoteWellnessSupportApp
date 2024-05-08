@@ -24,7 +24,7 @@ struct SettingScreen: View {
         case .profileSetting:
             ProfileSettingView()
         case .reminderEditList:
-            ReminderEditView()
+            ReminderSettingView()
         case let .nicknameEditInput(profile):
             NicknameEditInputView(profile: profile)
         case let .workDaySelectEdit(profile: profile):
@@ -35,6 +35,8 @@ struct SettingScreen: View {
             RestTimeEditInputView(profile: profile)
         case let .goalSettingEditInput(profile: profile):
             GoalSettingEditInputView(profile: profile)
+        case let .physicalConditionReminderEdit(reminder: reminder):
+            PhysicalConditionReminderEditView(reminder: reminder)
         }
     }
 }
