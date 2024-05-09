@@ -9,6 +9,12 @@ import Foundation
 import UserNotifications
 
 class NotificationPermissionViewModel: ObservableObject {
+    private let physicalConditionReminderDataSource: PhysicalConditionReminderDataSource
+
+    init(physicalConditionReminderDataSource: PhysicalConditionReminderDataSource = PhysicalConditionReminderDataSource.shared) {
+        self.physicalConditionReminderDataSource = physicalConditionReminderDataSource
+    }
+
     @Published var isNotificationPermissionGranted = false
     @Published var isErrorAlert = false
     @Published var errorMessage = ""
@@ -25,6 +31,17 @@ class NotificationPermissionViewModel: ObservableObject {
             }
         } catch {
             await setError(withMessage: "通知の許可リクエストまたは通知スケジュールに失敗しました")
+        }
+    }
+
+    func createReminderWithNoNotificationSetting() async -> Bool {
+        do {
+            let physicalConditionReminder = PhysicalConditionReminder(isActive: false, sendsToiOS: false, sendsTowatchOS: false)
+            try physicalConditionReminderDataSource.insertPhysicalConditionReminder(physicalConditionReminder: physicalConditionReminder)
+            return true
+        } catch {
+            await setError(withMessage: "通知設定の登録に失敗しました")
+            return false
         }
     }
 

@@ -21,9 +21,15 @@ struct NotificationPermissionView: View {
                     router.items.append(.physicalConditionReminder)
                 }
 
-                NavigationLink(value: NotificationSettingNavigationItem.notificationSettingEnd) {
+                Button(action: {
+                    Task {
+                        if await viewModel.createReminderWithNoNotificationSetting() {
+                            router.items.append(NotificationSettingNavigationItem.notificationSettingEnd)
+                        }
+                    }
+                }, label: {
                     Text("通知設定をスキップする")
-                }
+                })
             }
         }
         .padding(.vertical, 50)
