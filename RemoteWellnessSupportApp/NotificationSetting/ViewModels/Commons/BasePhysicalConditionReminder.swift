@@ -35,27 +35,6 @@ class BasePhysicalConditionReminder: BaseViewModel {
         return true
     }
 
-    private func assignPhysicalConditionReminder() -> PhysicalConditionReminder {
-        var physicalConditionReminder: PhysicalConditionReminder
-        let sendsToiOS = isReminderActive ? true : false
-        let sendsTowatchOS = false
-        let interval = selectedHour * 3600 + selectedMinute * 60
-
-        let scheduledTimes = scheduledTimeSelections.map(\.selectedTime).sorted()
-
-        if !isReminderActive {
-            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS)
-        } else if selectedTab == .repeating {
-            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS,
-                                                                  type: .repeating, interval: interval)
-        } else {
-            physicalConditionReminder = PhysicalConditionReminder(isActive: isReminderActive, sendsToiOS: sendsToiOS, sendsTowatchOS: sendsTowatchOS,
-                                                                  type: .scheduled, scheduledTimes: scheduledTimes)
-        }
-
-        return physicalConditionReminder
-    }
-
     func sendNotification(for reminder: PhysicalConditionReminder) async -> Bool {
         let center = UNUserNotificationCenter.current()
 

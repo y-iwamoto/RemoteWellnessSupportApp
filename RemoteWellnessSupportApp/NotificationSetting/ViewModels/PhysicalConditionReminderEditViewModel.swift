@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder {
+class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, ReminderViewModelProtocol {
     @Published var physicalConditionReminder: PhysicalConditionReminder
 
     init(reminder: PhysicalConditionReminder) {
