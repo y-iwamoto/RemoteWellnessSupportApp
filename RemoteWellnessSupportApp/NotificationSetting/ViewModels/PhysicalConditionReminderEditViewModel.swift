@@ -48,11 +48,12 @@ class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, Rem
 
     private func assignPhysicalConditionReminderForUpdate() {
         physicalConditionReminder.isActive = isReminderActive
-        if selectedTab == .repeating {
+        switch selectedTab {
+        case .repeating:
             let interval = selectedHour * 3600 + selectedMinute * 60
             physicalConditionReminder.type = .repeating
             physicalConditionReminder.interval = interval
-        } else {
+        case .scheduled:
             let scheduledTimes = scheduledTimeSelections.map(\.selectedTime).sorted()
             physicalConditionReminder.type = .scheduled
             physicalConditionReminder.scheduledTimes = scheduledTimes
