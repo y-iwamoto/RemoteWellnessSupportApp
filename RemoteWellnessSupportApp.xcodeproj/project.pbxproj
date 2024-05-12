@@ -140,6 +140,9 @@
 		2E9D61E42BEEFB5D00C8F062 /* HydrationReminderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D61E32BEEFB5D00C8F062 /* HydrationReminderDataSource.swift */; };
 		2E9D61E62BEF102F00C8F062 /* ReminderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D61E52BEF102F00C8F062 /* ReminderType.swift */; };
 		2EA2C5992BF0454F00F7751D /* ReminderNotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2C5982BF0454F00F7751D /* ReminderNotificationData.swift */; };
+		2EA2C59B2BF049B900F7751D /* ReminderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2C59A2BF049B900F7751D /* ReminderSection.swift */; };
+		2EA2C59D2BF0564F00F7751D /* HydrationReminderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2C59C2BF0564F00F7751D /* HydrationReminderEditView.swift */; };
+		2EA2C59F2BF05BD500F7751D /* HydrationReminderEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2C59E2BF05BD500F7751D /* HydrationReminderEditViewModel.swift */; };
 		2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */; };
 		2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */; };
 		2EB2069F2BC8056C003F0700 /* WeekStepGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB2069E2BC8056C003F0700 /* WeekStepGraph.swift */; };
@@ -381,6 +384,9 @@
 		2E9D61E32BEEFB5D00C8F062 /* HydrationReminderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationReminderDataSource.swift; sourceTree = "<group>"; };
 		2E9D61E52BEF102F00C8F062 /* ReminderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderType.swift; sourceTree = "<group>"; };
 		2EA2C5982BF0454F00F7751D /* ReminderNotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderNotificationData.swift; sourceTree = "<group>"; };
+		2EA2C59A2BF049B900F7751D /* ReminderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSection.swift; sourceTree = "<group>"; };
+		2EA2C59C2BF0564F00F7751D /* HydrationReminderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationReminderEditView.swift; sourceTree = "<group>"; };
+		2EA2C59E2BF05BD500F7751D /* HydrationReminderEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationReminderEditViewModel.swift; sourceTree = "<group>"; };
 		2EAD063D2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		2EAD063F2B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhysicalConditionDataSource+Extension.swift"; sourceTree = "<group>"; };
 		2EB2069E2BC8056C003F0700 /* WeekStepGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStepGraph.swift; sourceTree = "<group>"; };
@@ -665,6 +671,7 @@
 			isa = PBXGroup;
 			children = (
 				2E642DD92BEC47C60075BC7E /* CustomSection.swift */,
+				2EA2C59A2BF049B900F7751D /* ReminderSection.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -744,6 +751,7 @@
 				2E8FBED02BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift */,
 				2EFD1B9F2BE993DF0014EDBE /* PhysicalConditionReminderEditViewModel.swift */,
 				2E9D61DB2BEEEF8E00C8F062 /* HydrationReminderViewModel.swift */,
+				2EA2C59E2BF05BD500F7751D /* HydrationReminderEditViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1346,6 +1354,7 @@
 			isa = PBXGroup;
 			children = (
 				2EFD1B9D2BE98E030014EDBE /* PhysicalConditionReminderEditView.swift */,
+				2EA2C59C2BF0564F00F7751D /* HydrationReminderEditView.swift */,
 			);
 			path = EditViews;
 			sourceTree = "<group>";
@@ -1543,6 +1552,7 @@
 				2EB942032BAE7DEB00F3B0D2 /* WorkDaySelectViewModel.swift in Sources */,
 				2E8FBEC82BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift in Sources */,
 				2E8FBEDE2BA86E660082B3E1 /* IntervalTimeSelectView.swift in Sources */,
+				2EA2C59D2BF0564F00F7751D /* HydrationReminderEditView.swift in Sources */,
 				2E712E2E2BE1ACFE004F574D /* NicknameEditInputView.swift in Sources */,
 				2EA2C5992BF0454F00F7751D /* ReminderNotificationData.swift in Sources */,
 				2ED5FF0F2BE64F820025113D /* GoalSettingEditInputViewModel.swift in Sources */,
@@ -1618,6 +1628,7 @@
 				2E712E2B2BE1AA35004F574D /* Double+Extensions.swift in Sources */,
 				2EB942182BAFC19400F3B0D2 /* RestTimePeriod.swift in Sources */,
 				2E09E7C82BCD4982004DC601 /* CircleProgress.swift in Sources */,
+				2EA2C59B2BF049B900F7751D /* ReminderSection.swift in Sources */,
 				2E1194A72BE5BBFD00DB4BD3 /* RestTimeEditInputView.swift in Sources */,
 				2EB941FD2BACF73300F3B0D2 /* ProfileNavigationRouter.swift in Sources */,
 				2EB941FB2BACF54300F3B0D2 /* NicknameInputView.swift in Sources */,
@@ -1648,6 +1659,7 @@
 				2E642DDF2BECFCFB0075BC7E /* ReminderBaseView.swift in Sources */,
 				2EB941FF2BADA8C500F3B0D2 /* NicknameInputViewModel.swift in Sources */,
 				2EBA3DA32BCB743F00599131 /* DailyStepListViewModel.swift in Sources */,
+				2EA2C59F2BF05BD500F7751D /* HydrationReminderEditViewModel.swift in Sources */,
 				2EB2069F2BC8056C003F0700 /* WeekStepGraph.swift in Sources */,
 				2EB9420B2BAED68C00F3B0D2 /* RestTimeInputViewModel.swift in Sources */,
 				2E8FBEE02BA86E9D0082B3E1 /* ScheduleTimeSelectView.swift in Sources */,

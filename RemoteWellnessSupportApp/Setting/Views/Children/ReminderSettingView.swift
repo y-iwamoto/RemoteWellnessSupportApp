@@ -30,29 +30,17 @@ struct ReminderSettingView: View {
                 .modifier(MaxWidthLeadingAlignmentPaddingModifier())
             }
 
-            CustomSection {
-                Text("体調通知")
-                    .font(.headline)
-                    .modifier(MaxWidthLeadingAlignmentPaddingModifier())
-
-                if let physicalConditionReminder = viewModel.physicalConditionReminder {
-                    HStack {
-                        reminderText(for: physicalConditionReminder)
-                        Spacer()
-                        Button(action: {
-                            router.items.append(SettingScreenNavigationItem.physicalConditionReminderEdit(reminder: physicalConditionReminder))
-                        }, label: {
-                            Image(systemName: "square.and.pencil")
-                        })
-                    }
-                    .padding(10)
-
-                } else {
-                    Text("通知設定なし")
-                        .modifier(MaxWidthLeadingAlignmentPaddingModifier())
+            ReminderSection(title: "体調通知", reminder: viewModel.physicalConditionReminder) {
+                if let reminder = viewModel.physicalConditionReminder {
+                    router.items.append(SettingScreenNavigationItem.physicalConditionReminderEdit(reminder: reminder))
                 }
             }
 
+            ReminderSection(title: "水分摂取通知", reminder: viewModel.hydrationReminder) {
+                if let reminder = viewModel.hydrationReminder {
+                    router.items.append(SettingScreenNavigationItem.hydrationReminderEdit(reminder: reminder))
+                }
+            }
             Spacer()
         }
         .onAppear {
@@ -76,25 +64,12 @@ struct ReminderSettingView: View {
         UIApplication.shared.open(settingsUrl)
     }
 
-    private struct MaxWidthLeadingAlignmentPaddingModifier: ViewModifier {
+    struct MaxWidthLeadingAlignmentPaddingModifier: ViewModifier {
         func body(content: Content) -> some View {
             content
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-        }
-    }
-
-    @ViewBuilder
-    private func reminderText(for reminder: PhysicalConditionReminder) -> some View {
-        if !reminder.isActive {
-            Text("通知設定OFF")
-        } else if reminder.type == .scheduled, let scheduledTimes = reminder.scheduledTimes {
-            ForEach(scheduledTimes, id: \.self) { scheduledTime in
-                Text("\(scheduledTime.toString(format: "HH:mm"))")
-            }
-        } else if reminder.type == .repeating {
-            Text("\(viewModel.convertedIntervalText)")
         }
     }
 }

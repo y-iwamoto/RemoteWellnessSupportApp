@@ -37,6 +37,8 @@ struct SettingScreen: View {
             GoalSettingEditInputView(profile: profile)
         case let .physicalConditionReminderEdit(reminder: reminder):
             PhysicalConditionReminderEditView(reminder: reminder)
+        case let .hydrationReminderEdit(reminder: reminder):
+            HydrationReminderEditView(reminder: reminder)
         }
     }
 }

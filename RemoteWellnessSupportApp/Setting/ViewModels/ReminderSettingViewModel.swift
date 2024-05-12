@@ -11,8 +11,10 @@ import UserNotifications
 @MainActor
 class ReminderSettingViewModel: BaseViewModel {
     private let physicalConditionReminderDataSource: PhysicalConditionReminderDataSource
+    private let hydrationReminderDataSource: HydrationReminderDataSource
     @Published var isNotificationEnabled = false
     @Published var physicalConditionReminder: PhysicalConditionReminder?
+    @Published var hydrationReminder: HydrationReminder?
 
     var convertedIntervalText: String {
         let intervalInSeconds = physicalConditionReminder?.interval ?? 0
@@ -25,10 +27,13 @@ class ReminderSettingViewModel: BaseViewModel {
         isNotificationEnabled ? "許可" : "不許可"
     }
 
-    init(physicalConditionReminderDataSource: PhysicalConditionReminderDataSource = PhysicalConditionReminderDataSource.shared) {
+    init(physicalConditionReminderDataSource: PhysicalConditionReminderDataSource = PhysicalConditionReminderDataSource.shared,
+         hydrationReminderDataSource: HydrationReminderDataSource = HydrationReminderDataSource.shared) {
         self.physicalConditionReminderDataSource = physicalConditionReminderDataSource
+        self.hydrationReminderDataSource = hydrationReminderDataSource
         super.init()
         fetchPhysicalConditionReminder()
+        fetchHydrationReminder()
     }
 
     func fetchPhysicalConditionReminder() {
@@ -39,6 +44,17 @@ class ReminderSettingViewModel: BaseViewModel {
             physicalConditionReminder = reminder
         } catch {
             setError(withMessage: "体調リマインダー情報の取得に失敗しました")
+        }
+    }
+
+    func fetchHydrationReminder() {
+        do {
+            guard let reminder = try hydrationReminderDataSource.fetchHydrationReminder() else {
+                return
+            }
+            hydrationReminder = reminder
+        } catch {
+            setError(withMessage: "水分摂取リマインダー情報の取得に失敗しました")
         }
     }
 

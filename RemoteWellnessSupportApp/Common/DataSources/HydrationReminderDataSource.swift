@@ -26,4 +26,13 @@ final class HydrationReminderDataSource {
         modelContext.insert(hydrationReminder)
         try modelContext.save()
     }
+
+    func fetchHydrationReminder() throws -> HydrationReminder? {
+        let descriptor = FetchDescriptor<HydrationReminder>()
+        return try modelContext.fetch(descriptor).last
+    }
+
+    func updateHydrationReminder() throws {
+        try modelContext.save()
+    }
 }

@@ -16,7 +16,7 @@ class PhysicalConditionReminder: BaseReminderProtocol {
     var sendsTowatchOS: Bool
     var type: Reminder?
     var interval: Int?
-    @Attribute(.transformable(by: DateArrayTransformer.self)) var scheduledTimes: [Date]?
+    var scheduledTimes: [Date]?
     var createdAt: Date
     var updatedAt: Date
 

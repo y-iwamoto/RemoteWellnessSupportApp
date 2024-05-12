@@ -16,6 +16,9 @@ class BaseReminderScheduler: BaseViewModel {
     @Published var selectedTab: Reminder = .repeating
 
     func validateInputs() -> Bool {
+        if !isReminderActive {
+            return true
+        }
         if selectedTab == .repeating {
             if selectedHour == 0, selectedMinute == 0 {
                 setError(withMessage: "0時間0分は設定しないで下さい")
@@ -31,6 +34,10 @@ class BaseReminderScheduler: BaseViewModel {
     }
 
     func sendNotification(for reminder: BaseReminderProtocol, type: ReminderType) async -> Bool {
+        if !reminder.isActive {
+            return true
+        }
+
         let reminderNotificationData = dataForReminderType(type: type)
         let center = UNUserNotificationCenter.current()
 
@@ -43,10 +50,6 @@ class BaseReminderScheduler: BaseViewModel {
 
         if hasPhysicalConditionReminder {
             center.removePendingNotificationRequests(withIdentifiers: [reminderNotificationData.reminderName])
-        }
-
-        if !reminder.isActive {
-            return true
         }
 
         let content = UNMutableNotificationContent()
@@ -78,6 +81,15 @@ class BaseReminderScheduler: BaseViewModel {
         }
     }
 
+    func assignReminderForEditInitial(reminder: BaseReminderProtocol) {
+        isReminderActive = reminder.isActive
+        selectedTab = reminder.type ?? Reminder.repeating
+        if let interval = reminder.interval {
+            (selectedHour, selectedMinute) = calculateTime(from: interval)
+        }
+        scheduledTimeSelections = convertToTimeSelections(from: reminder.scheduledTimes)
+    }
+
     private func dataForReminderType(type: ReminderType) -> ReminderNotificationData {
         var reminderName = ""
         var notificationTitle = ""
@@ -95,5 +107,19 @@ class BaseReminderScheduler: BaseViewModel {
         return ReminderNotificationData(reminderName: reminderName,
                                         notificationTitle: notificationTitle,
                                         notificationBody: notificationBody)
+    }
+
+    private func calculateTime(from interval: Int) -> (hour: Int, minute: Int) {
+        let selectedHour = interval / 3600
+        let selectedMinute = (interval % 3600) / 60
+        return (selectedHour, selectedMinute)
+    }
+
+    private func convertToTimeSelections(from scheduledTimes: [Date]?) -> [TimeSelection] {
+        guard let scheduledTimes else {
+            return [TimeSelection()]
+        }
+
+        return scheduledTimes.sorted().map { TimeSelection(selectedTime: $0) }
     }
 }
