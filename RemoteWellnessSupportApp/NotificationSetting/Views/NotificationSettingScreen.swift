@@ -18,6 +18,8 @@ struct NotificationSettingScreen: View {
                         NotificationPermissionView()
                     case .physicalConditionReminder:
                         PhysicalConditionReminderView()
+                    case .hydrationReminder:
+                        HydrationReminderView()
                     case .notificationSettingEnd:
                         NotificationSettingEndView()
                             .navigationBarBackButtonHidden(true)

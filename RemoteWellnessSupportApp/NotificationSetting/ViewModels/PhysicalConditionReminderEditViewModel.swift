@@ -13,7 +13,7 @@ class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, Rem
     init(reminder: PhysicalConditionReminder) {
         physicalConditionReminder = reminder
         super.init()
-        assignPhysicalConditionReminderForInitial()
+        assignReminderForEditInitial(reminder: physicalConditionReminder)
     }
 
     func updatePhysicalConditionReminder() async -> Bool {
@@ -28,22 +28,7 @@ class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, Rem
             return false
         }
 
-        return await sendNotification(for: physicalConditionReminder)
-    }
-
-    private func assignPhysicalConditionReminderForInitial() {
-        isReminderActive = physicalConditionReminder.isActive
-        selectedTab = physicalConditionReminder.type ?? Reminder.repeating
-        if let interval = physicalConditionReminder.interval {
-            (selectedHour, selectedMinute) = calculateTime(from: interval)
-        }
-        scheduledTimeSelections = convertToTimeSelections(from: physicalConditionReminder.scheduledTimes)
-    }
-
-    private func calculateTime(from interval: Int) -> (hour: Int, minute: Int) {
-        let selectedHour = interval / 3600
-        let selectedMinute = (interval % 3600) / 60
-        return (selectedHour, selectedMinute)
+        return await sendNotification(for: physicalConditionReminder, type: .physicalCondition)
     }
 
     private func assignPhysicalConditionReminderForUpdate() {
@@ -58,13 +43,5 @@ class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, Rem
             physicalConditionReminder.type = .scheduled
             physicalConditionReminder.scheduledTimes = scheduledTimes
         }
-    }
-
-    private func convertToTimeSelections(from scheduledTimes: [Date]?) -> [TimeSelection] {
-        guard let scheduledTimes else {
-            return [TimeSelection()]
-        }
-
-        return scheduledTimes.sorted().map { TimeSelection(selectedTime: $0) }
     }
 }

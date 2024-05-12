@@ -10,5 +10,6 @@ import Foundation
 enum NotificationSettingNavigationItem: Hashable {
     case notificationPermission
     case physicalConditionReminder
+    case hydrationReminder
     case notificationSettingEnd
 }

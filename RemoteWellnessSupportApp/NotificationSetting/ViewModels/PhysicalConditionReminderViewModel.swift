@@ -9,7 +9,7 @@ import Foundation
 import UserNotifications
 
 class PhysicalConditionReminderViewModel: BasePhysicalConditionReminder, ReminderViewModelProtocol {
-    func savePhysicalConditionReminderSetteing() async -> Bool {
+    func savePhysicalConditionReminder() async -> Bool {
         guard validateInputs() else {
             return false
         }
@@ -20,7 +20,7 @@ class PhysicalConditionReminderViewModel: BasePhysicalConditionReminder, Reminde
             return false
         }
 
-        return await sendNotification(for: physicalConditionReminder)
+        return await sendNotification(for: physicalConditionReminder, type: .physicalCondition)
     }
 
     private func assignPhysicalConditionReminder() -> PhysicalConditionReminder {

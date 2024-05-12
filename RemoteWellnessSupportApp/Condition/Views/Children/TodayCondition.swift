@@ -48,8 +48,13 @@ struct TodayCondition: View {
                 ActivityEntryArea(targetDate: today)
             }
             .onChange(of: notificationIdentifier) {
-                if notificationIdentifier != nil {
-                    router.items.append(.physicalConditionEntryForm(date: today))
+                if let identifier = notificationIdentifier.flatMap(ReminderType.fromIdentifier) {
+                    switch identifier {
+                    case .hydration:
+                        router.items.append(.hydrationEntryForm(date: today))
+                    case .physicalCondition:
+                        router.items.append(.physicalConditionEntryForm(date: today))
+                    }
                 }
             }
         }

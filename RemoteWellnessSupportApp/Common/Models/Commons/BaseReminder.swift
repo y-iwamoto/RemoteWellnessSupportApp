@@ -1,22 +1,22 @@
 //
-//  PhysicalConditionReminder.swift
+//  BaseReminder.swift
 //  RemoteWellnessSupportApp
 //
-//  Created by 岩本雄貴 on 2024/03/17.
+//  Created by 岩本雄貴 on 2024/05/10.
 //
 
 import Foundation
 import SwiftData
 
 @Model
-class PhysicalConditionReminder: BaseReminderProtocol {
+class BaseReminder {
     @Attribute(.unique) var id: String = UUID().uuidString
     var isActive: Bool
     var sendsToiOS: Bool
     var sendsTowatchOS: Bool
     var type: Reminder?
     var interval: Int?
-    var scheduledTimes: [Date]?
+    @Attribute(.transformable(by: DateArrayTransformer.self)) var scheduledTimes: [Date]?
     var createdAt: Date
     var updatedAt: Date
 
