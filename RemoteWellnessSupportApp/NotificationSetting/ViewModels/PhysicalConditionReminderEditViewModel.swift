@@ -28,7 +28,7 @@ class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, Rem
             return false
         }
 
-        return await sendNotification(for: physicalConditionReminder)
+        return await sendNotification(for: physicalConditionReminder, type: .physicalCondition)
     }
 
     private func assignPhysicalConditionReminderForInitial() {

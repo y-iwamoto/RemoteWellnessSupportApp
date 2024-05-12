@@ -18,9 +18,10 @@ struct PhysicalConditionReminderEditView: View {
     }
 
     var body: some View {
-        PhysicalConditionReminderBaseView(
+        ReminderBaseView(
             viewModel: viewModel,
             buttonTitle: "保存する",
+            textTitle: "体調リマインドについて設定して下さい",
             buttonAction: {
                 Task {
                     if await viewModel.updatePhysicalConditionReminder() {

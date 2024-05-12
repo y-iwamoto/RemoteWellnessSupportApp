@@ -12,13 +12,14 @@ struct PhysicalConditionReminderView: View {
     @EnvironmentObject private var router: NotificationSettingNavigationRouter
 
     var body: some View {
-        PhysicalConditionReminderBaseView(
+        ReminderBaseView(
             viewModel: viewModel,
             buttonTitle: "次へ進む",
+            textTitle: "体調リマインドについて設定して下さい",
             buttonAction: {
                 Task {
-                    if await viewModel.savePhysicalConditionReminderSetteing() {
-                        router.items.append(.notificationSettingEnd)
+                    if await viewModel.savePhysicalConditionReminderSetting() {
+                        router.items.append(.hydrationReminder)
                     }
                 }
             }
