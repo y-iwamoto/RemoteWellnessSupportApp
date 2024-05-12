@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ReminderSection: View {
     let title: String
-    var reminder: BaseReminderProtocol?
-    var action: () -> Void
+    let reminder: BaseReminderProtocol?
+    let action: () -> Void
 
     var body: some View {
         CustomSection {

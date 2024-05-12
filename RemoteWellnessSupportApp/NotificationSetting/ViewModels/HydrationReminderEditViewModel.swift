@@ -34,13 +34,21 @@ class HydrationReminderEditViewModel: BaseHydrationReminder, ReminderViewModelPr
         hydrationReminder.isActive = isReminderActive
         switch selectedTab {
         case .repeating:
-            let interval = selectedHour * 3600 + selectedMinute * 60
-            hydrationReminder.type = .repeating
-            hydrationReminder.interval = interval
+            assignHydrationReminderTypeAndInterval()
         case .scheduled:
-            let scheduledTimes = scheduledTimeSelections.map(\.selectedTime).sorted()
-            hydrationReminder.type = .scheduled
-            hydrationReminder.scheduledTimes = scheduledTimes
+            assignHydrationReminderScheduledTimes()
         }
+    }
+
+    private func assignHydrationReminderTypeAndInterval() {
+        let interval = selectedHour * 3600 + selectedMinute * 60
+        hydrationReminder.type = .repeating
+        hydrationReminder.interval = interval
+    }
+
+    private func assignHydrationReminderScheduledTimes() {
+        let scheduledTimes = scheduledTimeSelections.map(\.selectedTime).sorted()
+        hydrationReminder.type = .scheduled
+        hydrationReminder.scheduledTimes = scheduledTimes
     }
 }

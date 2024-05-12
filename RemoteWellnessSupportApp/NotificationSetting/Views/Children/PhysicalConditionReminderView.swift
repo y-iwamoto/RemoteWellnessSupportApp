@@ -18,7 +18,7 @@ struct PhysicalConditionReminderView: View {
             textTitle: "体調リマインドについて設定して下さい",
             buttonAction: {
                 Task {
-                    if await viewModel.savePhysicalConditionReminderSetting() {
+                    if await viewModel.savePhysicalConditionReminder() {
                         router.items.append(.hydrationReminder)
                     }
                 }
