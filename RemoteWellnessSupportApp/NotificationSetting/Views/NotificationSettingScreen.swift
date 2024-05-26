@@ -20,6 +20,8 @@ struct NotificationSettingScreen: View {
                         PhysicalConditionReminderView()
                     case .hydrationReminder:
                         HydrationReminderView()
+                    case .pomodoroReminder:
+                        PomodoroReminderView()
                     case .notificationSettingEnd:
                         NotificationSettingEndView()
                             .navigationBarBackButtonHidden(true)

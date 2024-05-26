@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PomodoroTimer: View {
     @StateObject var viewModel = PomodoroTimerViewModel()
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         VStack {
@@ -34,6 +35,24 @@ struct PomodoroTimer: View {
             }
             .padding(40)
             timerModeView
+        }
+        .onChange(of: scenePhase) {
+            if scenePhase == .background {
+                if viewModel.timerMode == .running || viewModel.timerMode == .breakMode {
+                    viewModel.backgroundSetTimer()
+                }
+            }
+            if scenePhase == .active {
+                if (viewModel.backgroundEntryTimestamp != nil) && viewModel.timerMode == .running || viewModel.timerMode == .breakMode {
+                    viewModel.syncTimerOnActive()
+                }
+            }
+            if scenePhase == .inactive {
+                print("バックグラウンドorフォアグラウンド直前（.inactive）")
+            }
+        }
+        .onChange(of: viewModel.secondsLeft) {
+            print("viewModel.secondsLeft", viewModel.secondsLeft)
         }
     }
 

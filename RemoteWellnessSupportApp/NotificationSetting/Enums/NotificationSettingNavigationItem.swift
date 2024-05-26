@@ -11,5 +11,6 @@ enum NotificationSettingNavigationItem: Hashable {
     case notificationPermission
     case physicalConditionReminder
     case hydrationReminder
+    case pomodoroReminder
     case notificationSettingEnd
 }
