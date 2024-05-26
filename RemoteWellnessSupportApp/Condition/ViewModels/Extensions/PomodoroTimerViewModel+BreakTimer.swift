@@ -9,21 +9,14 @@ import Foundation
 
 extension PomodoroTimerViewModel {
     func startBraekMode() {
-        timer.invalidate()
+        timer?.cancel()
         secondsLeft = PomodoroTimerViewModel.BreakTime
         currentMaxTime = PomodoroTimerViewModel.BreakTime
         timerMode = .breakMode
         Task {
             await sendBreakTimerEndNotification()
         }
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            guard let self else { return }
-            if secondsLeft == 0 {
-                endBreakTimer()
-            } else {
-                secondsLeft -= 1
-            }
-        }
+        startBreakDispatchTimer()
     }
 
     func endBreakTimer() {
@@ -39,5 +32,21 @@ extension PomodoroTimerViewModel {
             setError(withMessage: "登録処理に失敗しました", error: error)
         }
         resetTimer()
+    }
+
+    private func startBreakDispatchTimer() {
+        timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global(qos: .background))
+        timer?.schedule(deadline: .now(), repeating: 1.0)
+        timer?.setEventHandler { [weak self] in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                if self.secondsLeft == 0 {
+                    self.endBreakTimer()
+                } else {
+                    self.secondsLeft -= 1
+                }
+            }
+        }
+        timer?.resume()
     }
 }

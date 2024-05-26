@@ -10,13 +10,13 @@ import Foundation
 extension PomodoroTimerViewModel {
     func pauseTimer() {
         cancelNotification()
-        timer.invalidate()
+        timer?.cancel()
         timerMode = .paused
     }
 
     func resetTimer() {
         cancelNotification()
-        timer.invalidate()
+        timer?.cancel()
         secondsLeft = PomodoroTimerViewModel.MaxTimer
         currentMaxTime = PomodoroTimerViewModel.MaxTimer
         timerMode = .initial
@@ -33,18 +33,7 @@ extension PomodoroTimerViewModel {
             Task {
                 await resumeNotification()
             }
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-                guard let self else { return }
-                if secondsLeft == 0 {
-                    if timerMode == .running {
-                        endMainTimer()
-                    } else {
-                        resetTimer()
-                    }
-                } else {
-                    secondsLeft -= 1
-                }
-            }
+            startDispatchMainTimer()
         }
     }
 

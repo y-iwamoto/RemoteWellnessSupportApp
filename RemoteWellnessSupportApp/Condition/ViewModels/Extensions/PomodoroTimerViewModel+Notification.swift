@@ -13,14 +13,14 @@ extension PomodoroTimerViewModel {
         guard isReminderActive else {
             return
         }
-        await sendPomodoroNotification(type: .mainTimer, interval: 15)
+        await sendPomodoroNotification(type: .mainTimer, interval: PomodoroTimerViewModel.MaxTimer)
     }
 
     func sendBreakTimerEndNotification() async {
         guard isReminderActive else {
             return
         }
-        await sendPomodoroNotification(type: .breakTimer, interval: 3)
+        await sendPomodoroNotification(type: .breakTimer, interval: PomodoroTimerViewModel.BreakTime)
     }
 
     func cancelCurrentNotification(type: PomodoroReminderType) {
@@ -42,7 +42,6 @@ extension PomodoroTimerViewModel {
         if checkStatus.authorizationStatus != .authorized {
             return
         }
-        // let requests = await center.pendingNotificationRequests()
         center.removePendingNotificationRequests(withIdentifiers: [reminderNotificationData.reminderName])
 
         let content = UNMutableNotificationContent()
@@ -66,26 +65,15 @@ extension PomodoroTimerViewModel {
         switch type {
         case .mainTimer:
             reminderName = PomodoroReminderType.mainTimer.rawValue
-            // TODO: 分の数値を動的に変更
-            notificationTitle = "25分経ちました"
+            notificationTitle = "\(formatPomodoroTime(PomodoroTimerViewModel.MaxTimer))経ちました"
             notificationBody = "休憩に入りましょう"
         case .breakTimer:
             reminderName = PomodoroReminderType.breakTimer.rawValue
-            // TODO: 分の数値を動的に変更
-            notificationTitle = "5分経ちました"
+            notificationTitle = "\(formatPomodoroTime(PomodoroTimerViewModel.BreakTime))経ちました"
             notificationBody = "業務に戻りましょう"
         }
         return ReminderNotificationData(reminderName: reminderName,
                                         notificationTitle: notificationTitle,
                                         notificationBody: notificationBody)
-    }
-}
-
-enum PomodoroReminderType: String {
-    case mainTimer
-    case breakTimer
-
-    static func fromIdentifier(_ identifier: String) -> PomodoroReminderType? {
-        PomodoroReminderType(rawValue: identifier)
     }
 }

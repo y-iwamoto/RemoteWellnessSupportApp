@@ -9,7 +9,7 @@ import Foundation
 
 extension PomodoroTimerViewModel {
     func startTimer() {
-        timer.invalidate()
+        timer?.cancel()
         secondsLeft = PomodoroTimerViewModel.MaxTimer
         currentMaxTime = PomodoroTimerViewModel.MaxTimer
         timerMode = .running
@@ -18,23 +18,11 @@ extension PomodoroTimerViewModel {
         Task {
             await sendMainTimerEndNotification()
         }
-
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            guard let self else { return }
-            if secondsLeft == 0 {
-                if timerMode == .running {
-                    endMainTimer()
-                } else {
-                    resetTimer()
-                }
-            } else {
-                secondsLeft -= 1
-            }
-        }
+        startDispatchMainTimer()
     }
 
     func endMainTimer() {
-        timer.invalidate()
+        timer?.cancel()
         secondsLeft = PomodoroTimerViewModel.BreakTime
         currentMaxTime = PomodoroTimerViewModel.BreakTime
         timerMode = .initial
@@ -51,5 +39,25 @@ extension PomodoroTimerViewModel {
         } catch {
             setError(withMessage: "登録処理に失敗しました", error: error)
         }
+    }
+
+    func startDispatchMainTimer() {
+        timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global(qos: .background))
+        timer?.schedule(deadline: .now(), repeating: 1.0)
+        timer?.setEventHandler { [weak self] in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                if self.secondsLeft == 0 {
+                    if self.timerMode == .running {
+                        self.endMainTimer()
+                    } else {
+                        self.resetTimer()
+                    }
+                } else {
+                    self.secondsLeft -= 1
+                }
+            }
+        }
+        timer?.resume()
     }
 }

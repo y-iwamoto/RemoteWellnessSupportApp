@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class PomodoroTimerViewModel: BaseViewModel {
+    static let shared = PomodoroTimerViewModel()
     let dataSource: PomodoroDataSource
     let pomodoroReminderDataSource: PomodoroReminderDataSource
     static let MaxTimer: Int = 15
@@ -47,7 +48,7 @@ class PomodoroTimerViewModel: BaseViewModel {
     }()
 
     var pomodoroGroupId: UUID?
-    var timer = Timer()
+    var timer: DispatchSourceTimer?
 
     init(dataSource: PomodoroDataSource = PomodoroDataSource.shared,
          pomodoroReminderDataSource: PomodoroReminderDataSource = PomodoroReminderDataSource.shared) {
@@ -58,5 +59,9 @@ class PomodoroTimerViewModel: BaseViewModel {
         completedPomodoroCount = workTimeEndPomodoros.count
         pomodoroRemindeer = fetchReminder()
         isReminderActive = pomodoroRemindeer?.isActive ?? false
+    }
+
+    deinit {
+        timer?.cancel()
     }
 }

@@ -28,7 +28,12 @@ extension PomodoroTimerViewModel {
                 endBreakTimer()
             }
         } else {
-            secondsLeft = Int(remainingTime.rounded(.up))
+            secondsLeft = Int(remainingTime.rounded(.toNearestOrAwayFromZero))
         }
+    }
+
+    func formatPomodoroTime(_ second: Int) -> String {
+        let formattedString = formatter.string(from: TimeInterval(second))!
+        return formattedString
     }
 }

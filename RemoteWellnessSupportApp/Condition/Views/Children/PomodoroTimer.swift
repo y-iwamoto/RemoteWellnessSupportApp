@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PomodoroTimer: View {
-    @StateObject var viewModel = PomodoroTimerViewModel()
+    @StateObject var viewModel = PomodoroTimerViewModel.shared
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -25,7 +25,7 @@ struct PomodoroTimer: View {
                     .animation(.linear, value: viewModel.progress)
 
                 VStack {
-                    Text("\(formatPomodoroTime(viewModel.secondsLeft))")
+                    Text("\(viewModel.formatPomodoroTime(viewModel.secondsLeft))")
                         .font(.largeTitle)
                         .padding()
 
@@ -47,12 +47,6 @@ struct PomodoroTimer: View {
                     viewModel.syncTimerOnActive()
                 }
             }
-            if scenePhase == .inactive {
-                print("バックグラウンドorフォアグラウンド直前（.inactive）")
-            }
-        }
-        .onChange(of: viewModel.secondsLeft) {
-            print("viewModel.secondsLeft", viewModel.secondsLeft)
         }
     }
 
@@ -83,13 +77,6 @@ struct PomodoroTimer: View {
                 }
             }
         }
-    }
-
-    private func formatPomodoroTime(_ second: Int) -> String {
-        let formatter = viewModel.formatter
-
-        let formattedString = formatter.string(from: TimeInterval(second))!
-        return formattedString
     }
 }
 
