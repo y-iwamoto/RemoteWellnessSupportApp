@@ -12,6 +12,8 @@
 		2E041C232BDCF6940082CBD6 /* BreakTimeProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E041C222BDCF6940082CBD6 /* BreakTimeProgressView.swift */; };
 		2E041C252BDCF6A10082CBD6 /* BreakTimeProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E041C242BDCF6A10082CBD6 /* BreakTimeProgressViewModel.swift */; };
 		2E09E7C82BCD4982004DC601 /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E09E7C72BCD4982004DC601 /* CircleProgress.swift */; };
+		2E0A11EF2BF6BEA9001CE56F /* PomodoroTimerViewModel+FetchReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A11EE2BF6BEA9001CE56F /* PomodoroTimerViewModel+FetchReminder.swift */; };
+		2E0A11F12C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A11F02C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift */; };
 		2E0ACDF32B93E42200318BF2 /* DailyPhysicalConditionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF22B93E42200318BF2 /* DailyPhysicalConditionList.swift */; };
 		2E0ACDF52B93E9EA00318BF2 /* DailyPhysicalConditionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF42B93E9EA00318BF2 /* DailyPhysicalConditionListViewModel.swift */; };
 		2E0ACDF82B947CD800318BF2 /* ActivityEditDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ACDF72B947CD800318BF2 /* ActivityEditDestination.swift */; };
@@ -40,6 +42,7 @@
 		2E1194A52BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A42BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift */; };
 		2E1194A72BE5BBFD00DB4BD3 /* RestTimeEditInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A62BE5BBFD00DB4BD3 /* RestTimeEditInputView.swift */; };
 		2E1194A92BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A82BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift */; };
+		2E16966E2C03F6B900D540BD /* PomodoroReminderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */; };
 		2E17831F2BE0537200F07B97 /* ProfileSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17831E2BE0537200F07B97 /* ProfileSettingViewModel.swift */; };
 		2E50E67E2BE2FC2F00068916 /* NicknameEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E50E67D2BE2FC2F00068916 /* NicknameEditInputViewModel.swift */; };
 		2E50E6802BE305EC00068916 /* WorkDaySelectEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E50E67F2BE305EC00068916 /* WorkDaySelectEditView.swift */; };
@@ -92,6 +95,16 @@
 		2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB92BB6372500681E6B /* SelectedDateHydrationGraph.swift */; };
 		2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */; };
 		2E8C66DB2B856F9100280A17 /* StyledTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */; };
+		2E8E60D42BF2D050005B1232 /* PomodoroReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60D32BF2D050005B1232 /* PomodoroReminder.swift */; };
+		2E8E60D62BF2D0B9005B1232 /* PomodoroReminderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60D52BF2D0B9005B1232 /* PomodoroReminderDataSource.swift */; };
+		2E8E60D82BF2D165005B1232 /* PomodoroReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60D72BF2D165005B1232 /* PomodoroReminderView.swift */; };
+		2E8E60DA2BF420AB005B1232 /* PomodoroReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60D92BF420AB005B1232 /* PomodoroReminderViewModel.swift */; };
+		2E8E60DC2BF4221A005B1232 /* BasePomodoroReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60DB2BF4221A005B1232 /* BasePomodoroReminder.swift */; };
+		2E8E60DF2BF57B82005B1232 /* PomodoroTimerViewModel+MainTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60DE2BF57B82005B1232 /* PomodoroTimerViewModel+MainTimer.swift */; };
+		2E8E60E12BF57C03005B1232 /* PomodoroTimerViewModel+BreakTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60E02BF57C03005B1232 /* PomodoroTimerViewModel+BreakTimer.swift */; };
+		2E8E60E32BF57C82005B1232 /* PomodoroTimerViewModel+StopTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60E22BF57C82005B1232 /* PomodoroTimerViewModel+StopTimer.swift */; };
+		2E8E60E52BF57CF1005B1232 /* PomodoroTimerViewModel+FetchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60E42BF57CF1005B1232 /* PomodoroTimerViewModel+FetchTimer.swift */; };
+		2E8E60E72BF57D99005B1232 /* PomodoroTimerViewModel+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E60E62BF57D99005B1232 /* PomodoroTimerViewModel+Notification.swift */; };
 		2E8FBEC32BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */; };
 		2E8FBEC62BA676C60082B3E1 /* NotificationSettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEC52BA676C60082B3E1 /* NotificationSettingScreen.swift */; };
 		2E8FBEC82BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBEC72BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift */; };
@@ -258,6 +271,8 @@
 		2E041C222BDCF6940082CBD6 /* BreakTimeProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakTimeProgressView.swift; sourceTree = "<group>"; };
 		2E041C242BDCF6A10082CBD6 /* BreakTimeProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakTimeProgressViewModel.swift; sourceTree = "<group>"; };
 		2E09E7C72BCD4982004DC601 /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		2E0A11EE2BF6BEA9001CE56F /* PomodoroTimerViewModel+FetchReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+FetchReminder.swift"; sourceTree = "<group>"; };
+		2E0A11F02C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+CommonProcessTimer.swift"; sourceTree = "<group>"; };
 		2E0ACDF22B93E42200318BF2 /* DailyPhysicalConditionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPhysicalConditionList.swift; sourceTree = "<group>"; };
 		2E0ACDF42B93E9EA00318BF2 /* DailyPhysicalConditionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPhysicalConditionListViewModel.swift; sourceTree = "<group>"; };
 		2E0ACDF72B947CD800318BF2 /* ActivityEditDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEditDestination.swift; sourceTree = "<group>"; };
@@ -286,6 +301,7 @@
 		2E1194A42BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimeEditInputViewModel.swift; sourceTree = "<group>"; };
 		2E1194A62BE5BBFD00DB4BD3 /* RestTimeEditInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimeEditInputView.swift; sourceTree = "<group>"; };
 		2E1194A82BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimeEditInputViewModel.swift; sourceTree = "<group>"; };
+		2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminderType.swift; sourceTree = "<group>"; };
 		2E17831E2BE0537200F07B97 /* ProfileSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewModel.swift; sourceTree = "<group>"; };
 		2E50E67D2BE2FC2F00068916 /* NicknameEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameEditInputViewModel.swift; sourceTree = "<group>"; };
 		2E50E67F2BE305EC00068916 /* WorkDaySelectEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDaySelectEditView.swift; sourceTree = "<group>"; };
@@ -336,6 +352,16 @@
 		2E868AB92BB6372500681E6B /* SelectedDateHydrationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDateHydrationGraph.swift; sourceTree = "<group>"; };
 		2E8C66D02B81DF2300280A17 /* PhysicalCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCondition.swift; sourceTree = "<group>"; };
 		2E8C66DA2B856F9100280A17 /* StyledTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextEditor.swift; sourceTree = "<group>"; };
+		2E8E60D32BF2D050005B1232 /* PomodoroReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminder.swift; sourceTree = "<group>"; };
+		2E8E60D52BF2D0B9005B1232 /* PomodoroReminderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminderDataSource.swift; sourceTree = "<group>"; };
+		2E8E60D72BF2D165005B1232 /* PomodoroReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminderView.swift; sourceTree = "<group>"; };
+		2E8E60D92BF420AB005B1232 /* PomodoroReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminderViewModel.swift; sourceTree = "<group>"; };
+		2E8E60DB2BF4221A005B1232 /* BasePomodoroReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePomodoroReminder.swift; sourceTree = "<group>"; };
+		2E8E60DE2BF57B82005B1232 /* PomodoroTimerViewModel+MainTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+MainTimer.swift"; sourceTree = "<group>"; };
+		2E8E60E02BF57C03005B1232 /* PomodoroTimerViewModel+BreakTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+BreakTimer.swift"; sourceTree = "<group>"; };
+		2E8E60E22BF57C82005B1232 /* PomodoroTimerViewModel+StopTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+StopTimer.swift"; sourceTree = "<group>"; };
+		2E8E60E42BF57CF1005B1232 /* PomodoroTimerViewModel+FetchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+FetchTimer.swift"; sourceTree = "<group>"; };
+		2E8E60E62BF57D99005B1232 /* PomodoroTimerViewModel+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroTimerViewModel+Notification.swift"; sourceTree = "<group>"; };
 		2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionScreenNavigationRouter.swift; sourceTree = "<group>"; };
 		2E8FBEC52BA676C60082B3E1 /* NotificationSettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingScreen.swift; sourceTree = "<group>"; };
 		2E8FBEC72BA679D20082B3E1 /* NotificationSettingNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingNavigationRouter.swift; sourceTree = "<group>"; };
@@ -714,6 +740,7 @@
 				2E61D0AC2BB238C00087B895 /* Hydration.swift */,
 				2E7EC78A2BD09CB400EF4854 /* Pomodoro.swift */,
 				2E9D61B42BED8B5200C8F062 /* HydrationReminder.swift */,
+				2E8E60D32BF2D050005B1232 /* PomodoroReminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -752,6 +779,7 @@
 				2EFD1B9F2BE993DF0014EDBE /* PhysicalConditionReminderEditViewModel.swift */,
 				2E9D61DB2BEEEF8E00C8F062 /* HydrationReminderViewModel.swift */,
 				2EA2C59E2BF05BD500F7751D /* HydrationReminderEditViewModel.swift */,
+				2E8E60D92BF420AB005B1232 /* PomodoroReminderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -785,6 +813,20 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		2E8E60DD2BF57B3C005B1232 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E8E60DE2BF57B82005B1232 /* PomodoroTimerViewModel+MainTimer.swift */,
+				2E8E60E02BF57C03005B1232 /* PomodoroTimerViewModel+BreakTimer.swift */,
+				2E8E60E22BF57C82005B1232 /* PomodoroTimerViewModel+StopTimer.swift */,
+				2E8E60E42BF57CF1005B1232 /* PomodoroTimerViewModel+FetchTimer.swift */,
+				2E8E60E62BF57D99005B1232 /* PomodoroTimerViewModel+Notification.swift */,
+				2E0A11EE2BF6BEA9001CE56F /* PomodoroTimerViewModel+FetchReminder.swift */,
+				2E0A11F02C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2E8FBEC92BA67BDA0082B3E1 /* Children */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,6 +835,7 @@
 				2E8FBECA2BA67BF20082B3E1 /* NotificationSettingEndView.swift */,
 				2E8FBECC2BA67D680082B3E1 /* PhysicalConditionReminderView.swift */,
 				2E9D61D92BEEEEC700C8F062 /* HydrationReminderView.swift */,
+				2E8E60D72BF2D165005B1232 /* PomodoroReminderView.swift */,
 			);
 			path = Children;
 			sourceTree = "<group>";
@@ -1120,6 +1163,7 @@
 				2E61D0AE2BB2396A0087B895 /* HydrationDataSource.swift */,
 				2E99F0352BD14C4600F7E97F /* PomodoroDataSource.swift */,
 				2E9D61E32BEEFB5D00C8F062 /* HydrationReminderDataSource.swift */,
+				2E8E60D52BF2D0B9005B1232 /* PomodoroReminderDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -1305,6 +1349,7 @@
 				2EE812E42B79A4A0000B65E5 /* ConditionNavigationLink.swift */,
 				2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */,
 				2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */,
+				2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1312,6 +1357,7 @@
 		2EE812EA2B7A2427000B65E5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2E8E60DD2BF57B3C005B1232 /* Extensions */,
 				2EE812EB2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift */,
 				2E6983682B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift */,
 				2E8FBEC22BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift */,
@@ -1365,6 +1411,7 @@
 				2EFD1BA22BE9A2E10014EDBE /* BasePhysicalConditionReminder.swift */,
 				2E9D61DF2BEEF5DC00C8F062 /* BaseReminderScheduler.swift */,
 				2E9D61E12BEEF98F00C8F062 /* BaseHydrationReminder.swift */,
+				2E8E60DB2BF4221A005B1232 /* BasePomodoroReminder.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -1475,11 +1522,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E61D0AB2BB238130087B895 /* HydrationEntryFormViewModel.swift in Sources */,
+				2E8E60D42BF2D050005B1232 /* PomodoroReminder.swift in Sources */,
 				2E6FE2122BA2750100541819 /* AppDelegate.swift in Sources */,
+				2E8E60E52BF57CF1005B1232 /* PomodoroTimerViewModel+FetchTimer.swift in Sources */,
 				2E8C66D12B81DF2300280A17 /* PhysicalCondition.swift in Sources */,
 				2E916C6C2BDF62690016D67E /* SettingListViewModel.swift in Sources */,
 				2EE812EC2B7A243C000B65E5 /* ActivityEntryAreaViewModel.swift in Sources */,
 				2E9D61E62BEF102F00C8F062 /* ReminderType.swift in Sources */,
+				2E0A11EF2BF6BEA9001CE56F /* PomodoroTimerViewModel+FetchReminder.swift in Sources */,
 				2E61D0BF2BB432520087B895 /* DailyHydrationList.swift in Sources */,
 				2E642DDA2BEC47C60075BC7E /* CustomSection.swift in Sources */,
 				2EB206A12BC805D5003F0700 /* WeekStepGraphViewModel.swift in Sources */,
@@ -1495,16 +1545,19 @@
 				2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */,
 				2E8FBEF62BAA8A310082B3E1 /* ModelManager.swift in Sources */,
 				2E99F0362BD14C4600F7E97F /* PomodoroDataSource.swift in Sources */,
+				2E8E60DF2BF57B82005B1232 /* PomodoroTimerViewModel+MainTimer.swift in Sources */,
 				2E8FBECD2BA67D680082B3E1 /* PhysicalConditionReminderView.swift in Sources */,
 				2E8FBEE72BA86F630082B3E1 /* TimePicker.swift in Sources */,
 				2E61D0B72BB2F26E0087B895 /* HydrationGraph.swift in Sources */,
 				2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */,
 				2E61D0B52BB246B80087B895 /* HydrationCreateForm.swift in Sources */,
 				2E0C95DA2B6BC62D00576531 /* CommonButtonView.swift in Sources */,
+				2E8E60D62BF2D0B9005B1232 /* PomodoroReminderDataSource.swift in Sources */,
 				2E57473D2BC55E7D00B46C55 /* StepGraphViewModel.swift in Sources */,
 				2E0C95CC2B6A7D2F00576531 /* HealthReviewDescriptionView.swift in Sources */,
 				2E782F9C2BDDD598008B00F7 /* Notification+Extensions.swift in Sources */,
 				2E631C6E2B896F0D00B35AAC /* PhysicalConditionGraph.swift in Sources */,
+				2E16966E2C03F6B900D540BD /* PomodoroReminderType.swift in Sources */,
 				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
 				2E8FBEF22BAA7A850082B3E1 /* Reminder+Extensions.swift in Sources */,
 				2E8FBEC32BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift in Sources */,
@@ -1514,12 +1567,14 @@
 				2EBA3DAE2BCBB99300599131 /* PomodoroTimer.swift in Sources */,
 				2E8FBED32BA6E6AA0082B3E1 /* PhysicalConditionReminder.swift in Sources */,
 				2E642DDD2BECFB070075BC7E /* ReminderViewModelProtocol.swift in Sources */,
+				2E8E60E72BF57D99005B1232 /* PomodoroTimerViewModel+Notification.swift in Sources */,
 				2E0ACDF52B93E9EA00318BF2 /* DailyPhysicalConditionListViewModel.swift in Sources */,
 				2E6FE20C2BA26D2700541819 /* NotificationPermissionView.swift in Sources */,
 				2E1194A32BE4773A00DB4BD3 /* WorkTimeEditInputView.swift in Sources */,
 				2E7EC78B2BD09CB400EF4854 /* Pomodoro.swift in Sources */,
 				2EB9421D2BB01F6400F3B0D2 /* TextInput.swift in Sources */,
 				2E6983652B9C728D0076EF4F /* WeekCondition.swift in Sources */,
+				2E8E60E12BF57C03005B1232 /* PomodoroTimerViewModel+BreakTimer.swift in Sources */,
 				2ED5FF142BE6596D0025113D /* RestTimePeriodSection+Extensions.swift in Sources */,
 				2E041C1F2BDCD8B00082CBD6 /* StepProgressView.swift in Sources */,
 				2E9D61DA2BEEEEC700C8F062 /* HydrationReminderView.swift in Sources */,
@@ -1535,6 +1590,7 @@
 				2EE812DB2B79904E000B65E5 /* ReviewEntryForm.swift in Sources */,
 				2E0C95CE2B6A7E8000576531 /* WatchFeatureExplanationView.swift in Sources */,
 				2E99F03F2BD3267500F7E97F /* WeekPomodoroGraph.swift in Sources */,
+				2E8E60DA2BF420AB005B1232 /* PomodoroReminderViewModel.swift in Sources */,
 				2E61D0BB2BB2F8D20087B895 /* GraphValueChartView.swift in Sources */,
 				2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */,
 				2E8FBED12BA680FC0082B3E1 /* NotificationSettingEndViewModel.swift in Sources */,
@@ -1556,6 +1612,7 @@
 				2E712E2E2BE1ACFE004F574D /* NicknameEditInputView.swift in Sources */,
 				2EA2C5992BF0454F00F7751D /* ReminderNotificationData.swift in Sources */,
 				2ED5FF0F2BE64F820025113D /* GoalSettingEditInputViewModel.swift in Sources */,
+				2E0A11F12C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift in Sources */,
 				2E041C212BDCD8DA0082CBD6 /* StepProgressViewModel.swift in Sources */,
 				2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */,
 				2E61D0BD2BB302190087B895 /* HydrationChartYModifier.swift in Sources */,
@@ -1614,6 +1671,7 @@
 				2E916C5E2BDF295A0016D67E /* SettingScreen.swift in Sources */,
 				2E947A6F2BD87C07002B660A /* GoalProgressView.swift in Sources */,
 				2E868ABA2BB6372500681E6B /* SelectedDateHydrationGraph.swift in Sources */,
+				2E8E60D82BF2D165005B1232 /* PomodoroReminderView.swift in Sources */,
 				2EE812C12B790137000B65E5 /* MainView.swift in Sources */,
 				2EB942052BAEBF2500F3B0D2 /* WorkTimeInputView.swift in Sources */,
 				2EB942242BB0500B00F3B0D2 /* TitleView.swift in Sources */,
@@ -1635,6 +1693,7 @@
 				2EB942122BAFB8A000F3B0D2 /* RestTimePeriodSection.swift in Sources */,
 				2E0C95D32B6B0D2B00576531 /* OnBoardingTab.swift in Sources */,
 				2E61D0AD2BB238C00087B895 /* Hydration.swift in Sources */,
+				2E8E60E32BF57C82005B1232 /* PomodoroTimerViewModel+StopTimer.swift in Sources */,
 				2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */,
 				2E9D61E22BEEF98F00C8F062 /* BaseHydrationReminder.swift in Sources */,
 				2EB4D52E2BE6FE3C00FF4A2A /* ReminderSettingViewModel.swift in Sources */,
@@ -1667,6 +1726,7 @@
 				2EB942272BB0512200F3B0D2 /* CommonPaddingModifier.swift in Sources */,
 				2E868AB62BB6332700681E6B /* WeekHydrationListView.swift in Sources */,
 				2EBA3DA52BCB7BF200599131 /* WeekStepListView.swift in Sources */,
+				2E8E60DC2BF4221A005B1232 /* BasePomodoroReminder.swift in Sources */,
 				2EBA3DA72BCB7C0F00599131 /* WeekStepListViewModel.swift in Sources */,
 				2EFD1BA02BE993DF0014EDBE /* PhysicalConditionReminderEditViewModel.swift in Sources */,
 				2E0DA4232B8CBD9C004E0185 /* TimeZoneType.swift in Sources */,

@@ -19,7 +19,7 @@ struct HydrationReminderView: View {
             buttonAction: {
                 Task {
                     if await viewModel.saveHydrationReminder() {
-                        router.items.append(.notificationSettingEnd)
+                        router.items.append(.pomodoroReminder)
                     }
                 }
             }
