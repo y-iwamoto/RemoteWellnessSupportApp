@@ -9,10 +9,7 @@ import Foundation
 import SwiftUI
 
 class PomodoroTimerViewModel: BaseViewModel {
-    private static let _shared = PomodoroTimerViewModel()
-    static func shared() -> PomodoroTimerViewModel {
-        _shared
-    }
+    static let shared = PomodoroTimerViewModel()
 
     let dataSource: PomodoroDataSource
     let pomodoroReminderDataSource: PomodoroReminderDataSource
@@ -60,10 +57,7 @@ class PomodoroTimerViewModel: BaseViewModel {
         self.pomodoroReminderDataSource = pomodoroReminderDataSource
         super.init()
         do {
-            let workTimeEndPomodoros = try fetchCount()
-            completedPomodoroCount = workTimeEndPomodoros.count
-            pomodoroReminder = try fetchReminder()
-            isReminderActive = pomodoroReminder?.isActive ?? false
+            try initializeDataSources()
         } catch {
             setError(withMessage: "初期取得処理に失敗しました", error: error)
         }
@@ -71,5 +65,12 @@ class PomodoroTimerViewModel: BaseViewModel {
 
     deinit {
         timer?.cancel()
+    }
+
+    func initializeDataSources() throws {
+        let workTimeEndPomodoros = try fetchCount()
+        completedPomodoroCount = workTimeEndPomodoros.count
+        pomodoroReminder = try fetchReminder()
+        isReminderActive = pomodoroReminder?.isActive ?? false
     }
 }

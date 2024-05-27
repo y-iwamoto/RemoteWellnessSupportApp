@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PomodoroTimer: View {
-    @StateObject var viewModel = PomodoroTimerViewModel.shared()
+    @StateObject var viewModel = PomodoroTimerViewModel.shared
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
