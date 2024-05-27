@@ -33,7 +33,9 @@ extension PomodoroTimerViewModel {
     }
 
     func formatPomodoroTime(_ second: Int) -> String {
-        let formattedString = formatter.string(from: TimeInterval(second))!
+        guard let formattedString = formatter.string(from: TimeInterval(second)) else {
+            return ""
+        }
         return formattedString
     }
 }

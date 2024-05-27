@@ -17,7 +17,7 @@ class PomodoroReminderViewModel: BasePomodoroReminder {
         return true
     }
 
-    private func insertPomodoroReminder(_ reminder: PomodoroReminder) -> Bool {
+    func insertPomodoroReminder(_ reminder: PomodoroReminder) -> Bool {
         do {
             try dataSource.insertPomodoroReminder(pomodoroReminder: reminder)
             return true

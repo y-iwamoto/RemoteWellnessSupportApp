@@ -8,7 +8,7 @@
 import Foundation
 
 extension PomodoroTimerViewModel {
-    func startBraekMode() {
+    func startBreakMode() {
         timer?.cancel()
         secondsLeft = PomodoroTimerViewModel.BreakTime
         currentMaxTime = PomodoroTimerViewModel.BreakTime
@@ -21,7 +21,8 @@ extension PomodoroTimerViewModel {
 
     func endBreakTimer() {
         guard let pomodoroGroupId else {
-            fatalError("不正な値です")
+            setError(withMessage: "不正な値です")
+            return
         }
         let pomodoro = Pomodoro(pomodoroGroupId: pomodoroGroupId.uuidString, activityType: .breakTime)
 

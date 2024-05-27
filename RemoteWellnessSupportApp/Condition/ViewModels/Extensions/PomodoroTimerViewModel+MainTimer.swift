@@ -34,7 +34,7 @@ extension PomodoroTimerViewModel {
         do {
             try dataSource.insertPomodoro(pomodoro: pomodoro)
 
-            let workTimeEndPomodoros = fetchCount()
+            let workTimeEndPomodoros = try fetchCount()
             completedPomodoroCount = workTimeEndPomodoros.count
         } catch {
             setError(withMessage: "登録処理に失敗しました", error: error)

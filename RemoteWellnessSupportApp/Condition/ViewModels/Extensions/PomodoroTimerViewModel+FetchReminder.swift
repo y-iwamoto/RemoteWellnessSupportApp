@@ -8,13 +8,8 @@
 import Foundation
 
 extension PomodoroTimerViewModel {
-    func fetchReminder() -> PomodoroReminder? {
-        do {
-            let reminder = try pomodoroReminderDataSource.fetchPomodoroReminder()
-            return reminder
-        } catch {
-            setError(withMessage: "取得処理に失敗しました", error: error)
-        }
-        return nil
+    func fetchReminder() throws -> PomodoroReminder? {
+        let reminder = try pomodoroReminderDataSource.fetchPomodoroReminder()
+        return reminder
     }
 }

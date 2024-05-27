@@ -8,18 +8,13 @@
 import Foundation
 
 extension PomodoroTimerViewModel {
-    func fetchCount() -> [Pomodoro] {
-        do {
-            let predicate = try createPredicateForOneDayPomodoro()
-            let pomodoros = try dataSource.fetchPomodoros(predicate: predicate)
-            let workTimeEndPomodoros = pomodoros.filter {
-                $0.activityType == .workTime
-            }
-            return workTimeEndPomodoros
-        } catch {
-            setError(withMessage: "取得処理に失敗しました", error: error)
+    func fetchCount() throws -> [Pomodoro] {
+        let predicate = try createPredicateForOneDayPomodoro()
+        let pomodoros = try dataSource.fetchPomodoros(predicate: predicate)
+        let workTimeEndPomodoros = pomodoros.filter {
+            $0.activityType == .workTime
         }
-        return []
+        return workTimeEndPomodoros
     }
 
     private func createPredicateForOneDayPomodoro() throws -> Predicate<Pomodoro> {

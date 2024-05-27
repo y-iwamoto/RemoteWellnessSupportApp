@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PomodoroTimer: View {
-    @StateObject var viewModel = PomodoroTimerViewModel.shared
+    @StateObject var viewModel = PomodoroTimerViewModel.shared()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -60,7 +60,7 @@ struct PomodoroTimer: View {
                 }
             } else if viewModel.currentMaxTime == PomodoroTimerViewModel.BreakTime {
                 PomodoroButton(title: "休憩開始", backgroundColor: Color.blue) {
-                    viewModel.startBraekMode()
+                    viewModel.startBreakMode()
                 }
             }
         case .running, .breakMode:

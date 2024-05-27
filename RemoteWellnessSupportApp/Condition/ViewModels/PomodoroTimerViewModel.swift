@@ -9,11 +9,15 @@ import Foundation
 import SwiftUI
 
 class PomodoroTimerViewModel: BaseViewModel {
-    static let shared = PomodoroTimerViewModel()
+    private static let _shared = PomodoroTimerViewModel()
+    static func shared() -> PomodoroTimerViewModel {
+        _shared
+    }
+
     let dataSource: PomodoroDataSource
     let pomodoroReminderDataSource: PomodoroReminderDataSource
-    static let MaxTimer: Int = 15
-    static let BreakTime: Int = 3
+    static let MaxTimer: Int = 1500
+    static let BreakTime: Int = 300
     @Published var timerMode: PomodoroTimerMode = .initial
     @Published var secondsLeft: Int = MaxTimer
     @Published var currentMaxTime: Int = MaxTimer
@@ -21,7 +25,7 @@ class PomodoroTimerViewModel: BaseViewModel {
     var timerStartTimestamp: Date?
     var backgroundEntryTimestamp: Date?
     var remain: Int = 0
-    var pomodoroRemindeer: PomodoroReminder?
+    var pomodoroReminder: PomodoroReminder?
     var isReminderActive = false
 
     var progress: CGFloat {
@@ -55,10 +59,14 @@ class PomodoroTimerViewModel: BaseViewModel {
         self.dataSource = dataSource
         self.pomodoroReminderDataSource = pomodoroReminderDataSource
         super.init()
-        let workTimeEndPomodoros = fetchCount()
-        completedPomodoroCount = workTimeEndPomodoros.count
-        pomodoroRemindeer = fetchReminder()
-        isReminderActive = pomodoroRemindeer?.isActive ?? false
+        do {
+            let workTimeEndPomodoros = try fetchCount()
+            completedPomodoroCount = workTimeEndPomodoros.count
+            pomodoroReminder = try fetchReminder()
+            isReminderActive = pomodoroReminder?.isActive ?? false
+        } catch {
+            setError(withMessage: "初期取得処理に失敗しました", error: error)
+        }
     }
 
     deinit {
