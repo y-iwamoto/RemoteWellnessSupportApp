@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 class NotificationSettingEndViewModel: ObservableObject {
-    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting = false
+    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting
+        = Const.AppDefaults.hasCompletedNotificationSetting
 
     func endNotificationSettings() {
         hasCompletedNotificationSetting = true

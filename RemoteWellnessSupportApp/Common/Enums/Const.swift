@@ -13,4 +13,10 @@ enum Const {
         static let hasCompletedNotificationSetting = "hasCompletedNotificationSetting"
         static let hasCompletedProfileRegister = "hasCompletedProfileRegister"
     }
+
+    enum AppDefaults {
+        static let hasCompletedOnboarding = false
+        static let hasCompletedNotificationSetting = false
+        static let hasCompletedProfileRegister = false
+    }
 }

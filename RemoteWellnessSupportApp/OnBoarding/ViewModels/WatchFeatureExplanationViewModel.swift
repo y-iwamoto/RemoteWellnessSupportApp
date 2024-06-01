@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class WatchFeatureExplanationViewModel: ObservableObject {
-    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding = false
+    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding = Const.AppDefaults.hasCompletedOnboarding
 
     func completeOnboarding() {
         hasCompletedOnboarding = true
