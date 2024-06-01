@@ -11,7 +11,7 @@ struct GoalSettingInputView: View {
     @Binding var hydrationGoal: String
     @Binding var stepGoal: String
     @StateObject var viewModel = GoalSettingInputViewModel()
-    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = false
+    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = Const.AppDefaults.hasCompletedProfileRegister
 
     var saveProfile: () -> Bool
 

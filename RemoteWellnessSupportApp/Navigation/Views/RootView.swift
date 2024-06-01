@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RootView: View {
-    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = false
-    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting = false
-    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = false
+    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = Const.AppDefaults.hasCompletedOnboarding
+    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting
+        = Const.AppDefaults.hasCompletedNotificationSetting
+    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister
+        = Const.AppDefaults.hasCompletedProfileRegister
 
     var body: some View {
         if hasCompletedNotificationSetting {

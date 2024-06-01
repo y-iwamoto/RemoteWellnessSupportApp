@@ -19,7 +19,7 @@ class SettingListViewModel: BaseViewModel {
         do {
             try dataSource.deleteAllData()
         } catch {
-            setError(withMessage: "データ削除に失敗しました", error: error)
+            setError(withMessage: "データ削除に失敗しました。時間をおいてもう一度再実行してください。", error: error)
         }
     }
 }

@@ -10,9 +10,12 @@ import SwiftUI
 struct SettingList: View {
     @StateObject var viewModel = SettingListViewModel()
     @EnvironmentObject var router: SettingScreenNavigationRouter
-    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool = false
-    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting = false
-    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = false
+    @AppStorage(Const.AppStatus.hasCompletedOnboarding) var hasCompletedOnboarding: Bool
+        = Const.AppDefaults.hasCompletedOnboarding
+    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting
+        = Const.AppDefaults.hasCompletedNotificationSetting
+    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister
+        = Const.AppDefaults.hasCompletedProfileRegister
 
     var body: some View {
         GeometryReader { geometry in
