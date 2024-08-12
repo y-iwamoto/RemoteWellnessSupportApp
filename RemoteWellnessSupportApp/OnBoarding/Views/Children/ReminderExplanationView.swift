@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ReminderExplanationView: View {
     var body: some View {
-        OnboardingContentView(imageName: "ReminderExplanation",
-                              title: "ついつい忘れがちな項目についてリマインド",
-                              // swiftlint:disable:next line_length
-                              description: "業務に集中していると疎かになりがちな水分摂取や座りっぱなしの状況。普段から意識して行動しないと、血の巡りが悪くパフォーマンスを最大限にできません。\n\nこのアプリでリマインドを送って、自己管理していきましょう。")
+        VStack {
+            OnboardingContentView(
+                imageName: "ReminderExplanationIos",
+                title: "忘れがちな項目をリマインドします",
+                // swiftlint:disable:next line_length
+                description: "仕事に集中していると、水分補給や休憩を忘れがちになり、長時間座り続けてしまうことが多いです。これに気を付けないと血行が悪くなり、最大限のパフォーマンスを発揮できません。\n\nこのアプリを使って、リマインダーを設定し、自己管理をしていきましょう。"
+            )
+            CommonButtonView(title: "") {}
+                .opacity(0)
+                .padding(.bottom, 40)
+        }
     }
 }
 

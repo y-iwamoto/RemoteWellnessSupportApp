@@ -9,7 +9,6 @@ import Foundation
 
 class ProfileScreenViewModel: BaseViewModel {
     private let dataSource: ProfileDataSource
-    @Published var nickname = ""
     @Published var workDays: [WorkDay] = [.monday, .tuesday, .wednesday, .thursday, .friday]
     @Published var workTimeFrom: TimeSelection
     @Published var workTimeTo: TimeSelection
@@ -36,7 +35,7 @@ class ProfileScreenViewModel: BaseViewModel {
             RestTimePeriod(fromTime: section.fromTime.selectedTime, toTime: section.toTime.selectedTime)
         }
 
-        let profile = Profile(nickname: nickname, workDays: workDays, workTimeFrom: workTimeFrom.selectedTime,
+        let profile = Profile(workDays: workDays, workTimeFrom: workTimeFrom.selectedTime,
                               workTimeTo: workTimeTo.selectedTime, hydrationGoal: hydrationGoalDoubleValue, stepGoal: stepGoalDoubleValue,
                               restTimePeriods: restTimePeriods)
 

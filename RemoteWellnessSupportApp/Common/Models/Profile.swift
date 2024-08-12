@@ -11,7 +11,6 @@ import SwiftData
 @Model
 class Profile {
     @Attribute(.unique) var id: String = UUID().uuidString
-    var nickname: String
     var workDays: [WorkDay]
     var workTimeFrom: Date
     var workTimeTo: Date
@@ -21,11 +20,10 @@ class Profile {
     var createdAt: Date
     var updatedAt: Date
 
-    init(id: String = UUID().uuidString, nickname: String, workDays: [WorkDay], workTimeFrom: Date, workTimeTo: Date,
+    init(id: String = UUID().uuidString, workDays: [WorkDay], workTimeFrom: Date, workTimeTo: Date,
          hydrationGoal: Double, stepGoal: Double, restTimePeriods: [RestTimePeriod],
          createdAt: Date = Date(), updatedAt: Date = Date()) {
         self.id = id
-        self.nickname = nickname
         self.workDays = workDays
         self.workTimeFrom = workTimeFrom
         self.workTimeTo = workTimeTo

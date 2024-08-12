@@ -31,7 +31,7 @@ struct GoalSettingInputView: View {
                     }
 
                     HStack {
-                        Text("歩数")
+                        Text("歩数　　")
                         TextInput(labelName: "歩", value: $stepGoal)
                             .onChange(of: stepGoal) { _, newState in
                                 stepGoal = viewModel.extractNumbersFromString(newState)
