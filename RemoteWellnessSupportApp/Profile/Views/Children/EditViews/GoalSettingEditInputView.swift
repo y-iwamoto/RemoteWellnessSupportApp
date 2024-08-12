@@ -33,15 +33,6 @@ struct GoalSettingEditInputView: View {
                             }
                             .keyboardType(.numberPad)
                     }
-
-                    HStack {
-                        Text("歩数")
-                        TextInput(labelName: "歩", value: $viewModel.stepGoal)
-                            .onChange(of: viewModel.stepGoal) { _, newState in
-                                viewModel.stepGoal = viewModel.extractNumbersFromString(newState)
-                            }
-                            .keyboardType(.numberPad)
-                    }
                 }
             },
             buttonAction: {

@@ -11,26 +11,23 @@ class GoalSettingEditInputViewModel: BaseViewModel {
     private let dataSource: ProfileDataSource
     var profile: Profile
     @Published var hydrationGoal: String
-    @Published var stepGoal: String
 
     init(dataSource: ProfileDataSource = ProfileDataSource.shared, profile: Profile) {
         self.dataSource = dataSource
         self.profile = profile
         hydrationGoal = profile.hydrationGoal.roundedString
-        stepGoal = profile.stepGoal.roundedString
     }
 
     func updateGoalSettings() -> Bool {
         do {
-            guard inputValidate(goalValue: hydrationGoal), inputValidate(goalValue: stepGoal) else {
+            guard inputValidate(goalValue: hydrationGoal) else {
                 return false
             }
-            guard let hydrationGoalDoubleValue = Double(hydrationGoal), let stepGoalDoubleValue = Double(stepGoal) else {
+            guard let hydrationGoalDoubleValue = Double(hydrationGoal) else {
                 setError(withMessage: "入力値が無効です")
                 return false
             }
             profile.hydrationGoal = hydrationGoalDoubleValue
-            profile.stepGoal = stepGoalDoubleValue
 
             try dataSource.updateProfile()
             return true
