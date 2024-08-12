@@ -16,18 +16,6 @@ struct ProfileSettingView: View {
             Text("プロフィール")
             if let profile = viewModel.profileRecord {
                 List {
-                    Section(header: Text("ニックネーム")) {
-                        HStack {
-                            Text(profile.nickname)
-                            Spacer()
-                            Button(action: {
-                                router.items.append(SettingScreenNavigationItem.nicknameEditInput(profile: profile))
-                            }, label: {
-                                Image(systemName: "square.and.pencil")
-                            })
-                        }
-                    }
-
                     Section(header: Text("勤務曜日")) {
                         HStack {
                             Text(viewModel.workDaysLabels)

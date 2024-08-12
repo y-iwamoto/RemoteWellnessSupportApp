@@ -8,7 +8,6 @@
 import Foundation
 
 enum ProfileNavigationItem: Hashable {
-    case nicknameInput
     case workDaySelect
     case workTimeInput
     case restTimeInput

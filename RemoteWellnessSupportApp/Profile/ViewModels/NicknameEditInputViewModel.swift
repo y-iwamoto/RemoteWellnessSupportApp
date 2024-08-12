@@ -16,7 +16,6 @@ class NicknameEditInputViewModel: BaseViewModel {
     init(dataSource: ProfileDataSource = ProfileDataSource.shared, profile: Profile) {
         self.dataSource = dataSource
         self.profile = profile
-        nickname = profile.nickname
     }
 
     func updateNickname() -> Bool {
@@ -25,7 +24,6 @@ class NicknameEditInputViewModel: BaseViewModel {
             return false
         }
         do {
-            profile.nickname = nickname
             try dataSource.updateProfile()
             return true
         } catch {

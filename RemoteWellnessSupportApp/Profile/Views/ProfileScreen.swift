@@ -13,7 +13,7 @@ struct ProfileScreen: View {
 
     var body: some View {
         NavigationStack(path: $router.items) {
-            NicknameInputView(nickname: $viewModel.nickname)
+            WorkDaySelectView(workDays: $viewModel.workDays)
                 .navigationDestination(for: ProfileNavigationItem.self,
                                        destination: navigationDestinationBuilder)
         }
@@ -24,8 +24,6 @@ struct ProfileScreen: View {
     @ViewBuilder
     private func navigationDestinationBuilder(item: ProfileNavigationItem) -> some View {
         switch item {
-        case .nicknameInput:
-            NicknameInputView(nickname: $viewModel.nickname)
         case .workDaySelect:
             WorkDaySelectView(workDays: $viewModel.workDays)
         case .workTimeInput:
