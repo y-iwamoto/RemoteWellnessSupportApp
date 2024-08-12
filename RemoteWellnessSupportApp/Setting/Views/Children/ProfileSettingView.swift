@@ -60,10 +60,6 @@ struct ProfileSettingView: View {
                                     Text("水分摂取")
                                     Text("\(profile.hydrationGoal.roundedString)ml")
                                 }
-                                HStack {
-                                    Text("アクティビティ")
-                                    Text("\(profile.stepGoal.roundedString)歩")
-                                }
                             }
                             Spacer()
                             Button(action: {

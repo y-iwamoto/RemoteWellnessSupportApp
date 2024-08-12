@@ -31,7 +31,7 @@ struct ProfileScreen: View {
         case .restTimeInput:
             RestTimeInputView(restTimePeriodSections: $viewModel.restTimePeriodSections)
         case .goalSettingInput:
-            GoalSettingInputView(hydrationGoal: $viewModel.hydrationGoal, stepGoal: $viewModel.stepGoal) {
+            GoalSettingInputView(hydrationGoal: $viewModel.hydrationGoal) {
                 viewModel.saveProfile()
             }
         }

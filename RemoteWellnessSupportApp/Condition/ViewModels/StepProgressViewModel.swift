@@ -56,7 +56,9 @@ class StepProgressViewModel: BaseViewModel {
         }
         let breakTimeIntervalInHours = breakTimeIntervalInMinutes / 60
         let workTimeInHoursExcludingBreaks = workTimeIntervalInHours - breakTimeIntervalInHours
-        return Int(profile.stepGoal * workTimeInHoursExcludingBreaks)
+        // TODO: 後でまるまるロジックを削除する必要あり
+        return 0
+        // return Int(profile.stepGoal * workTimeInHoursExcludingBreaks)
     }
 
     private func calculateStepProgress() -> CGFloat {
