@@ -12,10 +12,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Set up Swift
+    - name: Set up Xcode 15
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: 'latest'
+        xcode-version: '15'
 
     - name: Cache Swift dependencies
       uses: actions/cache@v3
