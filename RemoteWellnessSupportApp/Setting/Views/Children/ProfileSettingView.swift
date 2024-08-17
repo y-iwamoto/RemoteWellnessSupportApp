@@ -69,10 +69,43 @@ struct ProfileSettingView: View {
                             })
                         }
                     }
+
+                    Section(header: Text("ヘルスケア連携項目設定")) {
+                        HStack {
+                            Text("アプリ設定を開く")
+                            Spacer()
+                            Button(action: {
+                                viewModel.isOpenAlert = true
+                            }, label: {
+                                Image(systemName: "arrow.up.forward.app.fill")
+                            })
+                        }
+                    }
                 }
 
             } else {
                 Text("プロファイル情報が存在しません")
+            }
+        }
+        .alert("ヘルスケア設定の案内", isPresented: $viewModel.isOpenAlert) {
+            Button("OK") {
+                openAppSettings()
+            }
+        } message: {
+            Text("""
+            1. まず画面左上の「設定」をタップしてください。
+            2. 次に「ヘルスケア」をタップしてください。
+            3. さらに「データアクセスとデバイス」を選択してください。
+            4. 対象のアプリ名を選び、読み取り権限をオン・オフを確認または変更してください。
+            5. 設定が完了したら、アプリに戻ってください。
+            """)
+        }
+    }
+
+    private func openAppSettings() {
+        if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl)
             }
         }
     }

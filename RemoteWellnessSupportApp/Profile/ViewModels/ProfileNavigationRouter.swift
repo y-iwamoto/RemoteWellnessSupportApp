@@ -11,6 +11,7 @@ enum ProfileNavigationItem: Hashable {
     case workDaySelect
     case workTimeInput
     case restTimeInput
+    case standHourPermission
     case goalSettingInput
 }
 

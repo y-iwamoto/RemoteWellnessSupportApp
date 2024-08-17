@@ -37,6 +37,7 @@
 		2E0DA4252B8D5DC4004E0185 /* GraphDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */; };
 		2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */; };
 		2E0DA42A2B8E113D004E0185 /* PhysicalConditionChartYModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */; };
+		2E10CEEC2C6C1BF5008B041D /* StandHourPermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E10CEEB2C6C1BF5008B041D /* StandHourPermissionViewModel.swift */; };
 		2E1194A12BE46D0E00DB4BD3 /* WorkDaySelectEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A02BE46D0E00DB4BD3 /* WorkDaySelectEditViewModel.swift */; };
 		2E1194A32BE4773A00DB4BD3 /* WorkTimeEditInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A22BE4773A00DB4BD3 /* WorkTimeEditInputView.swift */; };
 		2E1194A52BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A42BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift */; };
@@ -44,6 +45,7 @@
 		2E1194A92BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1194A82BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift */; };
 		2E16966E2C03F6B900D540BD /* PomodoroReminderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */; };
 		2E17831F2BE0537200F07B97 /* ProfileSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17831E2BE0537200F07B97 /* ProfileSettingViewModel.swift */; };
+		2E35BB512C6AC67000CDAEFC /* StandHourPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35BB502C6AC66F00CDAEFC /* StandHourPermissionView.swift */; };
 		2E50E67E2BE2FC2F00068916 /* NicknameEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E50E67D2BE2FC2F00068916 /* NicknameEditInputViewModel.swift */; };
 		2E50E6802BE305EC00068916 /* WorkDaySelectEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E50E67F2BE305EC00068916 /* WorkDaySelectEditView.swift */; };
 		2E57473A2BC55E2600B46C55 /* StepGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5747392BC55E2600B46C55 /* StepGraph.swift */; };
@@ -297,6 +299,7 @@
 		2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDefinition.swift; sourceTree = "<group>"; };
 		2E0DA4272B8E10EB004E0185 /* ChartXAxisModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisModifier.swift; sourceTree = "<group>"; };
 		2E0DA4292B8E113D004E0185 /* PhysicalConditionChartYModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionChartYModifier.swift; sourceTree = "<group>"; };
+		2E10CEEB2C6C1BF5008B041D /* StandHourPermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandHourPermissionViewModel.swift; sourceTree = "<group>"; };
 		2E1194A02BE46D0E00DB4BD3 /* WorkDaySelectEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDaySelectEditViewModel.swift; sourceTree = "<group>"; };
 		2E1194A22BE4773A00DB4BD3 /* WorkTimeEditInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimeEditInputView.swift; sourceTree = "<group>"; };
 		2E1194A42BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimeEditInputViewModel.swift; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 		2E1194A82BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimeEditInputViewModel.swift; sourceTree = "<group>"; };
 		2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminderType.swift; sourceTree = "<group>"; };
 		2E17831E2BE0537200F07B97 /* ProfileSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewModel.swift; sourceTree = "<group>"; };
+		2E35BB502C6AC66F00CDAEFC /* StandHourPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandHourPermissionView.swift; sourceTree = "<group>"; };
 		2E50E67D2BE2FC2F00068916 /* NicknameEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameEditInputViewModel.swift; sourceTree = "<group>"; };
 		2E50E67F2BE305EC00068916 /* WorkDaySelectEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDaySelectEditView.swift; sourceTree = "<group>"; };
 		2E5747392BC55E2600B46C55 /* StepGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGraph.swift; sourceTree = "<group>"; };
@@ -1007,6 +1011,7 @@
 				2E1194A42BE4794300DB4BD3 /* WorkTimeEditInputViewModel.swift */,
 				2E1194A82BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift */,
 				2ED5FF0E2BE64F820025113D /* GoalSettingEditInputViewModel.swift */,
+				2E10CEEB2C6C1BF5008B041D /* StandHourPermissionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1020,6 +1025,7 @@
 				2EB942002BADAA2300F3B0D2 /* WorkDaySelectView.swift */,
 				2EB942042BAEBF2500F3B0D2 /* WorkTimeInputView.swift */,
 				2EB942082BAECC9200F3B0D2 /* RestTimeInputView.swift */,
+				2E35BB502C6AC66F00CDAEFC /* StandHourPermissionView.swift */,
 			);
 			path = Children;
 			sourceTree = "<group>";
@@ -1618,6 +1624,7 @@
 				2E0A11F12C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift in Sources */,
 				2E041C212BDCD8DA0082CBD6 /* StepProgressViewModel.swift in Sources */,
 				2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */,
+				2E35BB512C6AC67000CDAEFC /* StandHourPermissionView.swift in Sources */,
 				2E61D0BD2BB302190087B895 /* HydrationChartYModifier.swift in Sources */,
 				2E9D61E42BEEFB5D00C8F062 /* HydrationReminderDataSource.swift in Sources */,
 				2EB9421B2BAFC85200F3B0D2 /* BaseViewModel.swift in Sources */,
@@ -1701,6 +1708,7 @@
 				2EE812E72B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift in Sources */,
 				2E9D61E22BEEF98F00C8F062 /* BaseHydrationReminder.swift in Sources */,
 				2EB4D52E2BE6FE3C00FF4A2A /* ReminderSettingViewModel.swift in Sources */,
+				2E10CEEC2C6C1BF5008B041D /* StandHourPermissionViewModel.swift in Sources */,
 				2EE812CA2B79016D000B65E5 /* TodayCondition.swift in Sources */,
 				2ED5FF0D2BE64C620025113D /* GoalSettingEditInputView.swift in Sources */,
 				2EE812D82B79904E000B65E5 /* HydrationEntryForm.swift in Sources */,

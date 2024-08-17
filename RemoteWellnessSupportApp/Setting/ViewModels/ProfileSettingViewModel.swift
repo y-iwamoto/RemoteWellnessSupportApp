@@ -10,6 +10,7 @@ import Foundation
 class ProfileSettingViewModel: BaseViewModel {
     private let dataSource: ProfileDataSource
     @Published var profileRecord: Profile?
+    @Published var isOpenAlert = false
 
     var workDaysLabels: String {
         guard let profile = profileRecord else {

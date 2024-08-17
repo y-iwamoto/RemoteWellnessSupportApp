@@ -30,6 +30,8 @@ struct ProfileScreen: View {
             WorkTimeInputView(workTimeFrom: $viewModel.workTimeFrom, workTimeTo: $viewModel.workTimeTo)
         case .restTimeInput:
             RestTimeInputView(restTimePeriodSections: $viewModel.restTimePeriodSections)
+        case .standHourPermission:
+            StandHourPermissionView()
         case .goalSettingInput:
             GoalSettingInputView(hydrationGoal: $viewModel.hydrationGoal) {
                 viewModel.saveProfile()
