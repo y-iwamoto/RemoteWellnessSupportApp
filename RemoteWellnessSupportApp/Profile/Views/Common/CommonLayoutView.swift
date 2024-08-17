@@ -13,13 +13,17 @@ struct CommonLayoutView<Content>: View where Content: View {
     let buttonAction: () -> Void
     let content: Content
     let isFirstView: Bool
+    let isButtonDisabled: Bool
 
-    init(title: String, buttonTitle: String, @ViewBuilder content: () -> Content, buttonAction: @escaping () -> Void, isFirstView: Bool = false) {
+    init(title: String, buttonTitle: String,
+         @ViewBuilder content: () -> Content, buttonAction: @escaping () -> Void,
+         isFirstView: Bool = false, isButtonDisabled: Bool = false) {
         self.title = title
         self.buttonTitle = buttonTitle
         self.buttonAction = buttonAction
         self.content = content()
         self.isFirstView = isFirstView
+        self.isButtonDisabled = isButtonDisabled
     }
 
     var body: some View {
@@ -27,7 +31,7 @@ struct CommonLayoutView<Content>: View where Content: View {
             TitleView(text: title)
             content
             Spacer()
-            CommonButtonView(title: buttonTitle, action: buttonAction)
+            CommonButtonView(title: buttonTitle, disabled: isButtonDisabled, action: buttonAction)
         }
         .modifier(CommonPaddingModifier(horizontal: 10, verticalTop: isFirstView ? 70 : 30, verticalBottom: 70))
     }

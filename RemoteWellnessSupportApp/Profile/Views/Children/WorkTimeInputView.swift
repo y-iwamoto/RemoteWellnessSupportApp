@@ -23,7 +23,7 @@ struct WorkTimeInputView: View {
             },
             buttonAction: {
                 if viewModel.inputValidate(workTimeFrom: workTimeFrom, workTimeTo: workTimeTo) {
-                    router.items.append(.restTimeInput)
+                    router.items.append(.standHourPermission)
                 }
             }
         )
