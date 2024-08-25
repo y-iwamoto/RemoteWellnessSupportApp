@@ -75,7 +75,7 @@ class ReminderSettingViewModel: BaseViewModel {
                 isNotificationEnabled = true
             }
         } catch {
-            setError(withMessage: "通知の許可リクエストまたは通知スケジュールに失敗しました")
+            setError(withMessage: "通知の許可をリクエスト中にエラーが発生しました。設定を確認してください。")
         }
     }
 
@@ -97,7 +97,7 @@ class ReminderSettingViewModel: BaseViewModel {
             fetchPhysicalConditionReminder()
 
         } catch {
-            setError(withMessage: "体調リマインダーの登録に失敗しました")
+            setError(withMessage: "体調リマインダーの登録に失敗しました。再試行してください。")
         }
     }
 
@@ -107,7 +107,7 @@ class ReminderSettingViewModel: BaseViewModel {
             try hydrationReminderDataSource.insertHydrationReminder(hydrationReminder: hydrationReminder)
             fetchHydrationReminder()
         } catch {
-            setError(withMessage: "水分摂取リマインダーの登録に失敗しました")
+            setError(withMessage: "水分摂取リマインダーの登録に失敗しました。再試行してください。")
         }
     }
 
