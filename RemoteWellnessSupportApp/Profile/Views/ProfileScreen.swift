@@ -36,6 +36,8 @@ struct ProfileScreen: View {
             GoalSettingInputView(hydrationGoal: $viewModel.hydrationGoal) {
                 viewModel.saveProfile()
             }
+        case .profileEnd:
+            ProfileEndView()
         }
     }
 }

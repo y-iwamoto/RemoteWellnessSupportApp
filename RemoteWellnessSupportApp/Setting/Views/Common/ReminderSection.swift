@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReminderSection: View {
+    @Binding var isNotificationEnabled: Bool
     let title: String
     let reminder: BaseReminderProtocol?
     let action: () -> Void
@@ -18,7 +19,7 @@ struct ReminderSection: View {
                 .font(.headline)
                 .modifier(ReminderSettingView.MaxWidthLeadingAlignmentPaddingModifier())
 
-            if let reminder {
+            if let reminder, isNotificationEnabled {
                 HStack {
                     reminderText(for: reminder)
                     Spacer()
@@ -27,6 +28,10 @@ struct ReminderSection: View {
                     })
                 }
                 .padding(10)
+            } else if !isNotificationEnabled {
+                Text("通知不許可")
+                    .modifier(ReminderSettingView.MaxWidthLeadingAlignmentPaddingModifier())
+
             } else {
                 Text("通知設定なし")
                     .modifier(ReminderSettingView.MaxWidthLeadingAlignmentPaddingModifier())

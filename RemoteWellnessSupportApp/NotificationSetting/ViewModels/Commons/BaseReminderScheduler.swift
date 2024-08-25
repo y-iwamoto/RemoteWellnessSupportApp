@@ -33,6 +33,26 @@ class BaseReminderScheduler: BaseViewModel {
         return true
     }
 
+    func removeNotification(for reminder: BaseReminderProtocol, type: ReminderType) async {
+        if reminder.isActive {
+            return
+        }
+
+        let reminderNotificationData = dataForReminderType(type: type)
+        let center = UNUserNotificationCenter.current()
+
+        let checkStatus = await center.notificationSettings()
+        if checkStatus.authorizationStatus != .authorized {
+            return
+        }
+        let requests = await center.pendingNotificationRequests()
+        let hasPhysicalConditionReminder = requests.contains { $0.identifier == reminderNotificationData.reminderName }
+
+        if hasPhysicalConditionReminder {
+            center.removePendingNotificationRequests(withIdentifiers: [reminderNotificationData.reminderName])
+        }
+    }
+
     func sendNotification(for reminder: BaseReminderProtocol, type: ReminderType) async -> Bool {
         if !reminder.isActive {
             return true

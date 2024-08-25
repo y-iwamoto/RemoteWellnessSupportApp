@@ -13,6 +13,7 @@ enum ProfileNavigationItem: Hashable {
     case restTimeInput
     case standHourPermission
     case goalSettingInput
+    case profileEnd
 }
 
 final class ProfileNavigationRouter: ObservableObject {
