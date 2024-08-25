@@ -27,8 +27,12 @@ class PhysicalConditionReminderEditViewModel: BasePhysicalConditionReminder, Rem
             setError(withMessage: "体調通知設定の更新に失敗しました")
             return false
         }
-
-        return await sendNotification(for: physicalConditionReminder, type: .physicalCondition)
+        if physicalConditionReminder.isActive {
+            return await sendNotification(for: physicalConditionReminder, type: .physicalCondition)
+        } else {
+            await removeNotification(for: physicalConditionReminder, type: .physicalCondition)
+            return true
+        }
     }
 
     private func assignPhysicalConditionReminderForUpdate() {

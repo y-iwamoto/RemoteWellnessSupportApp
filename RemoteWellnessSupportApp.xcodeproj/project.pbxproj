@@ -89,6 +89,7 @@
 		2E712E2B2BE1AA35004F574D /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E712E2A2BE1AA35004F574D /* Double+Extensions.swift */; };
 		2E712E2E2BE1ACFE004F574D /* NicknameEditInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E712E2D2BE1ACFE004F574D /* NicknameEditInputView.swift */; };
 		2E782F9C2BDDD598008B00F7 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E782F9B2BDDD598008B00F7 /* Notification+Extensions.swift */; };
+		2E7B7CD32C7191A800BF619A /* ProfileEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B7CD22C7191A800BF619A /* ProfileEndView.swift */; };
 		2E7EC78B2BD09CB400EF4854 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7EC78A2BD09CB400EF4854 /* Pomodoro.swift */; };
 		2E868AB22BB59D5A00681E6B /* WeekHydrationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB12BB59D5A00681E6B /* WeekHydrationGraph.swift */; };
 		2E868AB42BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E868AB32BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift */; };
@@ -349,6 +350,7 @@
 		2E712E2A2BE1AA35004F574D /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		2E712E2D2BE1ACFE004F574D /* NicknameEditInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameEditInputView.swift; sourceTree = "<group>"; };
 		2E782F9B2BDDD598008B00F7 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		2E7B7CD22C7191A800BF619A /* ProfileEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndView.swift; sourceTree = "<group>"; };
 		2E7EC78A2BD09CB400EF4854 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
 		2E868AB12BB59D5A00681E6B /* WeekHydrationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHydrationGraph.swift; sourceTree = "<group>"; };
 		2E868AB32BB59D6B00681E6B /* WeekHydrationGraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHydrationGraphViewModel.swift; sourceTree = "<group>"; };
@@ -1026,6 +1028,7 @@
 				2EB942042BAEBF2500F3B0D2 /* WorkTimeInputView.swift */,
 				2EB942082BAECC9200F3B0D2 /* RestTimeInputView.swift */,
 				2E35BB502C6AC66F00CDAEFC /* StandHourPermissionView.swift */,
+				2E7B7CD22C7191A800BF619A /* ProfileEndView.swift */,
 			);
 			path = Children;
 			sourceTree = "<group>";
@@ -1619,6 +1622,7 @@
 				2E8FBEDE2BA86E660082B3E1 /* IntervalTimeSelectView.swift in Sources */,
 				2EA2C59D2BF0564F00F7751D /* HydrationReminderEditView.swift in Sources */,
 				2E712E2E2BE1ACFE004F574D /* NicknameEditInputView.swift in Sources */,
+				2E7B7CD32C7191A800BF619A /* ProfileEndView.swift in Sources */,
 				2EA2C5992BF0454F00F7751D /* ReminderNotificationData.swift in Sources */,
 				2ED5FF0F2BE64F820025113D /* GoalSettingEditInputViewModel.swift in Sources */,
 				2E0A11F12C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift in Sources */,

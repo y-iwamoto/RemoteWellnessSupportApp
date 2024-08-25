@@ -10,7 +10,7 @@ import SwiftUI
 struct GoalSettingInputView: View {
     @Binding var hydrationGoal: String
     @StateObject var viewModel = GoalSettingInputViewModel()
-    @AppStorage(Const.AppStatus.hasCompletedProfileRegister) var hasCompletedProfileRegister = Const.AppDefaults.hasCompletedProfileRegister
+    @EnvironmentObject var router: ProfileNavigationRouter
 
     var saveProfile: () -> Bool
 
@@ -32,7 +32,7 @@ struct GoalSettingInputView: View {
             },
             buttonAction: {
                 if viewModel.inputValidate(goalValue: hydrationGoal), saveProfile() {
-                    hasCompletedProfileRegister = true
+                    router.items.append(.profileEnd)
                 }
             }
         )

@@ -68,6 +68,49 @@ class ReminderSettingViewModel: BaseViewModel {
         isNotificationEnabled = false
     }
 
+    func scheduleNotification() async {
+        let center = UNUserNotificationCenter.current()
+        do {
+            if try await center.requestAuthorization(options: [.alert, .sound]) {
+                isNotificationEnabled = true
+            }
+        } catch {
+            setError(withMessage: "通知の許可をリクエスト中にエラーが発生しました。設定を確認してください。")
+        }
+    }
+
+    func createReminderWithEmptyNotificationSetting() async {
+        await withThrowingTaskGroup(of: Void.self) { group in
+            group.addTask {
+                await self.createPhysicalConditionReminder()
+            }
+            group.addTask {
+                await self.createHydrationReminder()
+            }
+        }
+    }
+
+    private func createPhysicalConditionReminder() async {
+        do {
+            let physicalConditionReminder = PhysicalConditionReminder(isActive: false, sendsToiOS: false, sendsTowatchOS: false)
+            try physicalConditionReminderDataSource.insertPhysicalConditionReminder(physicalConditionReminder: physicalConditionReminder)
+            fetchPhysicalConditionReminder()
+
+        } catch {
+            setError(withMessage: "体調リマインダーの登録に失敗しました。再試行してください。")
+        }
+    }
+
+    private func createHydrationReminder() async {
+        do {
+            let hydrationReminder = HydrationReminder(isActive: false, sendsToiOS: false, sendsTowatchOS: false)
+            try hydrationReminderDataSource.insertHydrationReminder(hydrationReminder: hydrationReminder)
+            fetchHydrationReminder()
+        } catch {
+            setError(withMessage: "水分摂取リマインダーの登録に失敗しました。再試行してください。")
+        }
+    }
+
     private func checkAuthorizeNotificationSetting(center: UNUserNotificationCenter) async -> Bool {
         let checkStatus = await center.notificationSettings()
         if checkStatus.authorizationStatus == .authorized {

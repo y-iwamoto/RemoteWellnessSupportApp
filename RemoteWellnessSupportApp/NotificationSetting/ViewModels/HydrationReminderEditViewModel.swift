@@ -27,7 +27,13 @@ class HydrationReminderEditViewModel: BaseHydrationReminder, ReminderViewModelPr
             setError(withMessage: "水分摂取通知設定の更新に失敗しました")
             return false
         }
-        return await sendNotification(for: hydrationReminder, type: .hydration)
+        if hydrationReminder.isActive {
+            return await sendNotification(for: hydrationReminder, type: .hydration)
+
+        } else {
+            await removeNotification(for: hydrationReminder, type: .hydration)
+            return true
+        }
     }
 
     private func assignHydrationReminderForUpdate() {

@@ -11,6 +11,8 @@ struct ReminderSettingView: View {
     @StateObject var viewModel = ReminderSettingViewModel()
     @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject var router: SettingScreenNavigationRouter
+    @AppStorage(Const.AppStatus.hasCompletedNotificationSetting) var hasCompletedNotificationSetting
+        = Const.AppDefaults.hasCompletedNotificationSetting
 
     var body: some View {
         VStack {
@@ -30,13 +32,13 @@ struct ReminderSettingView: View {
                 .modifier(MaxWidthLeadingAlignmentPaddingModifier())
             }
 
-            ReminderSection(title: "体調通知", reminder: viewModel.physicalConditionReminder) {
+            ReminderSection(isNotificationEnabled: $viewModel.isNotificationEnabled, title: "体調通知", reminder: viewModel.physicalConditionReminder) {
                 if let reminder = viewModel.physicalConditionReminder {
                     router.items.append(SettingScreenNavigationItem.physicalConditionReminderEdit(reminder: reminder))
                 }
             }
 
-            ReminderSection(title: "水分摂取通知", reminder: viewModel.hydrationReminder) {
+            ReminderSection(isNotificationEnabled: $viewModel.isNotificationEnabled, title: "水分摂取通知", reminder: viewModel.hydrationReminder) {
                 if let reminder = viewModel.hydrationReminder {
                     router.items.append(SettingScreenNavigationItem.hydrationReminderEdit(reminder: reminder))
                 }
@@ -45,7 +47,13 @@ struct ReminderSettingView: View {
         }
         .onAppear {
             Task {
-                await viewModel.checkNotificationStatus()
+                if hasCompletedNotificationSetting {
+                    await viewModel.checkNotificationStatus()
+                } else {
+                    await viewModel.scheduleNotification()
+                    await viewModel.createReminderWithEmptyNotificationSetting()
+                    hasCompletedNotificationSetting = true
+                }
             }
         }
         .onChange(of: scenePhase) {
