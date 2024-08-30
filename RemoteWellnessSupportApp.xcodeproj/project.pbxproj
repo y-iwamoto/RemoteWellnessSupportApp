@@ -219,6 +219,7 @@
 		2ED957D12B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED957D02B883D8B007663AA /* PhysicalConditionDataSource.swift */; };
 		2EE3AB912C813DBD00B05E91 /* WorkModeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3AB902C813DBD00B05E91 /* WorkModeMessageView.swift */; };
 		2EE3AB932C813F9D00B05E91 /* WorkModeMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3AB922C813F9D00B05E91 /* WorkModeMessageViewModel.swift */; };
+		2EE3AB962C81564800B05E91 /* WorkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE3AB952C81564800B05E91 /* WorkStatus.swift */; };
 		2EE812C02B790137000B65E5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812BE2B790137000B65E5 /* RootView.swift */; };
 		2EE812C12B790137000B65E5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812BF2B790137000B65E5 /* MainView.swift */; };
 		2EE812C82B79016D000B65E5 /* ConditionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE812C42B79016D000B65E5 /* ConditionScreen.swift */; };
@@ -482,6 +483,7 @@
 		2ED957D02B883D8B007663AA /* PhysicalConditionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionDataSource.swift; sourceTree = "<group>"; };
 		2EE3AB902C813DBD00B05E91 /* WorkModeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModeMessageView.swift; sourceTree = "<group>"; };
 		2EE3AB922C813F9D00B05E91 /* WorkModeMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModeMessageViewModel.swift; sourceTree = "<group>"; };
+		2EE3AB952C81564800B05E91 /* WorkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStatus.swift; sourceTree = "<group>"; };
 		2EE812BE2B790137000B65E5 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		2EE812BF2B790137000B65E5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2EE812C42B79016D000B65E5 /* ConditionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionScreen.swift; sourceTree = "<group>"; };
@@ -1367,6 +1369,7 @@
 				2E0DA4222B8CBD9C004E0185 /* TimeZoneType.swift */,
 				2E0DA4242B8D5DC4004E0185 /* GraphDefinition.swift */,
 				2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */,
+				2EE3AB952C81564800B05E91 /* WorkStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1661,6 +1664,7 @@
 				2EE812E32B79A068000B65E5 /* ConditionTab.swift in Sources */,
 				2E1194A92BE5BCE000DB4BD3 /* RestTimeEditInputViewModel.swift in Sources */,
 				2ED957D12B883D8B007663AA /* PhysicalConditionDataSource.swift in Sources */,
+				2EE3AB962C81564800B05E91 /* WorkStatus.swift in Sources */,
 				2EFD1BA32BE9A2E10014EDBE /* BasePhysicalConditionReminder.swift in Sources */,
 				2E99F03A2BD25F0B00F7E97F /* PomodoroTimerMode.swift in Sources */,
 				2EB941F62BACF1AC00F3B0D2 /* ProfileScreen.swift in Sources */,

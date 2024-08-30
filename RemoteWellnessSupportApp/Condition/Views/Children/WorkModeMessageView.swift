@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct WorkModeMessageView: View {
-    @StateObject var viewModel = WorkModeMessageViewModel()
+    @StateObject var viewModel: WorkModeMessageViewModel
+
+    init(viewModel: WorkModeMessageViewModel = WorkModeMessageViewModel()) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
     var body: some View {
         VStack {
             ZStack {
                 Circle()
                     .stroke(lineWidth: 20)
-                    .opacity(0.3)
+                    .opacity(0.8)
                     .foregroundColor(viewModel.workStatus.color)
                 VStack {
                     Text(viewModel.workStatus.title)
