@@ -18,7 +18,7 @@ struct TodayCondition: View {
             ZStack {
                 ScrollView {
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        PomodoroTimer()
+                        WorkModeMessageView()
                     }
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
                         GoalProgressView()
