@@ -13,13 +13,6 @@ struct WeekCondition: View {
             ZStack {
                 ScrollView {
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        WeekPomodoroGraph()
-                            .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
-                            .padding()
-                    }
-                    .frame(maxWidth: .infinity)
-
-                    VStack(spacing: StyleConst.Spacing.defaultSpacing) {
                         NavigationLink(value: ConditionScreenNavigationItem.weekPhysicalConditionList) {
                             WeekPhysicalConditionGraph()
                                 .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)

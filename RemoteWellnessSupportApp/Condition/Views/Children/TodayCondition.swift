@@ -24,13 +24,6 @@ struct TodayCondition: View {
                         GoalProgressView()
                     }
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        NavigationLink(value: ConditionScreenNavigationItem.dailyPhysicalConditionList(date: today)) {
-                            PhysicalConditionGraph(targetDate: today)
-                                .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
-                                .padding()
-                        }
-                    }
-                    VStack(spacing: StyleConst.Spacing.defaultSpacing) {
                         NavigationLink(value: ConditionScreenNavigationItem.dailyHydrationList(date: today)) {
                             HydrationGraph(targetDate: today)
                                 .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)

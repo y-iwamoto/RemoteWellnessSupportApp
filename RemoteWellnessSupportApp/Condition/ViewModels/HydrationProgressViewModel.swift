@@ -69,8 +69,8 @@ class HydrationProgressViewModel: BaseViewModel {
         guard let endOfDay = calendar.date(byAdding: endOfDayComponents, to: startOfDay) else {
             throw DateError.calculationFailed(description: "Failed to calculate the end of day")
         }
-        let predicate = #Predicate<Hydration> { physicalCondition in
-            physicalCondition.entryDate >= startOfDay && physicalCondition.entryDate < endOfDay
+        let predicate = #Predicate<Hydration> { hydration in
+            hydration.entryDate >= startOfDay && hydration.entryDate < endOfDay
         }
         return predicate
     }
