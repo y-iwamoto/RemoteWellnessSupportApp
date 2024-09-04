@@ -11,7 +11,7 @@ final class PhysicalConditionProgressViewModel: BaseViewModel {
     private let physicalConditionDataSource: PhysicalConditionDataSource
     private let profileDataSource: ProfileDataSource
 
-    @Published var physicalConditionGoalProgress = CGFloat(0.0)
+    @Published var physicalConditionGoalProgress = Double(0.0)
     @Published var currentTotalPhysicalConditionAverage = 0.0
     @Published var totalPhysicalConditionGoal = 0
 

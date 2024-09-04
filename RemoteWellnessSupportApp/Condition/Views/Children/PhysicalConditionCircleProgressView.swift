@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PhysicalConditionCircleProgressView: View {
-    var progress: CGFloat
+    var progress: Double
     var totalValue: Int
     var imageName: String
     var itemValue: Double
@@ -25,7 +25,7 @@ struct PhysicalConditionCircleProgressView: View {
                 CircleProgress(progress: progress)
                     .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                     .foregroundColor(Color.green)
-                    .animation(.linear, value: progress)
+                    .animation(.easeInOut, value: progress)
 
                 Image(systemName: imageName)
                     .padding()

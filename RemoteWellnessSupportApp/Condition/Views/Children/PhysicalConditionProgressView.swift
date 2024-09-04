@@ -19,9 +19,7 @@ struct PhysicalConditionProgressView: View {
                                             imageName: ConditionNavigationLink.ImageName.physicalConditionEntryForm.rawValue,
                                             itemValue: viewModel.currentTotalPhysicalConditionAverage,
                                             itemName: "1日の気分")
-            .onAppear {
-                viewModel.aggregatePhysicalCondition()
-            }
+            .onAppear(perform: viewModel.aggregatePhysicalCondition)
     }
 }
 
