@@ -12,7 +12,7 @@ struct GoalProgressView: View {
         HStack(spacing: 10) {
             HydrationProgressView()
             StepProgressView()
-            BreakTimeProgressView()
+            PhysicalConditionProgressView()
         }
         .padding(10)
     }

@@ -46,6 +46,8 @@
 		2E16966E2C03F6B900D540BD /* PomodoroReminderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */; };
 		2E17831F2BE0537200F07B97 /* ProfileSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17831E2BE0537200F07B97 /* ProfileSettingViewModel.swift */; };
 		2E35BB512C6AC67000CDAEFC /* StandHourPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35BB502C6AC66F00CDAEFC /* StandHourPermissionView.swift */; };
+		2E3D1AF72C83EEA500D93282 /* PhysicalConditionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D1AF62C83EEA500D93282 /* PhysicalConditionProgressView.swift */; };
+		2E49FFE62C82A77F004593E9 /* PhysicalConditionProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49FFE52C82A77F004593E9 /* PhysicalConditionProgressViewModel.swift */; };
 		2E50E67E2BE2FC2F00068916 /* NicknameEditInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E50E67D2BE2FC2F00068916 /* NicknameEditInputViewModel.swift */; };
 		2E50E6802BE305EC00068916 /* WorkDaySelectEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E50E67F2BE305EC00068916 /* WorkDaySelectEditView.swift */; };
 		2E57473A2BC55E2600B46C55 /* StepGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5747392BC55E2600B46C55 /* StepGraph.swift */; };
@@ -78,6 +80,7 @@
 		2E69836D2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69836C2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift */; };
 		2E6983702B9DACC50076EF4F /* DateWithListValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69836F2B9DACC50076EF4F /* DateWithListValue.swift */; };
 		2E6983722B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6983712B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift */; };
+		2E6D158A2C851F14005B2E63 /* PhysicalConditionCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D15892C851F14005B2E63 /* PhysicalConditionCircleProgressView.swift */; };
 		2E6E640E2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E640F2B7E37A300A11DB9 /* PhysicalConditionRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */; };
 		2E6E64112B7EDEE900A11DB9 /* StyleConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */; };
@@ -312,6 +315,8 @@
 		2E16966D2C03F6B900D540BD /* PomodoroReminderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroReminderType.swift; sourceTree = "<group>"; };
 		2E17831E2BE0537200F07B97 /* ProfileSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewModel.swift; sourceTree = "<group>"; };
 		2E35BB502C6AC66F00CDAEFC /* StandHourPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandHourPermissionView.swift; sourceTree = "<group>"; };
+		2E3D1AF62C83EEA500D93282 /* PhysicalConditionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionProgressView.swift; sourceTree = "<group>"; };
+		2E49FFE52C82A77F004593E9 /* PhysicalConditionProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionProgressViewModel.swift; sourceTree = "<group>"; };
 		2E50E67D2BE2FC2F00068916 /* NicknameEditInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameEditInputViewModel.swift; sourceTree = "<group>"; };
 		2E50E67F2BE305EC00068916 /* WorkDaySelectEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDaySelectEditView.swift; sourceTree = "<group>"; };
 		2E5747392BC55E2600B46C55 /* StepGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGraph.swift; sourceTree = "<group>"; };
@@ -344,6 +349,7 @@
 		2E69836C2B9D58BB0076EF4F /* WeekPhysicalConditionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPhysicalConditionListViewModel.swift; sourceTree = "<group>"; };
 		2E69836F2B9DACC50076EF4F /* DateWithListValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWithListValue.swift; sourceTree = "<group>"; };
 		2E6983712B9E767D0076EF4F /* SelectedDatePhysicalConditionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDatePhysicalConditionGraph.swift; sourceTree = "<group>"; };
+		2E6D15892C851F14005B2E63 /* PhysicalConditionCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionCircleProgressView.swift; sourceTree = "<group>"; };
 		2E6E640D2B7E37A300A11DB9 /* PhysicalConditionRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionRating.swift; sourceTree = "<group>"; };
 		2E6E64102B7EDEE900A11DB9 /* StyleConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConst.swift; sourceTree = "<group>"; };
 		2E6E64142B80460400A11DB9 /* PhysicalConditionEntryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalConditionEntryFormViewModel.swift; sourceTree = "<group>"; };
@@ -1239,15 +1245,17 @@
 			isa = PBXGroup;
 			children = (
 				2EE812C62B79016D000B65E5 /* TabButton.swift */,
+				2E6983642B9C728D0076EF4F /* WeekCondition.swift */,
 				2EE812C72B79016D000B65E5 /* TodayCondition.swift */,
 				2EE812E62B79A6F0000B65E5 /* ActivityEntryNavigationLink.swift */,
 				2EE812ED2B7ADE9E000B65E5 /* ActivityEntryArea.swift */,
-				2E6983642B9C728D0076EF4F /* WeekCondition.swift */,
 				2EBA3DAD2BCBB99300599131 /* PomodoroTimer.swift */,
 				2E947A702BD9C81D002B660A /* HydrationProgressView.swift */,
 				2E041C1E2BDCD8B00082CBD6 /* StepProgressView.swift */,
 				2E041C222BDCF6940082CBD6 /* BreakTimeProgressView.swift */,
 				2EE3AB902C813DBD00B05E91 /* WorkModeMessageView.swift */,
+				2E3D1AF62C83EEA500D93282 /* PhysicalConditionProgressView.swift */,
+				2E6D15892C851F14005B2E63 /* PhysicalConditionCircleProgressView.swift */,
 			);
 			path = Children;
 			sourceTree = "<group>";
@@ -1386,6 +1394,7 @@
 				2E041C202BDCD8DA0082CBD6 /* StepProgressViewModel.swift */,
 				2E041C242BDCF6A10082CBD6 /* BreakTimeProgressViewModel.swift */,
 				2EE3AB922C813F9D00B05E91 /* WorkModeMessageViewModel.swift */,
+				2E49FFE52C82A77F004593E9 /* PhysicalConditionProgressViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1583,6 +1592,7 @@
 				2E0DA4282B8E10EB004E0185 /* ChartXAxisModifier.swift in Sources */,
 				2E8FBEF22BAA7A850082B3E1 /* Reminder+Extensions.swift in Sources */,
 				2E8FBEC32BA520BA0082B3E1 /* ConditionScreenNavigationRouter.swift in Sources */,
+				2E6D158A2C851F14005B2E63 /* PhysicalConditionCircleProgressView.swift in Sources */,
 				2EB942162BAFB97E00F3B0D2 /* WorkDay.swift in Sources */,
 				2EAD063E2B9BEFBE00FBCC21 /* PhysicalConditionDataSourceProtocol.swift in Sources */,
 				2EE812D92B79904E000B65E5 /* PhysicalConditionEntryForm.swift in Sources */,
@@ -1625,6 +1635,7 @@
 				2EFD01862B71A254003020C6 /* WatchFeatureExplanationViewModel.swift in Sources */,
 				2E50E6802BE305EC00068916 /* WorkDaySelectEditView.swift in Sources */,
 				2E916C662BDF3AC60016D67E /* SettingScreenNavigationRouter.swift in Sources */,
+				2E49FFE62C82A77F004593E9 /* PhysicalConditionProgressViewModel.swift in Sources */,
 				2E041C232BDCF6940082CBD6 /* BreakTimeProgressView.swift in Sources */,
 				2EAD06402B9BF01D00FBCC21 /* PhysicalConditionDataSource+Extension.swift in Sources */,
 				2EB942032BAE7DEB00F3B0D2 /* WorkDaySelectViewModel.swift in Sources */,
@@ -1637,6 +1648,7 @@
 				2ED5FF0F2BE64F820025113D /* GoalSettingEditInputViewModel.swift in Sources */,
 				2E0A11F12C0194C3001CE56F /* PomodoroTimerViewModel+CommonProcessTimer.swift in Sources */,
 				2E041C212BDCD8DA0082CBD6 /* StepProgressViewModel.swift in Sources */,
+				2E3D1AF72C83EEA500D93282 /* PhysicalConditionProgressView.swift in Sources */,
 				2E6983692B9C73E80076EF4F /* WeekPhysicalConditionGraphViewModel.swift in Sources */,
 				2E35BB512C6AC67000CDAEFC /* StandHourPermissionView.swift in Sources */,
 				2E61D0BD2BB302190087B895 /* HydrationChartYModifier.swift in Sources */,
