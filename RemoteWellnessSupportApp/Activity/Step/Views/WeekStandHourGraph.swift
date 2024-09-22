@@ -1,5 +1,5 @@
 //
-//  WeekStepGraph.swift
+//  WeekStandHourGraph.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/04/11.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct WeekStepGraph: View {
-    @StateObject var viewModel = WeekStepGraphViewModel()
+struct WeekStandHourGraph: View {
+    @StateObject var viewModel = WeekStandHourGraphViewModel()
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
             Text("アクティビティ")
@@ -37,5 +37,5 @@ struct WeekStepGraph: View {
 }
 
 #Preview {
-    WeekStepGraph()
+    WeekStandHourGraph()
 }

@@ -11,7 +11,7 @@ struct GoalProgressView: View {
     var body: some View {
         HStack(spacing: 10) {
             HydrationProgressView()
-            StepProgressView()
+            StandHourProgressView()
             PhysicalConditionProgressView()
         }
         .padding(10)

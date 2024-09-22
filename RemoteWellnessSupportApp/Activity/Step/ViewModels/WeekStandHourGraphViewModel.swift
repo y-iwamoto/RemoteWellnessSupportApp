@@ -1,5 +1,5 @@
 //
-//  WeekStepGraphViewModel.swift
+//  WeekStandHourGraphViewModel.swift
 //  RemoteWellnessSupportApp
 //
 //  Created by 岩本雄貴 on 2024/04/11.
@@ -9,7 +9,7 @@ import Foundation
 import HealthKit
 
 @MainActor
-class WeekStepGraphViewModel: BaseIncrementalYLabelGraphViewModel {
+class WeekStandHourGraphViewModel: BaseIncrementalYLabelGraphViewModel {
     var manager: HealthKitManager
     let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
 

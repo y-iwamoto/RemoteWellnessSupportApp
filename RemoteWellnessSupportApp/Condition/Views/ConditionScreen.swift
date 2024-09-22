@@ -54,7 +54,7 @@ struct ConditionScreen: View {
         case .weekHydrationList:
             WeekHydrationListView()
         case .weekStepList:
-            WeekStepListView()
+            WeekStandHourListView()
         case let .physicalConditionEditForm(physicalCondition):
             PhysicalConditionEditForm(physicalCondition: physicalCondition)
         case let .hydrationEditForm(hydration):
@@ -71,6 +71,8 @@ struct ConditionScreen: View {
             SelectedDatePhysicalConditionGraph(targetDate: targetDate)
         case let .selectedDateHydrationGraph(targetDate):
             SelectedDateHydrationGraph(targetDate: targetDate)
+        case let .selectedDateStandHourGraph(targetDate):
+            SelectedDateStandHourGraph(targetDate: targetDate)
         }
     }
     // swiftlint:enable cyclomatic_complexity
