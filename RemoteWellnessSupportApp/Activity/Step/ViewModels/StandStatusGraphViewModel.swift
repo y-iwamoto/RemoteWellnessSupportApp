@@ -10,8 +10,8 @@ import HealthKit
 
 @MainActor
 final class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
-    var manager: HealthKitManager
-    let calendar: Calendar
+    private var manager: HealthKitManager
+    private let calendar: Calendar
 
     init(targetDate: Date = Date()) {
         manager = HealthKitManager()
@@ -19,9 +19,9 @@ final class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
         super.init(targetDate: targetDate)
     }
 
-    @Published var targetDateStandStatus: [GraphValue] = []
-    @Published var standStatusRateYGraphRange: ClosedRange<Int> = 0 ... StepRating.highDefaultStepCount.rawValue
-    @Published var standStatusRatingYGraphValues: [Int] = []
+    @Published private(set) var targetDateStandStatus: [GraphValue] = []
+    @Published private(set) var standStatusRateYGraphRange: ClosedRange<Int> = 0 ... StepRating.highDefaultStepCount.rawValue
+    @Published private(set) var standStatusRatingYGraphValues: [Int] = []
 
     func fetchStandHour() async {
         let startOfDay = calendar.startOfDay(for: targetDate)
