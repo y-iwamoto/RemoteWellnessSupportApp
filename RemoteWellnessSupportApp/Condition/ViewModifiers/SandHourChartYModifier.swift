@@ -16,18 +16,22 @@ struct StandHourChartYModifier: ViewModifier {
         content
             .chartYScale(domain: stpeRateRange)
             .chartYAxis {
-                AxisMarks(position: .leading, values: ratingValues) { value in
-                    if let rawValue = value.as(Int.self), let rating = StandingHourRating(rawValue: rawValue) {
-                        AxisValueLabel {
-                            Text(rating.label)
-                        }
-                    }
-                }
+                labelAxisMarks(for: ratingValues)
                 AxisMarks(
                     values: Array(stpeRateRange)
                 ) {
                     AxisGridLine()
                 }
             }
+    }
+
+    private func labelAxisMarks(for values: [Int]) -> some AxisContent {
+        AxisMarks(position: .leading, values: values) { value in
+            if let rawValue = value.as(Int.self), let rating = StandingHourRating(rawValue: rawValue) {
+                AxisValueLabel {
+                    Text(rating.label)
+                }
+            }
+        }
     }
 }

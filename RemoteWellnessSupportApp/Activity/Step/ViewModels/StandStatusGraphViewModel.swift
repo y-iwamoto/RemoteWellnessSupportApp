@@ -9,12 +9,13 @@ import Foundation
 import HealthKit
 
 @MainActor
-class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
+final class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
     var manager: HealthKitManager
-    let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+    let calendar: Calendar
 
     init(targetDate: Date = Date()) {
         manager = HealthKitManager()
+        calendar = Calendar.current
         super.init(targetDate: targetDate)
     }
 
@@ -23,26 +24,21 @@ class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
     @Published var standStatusRatingYGraphValues: [Int] = []
 
     func fetchStandHour() async {
-        let startOfDay = Calendar.current.startOfDay(for: targetDate)
+        let startOfDay = calendar.startOfDay(for: targetDate)
         do {
             let samples = try await manager.fetchAppleStandHourData(startOfDay: startOfDay, endOfDay: targetDate)
-            try assignTargetDateStandStatus(samples)
+            if !samples.isEmpty {
+                let (hoursRange, groupedSteps) = try calculateDateRangeAndGroupedStandStatus(samples)
+                targetDateStandStatus = convertToGraphValues(dateRange: hoursRange, groupedValues: groupedSteps)
+                standStatusRatingYGraphValues = StandStatus.allCases.map(\.rawValue)
+                standStatusRateYGraphRange = convertToStandStatusRateRange()
+            }
         } catch {
-            setError(withMessage: "歩数の取得処理に失敗しました", error: error)
-        }
-    }
-
-    private func assignTargetDateStandStatus(_ standSamples: [HKCategorySample]) throws {
-        if !standSamples.isEmpty {
-            let (hoursRange, groupedSteps) = try calculateDateRangeAndGroupedStandStatus(standSamples)
-            targetDateStandStatus = convertToGraphValues(dateRange: hoursRange, groupedValues: groupedSteps)
-            standStatusRatingYGraphValues = StandStatus.allCases.map(\.rawValue)
-            standStatusRateYGraphRange = convertToStandStatusRateRange()
+            setError(withMessage: "立ち時間の取得処理に失敗しました", error: error)
         }
     }
 
     private func calculateDateRangeAndGroupedStandStatus(_ standSamples: [HKCategorySample]) throws -> ([Date], [Date: [StandStatusSample]]) {
-        let calendar = Calendar.current
         let hoursRange = try calculateWorkHoursRange()
 
         let currentDate = targetDate
