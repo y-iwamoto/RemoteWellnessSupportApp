@@ -29,7 +29,7 @@ struct StandHourChartYModifier: ViewModifier {
         AxisMarks(position: .leading, values: values) { value in
             if let rawValue = value.as(Int.self), let rating = StandingHourRating(rawValue: rawValue) {
                 AxisValueLabel {
-                    Text(rating.label)
+                    Text(rating.labelShort)
                 }
             }
         }

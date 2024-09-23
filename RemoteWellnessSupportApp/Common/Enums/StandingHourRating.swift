@@ -11,12 +11,21 @@ enum StandingHourRating: Int {
     case sedentary = 0
     case stoodUp = 1
 
-    var label: String {
+    var labelShort: String {
         switch self {
         case .sedentary:
             "座った\r\nまま"
         case .stoodUp:
-            "立ち\r\nあり"
+            "立ち時\r\n間あり"
+        }
+    }
+
+    var label: String {
+        switch self {
+        case .sedentary:
+            "座ったまま"
+        case .stoodUp:
+            "立った時間あり"
         }
     }
 }

@@ -33,9 +33,12 @@ struct StandingHourCircleProgressView: View {
                     .foregroundColor(.black)
                     .clipShape(Circle())
             }
-            Text(itemValue == 1 ? "立った時間あり" : "座ったまま")
-                .font(.headline)
-                .padding(.top, 15)
+            // health kitの値とヘルスケアの結果を比べると値0が立っている、値1が座り続けているの模様
+            if let rating = StandingHourRating(rawValue: itemValue) {
+                Text(rating.label)
+                    .font(.headline)
+                    .padding(.top, 15)
+            }
             Text(itemName)
         }
     }

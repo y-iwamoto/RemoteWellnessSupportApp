@@ -30,6 +30,7 @@ final class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
             if !samples.isEmpty {
                 let (hoursRange, groupedSteps) = try calculateDateRangeAndGroupedStandStatus(samples)
                 targetDateStandStatus = convertToGraphValues(dateRange: hoursRange, groupedValues: groupedSteps)
+
                 standStatusRatingYGraphValues = StandStatus.allCases.map(\.rawValue)
                 standStatusRateYGraphRange = convertToStandStatusRateRange()
             }
@@ -54,14 +55,14 @@ final class StandStatusGraphViewModel: BaseIncrementalYLabelGraphViewModel {
 
         let conditionsInHour = dates.reduce(into: [Date: [StandStatusSample]]()) { result, date in
             result[date] = groupedStatus[date]?.map { sample in
-                StandStatusSample(entryDate: date, rating: sample.value)
+                // health kitの値とヘルスケアの結果を比べると値0が立っている、値1が座り続けているの模様
+                StandStatusSample(entryDate: date, rating: (sample.value == 0 ? StandingHourRating.stoodUp : StandingHourRating.sedentary).rawValue)
             } ?? []
         }
         return (dates, conditionsInHour)
     }
 
     private func convertToStandStatusRateRange() -> ClosedRange<Int> {
-        let standStatusRatingMax = StandStatus.stood.rawValue
-        return noEntryValueForSpecificTime ... standStatusRatingMax
+        StandingHourRating.sedentary.rawValue ... StandingHourRating.stoodUp.rawValue
     }
 }
