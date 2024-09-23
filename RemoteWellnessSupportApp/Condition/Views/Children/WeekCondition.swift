@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WeekCondition: View {
+    @EnvironmentObject var router: ConditionScreenNavigationRouter
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -31,10 +32,8 @@ struct WeekCondition: View {
                     .frame(maxWidth: .infinity)
 
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        NavigationLink(value: ConditionScreenNavigationItem.weekStepList) {
-                            WeekStepGraph()
-                                .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
-                                .padding()
+                        CommonButtonView(title: "アクティビティへ進む") {
+                            router.items.append(.weekStepList)
                         }
                     }
                 }
