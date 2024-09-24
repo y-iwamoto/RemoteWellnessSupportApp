@@ -21,7 +21,7 @@ struct GoalSettingEditInputView: View {
 
     var body: some View {
         CommonLayoutView(
-            title: "変更したい1時間あたりの目標値を設定して下さい",
+            title: "1日の目標値を設定して下さい",
             buttonTitle: "保存する",
             content: {
                 VStack {

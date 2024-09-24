@@ -53,7 +53,7 @@ struct ProfileSettingView: View {
                         }
                     }
 
-                    Section(header: Text("１時間あたり目標値")) {
+                    Section(header: Text("１日あたり目標値")) {
                         HStack {
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack {

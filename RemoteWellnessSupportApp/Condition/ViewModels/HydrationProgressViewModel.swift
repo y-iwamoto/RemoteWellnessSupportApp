@@ -40,16 +40,7 @@ class HydrationProgressViewModel: BaseViewModel {
         guard let profile = try profileDataSource.fetchProfile() else {
             throw SwiftDataError.notFound(description: "Failed to fetch Profile")
         }
-        let workTimeIntervalInHours = profile.workTimeTo.timeIntervalSince(profile.workTimeFrom) / 3600
-
-        let breakTimeIntervalInMinutes = profile.restTimePeriods.reduce(into: 0) { total, period in
-            let intervalInSeconds = period.toTime.timeIntervalSince(period.fromTime)
-            let intervalInMinutes = intervalInSeconds / 60
-            total += intervalInMinutes
-        }
-        let breakTimeIntervalInHours = breakTimeIntervalInMinutes / 60
-        let workTimeInHoursExcludingBreaks = workTimeIntervalInHours - breakTimeIntervalInHours
-        return Int(profile.hydrationGoal * workTimeInHoursExcludingBreaks)
+        return Int(profile.hydrationGoal)
     }
 
     private func calculateTotalHydration(hydrations: [Hydration]) -> Int {
