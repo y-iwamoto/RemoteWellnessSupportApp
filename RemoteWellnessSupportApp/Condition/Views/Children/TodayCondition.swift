@@ -14,7 +14,7 @@ struct TodayCondition: View {
 
     let today = Date()
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             ZStack {
                 ScrollView {
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
@@ -22,13 +22,6 @@ struct TodayCondition: View {
                     }
                     VStack(spacing: StyleConst.Spacing.defaultSpacing) {
                         GoalProgressView()
-                    }
-                    VStack(spacing: StyleConst.Spacing.defaultSpacing) {
-                        NavigationLink(value: ConditionScreenNavigationItem.dailyHydrationList(date: today)) {
-                            HydrationGraph(targetDate: today)
-                                .frame(width: geometry.size.width * 4 / 5, height: geometry.size.height / 2)
-                                .padding()
-                        }
                     }
                 }
                 ActivityEntryArea(targetDate: today)
